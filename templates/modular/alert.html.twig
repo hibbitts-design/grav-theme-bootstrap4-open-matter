@@ -1,0 +1,16 @@
+{% if page.header.alert_style is defined %}
+  {% set alert_style = page.header.alert_style %}
+{% else %}
+  {% set alert_style = 'alert-primary' %}
+{% endif %}
+
+<div class="list-item">
+  <div class="list-blog-header">
+    <div class="list-blog-padding">
+      <div class="listbullet alert {{ alert_style }}">
+        <h5 class="alert-heading">{{page.title}}</h5>
+        {{ page.content }}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+navbar_style: navbar-dark
+navbar_bgcolor: '#222222'
+navbar_position: top
+navbar_breakpoint: md
+git_sync_edit_theme_link_location: none
+
+dropdown:
+  enabled: false
+
+streams:
+ schemes:
+   theme:
+     type: ReadOnlyStream
+     prefixes:
+       '':
+       - user/themes/bootstrap4-open-matter
+       - user/themes/bootstrap4
+
+menu:
+  -
+    text: Grav
+    icon: arrow-circle-right
+    url: 'http://getgrav.org/'

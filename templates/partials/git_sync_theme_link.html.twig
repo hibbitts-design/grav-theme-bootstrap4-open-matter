@@ -1,0 +1,48 @@
+{% if theme_var('git_sync_repo_link') %}
+  {% set gitrepothemeeditlinkurl = theme_var('git_sync_repo_link') ~ '/themes/' ~ config.system.pages.theme ~ '/' %}
+  {% set git_repo_link_url = theme_var('git_sync_repo_link') %}
+  {% if theme_var('custom_git_sync_repo_link_icon') is empty %}
+    {% if 'github' in git_repo_link_url %}
+      {% set git_repo_link_icon = "github" %}
+    {% elseif 'gitlab' in git_repo_link_url %}
+      {% set git_repo_link_icon = "gitlab" %}
+    {% elseif 'bitbucket' in git_repo_link_url %}
+      {% set git_repo_link_icon = "bitbucket" %}
+    {% else %}
+      {% set git_repo_link_icon = "git" %}
+    {% endif %}
+  {% else %}
+    {% set git_repo_link_icon = theme_var('custom_git_sync_repo_link_icon') %}
+  {% endif %}
+  <a class="newwindow external-link" href="{{ gitrepothemeeditlinkurl }}" title="{{ theme_var('git_sync.edit_theme_link_text') }}">
+  <i class="fa fa-{{ git_repo_link_icon }}" aria-hidden="true"></i>
+  {{ theme_var('git_sync.edit_theme_link_text') }}</a><br>
+{% else %}
+  {% if config.plugins['git-sync'].enabled and config.plugins['git-sync'].repository is empty %}
+    {% set admin_panel_appearance_url = grav.base_url ~ '/admin/plugins/git-sync' %}
+    <a class="newwindow external-link" href="{{ admin_panel_appearance_url }}" title="Setup Git Sync">
+    <i class="fa fa-cog" aria-hidden="true"></i>
+    Setup Git Sync</a>
+  {% else %}
+    {% set git_sync_repo_link = config.plugins['git-sync'].repository %}
+    {% if 'github' in git_sync_repo_link %}
+      {% set git_repo_link_icon = "github" %}
+      {% set gitrepothemeeditlinkurl = (git_sync_repo_link|replace({'.git':'/'})) ~ 'blob/master/themes/' ~ config.system.pages.theme ~ '/' %}
+    {% elseif 'gitlab' in git_sync_repo_link %}
+      {% set git_repo_link_icon = "gitlab" %}
+      {% set gitrepothemeeditlinkurl = (git_sync_repo_link|replace({'.git':'/'})) ~ 'blob/master/themes/' ~ config.system.pages.theme ~ '/' %}
+    {% elseif 'bitbucket' in git_sync_repo_link %}
+      {% set git_repo_link_icon = "bitbucket" %}
+      {% set gitrepothemeeditlinkurl = (git_sync_repo_link|replace({'.git':'/'})) ~ 'src/master/themes/' ~ config.system.pages.theme ~ '/' %}
+    {% else %}
+      {% set git_repo_link_icon = "git" %}
+      {% set gitrepothemeeditlinkurl = (git_sync_repo_link|replace({'.git':'/'})) ~ 'blob/master/themes/' ~ config.system.pages.theme ~ '/' %}
+    {% endif %}
+    {% if theme_var('custom_git_sync_repo_link_icon') %}
+      {% set git_repo_link_icon = theme_var('custom_git_sync_repo_link_icon') %}
+    {% endif %}
+    <a class="newwindow external-link" href="{{ gitrepothemeeditlinkurl }}" title="{{ theme_var('git_sync.edit_theme_link_text') }}">
+    <i class="fa fa-{{ git_repo_link_icon }}" aria-hidden="true"></i>
+    {{ theme_var('git_sync.edit_theme_link_text') }}</a><br>
+  {% endif %}
+{% endif %}

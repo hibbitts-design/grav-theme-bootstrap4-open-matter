@@ -1,0 +1,83 @@
+{% set navbar_style = theme_var('navbar_style') %}
+{% set navbar_bgcolor = theme_var('navbar_bgcolor') %}
+{% set navbar_position = theme_var('navbar_position') %}
+{% set navbar_breakpoint = theme_var('navbar_breakpoint') %}
+
+{% set background_image = pages.find('/headerimage').media.images|first %}
+{% if background_image and not(navbar_position == 'fixed-bottom') %}
+  <div class="myheader" style="background-image: url({{ background_image.url }});"></div>
+{% endif %}
+
+<nav class="navbar {{ navbar_position }} navbar-expand-{{ navbar_breakpoint }} {{ navbar_style }}" style="background-color:{{ navbar_bgcolor }};" role="navigation">
+    <div class="container">
+        <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url_relative }}">{{ site.title|e('html') }}</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse justify-content-end">
+            <ul class="navbar-nav">
+                {% for page in pages.children.visible %}
+                {# Supress home menu link - hibbittsdesign.org #}
+                  {% if not(theme_var('hidehomemenulink') and page.home()) %}
+                    {# Set all pages to use active page style - hibbittsdesign.org#}
+                    {% set current_page = 'active' %}
+                    {% if config.themes.bootstrap4.dropdown.enabled and page.children.visible.count > 0 %}
+                        <li class="nav-item dropdown {{ current_page }}">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ page.menu }}</a>
+                            <div class="dropdown-menu">
+                                {% set current_parent = page.active ? 'active' : '' %}
+                                <a href="{{ page.url }}" class="dropdown-item {{ current_parent }}">{{ page.menu }}</a>
+                                <div class="dropdown-divider"></div>
+                                {% for child in page.children.visible %}
+                                    {# Set all child pages to use active page style - hibbittsdesign.org#}
+                                    {% set current_child = 'active' %}
+                                    <a href="{{ child.url }}" class="dropdown-item {{ current_child }}">{{ child.menu }}</a>
+                                {% endfor %}
+                            </div>
+                        </li>
+                    {% else %}
+                        <li class="nav-item {{ current_page }}"><a class="nav-link" href="{{ page.url }}">{{ page.menu }}</a></li>
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+                {% for mitem in site.menu %}
+                    <li class="nav-item active">
+                        {% set icon = mitem.icon ? '<i class="fa fa-fw fa-' ~ mitem.icon ~ '"></i> ' : '' %}
+                        <a class="nav-link" href="{{ mitem.url }}">{{ icon }}{{ mitem.text }}</a>
+                    </li>
+                {% endfor %}
+
+                {# custom menu items check and display - hibbittsdesign.org #}
+                {% if theme_var('displaycustommenus.enabled') %}
+
+                  {% for mitem in theme_var('custommenu') %}
+                    <li class="nav-item active" >
+                      {{ dump (mitem.target) }}
+                      {% if mitem.target == "_blank" %}
+                        {% set mclass = 'external-link' %}
+                      {% endif %}
+                      <a class="nav-link {{mclass}}" href="{{ mitem.url }}" target="{{ mitem.target }}">
+                        {% if mitem.icon %}
+                          <i class="fa fa-{{ mitem.icon }}"></i>
+                        {% endif %}
+                        {{ mitem.text }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                {% endif %}
+
+                {# check to display git sync link in menu - hibbittsdesign.org #}
+                {% if theme_var('display_of_git_sync_repo_link') == 'menu' or theme_var('display_of_git_sync_repo_link') == empty %}
+                  <li class="nav-item active" >
+                      {% include 'partials/git_sync_repo_link.html.twig' with {linkinmenu: true} %}
+                  </li>
+                {% endif %}
+
+                {% if config.plugins.login.enabled and grav.user.username %}
+                    <li class="nav-item"><span class="nav-link"><i class="fa fa-lock"></i> {% include 'partials/login-status.html.twig' %}</span></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>

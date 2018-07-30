@@ -1,0 +1,126 @@
+title: Open Matter Blog Options
+'@extends':
+    type: blog
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+
+      fields:
+        blog:
+
+          fields:
+
+            hero_title:
+              type: section
+              title: Hero Section
+              underline: true
+
+            header.hero_classes:
+              type: text
+              label: Hero Classes
+              markdown: true
+              description: 'There are several Hero class options that can be listed here (space separated):<br />`hero-small`, `hero-medium`, `hero-large`, `hero-fullscreen`'
+
+            header.hero_image:
+              type: filepicker
+              label: Hero Image
+              preview_images: true
+              description: 'If not specified, this defaults to the first image found in the page''s folder'
+
+            header.hero_scroll:
+              type: toggle
+              label: Hero Scroll
+              highlight:                 1
+              default:                   0
+              options:
+                  1:                     Yes
+                  0:                     No
+              validate:
+                  type:                  bool
+
+            openmatter1:
+                type: section
+                title: "List Appearance"
+                underline: true
+
+            header.show_sidebar:
+                type:                      toggle
+                label:                     Display Sidebar on all Blog Pages
+                highlight:                 1
+                default:                   1
+                options:
+                    1:                     Yes
+                    0:                     No
+                validate:
+                    type:                  bool
+
+            header.display_post_summary:
+                type:                      toggle
+                label:                     Hide Summaries on Blog Post Pages
+                highlight:                 1
+                default:                   0
+                options:
+                    1:                     Yes
+                    0:                     No
+                validate:
+                    type:                  bool
+
+            header.post_icon:
+                type:                      text
+                size:                      small
+                label:                     Default Blog Item Font Awesome Icon
+                description:               Short name, e.g. 'newspaper-o'.
+                help:                      Determines the default Font Awesome icon used for the blog posts.
+                validate:
+                    type:                  text
+
+            header.hide_post_date:
+                type:                      toggle
+                label:                     Display Date on Blog Items
+                highlight:                 0
+                default:                   0
+                options:
+                    0:                     Yes
+                    1:                     No
+                validate:
+                    type:                  bool
+
+            header.hide_post_taxonomy:
+                type:                      toggle
+                label:                     Display Taxonomy on Blog Items
+                highlight:                 0
+                default:                   0
+                options:
+                    0:                     Yes
+                    1:                     No
+                validate:
+                    type:                  bool
+
+            openmatter2:
+                type: section
+                title: Git Repository
+                underline: true
+
+            header.hide_git_sync_repo_link:
+                type: toggle
+                label: Display Git Repository Edit Page Link
+                help: Determines if the Git Repository edit Page link is displayed for this page
+                default: 0
+                highlight: 0
+                options:
+                    0:  Yes
+                    1:  No
+                validate:
+                    type: bool
+
+            header.git_sync_repo_link:
+                type: text
+                size: large
+                label: Custom Git Repository Page URL
+                help: Custom Git Repository URL for this page, to override the automatically calculated URL
+                default: null
+                validate:
+                    type: URL

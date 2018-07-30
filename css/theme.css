@@ -1,0 +1,205 @@
+/*
+===============================================================================================================================
+Theme CSS.
+===============================================================================================================================
+*/
+
+/* CSS to better match font family with Canvas LMS*/
+/*
+body {
+  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+}
+*/
+
+/* CSS to better match link colors with Canvas LMS*/
+/*
+ a:not(btn) {
+  color: #008EE2;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #008EE2;
+  text-decoration: underline;
+}
+*/
+
+.myheader {
+  background-color: #222222;
+  background-repeat:no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-position:center;
+  width: auto;
+  height: 280px;
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1140px) {
+  .myheader {
+      height: 250px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 960px) {
+  .myheader {
+      height: 220px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .myheader {
+      height: 180px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .myheader {
+      height: 130px;
+  }
+}
+
+body {
+  margin-bottom: 270px!important;
+}
+
+.header {
+    background-color: #222222!important;
+}
+
+.alert {
+    padding: .15rem 1.25rem!important;
+}
+
+.list-item {
+    margin: -1px 0 0px!important;
+}
+
+ol.breadcrumb {
+    margin: -12px 0 0px;
+}
+
+.listbullet ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.listbullet li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+.listbullet li:before {
+  content: '\2713';
+  padding-right: 5px;
+}
+
+.image-credit-wrapper {
+overflow: hidden;
+position: relative;
+max-width: 1200px;
+}
+
+.image-credit-wrapper .image-credit {
+position: absolute;
+right: 0px;
+bottom: 0px;
+}
+
+.image-credit {
+background: rgba(0,0,0,.5);
+border-top-left-radius:3px;
+color: #ccc;
+display: inline-block;
+font-size: 11px;
+font-family: helvetica;
+font-weight: 300;
+padding: 5px 8px;
+position: absolute;
+bottom: 0;
+right: 0;
+}
+
+.image-credit a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.image-credit a:hover {
+  color: #ccc;
+}
+
+h4, .h4, h5, .h5 {
+    margin-top: 15.5px;
+    margin-bottom: 5.5px;
+}
+
+.header h1 {
+  text-shadow: 1px 1px 4px rgba(34,34,34,0.6);
+}
+
+.card-header .fa {
+  transition: .3s transform ease-in-out;
+}
+.card-header .collapsed .fa {
+  transform: rotate(-180deg);
+}
+
+img.left {
+  display:inline;
+  float:left;
+  margin:5px 15px 5px 0;
+}
+
+img.right {
+  float:right;
+  margin:5px 0 5px 15px;
+}
+
+img.center {
+  display:block;
+  margin:10px
+  auto;
+}
+
+figure.image-caption {
+    text-align: center;
+    margin: 1rem;
+}
+
+figure.image-caption figcaption {
+    opacity: 0.7;
+    font-size: 90%;
+}
+
+figure.figure-right {
+    float:right;
+    margin:5px 0 5px 15px;
+}
+
+figure.figure-left {
+    float: left;
+    margin:5px 15px 5px 0;
+}
+
+figure.caption-left figcaption {
+    text-align: left;
+}
+
+figure.caption-right figcaption {
+    text-align: right;
+}
+
+.up-arrow {
+  text-align: center;
+  font-size: 4em;
+  margin-top: -10px;
+  margin-bottom: -20px;
+}
+
+.footer {
+  height: 210px!important;
+}

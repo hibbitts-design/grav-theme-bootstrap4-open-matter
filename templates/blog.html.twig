@@ -1,0 +1,105 @@
+{% if page.header.hero_image %}
+  {% set header_image_media = page.media.images[page.header.hero_image] %}
+{% else %}
+  {% set header_image_media = page.media.images|first %}
+{% endif %}
+
+{% if page.header.show_sidebar is defined %}
+  {% set show_sidebar = page.header.show_sidebar %}
+{% else %}
+  {% set show_sidebar = true %}
+{% endif %}
+
+{% embed 'partials/base.html.twig' %}
+
+    {% set collection = page.collection() %}
+
+    {% block content %}
+
+      {# check content display flag - hibbittsdesign.org #}
+      {% if not (grav.uri.param('chromeless')) and not(theme_var('chromeless.enabled')) %}
+        {# check for hero image - hibbittsdesign.org #}
+        {% if header_image_media is not empty %}
+          {% include 'partials/hero.html.twig' %}
+        {% endif %}
+      {% endif %}
+
+        <div class="main-content">
+            <div class="container">
+                <div class="row">
+                      {# check content display flag - hibbittsdesign.org #}
+                      {% if not (grav.uri.param('chromeless')) and (show_sidebar) %}
+                        <div class="col-md-8 blog-main">
+                      {% else %}
+                        <div class="col-md-12 blog-main">
+                      {% endif %}
+
+                        {% if config.plugins.breadcrumbs.enabled %}
+                            {% include 'partials/breadcrumbs.html.twig' %}
+                        {% endif %}
+
+                        {# Added reminders and preparations blocks and content check - hibbittsdesign.org #}
+                        {% if page.collection('modular_content') is not empty %}
+                          {% for module in page.collection('modular_content') %}
+                            {% if (module.content|striptags)|trim %}
+                              <p>{{ module.content }}</p>
+                            {% endif %}
+                          {% endfor %}
+                          <hr>
+                        {% endif %}
+
+                        {# Added display of featured post - hibbittsdesign.org #}
+                        {% for post in taxonomy.findTaxonomy({'tag': "featured"}) %}
+                          {% if (post.header.hide_from_post_list != true) and (post.parent.slug == page.slug) %}
+                            {% include 'partials/blog_item.html.twig' with {'page':post, 'truncate':true} %}
+                          {% endif %}
+                        {% endfor %}
+
+                        {% for child in collection %}
+                          {# Added check for hiding post in list - hibbittsdesign.org #}
+                          {% if child.header.hide_from_post_list != true %}
+                            {# Added check for not repeating feature post - hibbittsdesign.org #}
+                            {% if "featured" not in child.taxonomy['tag'] %}
+                              {% include 'partials/blog_item.html.twig' with {'page':child, 'truncate':true} %}
+                            {% endif %}
+                          {% endif %}
+                        {% endfor %}
+
+                        {# Git repository edit link - hibbittsdesign.org #}
+                        {% if ( page.header.git_sync_repo_link_display is defined and page.header.git_sync_repo_link_display == 'page' ) or (( theme_var('display_of_git_sync_repo_link') == 'page' and page.header.git_sync_repo_link_display is not defined ) and not (page.header.hide_git_sync_repo_link)) %}
+                          <br>
+                          {% include 'partials/git_sync_repo_link_note.html.twig' %}
+                        {% endif %}
+
+                    </div>
+
+                    {# Check content display flag - hibbittsdesign.org #}
+                    {% if not (grav.uri.param('chromeless')) and (show_sidebar) %}
+                      <div class="col-md-4 blog-sidebar">
+                          {% include 'partials/sidebar.html.twig' with {'blog':page} %}
+                      </div>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block pagination %}
+        {% if config.plugins.pagination.enabled and collection.params.pagination %}
+        <div class="container pagination-container">
+          <div class="row">
+              {# check content display flag - hibbittsdesign.org #}
+              {% if (not (grav.uri.param('chromeless')) and not (config.site.hidesidebaronblogpages.enabled)) and page.header.show_sidebar %}
+                <div class="col-md-8">
+              {% else %}
+                <div class="col-md-12">
+              {% endif %}
+                  {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+              </div>
+          </div>
+        </div>
+        {% endif %}
+    {% endblock %}
+
+{% endembed %}

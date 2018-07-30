@@ -1,0 +1,19 @@
+{% set crumbs = breadcrumbs.get() %}
+{% set breadcrumbs_config = config.plugins.breadcrumbs %}
+
+{% if crumbs|length > 1 or breadcrumbs_config.show_all %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            {% for crumb in crumbs %}
+                {% set active = loop.last ? 'active' : '' %}
+                <li class="breadcrumb-item {{ active }}">
+                    {%- if not loop.last or config.plugins.breadcrumbs.link_trailing -%}
+                        <a href="{{ crumb.url }}">{{ crumb.menu }}</a>
+                    {%- else -%}
+                        {{ crumb.menu }}
+                    {%- endif -%}
+                </li>
+            {% endfor %}
+        </ol>
+    </nav>
+{% endif %}

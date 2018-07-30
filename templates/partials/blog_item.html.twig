@@ -1,0 +1,178 @@
+<div class="list-item">
+
+    {% set header_image = page.header.header_image|defined(true) %}
+    {# changed default image width and height - hibbittsdesign.org #}
+    {% set header_image_width  = page.header.header_image_width|defined(1200) %}
+    {% set header_image_height = page.header.header_image_height|defined(400) %}
+    {% set header_image_file = page.header.header_image_file %}
+
+    <div class="list-blog-header">
+
+        {% if page.header.link %}
+            <h3>
+                {% if page.header.continue_link is not sameas(false) %}
+                    <a href="{{ page.url }}"><i class="fa fa-angle-double-right"></i></a>
+                {% endif %}
+                <a href="{{ page.header.link }}">{{ page.title }}</a>
+            </h3>
+        {% else %}
+        {# added page title icon - hibbittsdesign.org #}
+        {% if page.header.icon %}
+          {% set titleicon = page.header.icon %}
+        {% else %}
+          {% if config.site.icon.post %}
+            {% set titleicon = page.parent.post_icon %}
+          {% endif %}
+          {% if page.parent.header.post_icon %}
+            {% set titleicon = page.parent.header.post_icon %}
+            {% endif %}
+          {% endif %}
+          {% if not (grav.uri.param('hidepagetitle')) %}
+            <h3>
+            {% if titleicon %}
+              <class="p-name"><a href="{{ page.url }}" class="u-url"><i class="fa fa-{{ titleicon }}" aria-hidden="true"></i></a>
+            {% endif %}
+            <class="p-name"><a href="{{ page.url }}" class="u-url">{{ page.title }}</a>
+          </h3>
+        {% endif %}
+        {% endif %}
+
+        <div class="list-blog-meta my-3">
+            {% if not (page.parent.header.hide_post_date) %}
+                <span class="list-blog-date">
+                <i class="fa fa-calendar"></i> <span>{{ page.date|date("F j, Y, g:i a") }}</span>
+              </span>
+            {% endif %}
+
+            {% if not (page.parent.header.hide_post_taxonomy) %}
+              {% if page.taxonomy.tag %}
+              <span class="list-blog-tags float-right">
+                  {% for tag in page.taxonomy.tag %}
+                      <a class="badge badge-primary" href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+                  {% endfor %}
+              </span>
+              {% endif %}
+            {% endif %}
+
+        </div>
+
+        {% if big_header %}
+            {{ page.media.images|first.cropResize(1200,600).html('','blog-header-image') }}
+            {% else %}
+              {% if header_image %}
+              {% if header_image_file %}
+                {% set image_parts = pathinfo(header_image_file) %}
+                {% set image_basename = image_parts.basename %}
+                {% set image_page = image_parts.dirname == '.' ? page : page.find(image_parts.dirname) %}
+                {% set header_image_media = image_page.media[image_basename] %}
+              {% else %}
+                {% set header_image_media = page.media.images|first %}
+              {% endif %}
+
+              {# support image credit tag with optional image meta file - hibbittsdesign.org #}
+              {% if header_image_media %}
+                {% if page.header.header_image_credit %}
+                  {% set image_credit = page.header.header_image_credit %}
+                  {% set image_creditlink = page.header.header_image_creditlink %}
+                  {% set image_alt_text = page.header.header_image_alt_text %}
+                {% elseif header_image_media.meta.header_image_credit  %}
+                  {% set image_credit = header_image_media.meta.header_image_credit %}
+                  {% set image_creditlink = header_image_media.meta.header_image_creditlink %}
+                  {% set image_alt_text = header_image_media.meta.header_image_alt_text %}
+                {% endif %}
+                {% if image_credit %}
+                  <div class="image-credit-wrapper"><span class="image-credit">
+                    {% if image_creditlink %}
+                      Image: <a class="newwindow external-link" href="{{ image_creditlink }}">
+                      {{ image_credit }}</a></span>
+                      <img src="{{ header_image_media.cropZoom(header_image_width, header_image_height).url }}" alt="{{ image_alt_text }}"/>
+                    {% else %}
+                      Image: {{ image_credit }}</span>
+                      <img src="{{ header_image_media.cropZoom(header_image_width, header_image_height).url }}" alt="{{ image_alt_text }}"/>
+                    {% endif %}
+                  </div>
+                {% else %}
+                  <img src="{{ header_image_media.cropZoom(header_image_width, header_image_height).url }}" alt="{{ image_alt_text }}"/>
+                {% endif %}
+              {% endif %}
+
+              {% endif %}
+            {% endif %}
+          </div>
+
+    <div class="list-blog-padding">
+
+        {% if page.header.continue_link is sameas(false) %}
+            <p>{{ page.content }}</p>
+            {% if not truncate %}
+            {% set show_prev_next = true %}
+            {% endif %}
+        {% elseif truncate and page.summary != page.content %}
+            <p>{{ page.summary }}</p>
+            <p><a href="{{ page.url }}">View all of {{ page.title }} <i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
+            <hr>
+        {% elseif truncate %}
+            {% if page.summary != page.content %}
+                <p>{{ page.content|truncate(550) }}</p>
+            {% else %}
+                <p>{{ page.content }}</p>
+            {% endif %}
+            <p><a href="{{ page.url }}">View all of {{ page.title }} <i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
+            <hr>
+        {% else %}
+            {# check to hide post summary on page - hibbittsdesign.org #}
+            {% if page.parent.header.display_post_summary %}
+              {% set content = page.content | slice(page.summary | length) %}
+            {% else %}
+              {% set content = page.content %}
+            {% endif %}
+
+            {# check summary only flag - hibbittsdesign.org #}
+            {% if not (grav.uri.param('summaryonly')) and not (grav.uri.param('onlysummary')) %}
+              {% if content is not empty  %}
+                    <p>{{ content }}</p>
+              {% else %}
+                  <p>{{ page.summary }}</p>
+              {% endif %}
+
+              {# Creative Commons License -  hibbittsdesign.org #}
+              {% if theme_var('cc_license.enabled') and not (grav.uri.param('onlysummary')) %}
+                <p>{% include 'partials/creative_commons_license.html.twig' %}</p>
+              {% endif %}
+
+              {# Git repository edit link - hibbittsdesign.org #}
+              {% if ( page.header.git_sync_repo_link_display is defined and page.header.git_sync_repo_link_display == 'page' ) or (( theme_var('display_of_git_sync_repo_link') == 'page' and page.header.git_sync_repo_link_display is not defined ) and not (page.header.hide_git_sync_repo_link)) %}
+                <br>
+                <hr>
+                <br>
+                {% include 'partials/git_sync_repo_link_note.html.twig' %}
+                <br>
+              {% endif %}
+
+              {% set show_prev_next = true %}
+
+            {% else %}
+
+              <p>{{ page.summary }}</p>
+              <p><a class="topwindow" href="{{ page.url }}">View all of {{ page.title }} <i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
+
+          {% endif %}
+
+        {% endif %}
+
+        {# added check for content display flag - hibbittsdesign.org #}
+        {% if show_prev_next and not (grav.uri.param('chromeless')) %}
+            <p class="text-center mt-4">
+                {% if not page.isLast %}
+                    <a class="btn btn-primary" href="{{ page.prevSibling.url }}"><i class="fa fa-chevron-left"></i> Previous Post</a>
+                {% endif %}
+
+                {% if not page.isFirst %}
+                    <a class="btn btn-primary" href="{{ page.nextSibling.url }}">Next Post <i class="fa fa-chevron-right"></i></a>
+                {% endif %}
+
+            </p>
+        {% endif %}
+
+    </div>
+</div>
