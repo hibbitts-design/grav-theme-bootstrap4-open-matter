@@ -13,7 +13,7 @@ streams:
      type: ReadOnlyStream
      prefixes:
        '':
-       - user/themes/bootstrap4openmatter
+       - user/themes/bootstrap4-open-matter
        - user/themes/bootstrap4
 
 menu:
