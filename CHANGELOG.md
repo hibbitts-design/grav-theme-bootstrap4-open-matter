@@ -1,3 +1,9 @@
+# v0.9.74
+## 08/05/2018
+
+1. [](#improved)
+    * Updated default NavBar (Bootstrap4 Menubar) colour
+
 # v0.9.73
 ## 08/03/2018
 
