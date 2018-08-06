@@ -1,3 +1,9 @@
+# v0.9.75
+## 08/06/2018
+
+1. [](#improved)
+    * Updated theme screenshots
+
 # v0.9.74
 ## 08/05/2018
 
