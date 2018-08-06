@@ -1,6 +1,6 @@
 name: 'Bootstrap4 Open Matter'
 version: 0.9.75
-description: "A custom version of the Bootstrap4 theme for open course hubs and blogs. Includes Git Sync and 'chromeless' content embedding."
+description: "A custom version of the Bootstrap4 theme for open blogs, course hubs and more. Includes Git Sync and 'chromeless' content embedding."
 icon: bold
 author:
     name: 'Hibbitts Design'
