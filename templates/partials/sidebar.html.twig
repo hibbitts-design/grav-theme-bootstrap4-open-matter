@@ -3,7 +3,7 @@
 
 {% if config.plugins.simplesearch.enabled %}
 <div class="sidebar-content">
-    <h5>SimpleSearch</h5>
+    <h5>{{ 'SIDEBAR.SIMPLE_SEARCH.HEADLINE'|t }}</h5>
     {% include 'partials/simplesearch_searchbox.html.twig' %}
 </div>
 {% endif %}
@@ -16,34 +16,34 @@
 {% endif %}
 
 {% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
-    <h5>Related Posts</h5>
+    <h5>{{ 'SIDEBAR.RELATED_POSTS.HEADLINE'|t }}</h5>
     {% include 'partials/relatedpages.html.twig' %}
 {% endif %}
 
 {% if config.plugins.random.enabled %}
 <div class="sidebar-content">
-    <h5>Random Article</h5>
+    <h5>{{ 'SIDEBAR.RANDOM_ARTICLE.HEADLINE'|t }}</h5>
     <a class="btn" href="{{ base_url_relative }}/random"><i class="fa fa-retweet"></i> I'm Feeling Lucky!</a>
 </div>
 {% endif %}
 
 {% if config.plugins.taxonomylist.enabled %}
 <div class="sidebar-content">
-    <h5>Popular Tags</h5>
+    <h5>{{ 'SIDEBAR.POPULAR_TAGS.HEADLINE'|t }}</h5>
     {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
 </div>
 {% endif %}
 
 {% if config.plugins.archives.enabled %}
 <div class="sidebar-content">
-    <h5>Archives</h5>
+    <h5>{{ 'SIDEBAR.ARCHIVES.HEADLINE'|t }}</h5>
 	{% include 'partials/archives.html.twig' with {'base_url':new_base_url} %}
 </div>
 {% endif %}
 
 {% if config.plugins.feed.enabled %}
 <div class="sidebar-content">
-    <h5>Syndicate</h5>
+    <h5>{{ 'SIDEBAR.SYNDICATE.HEADLINE'|t }}</h5>
     <div class="btn-group">
         <a class="btn btn-warning" href="{{ feed_url }}.atom"><i class="fa fa-rss-square"></i> Atom 1.0</a>
         <a class="btn btn-warning" href="{{ feed_url }}.rss"><i class="fa fa-rss-square"></i> RSS</a>

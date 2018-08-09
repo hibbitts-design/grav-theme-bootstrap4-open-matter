@@ -59,7 +59,7 @@
                   {% if page.header.rss_feed_preview_paragraphs == 'two' %}
                     <p>{{ secondParagraph | striptags }}</p>
                   {% endif %}
-                  <p><a class="newwindow external-link" href="{{ item.url }}">Continue reading...</a></p><br>
+                  <p><a class="newwindow external-link" href="{{ item.url }}">{{ 'BLOG.ITEM.CONTINUE_READING'|t }}</a></p><br>
                 {% endif %}
               {% endif %}
             {% endfor %}
