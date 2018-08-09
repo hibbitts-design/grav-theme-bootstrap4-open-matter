@@ -1,3 +1,11 @@
+# v0.9.76
+## 08/09/2018
+
+1. [](#new)
+    * Added multi-language support
+1. [](#improved)
+    * Updated example pages in theme '_demo' folder
+
 # v0.9.75
 ## 08/06/2018
 
