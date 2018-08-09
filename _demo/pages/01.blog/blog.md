@@ -24,5 +24,5 @@ feed:
 pagination: true
 ---
 
-# My Gravtastic Blog
-## A tale of **awesomazing** adventures
+# My **Open Matter** Blog
+## Create, Publish, Share and Collaborate
