@@ -43,7 +43,7 @@ form:
 
             openmatter1:
                 type: section
-                title: "List Appearance"
+                title: "Appearance"
                 underline: true
 
             header.show_sidebar:
@@ -56,6 +56,16 @@ form:
                     0:                     No
                 validate:
                     type:                  bool
+
+            header.markdown_area_location:
+                type: select
+                size: small
+                classes: fancy
+                label: 'Location of Markdown Area in Sidebar'
+                default: top
+                options:
+                    top: Top
+                    bottom: Bottom
 
             header.display_post_summary:
                 type:                      toggle

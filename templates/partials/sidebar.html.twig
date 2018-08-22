@@ -8,11 +8,13 @@
 </div>
 {% endif %}
 
-{% set content = pages.find('/sidebar').content %}
-{% if content is not empty %}
-  <div class="sidebar-content">
-    {{ content }}
-  </div>
+{% if page.header.markdown_area_location == 'top' or page.header.markdown_area_location is empty %}
+  {% set content = pages.find('/sidebar').content %}
+  {% if content is not empty %}
+    <div class="sidebar-content">
+      {{ content }}
+    </div>
+  {% endif %}
 {% endif %}
 
 {% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
@@ -39,6 +41,15 @@
     <h5>{{ 'SIDEBAR.ARCHIVES.HEADLINE'|t }}</h5>
 	{% include 'partials/archives.html.twig' with {'base_url':new_base_url} %}
 </div>
+{% endif %}
+
+{% if page.header.markdown_area_location == 'bottom' %}
+  {% set content = pages.find('/sidebar').content %}
+  {% if content is not empty %}
+    <div class="sidebar-content">
+      {{ content }}
+    </div>
+  {% endif %}
 {% endif %}
 
 {% if config.plugins.feed.enabled %}
