@@ -1,3 +1,9 @@
+# v0.9.78
+## 08/22/2018
+
+1. [](#new)
+    * Added location option for Sidebar Markdown area
+
 # v0.9.77
 ## 08/18/2018
 
