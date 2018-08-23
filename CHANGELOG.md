@@ -1,3 +1,9 @@
+# v0.9.79
+## 08/22/2018
+
+1. [](#new)
+    * Moved option for Sidebar Markdown area location to Theme settings
+
 # v0.9.78
 ## 08/22/2018
 
