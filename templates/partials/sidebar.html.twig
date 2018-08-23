@@ -8,7 +8,7 @@
 </div>
 {% endif %}
 
-{% if page.header.markdown_area_location == 'top' or page.header.markdown_area_location is empty %}
+{% if theme_var('sidebar_markdown_area_location') == 'top' or theme_var('sidebar_markdown_area_location') is empty %}
   {% set content = pages.find('/sidebar').content %}
   {% if content is not empty %}
     <div class="sidebar-content">
@@ -43,7 +43,7 @@
 </div>
 {% endif %}
 
-{% if page.header.markdown_area_location == 'bottom' %}
+{% if theme_var('sidebar_markdown_area_location') == 'bottom' %}
   {% set content = pages.find('/sidebar').content %}
   {% if content is not empty %}
     <div class="sidebar-content">
