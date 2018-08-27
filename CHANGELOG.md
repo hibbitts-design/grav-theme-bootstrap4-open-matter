@@ -1,3 +1,9 @@
+# v0.9.83
+## 08/27/2018
+
+1. [](#bugfix)
+    * Removed unavailable Bootswatch theme style options
+
 # v0.9.82
 ## 08/27/2018
 
