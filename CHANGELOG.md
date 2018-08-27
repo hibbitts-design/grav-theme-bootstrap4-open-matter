@@ -1,3 +1,9 @@
+# v0.9.82
+## 08/27/2018
+
+1. [](#new)
+    * Added experimental support for Bootswatch theme styles (thanks to Ralf Geschke for the Tikva theme example)
+
 # v0.9.81
 ## 08/23/2018
 
