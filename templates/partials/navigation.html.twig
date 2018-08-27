@@ -1,5 +1,6 @@
 {% set navbar_style = theme_var('navbar_style') %}
-{% set navbar_bgcolor = theme_var('navbar_bgcolor') %}
+{% set navbar_bg = theme_var('navbar_bg') %}
+{% set navbar_bg_color = theme_var('navbar_bg_color') %}
 {% set navbar_position = theme_var('navbar_position') %}
 {% set navbar_breakpoint = theme_var('navbar_breakpoint') %}
 
@@ -8,7 +9,17 @@
   <div class="myheader" style="background-image: url({{ background_image.url }});"></div>
 {% endif %}
 
-<nav class="navbar {{ navbar_position }} navbar-expand-{{ navbar_breakpoint }} {{ navbar_style }}" style="background-color:{{ navbar_bgcolor }};" role="navigation">
+{% if navbar_bg_color %}
+    {% set navbar_bg_color = "style=\"background-color: #{navbar_bg_color}\"" %}
+    {% set navbar_bg = '' %}
+{% elseif navbar_bg and navbar_bg != 'default' %}
+    {% set navbar_bg_color = '' %}
+{% else %}
+    {% set navbar_bg = 'bg-primary' %}
+    {% set navbar_bg_color = '' %}
+{% endif %}
+
+<nav class="navbar {{ navbar_position }} navbar-expand-{{ navbar_breakpoint }} {{ navbar_style }} {{ navbar_bg }}" {{ navbar_bg_color }};" role="navigation">
     <div class="container">
         <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url_relative }}">{{ site.title|e('html') }}</a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,7 +64,6 @@
 
                   {% for mitem in theme_var('custommenu') %}
                     <li class="nav-item active" >
-                      {{ dump (mitem.target) }}
                       {% if mitem.target == "_blank" %}
                         {% set mclass = 'external-link' %}
                       {% endif %}

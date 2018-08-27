@@ -13,10 +13,15 @@
 
         {% block stylesheets %}
             {# load theme.css and custom.css files - hibbittsdesign.org #}
-            {% do assets.addCss('theme://css/theme.css',99) %}
-            {% do assets.addCss('theme://css/custom.css',100) %}
-            {% do assets.add('theme://css/font-awesome.min.css',98) %}
-            {% do assets.add('theme://css-compiled/theme.css',97) %}
+            {% if theme_var('theme_stylesheet') != 'default' %}
+              {% do assets.addCss("theme://css/bootswatch/#{ theme_var('theme_stylesheet') }/bootstrap.min.css", 100) %}
+            {% else %}
+              {% do assets.addCss('theme://css/bootstrap/bootstrap.min.css', 100) %}
+            {% endif %}
+            {% do assets.addCss('theme://css/theme.css',98) %}
+            {% do assets.addCss('theme://css/custom.css',99) %}
+            {% do assets.add('theme://css/font-awesome.min.css',97) %}
+            {% do assets.add('theme://css-compiled/theme.css',96) %}
         {% endblock %}
         {{ assets.css() }}
 

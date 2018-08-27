@@ -1,5 +1,4 @@
 navbar_style: navbar-dark
-navbar_bgcolor: '#651E49'
 navbar_position: top
 navbar_breakpoint: md
 git_sync_edit_theme_link_location: none

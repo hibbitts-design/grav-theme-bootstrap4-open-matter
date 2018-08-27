@@ -1,5 +1,5 @@
 name: 'Bootstrap4 Open Matter'
-version: 0.9.81
+version: 0.9.82
 description: "A custom version of the Bootstrap4 theme for open blogs, course hubs and more. Includes Git Sync and 'chromeless' content embedding."
 icon: bold
 author:
@@ -250,6 +250,45 @@ form:
           type: tab
           title: Bootstrap4  Options
           fields:
+
+            generaloptions:
+                type: section
+                title: 'Visual Style (Bootstrap4 CSS)'
+                underline: true
+            theme_stylesheet:
+              type: select
+              size: medium
+              classes: fancy
+              label: Theme Stylesheet
+              default: 'default'
+              options:
+                'default': "Default"
+                'cerulean': "Cerulean"
+                'cloudhouse': "Cloudhouse"
+                'cosmo': "Cosmo"
+                'csiogold': 'Csiogold'
+                'cyborg': "Cyborg"
+                'darkly': "Darkly"
+                'flatly': "Flatly"
+                'journal': "Journal"
+                'litera': "Litera"
+                'lumen': "Lumen"
+                'lux': "Lux"
+                'materia': "Materia"
+                'minty': "Minty"
+                'pulse': "Pulse"
+                'sandstone': "Sandstone"
+                'schwoblue': "Schwoblue"
+                'schwobrown': "Schwobrown"
+                'sketchy': "Sketchy"
+                'simplex': "Simplex"
+                'slate': "Slate"
+                'solar': "Solar"
+                'spacelab': "Spacelab"
+                'superhero': "Superhero"
+                'united': "United"
+                'yeti': "Yeti"
+
             menubaroptions:
                 type: section
                 title: 'NavBar (Bootstrap4 Menubar)'
@@ -262,11 +301,26 @@ form:
                 options:
                     navbar-dark: Dark
                     navbar-light: Light
-            navbar_bgcolor:
+            navbar_bg:
+              type: select
+              size: small
+              classes: fancy
+              label: NavBar Background
+              default: 'default'
+              options:
+                'default': "Default"
+                'bg-primary': "bg-primary"
+                'bg-success': "bg-success"
+                'bg-info': "bg-info"
+                'bg-warning': "bg-warning"
+                'bg-danger': "bg-danger"
+                'bg-inverse': "bg-inverse"
+                'bg-faded': "bg-faded"
+            navbar_bg_color:
                 type: colorpicker
                 label: 'NavBar Background Color'
+                description: If set, will be used for NavBar Background.
                 size: small
-                default: '#ffffff'
             navbar_position:
                 type: select
                 label: 'NavBar Postion'
