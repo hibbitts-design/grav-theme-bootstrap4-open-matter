@@ -35,7 +35,7 @@ form:
                     size: large
                     label: 'How-to Tip'
                     markdown: false
-                    content: "To display this item within another page, enter '[plugin:page-inject](/hp5-content/PAGE)' in your Markdown content area."
+                    content: "To display this item within another page, enter '[plugin:page-inject](/hp5/PAGE)' in your Markdown content area."
 
         options:
           fields:
