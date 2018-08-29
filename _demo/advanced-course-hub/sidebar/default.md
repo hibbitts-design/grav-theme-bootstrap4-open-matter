@@ -22,4 +22,5 @@ Another Name
 [Grades](https://canvas.sfu.ca/grades)  
 [Syllabus](https://canvas.sfu.ca/courses/36662/assignments/syllabus)
 
-[plugin:page-inject](/twitter-feed)
+##### Twitter Feed
+[twitter url="https://twitter.com/hibbittsdesign/lists/cpt-363" text="A Twitter list by @hibbittsdesign" height="600"]
