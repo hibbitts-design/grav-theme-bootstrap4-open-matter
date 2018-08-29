@@ -1,0 +1,131 @@
+title: Course Hub Page Options
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        options:
+          type: tab
+
+          fields:
+
+            appearance:
+                type: section
+                title: Appearance
+                underline: true
+
+            header.hide_page_title:
+                type: toggle
+                label: Display Title at top of Page
+                help: Determines if the page title is displayed at the top of a page
+                default: 0
+                highlight: 0
+                options:
+                    0:  Yes
+                    1:  No
+                validate:
+                    type: bool
+
+            header.show_sidebar:
+                type:                      toggle
+                label:                     Display Sidebar on Page
+                highlight:                 1
+                default:                   1
+                options:
+                    1:                     Yes
+                    0:                     No
+                validate:
+                    type:                  bool
+
+            gitsync:
+                type: section
+                title: Git Repository
+                underline: true
+
+            header.hide_git_sync_repo_link:
+                type: toggle
+                label: Display Git Repository Edit Page Link
+                help: Determines if the Git Repository edit Page link is displayed for this page
+                default: 0
+                highlight: 0
+                options:
+                    0:  Yes
+                    1:  No
+                validate:
+                    type: bool
+
+            header.git_sync_repo_link:
+                type: text
+                size: large
+                label: Custom Git Repository Page URL
+                help: Custom Git Repository URL for this page, to override the automatically calculated URL
+                default: null
+                validate:
+                    type: URL
+
+        rssfeed:
+          type: tab
+          title: RSS Feeds Display
+
+          fields:
+
+            rssfeeditems:
+                type: section
+                title: Display Options
+                underline: true
+
+            header.rss_feed_limit:
+              type: text
+              size: small
+              label: Max Item Count
+              default: 10
+              validate:
+                required: true
+                type: integer
+                min: 1
+
+            header.rss_feed_pagination:
+              type: toggle
+              label: Pagination
+              highlight: 1
+              default: 1
+              options:
+                1: Enabled
+                0: Disabled
+              validate:
+                type: bool
+
+            header.rss_feed_header_images:
+              type: toggle
+              label: Item Header Images
+              highlight: 1
+              default: 1
+              options:
+                1: Enabled
+                0: Disabled
+              validate:
+                type: bool
+
+            header.rss_feed_preview_paragraphs:
+              type: select
+              size: medium
+              label: Item Preview Paragraphs
+              default: one
+              options:
+                  none: None
+                  one: One (with no formating)
+                  two: Two (with no formating)
+                  all: All (including formating and images)
+
+            additional_rss_feed_info:
+                type: display
+                size: large
+                label: ''
+                markdown: true
+                content: "Note: To add or change RSS Feeds use the **Twig Feeds** Plugin"
