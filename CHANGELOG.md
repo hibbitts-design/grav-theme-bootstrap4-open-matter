@@ -1,3 +1,18 @@
+# v0.9.84
+## 08/29/2018
+
+1. [](#new)
+    * Added Twitter shortcode ([twitter url="" text="" theme="" height=""]), where theme can be 'light' or 'dark'
+    * Added PDF shortcode ([pdf url="")
+    * Added new page template and blueprint ('Page') with optional display of sidebar (replaces previous 'fullwidthpage' and 'sidebarpage' templates and blueprints)
+    * Added new HP5 page templates
+1. [](#improved)
+    * Added default favicon folder and file
+    * Added insert PDF Shortcode button into Editor toolbar
+    * Updated H5P template and blueprint files
+    * Updated Twitter feed template and blueprint files
+    * Updated example pages in theme '_demo' folder
+
 # v0.9.83
 ## 08/27/2018
 
