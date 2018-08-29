@@ -1,6 +1,7 @@
 ---
 title: 'Read Me'
 published: true
+show_sidebar: false
 ---
 
 ### Easily Publish, Share and Collaborate using the Bootstrap4 Open Matter Theme!  

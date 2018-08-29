@@ -1,6 +1,7 @@
 ---
 title: 'Modular Page'
 published: true
+show_sidebar: true
 body_classes: modular
 onpage_menu: false
 page-inject:
