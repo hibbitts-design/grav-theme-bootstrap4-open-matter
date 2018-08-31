@@ -4,6 +4,7 @@ published: true
 hide_page_title: false
 show_sidebar: true
 hide_git_sync_repo_link: false
+cache_enable: false
 ---
 
 #### [:fa-calendar: Week 1 (Sep 6 - 12)](/home/unit-01)

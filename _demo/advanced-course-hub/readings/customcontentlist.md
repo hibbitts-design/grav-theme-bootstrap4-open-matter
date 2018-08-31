@@ -13,4 +13,5 @@ hide_sidebar: false
 display_child_page_titles: true
 hide_git_sync_repo_link: true
 sidebar: true
+cache_enable: false
 ---
