@@ -1,3 +1,12 @@
+# v0.9.86
+## 08/31/2018
+
+1. [](#improved)
+    * Updated example pages in theme '_demo' folder
+    * Added templates to handle possible Atom/RSS feed issues
+    * Display Atom/RSS feed buttons only on Blog pages
+    * Added new page template to show only latest custom content item
+
 # v0.9.85
 ## 08/29/2018
 
