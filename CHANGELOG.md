@@ -1,3 +1,9 @@
+# v0.9.87
+## 08/31/2018
+
+1. [](#improved)
+    * Added additional templates to handle possible Atom/RSS feed issues
+
 # v0.9.86
 ## 08/31/2018
 
