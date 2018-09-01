@@ -1,3 +1,9 @@
+# v0.9.88
+## 09/01/2018
+
+1. [](#improved)
+    * Updated 'latest' page template to work with more page types
+
 # v0.9.87
 ## 08/31/2018
 
