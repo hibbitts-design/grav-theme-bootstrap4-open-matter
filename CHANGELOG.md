@@ -3,6 +3,7 @@
 
 1. [](#improved)
     * Revised custom content type-related template names
+    * Updated example pages in theme '_demo' folder
 
 # v0.9.88
 ## 09/01/2018
