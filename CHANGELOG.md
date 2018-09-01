@@ -1,3 +1,9 @@
+# v0.9.89
+## 09/01/2018
+
+1. [](#improved)
+    * Revised custom content type-related template names
+
 # v0.9.88
 ## 09/01/2018
 
