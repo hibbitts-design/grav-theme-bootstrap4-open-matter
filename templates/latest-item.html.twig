@@ -1,8 +1,5 @@
 {% block content %}
-
-{% for page in page.find('/all-web-picks-of-the-week').children.order('default', 'desc').slice(0, 1) %}
+{% set page = (page.find('/' ~ page.parent.slug).children.order('{page.parent.header.content.order.by}','desc').visible|first) %}
 {% set templatename = page.template ~ '.html.twig' %}
 {% include templatename with {'content' : page.content} %}
-{% endfor %}
-
 {% endblock %}
