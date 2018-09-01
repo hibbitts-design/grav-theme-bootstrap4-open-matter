@@ -1,3 +1,9 @@
+# v0.9.90
+## 09/02/2018
+
+1. [](#bugfix)
+    * Renamed blueprint for revised custom content list template name
+
 # v0.9.89
 ## 09/01/2018
 
