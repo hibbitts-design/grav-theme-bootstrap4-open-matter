@@ -3,8 +3,6 @@ title: Custom Content List
     type: default
     context: blueprints://pages
 
-child_type: embedlycard
-
 form:
   fields:
     tabs:
@@ -17,8 +15,10 @@ form:
             overrides:
               fields:
                 header.child_type:
-                  default: customcontentlist
-        requiredreadings:
+                  default: embedlycard
+                  toggleable: false
+
+        customcontentlist:
           type: tab
           title: Custom Content List
 
@@ -41,7 +41,7 @@ form:
                 asc: Ascending
                 desc: Descending
 
-            coursehub1:
+            appearance:
                 type: section
                 title: "Appearance"
                 underline: true
@@ -81,7 +81,7 @@ form:
                 validate:
                     type: bool
 
-            coursehub2:
+            gitsync:
                 type: section
                 title: Git Repository
                 underline: true
