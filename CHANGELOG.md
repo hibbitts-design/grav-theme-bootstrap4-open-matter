@@ -1,3 +1,12 @@
+# v0.9.91
+## 09/04/2018
+
+1. [](#new)
+    * Added experimental Bootstrap button Shortcode ([button url="" label="" target="" type="" size="" classes=""])
+1. [](#improved)
+    * Updated example pages in theme '_demo' folder
+    * Added placeholder 'category' and 'topic' page templates
+
 # v0.9.90
 ## 09/02/2018
 
@@ -42,8 +51,8 @@
 ## 08/29/2018
 
 1. [](#new)
-    * Added Twitter shortcode ([twitter url="" text="" theme="" height=""]), where theme can be 'light' or 'dark'
-    * Added PDF shortcode ([pdf url="")
+    * Added Twitter Shortcode ([twitter url="" text="" theme="" height=""]), where theme can be 'light' or 'dark'
+    * Added PDF Shortcode ([pdf url="")
     * Added new page template and blueprint ('Page') with optional display of sidebar (replaces previous 'fullwidthpage' and 'sidebarpage' templates and blueprints)
     * Added new HP5 page templates
 1. [](#improved)
