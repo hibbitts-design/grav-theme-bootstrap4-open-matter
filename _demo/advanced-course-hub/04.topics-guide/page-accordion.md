@@ -1,6 +1,7 @@
 ---
 title: 'UX Techniques'
 published: true
+child_type: category
 hide_page_title: false
 show_sidebar: true
 hide_git_sync_repo_link: false
@@ -12,4 +13,3 @@ content:
         dir: asc
     limit: 0
 ---
-
