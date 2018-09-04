@@ -24,7 +24,7 @@ form:
 
           fields:
 
-            coursehub1:
+            pagetitle:
                 type: section
                 title: Page Title
                 underline: true
@@ -41,7 +41,7 @@ form:
                 validate:
                     type: bool
 
-            coursehub2:
+            gitsync:
                 type: section
                 title: Git Repository
                 underline: true
