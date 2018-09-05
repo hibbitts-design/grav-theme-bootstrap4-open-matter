@@ -1,3 +1,13 @@
+# v0.9.92
+## 09/05/2018
+
+1. [](#new)
+    * Added new open course hub examples in theme '_demo' folder
+1. [](#improved)
+    * Added 'topic' as default child type to newly created 'category' pages
+    * Added 'embedlycard' as default child type to newly created 'customcontentlist' pages
+    * Revised several page blueprint section names
+
 # v0.9.91
 ## 09/04/2018
 
