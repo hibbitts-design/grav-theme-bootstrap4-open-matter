@@ -1,4 +1,10 @@
 # v0.9.92
+## 09/06/2018
+
+1. [](#improved)
+    * Decreased file size of open course hub example images in theme '_demo' folder
+
+# v0.9.92
 ## 09/05/2018
 
 1. [](#new)
