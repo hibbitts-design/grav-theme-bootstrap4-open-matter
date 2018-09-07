@@ -20,7 +20,7 @@ content:
     pagination: '9'
 hide_sidebar: false
 hide_front_edit_button: true
-display_post_summary: true
+hide_post_summary: true
 post_icon: calendar-o
 hide_post_date: true
 hide_post_taxonomy: true
