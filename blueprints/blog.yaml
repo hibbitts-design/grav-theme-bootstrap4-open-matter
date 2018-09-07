@@ -99,6 +99,18 @@ form:
                 validate:
                     type:                  bool
 
+            header.continue_link_as_button:
+                type: toggle
+                label: Display 'View all of...' Links as Buttons
+                help: Determines if 'View all of...' links are displayed as buttons
+                default: 0
+                highlight: 1
+                options:
+                    1:  Yes
+                    0:  No
+                validate:
+                    type: bool
+
             openmatter2:
                 type: section
                 title: Git Sync Link
