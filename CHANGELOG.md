@@ -4,6 +4,7 @@
 1. [](#improved)
     * Revised page Blueprints to improve wording of various options
     * Updated example pages in theme '_demo' folder
+    * Restored option to display "View all of..." links as Buttons
 
 # v0.9.94
 ## 09/06/2018
