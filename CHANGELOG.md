@@ -1,3 +1,10 @@
+# v0.9.95
+## 09/07/2018
+
+1. [](#improved)
+    * Revised page Blueprints to improve wording of various options
+    * Updated example pages in theme '_demo' folder
+
 # v0.9.94
 ## 09/06/2018
 
