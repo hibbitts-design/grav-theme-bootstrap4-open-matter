@@ -57,7 +57,7 @@ form:
                 validate:
                     type:                  bool
 
-            header.display_post_summary:
+            header.hide_post_summary:
                 type:                      toggle
                 label:                     Hide Summaries on Blog Post Pages
                 highlight:                 1

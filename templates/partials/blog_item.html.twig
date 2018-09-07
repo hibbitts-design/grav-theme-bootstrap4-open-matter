@@ -137,7 +137,7 @@
             <hr>
         {% else %}
             {# check to hide post summary on page - hibbittsdesign.org #}
-            {% if page.parent.header.display_post_summary %}
+            {% if page.parent.header.hide_post_summary %}
               {% set content = page.content | slice(page.summary | length) %}
             {% else %}
               {% set content = page.content %}
