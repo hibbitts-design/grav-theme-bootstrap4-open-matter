@@ -48,7 +48,7 @@ form:
 
             header.show_sidebar:
                 type:                      toggle
-                label:                     Display Sidebar on all Blog Pages
+                label:                     Display Sidebar on Blog Pages
                 highlight:                 1
                 default:                   1
                 options:
@@ -71,7 +71,7 @@ form:
             header.post_icon:
                 type:                      text
                 size:                      small
-                label:                     Default Blog Item Font Awesome Icon
+                label:                     Default Font Awesome Icon for Blog Items
                 description:               Short name, e.g. 'newspaper-o'.
                 help:                      Determines the default Font Awesome icon used for the blog posts.
                 validate:
@@ -101,13 +101,13 @@ form:
 
             openmatter2:
                 type: section
-                title: Git Repository
+                title: Git Sync Link
                 underline: true
 
             header.hide_git_sync_repo_link:
                 type: toggle
-                label: Display Git Repository Edit Page Link
-                help: Determines if the Git Repository edit Page link is displayed for this page
+                label: Display Git Sync Link on Blog List
+                help: Determines if a Git Sync Link is displayed on this page
                 default: 0
                 highlight: 0
                 options:
@@ -119,8 +119,8 @@ form:
             header.git_sync_repo_link:
                 type: text
                 size: large
-                label: Custom Git Repository Page URL
-                help: Custom Git Repository URL for this page, to override the automatically calculated URL
+                label: Custom Git Repository Tree URL
+                help: Custom Git Repository Tree URL for this page, to override the automatically calculated URL
                 default: null
                 validate:
                     type: URL

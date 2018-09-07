@@ -153,7 +153,7 @@ form:
 
             header.hide_from_post_list:
                 type: toggle
-                label: Include this Item in Blog List
+                label: Display this Item in Blog List
                 help: Determines if this page (i.e. post) will appear in the blog index
                 default: 0
                 highlight: 0
@@ -165,7 +165,7 @@ form:
 
             header.continue_link:
                 type: toggle
-                label: Include 'View all of...' Link with this Item
+                label: Display 'View all of...' Link with Blog Item
                 help: Determines if a 'View all of...' link is displayed for items listed in the blog index
                 default: 1
                 highlight: 1
@@ -177,13 +177,13 @@ form:
 
             openmatter3:
                 type: section
-                title: Git Repository
+                title: Git Sync Link
                 underline: true
 
             header.hide_git_sync_repo_link:
                 type: toggle
-                label: Display Git Repository Edit Page Link
-                help: Determines if the Git Repository edit Page link is displayed for this page
+                label: Display Git Sync Link on Blog Item
+                help: Determines if a Git Sync Link is displayed on this page
                 default: 0
                 highlight: 0
                 options:

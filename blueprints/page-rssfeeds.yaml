@@ -45,13 +45,13 @@ form:
 
             gitsync:
                 type: section
-                title: Git Repository
+                title: Git Sync Link
                 underline: true
 
             header.hide_git_sync_repo_link:
                 type: toggle
-                label: Display Git Repository Edit Page Link
-                help: Determines if the Git Repository edit Page link is displayed for this page
+                label: Display Git Sync Link on Page
+                help: Determines if a Git Sync Link is displayed on this page
                 default: 0
                 highlight: 0
                 options:
@@ -63,8 +63,8 @@ form:
             header.git_sync_repo_link:
                 type: text
                 size: large
-                label: Custom Git Repository Page URL
-                help: Custom Git Repository URL for this page, to override the automatically calculated URL
+                label: Custom Git Repository Tree URL
+                help: Custom Git Repository Tree URL for this page, to override the automatically calculated URL
                 default: null
                 validate:
                     type: URL
