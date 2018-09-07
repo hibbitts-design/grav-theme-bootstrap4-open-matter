@@ -8,7 +8,7 @@ published: true
 ##### Required Reading
 [plugin:page-inject](/all-readings/week-05)
 
-[Required Reading Quiz](https://sso.canvaslms.com/courses/1413912/quizzes/3212425?classes=btn,btn-primary)
+[button url="https://sso.canvaslms.com/courses/1413912/quizzes/3212425" target="_blank" label="Required Reading Quiz" type="primary" classes="external-link"]
 
 ##### Slides to be Discussed
 [Usability Testing](https://docs.google.com/viewerng/viewer?url=https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf)
