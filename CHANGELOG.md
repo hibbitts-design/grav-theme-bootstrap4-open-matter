@@ -1,3 +1,9 @@
+# v0.9.96
+## 09/07/2018
+
+1. [](#improved)
+    * Added support for display of either blog item summary or content when hiding "View all of..." links
+
 # v0.9.95
 ## 09/07/2018
 
