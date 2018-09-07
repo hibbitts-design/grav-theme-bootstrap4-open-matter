@@ -5,6 +5,7 @@
     * Revised name of page frontmatter option to hide page summaries to 'hide_post_summary'
     * Updated example pages in theme '_demo' folder
 
+# v0.9.96
 ## 09/07/2018
 
 1. [](#improved)
