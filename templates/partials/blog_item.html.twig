@@ -102,23 +102,20 @@
 
     <div class="list-blog-padding">
 
-        {% if page.header.continue_link is sameas(false) %}
-            <p>{{ page.content }}</p>
-            {% if not truncate %}
-            {% set show_prev_next = true %}
-            {% endif %}
-        {% elseif truncate and page.summary != page.content %}
+      {% if truncate and page.summary != page.content %}
             <p>{{ page.summary }}</p>
-            <p>
-              {% if page.parent.header.continue_link_as_button %}
-                <a class="btn btn-primary" href="{{ page.url }}">{{ 'BLOG.ITEM.VIEW_ALL_OF'|t }}
-              {% else %}
-                <a href="{{ page.url }}">{{ 'BLOG.ITEM.VIEW_ALL_OF'|t }}
-              {% endif %}
-              {{ page.title }}
-              <i class="fa fa-chevron-right" aria-hidden="true"></i>
-            </a>
-            </p>
+              {% if page.header.continue_link is not sameas(false) %}
+                <p>
+                {% if page.parent.header.continue_link_as_button %}
+                  <a class="btn btn-primary" href="{{ page.url }}">{{ 'BLOG.ITEM.VIEW_ALL_OF'|t }}
+                {% else %}
+                  <a href="{{ page.url }}">{{ 'BLOG.ITEM.VIEW_ALL_OF'|t }}
+                {% endif %}
+                {{ page.title }}
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+              </a>
+              </p>
+            {% endif %}
             <hr>
         {% elseif truncate %}
             {% if page.summary != page.content %}
@@ -126,7 +123,17 @@
             {% else %}
                 <p>{{ page.content }}</p>
             {% endif %}
-            <p><a href="{{ page.url }}">{{ 'BLOG.ITEM.VIEW_ALL_OF'|t }} {{ page.title }} <i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
+             {% if page.header.continue_link is not sameas(false) %}
+               <p>
+               {% if page.parent.header.continue_link_as_button %}
+                 <a class="btn btn-primary" href="{{ page.url }}">{{ 'BLOG.ITEM.VIEW_ALL_OF'|t }}
+               {% else %}
+                 <a href="{{ page.url }}">{{ 'BLOG.ITEM.VIEW_ALL_OF'|t }}
+               {% endif %}
+               {{ page.title }}
+               <i class="fa fa-chevron-right" aria-hidden="true"></i>
+              </p>
+            {% endif %}
             <hr>
         {% else %}
             {# check to hide post summary on page - hibbittsdesign.org #}
@@ -162,8 +169,18 @@
 
             {% else %}
 
-              <p>{{ page.summary }}</p>
-              <p><a class="topwindow" href="{{ page.url }}">{{ 'BLOG.ITEM.VIEW_ALL_OF'|t }} {{ page.title }} <i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
+              {% if page.header.continue_link is not sameas(false) %}
+                <p>{{ page.summary }}</p>
+                <p>
+                {% if page.parent.header.continue_link_as_button %}
+                  <a class="topwindow btn btn-primary" href="{{ page.url }}">{{ 'BLOG.ITEM.VIEW_ALL_OF'|t }}
+                {% else %}
+                  <a href="{{ page.url }}">{{ 'BLOG.ITEM.VIEW_ALL_OF'|t }}
+                {% endif %}
+                {{ page.title }}
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+              </p>
+              {% endif %}
 
           {% endif %}
 
