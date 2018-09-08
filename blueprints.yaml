@@ -1,5 +1,5 @@
 name: 'Bootstrap4 Open Matter'
-version: 0.9.97
+version: 0.9.98
 description: "A custom version of the Bootstrap4 theme for open blogs, course hubs and more. Includes Git Sync and 'chromeless' content embedding."
 icon: bold
 author:
@@ -106,8 +106,8 @@ form:
                     type: text
             git_sync_repo_link:
                 type: input.url
-                label: 'Custom Git Repository Tree URL'
-                help: 'Enter the URL that leads to the pages folder of your Git Repository.'
+                label: 'Custom Git Repository URL'
+                help: 'Enter the URL that leads to the Pages folder in your Git Repository.'
                 description: 'URL path to a Git repository up to, but not including, ''/pages'' and everything following it. For example, ''https://github.com/paulhibbitts/demo-grav-course-hub/tree/master''.'
                 validate:
                     type: URL
