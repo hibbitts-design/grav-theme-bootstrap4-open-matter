@@ -1,3 +1,9 @@
+# v0.9.99
+## 09/14/2018
+
+1. [](#improved)
+    * Adjusted page margins for smaller screens (and when embedding pages into other systems)
+
 # v0.9.98
 ## 09/08/2018
 
