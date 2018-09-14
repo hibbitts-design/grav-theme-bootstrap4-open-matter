@@ -53,6 +53,9 @@ a:focus {
   .myheader {
       height: 180px;
   }
+  .container {
+      max-width:720px;
+  }
 }
 
 @media only screen and (max-width: 576px) {
