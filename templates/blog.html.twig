@@ -17,7 +17,7 @@
     {% block content %}
 
       {# check content display flag - hibbittsdesign.org #}
-      {% if not (grav.uri.param('chromeless')) and not(theme_var('chromeless.enabled')) %}
+      {% if not (grav.uri.param('chromeless') or grav.uri.param('embedded')) and not(theme_var('chromeless.enabled')) %}
         {# check for hero image - hibbittsdesign.org #}
         {% if header_image_media is not empty %}
           {% include 'partials/hero.html.twig' %}
@@ -28,7 +28,7 @@
             <div class="container">
                 <div class="row">
                       {# check content display flag - hibbittsdesign.org #}
-                      {% if not (grav.uri.param('chromeless')) and (show_sidebar) %}
+                      {% if not (grav.uri.param('chromeless') or grav.uri.param('embedded')) and not(theme_var('chromeless.enabled')) and (show_sidebar) %}
                         <div class="col-md-8 blog-main">
                       {% else %}
                         <div class="col-md-12 blog-main">
@@ -74,7 +74,7 @@
                     </div>
 
                     {# Check content display flag - hibbittsdesign.org #}
-                    {% if not (grav.uri.param('chromeless')) and (show_sidebar) %}
+                    {% if not (grav.uri.param('chromeless') or grav.uri.param('embedded')) and not(theme_var('chromeless.enabled')) and (show_sidebar) %}
                       <div class="col-md-4 blog-sidebar">
                           {% include 'partials/sidebar.html.twig' with {'blog':page} %}
                       </div>
@@ -90,7 +90,7 @@
         <div class="container pagination-container">
           <div class="row">
               {# check content display flag - hibbittsdesign.org #}
-              {% if (not (grav.uri.param('chromeless')) and not (config.site.hidesidebaronblogpages.enabled)) and page.header.show_sidebar %}
+              {% if (not (grav.uri.param('chromeless') or grav.uri.param('embedded')) and not (config.site.hidesidebaronblogpages.enabled)) and page.header.show_sidebar %}
                 <div class="col-md-8">
               {% else %}
                 <div class="col-md-12">

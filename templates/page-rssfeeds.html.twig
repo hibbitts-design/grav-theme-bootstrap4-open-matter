@@ -11,7 +11,7 @@
     <div class="container">
       <div class="row">
         {# check content display flag - hibbittsdesign.org #}
-        {% if show_sidebar and not (grav.uri.param('chromeless') or theme_var('chromeless.enabled')) %}
+        {% if show_sidebar and not (grav.uri.param('chromeless') or grav.uri.param('embedded') or theme_var('chromeless.enabled')) %}
           <div class="col-md-8 blog-main">
         {% else %}
           <div class="col-md-12 blog-main">
@@ -144,7 +144,7 @@
         {% endif %}
         </div>
         {# check content display flag - hibbittsdesign.org #}
-        {% if show_sidebar and not (grav.uri.param('chromeless') or theme_var('chromeless.enabled')) %}
+        {% if show_sidebar and not (grav.uri.param('chromeless') or grav.uri.param('embedded') or theme_var('chromeless.enabled')) %}
           <div class="col-md-4 blog-sidebar">
             {% include 'partials/sidebar.html.twig' with {'blog':page} %}
           </div>
