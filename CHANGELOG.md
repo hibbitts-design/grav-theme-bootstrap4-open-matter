@@ -1,3 +1,13 @@
+# v1.0.0
+## 09/24/2018
+
+1. [](#new)
+    * Added the experimental alias 'embedded' for 'chromeless' as a URL parameter (i.e. https://demo.hibbittsdesign.org/grav-open-matter-course-hub/embedded:true is the same as https://demo.hibbittsdesign.org/grav-open-matter-course-hub/chromeless:true)
+1. [](#improved)
+    * Revised UI text for the site-wide 'chromeless' setting to better relate to the new\ experimental 'embedded' alias
+    * Improved checks for the site-wide 'chromeless' setting
+    * Updated example pages in theme '_demo' folder
+
 # v0.9.99
 ## 09/14/2018
 

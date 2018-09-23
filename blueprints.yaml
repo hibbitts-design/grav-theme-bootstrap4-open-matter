@@ -1,5 +1,5 @@
 name: 'Bootstrap4 Open Matter'
-version: 0.9.99
+version: 1.0.0
 description: "A custom version of the Bootstrap4 theme for open blogs, course hubs and more. Includes Git Sync and 'chromeless' content embedding."
 icon: bold
 author:
@@ -55,7 +55,7 @@ form:
 
             chromelessoptions:
                 type: section
-                title: 'Chromeless Site'
+                title: 'Chromeless Site (i.e. Embedded)'
                 underline: true
             chromeless.enabled:
                 type: toggle
