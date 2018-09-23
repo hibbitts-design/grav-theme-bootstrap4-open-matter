@@ -1,5 +1,5 @@
 # v1.0.0
-## 09/24/2018
+## 09/23/2018
 
 1. [](#new)
     * Added the experimental alias 'embedded' for 'chromeless' as a URL parameter (i.e. https://demo.hibbittsdesign.org/grav-open-matter-course-hub/embedded:true is the same as https://demo.hibbittsdesign.org/grav-open-matter-course-hub/chromeless:true)
