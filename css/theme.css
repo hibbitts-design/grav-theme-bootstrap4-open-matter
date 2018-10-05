@@ -151,6 +151,11 @@ h4, .h4, h5, .h5 {
   transform: rotate(-180deg);
 }
 
+.blog-sidebar .nav-link {
+    display: block;
+    padding: .5rem 0rem;
+}
+
 img.left {
   display:inline;
   float:left;
