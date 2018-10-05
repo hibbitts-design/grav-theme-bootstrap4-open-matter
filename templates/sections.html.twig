@@ -14,14 +14,29 @@
   {% endif %}
 {% endif %}
 
+{% if page.header.sections_nav_align is defined %}
+  {% set sections_nav_align = page.header.sections_nav_align %}
+{% else %}
+  {% if page.parent.header.sections_nav_align is defined %}
+    {% set sections_nav_align = page.parent.header.sections_nav_align %}
+  {% else %}
+    {% if page.parent.parent.header.sections_nav_align is defined %}
+      {% set sections_nav_align = page.parent.parent.header.sections_nav_align %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+
 {% block content %}
 
   <div class="main-content">
     <div class="container">
       <div class="row">
-        {# check content display flag - hibbittsdesign.org #}
-        <div class="col-md-3 blog-sidebar">
 
+      {% if sections_nav_align == 'right' %}
+        <div class="col-md-3 blog-sidebar order-last">
+      {% else %}
+        <div class="col-md-3 blog-sidebar">
+      {% endif %}
 
         <ul class="nav flex-column">
 
