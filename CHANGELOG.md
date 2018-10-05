@@ -1,3 +1,9 @@
+# v1.0.3
+## 10/05/2018
+
+1. [](#improved)
+    * Restored the display of a Creative Commons License and Git Sync links on section-type pages
+
 # v1.0.2
 ## 10/05/2018
 
