@@ -1,3 +1,9 @@
+# v1.0.4
+## 10/06/2018
+
+1. [](#bugfix)
+    * Fixed current page check in section nav
+
 # v1.0.3
 ## 10/05/2018
 
