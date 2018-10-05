@@ -1,3 +1,11 @@
+# v1.0.5
+## 10/06/2018
+
+1. [](#new)
+    * Added blueprints for section-type pages
+1. [](#improved)
+    * Revised visual styling of active page indicator in sections nav
+
 # v1.0.4
 ## 10/06/2018
 
