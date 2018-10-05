@@ -50,7 +50,7 @@
         {% for p in collection %}
 
           <li class="nav-item">
-            {% set current_parent = p.active ? 'disabled' : '' %}
+            {% set current_parent = p.active ? 'active' : '' %}
             <a class="nav-link {{ current_parent }}" href="{{ p.url }}">{{ p.title }}</a>
           </li>
 
@@ -59,7 +59,7 @@
             {% if p.active or (p.slug == page.parent.slug) %}
               <ul class="nav flex-column ml-3">
               {% for child in p.children %}
-                {% set current_child = child.active ? 'disabled' : '' %}
+                {% set current_child = child.active ? 'active' : '' %}
                 <li class="nav-item">
                   <a class="nav-link {{ current_child }}" href="{{ child.url }}">{{ child.title }}</a>
                 </li>
