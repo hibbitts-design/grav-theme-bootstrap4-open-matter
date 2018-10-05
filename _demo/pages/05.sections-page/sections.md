@@ -1,7 +1,8 @@
 ---
 title: 'Sections Page'
-published: false
+published: true
 show_sidebar: false
+sections_nav_align: left
 content:
     items: '@self.children'
     order:
