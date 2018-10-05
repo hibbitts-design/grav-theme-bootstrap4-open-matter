@@ -54,7 +54,7 @@
             <a class="nav-link {{ current_parent }}" href="{{ p.url }}">{{ p.title }}</a>
           </li>
 
-          {% if page.children %}
+          {% if p.children.count != 0 %}
 
             {% if p.active or (p.slug == page.parent.slug) %}
               <ul class="nav flex-column ml-3">
@@ -141,7 +141,7 @@
           {% include 'partials/git_sync_repo_link_note.html.twig' %}
           <br>
         {% endif %}
-        
+
     </div>
 
       {# check content display flag - hibbittsdesign.org #}
