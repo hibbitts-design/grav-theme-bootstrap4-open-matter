@@ -1,3 +1,13 @@
+# v1.0.6
+## 10/07/2018
+
+1. [](#new)
+    * Added blueprints for section-type pages
+1. [](#improved)
+    * Revised visual styling of active page indicator in sections nav
+    * Adjusted page title alignment for section-type pages
+    * Updated demo pages in theme '_demo' folder
+
 # v1.0.5
 ## 10/06/2018
 
