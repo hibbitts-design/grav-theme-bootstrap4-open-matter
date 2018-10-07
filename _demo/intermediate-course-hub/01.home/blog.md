@@ -11,7 +11,6 @@ content:
         dir: desc
     pagination: '9'
 hide_sidebar: false
-hide_front_edit_button: true
 hide_post_summary: true
 post_icon: calendar-o
 hide_post_date: true
