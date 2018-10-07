@@ -17,7 +17,6 @@ hide_post_date: true
 hide_post_taxonomy: true
 hide_git_sync_repo_link: false
 continue_link_as_button: false
-hide_blog_sidebar: false
 modular_content:
     items: '@self.modular'
     order:
