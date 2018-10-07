@@ -25,7 +25,7 @@ modular_content:
         by: folder
         dir: dsc
 feed:
-    description: 'Course Hub for CMPT 363 User Interface Design at Simon Fraser University'
+    description: 'Grav CMS Open Matter Course Hub Description'
     limit: 10
 protectEdit: true
 ---

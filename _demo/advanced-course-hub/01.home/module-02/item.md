@@ -21,8 +21,8 @@ hide_git_sync_repo_link: true
 ##### Presented Slides  
 [plugin:page-inject](/all-slides/week-02)
 
-##### CMPT-363 UX Design Process/Toolkit
-![CMPT-363 UX Design Process/Toolkit Diagram](/images/ux-design-process-v4.png)
+##### CPT-363 UX Design Process/Toolkit
+![CPT-363 UX Design Process/Toolkit Diagram](/images/ux-design-process-v4.png)
 
 ##### Handouts
 [Product Reaction Cards](https://sso.canvaslms.com/courses/1413912/files/folder/Handouts/Product%20Reaction%20Cards)  
