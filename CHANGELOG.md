@@ -1,3 +1,10 @@
+# v1.0.7
+## 10/08/2018
+
+1. [](#improved)
+    * Removed dashes from all template and blueprint names
+    * Updated example pages in theme '_demo' folder
+
 # v1.0.6
 ## 10/07/2018
 
