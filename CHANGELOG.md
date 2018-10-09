@@ -1,3 +1,11 @@
+# v1.0.9
+## 10/09/2018
+
+1. [](#improved)
+    * Updated example pages in theme '_demo' folder
+1. [](#bugfix)
+    * Restored check for option to hide Git Sync link in menu
+
 # v1.0.8
 ## 10/08/2018
 
