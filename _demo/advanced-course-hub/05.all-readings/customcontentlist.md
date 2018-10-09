@@ -9,7 +9,7 @@ content:
         dir: asc
     items: '@self.children'
     limit: 0
-hide_sidebar: false
+show_sidebar: true
 hide_git_sync_repo_link: true
 display_child_page_titles: true
 sidebar: true

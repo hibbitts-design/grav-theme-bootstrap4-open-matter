@@ -9,7 +9,7 @@ content:
         dir: asc
     items: '@self.children'
     limit: 0
-hide_sidebar: false
+show_sidebar: true
 display_child_page_titles: true
 display_content_titles: false
 display_content_links: false
