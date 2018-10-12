@@ -1,3 +1,11 @@
+# v1.1.0
+## 10/12/2018
+
+1. [](#new)
+    * Added support for optional text string filter for display of RSS items
+1. [](#improved)
+    * Updated example pages in theme '_demo' folder
+
 # v1.0.9
 ## 10/09/2018
 
