@@ -77,7 +77,7 @@
             {% endif %}
           {% endfor %}
 
-          {% if page.header.rss_feed_pagination %}
+          {% if page.header.rss_feed_pagination is defined %}
             {% set rssfeedpagination = page.header.rss_feed_pagination %}
           {% else %}
             {% set rssfeedpagination = true %}
