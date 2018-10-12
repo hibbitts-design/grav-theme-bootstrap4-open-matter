@@ -1,3 +1,9 @@
+# v1.1.1
+## 10/12/2018
+
+1. [](#bugfix)
+    * Corrected check to hide or show RSS feed pagination controls
+
 # v1.1.0
 ## 10/12/2018
 
