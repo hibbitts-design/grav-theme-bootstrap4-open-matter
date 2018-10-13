@@ -126,7 +126,7 @@ form:
             header.rss_feed_text_filter:
               type: text
               size: medium
-              label: Item Text Filter
+              label: Item Content Text Filter
               description: Optional text string required for item display.
 
             additional_rss_feed_info:
