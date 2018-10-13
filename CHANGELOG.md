@@ -1,3 +1,9 @@
+# v1.1.2
+## 10/13/2018
+
+1. [](#improved)
+    * Added support for pagination controls when a text string filter for display of RSS items is used 
+
 # v1.1.1
 ## 10/12/2018
 
