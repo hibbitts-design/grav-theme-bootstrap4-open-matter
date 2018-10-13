@@ -28,10 +28,12 @@
           {% set feed_items = [] %}
           {% for name, feed in twig_feeds %}
             {% for item in feed.items %}
-              {% set index = index + 1 %}
-              {% set item = item|merge({ 'retrievedTitle': feed.title }) %}
-              {% set item = item|merge({ 'sortDate': item.date.date }) %}
-              {% set feed_items = feed_items|merge({ (index): (item) }) %}
+              {% if (page.header.rss_feed_text_filter is defined) and (item.content|contains(page.header.rss_feed_text_filter)) or (page.header.rss_feed_text_filter is empty) %}
+                {% set index = index + 1 %}
+                {% set item = item|merge({ 'retrievedTitle': feed.title }) %}
+                {% set item = item|merge({ 'sortDate': item.date.date }) %}
+                {% set feed_items = feed_items|merge({ (index): (item) }) %}
+              {% endif %}
             {% endfor %}
           {% endfor %}
 
@@ -52,27 +54,25 @@
           {{ page.content }}
 
           {% for index, item in feed_items|sort_by_key('sortDate')|reverse|slice(start, perPage) %}
-            {% if (page.header.rss_feed_text_filter is defined) and (item.content|contains(page.header.rss_feed_text_filter)) or (page.header.rss_feed_text_filter is empty) %}
-              <h4>
-              <a class="newwindow external-link" href="{{ item.url }}">{{ item.title }}</a>
-              </h4>
-              <time>{{ item.date.date|date("m/d/Y") }}</time>, {{ item.retrievedTitle }}
-              {% if page.header.rss_feed_header_images and not (page.header.rss_feed_preview_paragraphs == 'all') %}
-                <p>{{ item.content|preg_get('/(<img(?:(\s*(class)\s*=\s*\x22([^\x22]+)\x22*)+|[^>]+?)*>)/') }}</p>
+            <h4>
+            <a class="newwindow external-link" href="{{ item.url }}">{{ item.title }}</a>
+            </h4>
+            <time>{{ item.date.date|date("m/d/Y") }}</time>, {{ item.retrievedTitle }}
+            {% if page.header.rss_feed_header_images and not (page.header.rss_feed_preview_paragraphs == 'all') %}
+              <p>{{ item.content|preg_get('/(<img(?:(\s*(class)\s*=\s*\x22([^\x22]+)\x22*)+|[^>]+?)*>)/') }}</p>
+            {% endif %}
+            {% set paragraphs = item.content | split('</p>') %}
+            {% set firstParagraph = paragraphs[0] ~ '</p>' %}
+            {% set secondParagraph = paragraphs[1] ~ '</p>' %}
+            {% if not (page.header.rss_feed_preview_paragraphs == 'none') %}
+              {% if page.header.rss_feed_preview_paragraphs == 'all' %}
+                {{ item.content }}
+              {% else %}
+                <p>{{ firstParagraph | striptags }}</p>
+                {% if page.header.rss_feed_preview_paragraphs == 'two' %}
+                <p>{{ secondParagraph | striptags }}</p>
               {% endif %}
-              {% set paragraphs = item.content | split('</p>') %}
-              {% set firstParagraph = paragraphs[0] ~ '</p>' %}
-              {% set secondParagraph = paragraphs[1] ~ '</p>' %}
-              {% if not (page.header.rss_feed_preview_paragraphs == 'none') %}
-                {% if page.header.rss_feed_preview_paragraphs == 'all' %}
-                  {{ item.content }}
-                {% else %}
-                  <p>{{ firstParagraph | striptags }}</p>
-                  {% if page.header.rss_feed_preview_paragraphs == 'two' %}
-                  <p>{{ secondParagraph | striptags }}</p>
-                {% endif %}
-                  <p><a class="newwindow external-link" href="{{ item.url }}">{{ 'BLOG.ITEM.CONTINUE_READING'|t }}</a></p><br>
-                {% endif %}
+                <p><a class="newwindow external-link" href="{{ item.url }}">{{ 'BLOG.ITEM.CONTINUE_READING'|t }}</a></p><br>
               {% endif %}
             {% endif %}
           {% endfor %}
