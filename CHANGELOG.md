@@ -1,3 +1,10 @@
+# v1.1.4
+## 10/14/2018
+
+1. [](#improved)
+    * Adjusted Font Awesome icon spacing
+    * Updated example pages in theme '_demo' folder
+
 # v1.1.3
 ## 10/14/2018
 
