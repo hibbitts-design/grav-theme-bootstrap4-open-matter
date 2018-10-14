@@ -12,5 +12,5 @@ Instructor design reviews in TASC 1 8003, no regular class.
 
 Instructor design reviews in TASC 1 8003, no regular class.
 
-##### Required Reading  
+### Required Reading  
 [plugin:page-inject](/all-readings/week-12)

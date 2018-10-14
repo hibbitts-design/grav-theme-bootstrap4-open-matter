@@ -8,5 +8,5 @@ hide_git_sync_repo_link: true
 
 Instructor user research review meetings in TASC 1 8003, no regular class.  
 
-##### Required Reading  
+### Required Reading  
 None assigned.
