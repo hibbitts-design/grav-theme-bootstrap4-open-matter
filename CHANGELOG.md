@@ -2,7 +2,7 @@
 ## 10/14/2018
 
 1. [](#improved)
-    * Various accessibility improvements (update may require changing header levels used in pages, i.e. h5 to h2 etc.)
+    * Various accessibility improvements related to headings, contrast, and link text (update may require changing header levels used in pages, i.e. h5 to h2 etc.)
     * Updated example pages in theme '_demo' folder
 
 # v1.1.2
