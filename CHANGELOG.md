@@ -1,8 +1,15 @@
+# v1.1.3
+## 10/14/2018
+
+1. [](#improved)
+    * Various accessibility (a11y) improvements
+    * Updated example pages in theme '_demo' folder
+
 # v1.1.2
 ## 10/13/2018
 
 1. [](#improved)
-    * Added support for pagination controls when a text string filter for display of RSS items is used 
+    * Added support for pagination controls when a text string filter for display of RSS items is used
 
 # v1.1.1
 ## 10/12/2018

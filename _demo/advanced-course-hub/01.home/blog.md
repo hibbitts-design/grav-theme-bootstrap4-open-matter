@@ -9,14 +9,15 @@ content:
     order:
         by: date
         dir: desc
-    pagination: '9'
-hide_front_edit_button: true
+hero_scroll: false
+show_sidebar: true
 hide_post_summary: true
 post_icon: calendar-o
 hide_post_date: true
 hide_post_taxonomy: true
-hide_git_sync_repo_link: false
 continue_link_as_button: false
+hide_git_sync_repo_link: false
+hide_front_edit_button: true
 modular_content:
     items: '@self.modular'
     order:
@@ -26,4 +27,5 @@ feed:
     description: 'Grav CMS Open Matter Course Hub Description'
     limit: 10
 protectEdit: true
+hide_page_title: true
 ---

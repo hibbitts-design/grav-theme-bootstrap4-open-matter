@@ -5,7 +5,7 @@ visible: false
 position: top
 ---
 
-##### Markdown Area
+## Markdown Area
 
 Some text here.
 

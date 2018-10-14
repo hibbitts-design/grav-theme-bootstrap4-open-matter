@@ -46,6 +46,18 @@ form:
                 title: "Appearance"
                 underline: true
 
+            header.hide_page_title:
+                type: toggle
+                label: Display Title at top of Page
+                help: Determines if the page title is displayed at the top of a page
+                default: 0
+                highlight: 0
+                options:
+                    0:  Yes
+                    1:  No
+                validate:
+                    type: bool
+
             header.show_sidebar:
                 type:                      toggle
                 label:                     Display Sidebar on Blog Pages

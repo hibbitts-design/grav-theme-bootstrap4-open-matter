@@ -9,12 +9,11 @@
     <div class="list-blog-header">
 
         {% if page.header.link %}
-            <h3>
-                {% if page.header.continue_link is not sameas(false) %}
-                    <a href="{{ page.url }}"><i class="fa fa-angle-double-right"></i></a>
-                {% endif %}
-                <a href="{{ page.header.link }}">{{ page.title }}</a>
-            </h3>
+            <h2>
+              {% if page.header.continue_link is not sameas(false) %}
+                  <a href="{{ page.header.link }}"><i class="fa fa-angle-double-right"></i>{{ page.title }}</a>
+              {% endif %}            
+            </h2>
         {% else %}
         {# added page title icon - hibbittsdesign.org #}
         {% if page.header.icon %}
@@ -28,12 +27,13 @@
             {% endif %}
           {% endif %}
           {% if not (grav.uri.param('hidepagetitle')) %}
-            <h3>
+            <h1>
             {% if titleicon %}
-              <class="p-name"><a href="{{ page.url }}" class="u-url"><i class="fa fa-{{ titleicon }}" aria-hidden="true"></i></a>
+              <class="p-name"><a href="{{ page.url }}" class="u-url"><i class="fa fa-{{ titleicon }}"></i>{{ page.title }}</a>
+            {% else %}
+              <class="p-name"><a href="{{ page.url }}" class="u-url">{{ page.title }}</a>
             {% endif %}
-            <class="p-name"><a href="{{ page.url }}" class="u-url">{{ page.title }}</a>
-          </h3>
+          </h1>
         {% endif %}
         {% endif %}
 
@@ -111,8 +111,7 @@
                 {% else %}
                   <a href="{{ page.url }}">{{ 'BLOG.ITEM.VIEW_ALL_OF'|t }}
                 {% endif %}
-                {{ page.title }}
-                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                {{ page.title }}<i class="fa fa-chevron-right" aria-hidden="true"></i>
               </a>
               </p>
             {% endif %}
@@ -123,15 +122,14 @@
             {% else %}
                 <p>{{ page.content }}</p>
             {% endif %}
-             {% if page.header.continue_link is not sameas(false) %}
-               <p>
+            {% if page.header.continue_link is not sameas(false) %}
+              <p>
                {% if page.parent.header.continue_link_as_button %}
                  <a class="btn btn-primary" href="{{ page.url }}">{{ 'BLOG.ITEM.VIEW_ALL_OF'|t }}
                {% else %}
                  <a href="{{ page.url }}">{{ 'BLOG.ITEM.VIEW_ALL_OF'|t }}
                {% endif %}
-               {{ page.title }}
-               <i class="fa fa-chevron-right" aria-hidden="true"></i>
+               {{ page.title }}<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
               </p>
             {% endif %}
             <hr>

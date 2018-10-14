@@ -18,8 +18,11 @@
         {% endif %}
 
         {% if not (page.header.hide_page_title) and not (grav.uri.param('hidepagetitle')) %}
-          <h3>{{page.title}}</h3>
+          <h1>{{page.title}}</h1>
+        {% else %}
+          <h1 class="hidden">{{page.title}}</h1>
         {% endif %}
+        
         {{ page.content }}
         {% set collection = page.collection() %}
         {% if page.header.display_template %}
