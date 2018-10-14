@@ -1,6 +1,8 @@
 # v1.1.4
 ## 10/14/2018
 
+1. [](#new)
+    * Added Grava11y (Accessibility for Grav) Plugin as dependency
 1. [](#improved)
     * Adjusted Font Awesome icon spacing
     * Updated example pages in theme '_demo' folder
