@@ -1,4 +1,9 @@
-# v1.1.4
+# v1.1.5
+## 10/14/2018
+
+1. [](#bugfix)
+    * Corrected filename for Grava11y (Accessibility for Grav) Plugin
+
 ## 10/14/2018
 
 1. [](#new)
