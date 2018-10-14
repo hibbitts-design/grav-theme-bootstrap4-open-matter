@@ -25,7 +25,7 @@ dependencies:
   - feed
   - form
   - git-sync
-  - grav11y
+  - grava11y
   - image-captions
   - login
   - markdown-fontawesome
