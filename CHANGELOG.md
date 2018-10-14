@@ -2,7 +2,7 @@
 ## 10/14/2018
 
 1. [](#improved)
-    * Various accessibility (a11y) improvements
+    * Various accessibility improvements (update may require changing header levels used in pages, i.e. h5 to h2 etc.)
     * Updated example pages in theme '_demo' folder
 
 # v1.1.2
