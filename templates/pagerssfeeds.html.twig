@@ -54,9 +54,9 @@
           {{ page.content }}
 
           {% for index, item in feed_items|sort_by_key('sortDate')|reverse|slice(start, perPage) %}
-            <h4>
+            <h2>
             <a class="newwindow external-link" href="{{ item.url }}">{{ item.title }}</a>
-            </h4>
+            </h2>
             <time>{{ item.date.date|date("m/d/Y") }}</time>, {{ item.retrievedTitle }}
             {% if page.header.rss_feed_header_images and not (page.header.rss_feed_preview_paragraphs == 'all') %}
               <p>{{ item.content|preg_get('/(<img(?:(\s*(class)\s*=\s*\x22([^\x22]+)\x22*)+|[^>]+?)*>)/') }}</p>
