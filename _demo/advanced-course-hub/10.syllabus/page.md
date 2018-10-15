@@ -6,12 +6,12 @@ show_sidebar: false
 hide_git_sync_repo_link: false
 ---
 
-##### Course Description
+## Course Description
 In this course we will explore the art and science of designing usable, useful and enjoyable human-computer interfaces, with an emphasis on user-centered design techniques. The importance and necessity of effective interaction design techniques will be highlighted, and current design methodologies and principles across multiple platforms will be discussed. Students will gain valuable knowledge and experience by working in groups on a term-long design project.
 
 _Effectively working in a team and both verbal and written communication skills are essential to do well in this course._
 
-##### Course Objectives
+## Course Objectives
 * Describe and apply key UI/UX concepts, techniques, and principles
 * Assess and describe the usability and UX of a digital interface
 * Plan, conduct, and analyze user research for a digital product
@@ -20,7 +20,7 @@ _Effectively working in a team and both verbal and written communication skills 
 * Participate and contribute as a member of a team
 * Care about how people feel about and experience technology
 
-##### Topic Schedule
+## Topic Schedule
 1. What is usability and user experience design?
 1. What does a holistic user experience design process look like?
 1. How to make more strategic design decisions?
@@ -32,7 +32,7 @@ _Effectively working in a team and both verbal and written communication skills 
 1. How to design for mobile and multi-device usage?
 1. What are the essentials of effective visual communication?
 
-##### Course Assignments (tentative)
+## Course Assignments (tentative)
 Individual (46%)
 * Weekly Reading Quizzes: 6%
 * Usability Inspection (including required peer reviews): 25%
@@ -47,5 +47,5 @@ Team (54%)
 
 Reading quizzes must be submitted no later than 10:00am class day - no exceptions. Late assignments will not be accepted without valid documentation (e.g. medical certificate).
 
-##### Required Textbook
+## Required Textbook
 Are you kidding me, in 2017? All required readings will be available on-line.   
