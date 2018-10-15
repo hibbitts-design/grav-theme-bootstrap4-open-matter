@@ -1,3 +1,9 @@
+# v1.1.7
+## 10/15/2018
+
+1. [](#bugfix)
+    * Corrected Header level for RSS Page item titles
+
 # v1.1.6
 ## 10/15/2018
 
