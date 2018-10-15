@@ -1,3 +1,9 @@
+# v1.1.8
+## 10/16/2018
+
+1. [](#bugfix)
+    * Updated example pages in theme '_demo' folder
+
 # v1.1.7
 ## 10/15/2018
 
