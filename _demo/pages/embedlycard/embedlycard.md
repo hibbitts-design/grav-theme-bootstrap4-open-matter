@@ -7,4 +7,4 @@ published: false
 visible: false
 ---
 
-#### Example Embed.ly Card
+## Example Embed.ly Card
