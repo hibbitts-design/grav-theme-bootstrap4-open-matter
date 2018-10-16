@@ -10,6 +10,7 @@ content:
     pagination: '1'
 hero_classes: hero-large
 hero_scroll: false
+hide_page_title: true
 show_sidebar: true
 hide_post_summary: false
 hide_post_date: false
