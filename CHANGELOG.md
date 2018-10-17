@@ -1,3 +1,11 @@
+# v1.2.1
+## 10/17/2018
+
+1. [](#improved)
+    * Updated example pages in theme '_demo' folder
+1. [](#bugfix)
+    * Fixed blueprint site theme files Git Sync link option
+
 # v1.2.0
 ## 10/17/2018
 
