@@ -1,3 +1,9 @@
+# v1.2.0
+## 10/17/2018
+
+1. [](#improved)
+    * Updated display of site theme files Git Sync link
+
 # v1.1.9
 ## 10/16/2018
 
