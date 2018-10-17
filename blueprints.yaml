@@ -1,5 +1,5 @@
 name: 'Bootstrap4 Open Matter'
-version: 1.2.0
+version: 1.2.1
 description: "A custom version of the Bootstrap4 theme for open blogs, course hubs and more. Includes Git Sync and 'chromeless' content embedding."
 icon: bold
 author:
@@ -125,7 +125,7 @@ form:
             git_sync_edit_theme_link_location:
                 type: select
                 label: 'Location of Site Theme Files Link'
-                default: None
+                default: none
                 size: small
                 options:
                     footer: Footer
