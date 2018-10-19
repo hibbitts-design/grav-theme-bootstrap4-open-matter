@@ -1,3 +1,9 @@
+# v1.2.2
+## 10/19/2018
+
+1. [](#improved)
+    * Improved accessibility when displaying blog items in 'chromeless' mode and hiding page title
+
 # v1.2.1
 ## 10/17/2018
 
