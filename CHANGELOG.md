@@ -1,3 +1,9 @@
+# v1.2.3
+## 10/21/2018
+
+1. [](#improved)
+    * Updated example pages in theme '_demo' folder
+
 # v1.2.2
 ## 10/19/2018
 
@@ -21,13 +27,13 @@
 # v1.1.9
 ## 10/16/2018
 
-1. [](#bugfix)
+1. [](#improved)
     * Updated example pages in theme '_demo' folder
 
 # v1.1.8
 ## 10/16/2018
 
-1. [](#bugfix)
+1. [](#improved)
     * Updated example pages in theme '_demo' folder
 
 # v1.1.7
