@@ -5,4 +5,5 @@ embedly_card_alignment: left
 embedly_card_url: 'https://www.uxmatters.com/mt/archives/2014/06/an-overview-of-expert-heuristic-evaluations.php'
 published: true
 visible: false
+cache_enable: false
 ---

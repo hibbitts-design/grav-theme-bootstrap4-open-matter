@@ -7,4 +7,5 @@ published: true
 visible: true
 embedly_card_display: false
 date: '06-06-2018 00:00'
+cache_enable: false
 ---

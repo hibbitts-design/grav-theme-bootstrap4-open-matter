@@ -1,7 +1,6 @@
 ---
 title: 'Home in LMS'
 show_sidebar: false
-cache_enable: false
 visible: false
 hide_front_edit_button: true
 page-inject:

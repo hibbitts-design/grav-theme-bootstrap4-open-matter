@@ -6,4 +6,5 @@ embedly_card_url: 'https://medium.com/swlh/first-things-first-how-to-prioritize-
 published: true
 visible: true
 date: '02-05-2018 00:00'
+cache_enable: false
 ---

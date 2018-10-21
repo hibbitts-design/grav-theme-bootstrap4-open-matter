@@ -1,7 +1,6 @@
 ---
 title: Sidebar
 routable: false
-cache_enable: false
 visible: false
 ---
 
