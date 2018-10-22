@@ -1,3 +1,9 @@
+# v1.2.4
+## XX/XX/2018
+
+1. [](#improved)
+    * Updated included CSS examples for use with Canvas LMS
+
 # v1.2.3
 ## 10/21/2018
 
