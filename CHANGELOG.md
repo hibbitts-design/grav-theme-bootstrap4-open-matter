@@ -3,6 +3,7 @@
 
 1. [](#improved)
     * Added check for page visibility in Custom Content List page collections (to support creating archive folders within page folders)
+    * Updated item blueprints to set default page visibility to true 
     * Updated example pages in theme '_demo' folder
 
 # v1.2.4
