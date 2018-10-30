@@ -53,4 +53,4 @@ form:
             overrides:
               fields:
                 header.visible:
-                  default: 0
+                  default: 1
