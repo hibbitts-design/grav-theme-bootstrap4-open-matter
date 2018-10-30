@@ -1,6 +1,8 @@
 ---
 title: Text & Typography
 date: 13:34 07/19/2018
+published: true
+visible: true
 taxonomy:
     category: blog
     tag: [journal]

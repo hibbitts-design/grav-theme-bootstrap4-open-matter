@@ -1,5 +1,7 @@
 ---
 title: Classic Modern Architecture
+published: true
+visible: true
 date: 17:34 06/27/2018
 taxonomy:
     category: blog

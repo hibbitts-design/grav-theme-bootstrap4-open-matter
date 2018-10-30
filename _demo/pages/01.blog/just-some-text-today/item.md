@@ -1,5 +1,7 @@
 ---
 title: Just Some Text Today
+published: true
+visible: true
 date: 13:34 06/23/2018
 continue_link: false
 taxonomy:

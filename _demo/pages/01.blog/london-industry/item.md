@@ -1,5 +1,7 @@
 ---
 title: London Industry at Night
+published: true
+visible: true
 date: 13:34 06/07/2018
 taxonomy:
     category: blog

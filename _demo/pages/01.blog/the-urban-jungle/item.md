@@ -1,6 +1,8 @@
 ---
 title: The Urban Jungle
 date: 17:34 07/04/2018
+published: true
+visible: true
 taxonomy:
     category: blog
     tag: [travel, photography, city]

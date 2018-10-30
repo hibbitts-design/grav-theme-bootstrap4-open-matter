@@ -1,5 +1,7 @@
 ---
 title: Random Thoughts
+published: true
+visible: true
 date: 13:34 05/26/2018 
 taxonomy:
     category: blog

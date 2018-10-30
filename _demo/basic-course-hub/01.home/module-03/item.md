@@ -1,6 +1,7 @@
 ---
 title: 'Week 3 (May 23 - 29)'
 published: true
+visible: true
 date: '23-05-2018 00:00'
 hide_from_post_list: false
 hide_git_sync_repo_link: true

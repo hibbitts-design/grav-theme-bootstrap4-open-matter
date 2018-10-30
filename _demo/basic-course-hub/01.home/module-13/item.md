@@ -1,6 +1,7 @@
 ---
 title: 'Week 13 (Aug 1)'
 published: false
+visible: true
 date: '01-08-2018 00:00'
 hide_from_post_list: false
 hide_git_sync_repo_link: true
