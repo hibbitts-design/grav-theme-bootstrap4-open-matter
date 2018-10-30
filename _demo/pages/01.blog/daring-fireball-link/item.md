@@ -1,7 +1,5 @@
 ---
 title: Just Some Text Today
-published: true
-visible: true
 date: 13:34 07/10/2018
 continue_link: true
 link: http://daringfireball.net

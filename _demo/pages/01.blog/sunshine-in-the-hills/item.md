@@ -1,7 +1,5 @@
 ---
 title: Sunshine in the Hills
-published: true
-visible: true
 date: 14:55 07/11/2018
 author: Tasha Maxwell
 taxonomy:

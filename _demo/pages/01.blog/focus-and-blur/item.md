@@ -1,7 +1,5 @@
 ---
 title: Focus and Blur
-published: true
-visible: true
 date: 13:34 06/21/2018
 taxonomy:
     category: blog

@@ -1,5 +1,6 @@
 ---
 title: Blog
+published: true
 body_classes: 'header-image fullwidth'
 content:
     items: '@self.children'
