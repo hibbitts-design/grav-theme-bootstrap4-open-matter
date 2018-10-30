@@ -22,9 +22,9 @@
         {% else %}
           <h1 class="hidden">{{page.title}}</h1>
         {% endif %}
-        
+
         {{ page.content }}
-        {% set collection = page.collection() %}
+        {% set collection = page.collection().visible %}
         {% if page.header.display_template %}
           {% set templatename = page.header.display_template ~ '.html.twig' %}
         {% endif %}
