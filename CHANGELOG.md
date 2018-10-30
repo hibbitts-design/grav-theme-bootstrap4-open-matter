@@ -2,7 +2,7 @@
 ## 10/30/2018
 
 1. [](#improved)
-    * Added check for page visibility in Blog and Custom Content List page collections (to support creating archive folders within page folders)
+    * Added check for page visibility in Custom Content List page collections (to support creating archive folders within page folders)
     * Updated example pages in theme '_demo' folder
 
 # v1.2.4
