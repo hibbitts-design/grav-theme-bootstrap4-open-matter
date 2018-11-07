@@ -2,7 +2,7 @@
 ## 11/07/2018
 
 1. [](#improved)
-    * Twig 2.0 compatibility🎉
+    * Twig 2.0 compatibility
 
 # v1.2.5
 ## 10/30/2018
