@@ -10,7 +10,7 @@
 
         {% if page.header.link %}
             <h2>
-              {% if page.header.continue_link is not sameas(false) %}
+              {% if page.header.continue_link is not same as(false) %}
                   <a href="{{ page.header.link }}"><i class="fa fa-angle-double-right"></i>{{ page.title }}</a>
               {% endif %}
             </h2>
@@ -105,8 +105,8 @@
     <div class="list-blog-padding">
 
       {% if truncate and page.summary != page.content %}
-            <p>{{ page.summary }}</p>
-              {% if page.header.continue_link is not sameas(false) %}
+            <p>{{ page.summary|raw }}</p>
+              {% if page.header.continue_link is not same as(false) %}
                 <p>
                 {% if page.parent.header.continue_link_as_button %}
                   <a class="btn btn-primary" href="{{ page.url }}">{{ 'BLOG.ITEM.VIEW_ALL_OF'|t }}
@@ -122,9 +122,9 @@
             {% if page.summary != page.content %}
                 <p>{{ page.content|truncate(550) }}</p>
             {% else %}
-                <p>{{ page.content }}</p>
+                <p>{{ page.content|raw }}</p>
             {% endif %}
-            {% if page.header.continue_link is not sameas(false) %}
+            {% if page.header.continue_link is not same as(false) %}
               <p>
                {% if page.parent.header.continue_link_as_button %}
                  <a class="btn btn-primary" href="{{ page.url }}">{{ 'BLOG.ITEM.VIEW_ALL_OF'|t }}
@@ -146,9 +146,9 @@
             {# check summary only flag - hibbittsdesign.org #}
             {% if not (grav.uri.param('summaryonly')) and not (grav.uri.param('onlysummary')) %}
               {% if content is not empty  %}
-                    <p>{{ content }}</p>
+                    <p>{{ content|raw }}</p>
               {% else %}
-                  <p>{{ page.summary }}</p>
+                  <p>{{ page.summary|raw }}</p>
               {% endif %}
 
               {# Creative Commons License -  hibbittsdesign.org #}
@@ -169,8 +169,8 @@
 
             {% else %}
 
-              {% if page.header.continue_link is not sameas(false) %}
-                <p>{{ page.summary }}</p>
+              {% if page.header.continue_link is not same as(false) %}
+                <p>{{ page.summary|raw }}</p>
                 <p>
                 {% if page.parent.header.continue_link_as_button %}
                   <a class="topwindow btn btn-primary" href="{{ page.url }}">{{ 'BLOG.ITEM.VIEW_ALL_OF'|t }}

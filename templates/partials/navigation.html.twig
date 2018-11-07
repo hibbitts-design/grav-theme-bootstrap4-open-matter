@@ -19,7 +19,7 @@
     {% set navbar_bg_color = '' %}
 {% endif %}
 
-<nav class="navbar {{ navbar_position }} navbar-expand-{{ navbar_breakpoint }} {{ navbar_style }} {{ navbar_bg }}" {{ navbar_bg_color }};" role="navigation">
+<nav class="navbar {{ navbar_position }} navbar-expand-{{ navbar_breakpoint }} {{ navbar_style }} {{ navbar_bg }}" {{ navbar_bg_color|raw }};" role="navigation">
     <div class="container">
         <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url_relative }}">{{ site.title|e('html') }}</a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,7 +55,7 @@
                 {% for mitem in site.menu %}
                     <li class="nav-item active">
                         {% set icon = mitem.icon ? '<i class="fa fa-fw fa-' ~ mitem.icon ~ '"></i> ' : '' %}
-                        <a class="nav-link" href="{{ mitem.url }}">{{ icon }}{{ mitem.text }}</a>
+                        <a class="nav-link" href="{{ mitem.url }}">{{ icon|raw }}{{ mitem.text }}</a>
                     </li>
                 {% endfor %}
 

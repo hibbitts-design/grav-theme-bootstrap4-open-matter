@@ -51,7 +51,7 @@
           {% set start = currentPage * perPage - perPage %}
           {% set paginationLimit = perPage - 1 %}
 
-          {{ page.content }}
+          {{ page.content|raw }}
 
           {% for index, item in feed_items|sort_by_key('sortDate')|reverse|slice(start, perPage) %}
             <h2>
@@ -59,7 +59,7 @@
             </h2>
             <time>{{ item.date.date|date("m/d/Y") }}</time>, {{ item.retrievedTitle }}
             {% if page.header.rss_feed_header_images and not (page.header.rss_feed_preview_paragraphs == 'all') %}
-              <p>{{ item.content|preg_get('/(<img(?:(\s*(class)\s*=\s*\x22([^\x22]+)\x22*)+|[^>]+?)*>)/') }}</p>
+              <p>{{ item.content|preg_get('/(<img(?:(\s*(class)\s*=\s*\x22([^\x22]+)\x22*)+|[^>]+?)*>)/')|raw }}</p>
             {% endif %}
             {% set paragraphs = item.content | split('</p>') %}
             {% set firstParagraph = paragraphs[0] ~ '</p>' %}

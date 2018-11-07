@@ -23,7 +23,7 @@
             {% do assets.add('theme://css/font-awesome.min.css',97) %}
             {% do assets.add('theme://css-compiled/theme.css',96) %}
         {% endblock %}
-        {{ assets.css() }}
+        {{ assets.css()|raw }}
 
         {% block javascripts %}
             {% do assets.add('jquery', 101) %}
@@ -37,7 +37,7 @@
                 {% do assets.add('theme://js/html5shiv-printshiv.min.js') %}
             {% endif %}
         {% endblock %}
-        {{ assets.js() }}
+        {{ assets.js()|raw }}
 
         {% endblock head %}
     </head>
@@ -84,7 +84,7 @@
                   {% endif %}
                   {% set content = pages.find('/footer').content %}
                   {% if content %}
-                    {{ content }}
+                    {{ content|raw }}
                   {% endif %}
                   </div>
               </div>
@@ -92,7 +92,7 @@
         {% endif %}
 
         {% block bottom %}
-            {{ assets.js('bottom') }}
+            {{ assets.js('bottom')|raw }}
         {% endblock %}
 
         {# added global scripts - hibbittsdesign.org #}

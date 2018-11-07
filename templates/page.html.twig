@@ -21,7 +21,7 @@
             {% else %}
               <h1 class="hidden">{{page.title}}</h1>
             {% endif %}
-              {{ page.content }}
+              {{ page.content|raw }}
               {# Creative Commons License -  hibbittsdesign.org #}
               {% if theme_var('cc_license.enabled') and not(page.header.hide_cc_license) %}
                 <br>

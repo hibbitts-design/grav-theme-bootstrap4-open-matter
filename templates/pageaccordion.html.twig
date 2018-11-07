@@ -22,7 +22,7 @@
         {% else %}
           <h1 class="hidden">{{page.title}}</h1>
         {% endif %}
-        {{ page.content }}
+        {{ page.content|raw }}
         <div id="accordion" role="tablist" aria-multiselectable="true">
 
           <div class="card">
@@ -43,7 +43,7 @@
                     <div class="card-body">
 
                       {% for child in page.children %}
-                        {{ child.content }}
+                        {{ child.content|raw }}
                       {% endfor %}
 
                     </div>

@@ -9,7 +9,7 @@
     <div class="list-blog-header">
 
       {% if big_header %}
-        {{ page.media.images|first.cropResize(1200,600).html('','blog-header-image') }}
+        {{ page.media.images|first.cropResize(1200,600).html('','blog-header-image')|raw  }}
       {% else %}
         {% if header_image %}
           {% if header_image_file %}
@@ -37,14 +37,14 @@
                 {% if image_creditlink %}
                   Image: <a class="newwindow external-link" href="{{ image_creditlink }}">
                   {{ image_credit }}</a></span>
-                  <img src="{{ header_image_media.cropZoom(header_image_width, header_image_height).url }}" alt="{{ image_alt_text }}"/>
+                  <img src="{{ header_image_media.cropZoom(header_image_width, header_image_height).url|raw }}" alt="{{ image_alt_text }}"/>
                 {% else %}
                   Image: {{ image_credit }}</span>
-                  <img src="{{ header_image_media.cropZoom(header_image_width, header_image_height).url }}" alt="{{ image_alt_text }}"/>
+                  <img src="{{ header_image_media.cropZoom(header_image_width, header_image_height).url|raw }}" alt="{{ image_alt_text }}"/>
                 {% endif %}
               </div>
             {% else %}
-              <img src="{{ header_image_media.cropZoom(header_image_width, header_image_height).url }}" alt="{{ image_alt_text }}"/>
+              <img src="{{ header_image_media.cropZoom(header_image_width, header_image_height).url|raw }}" alt="{{ image_alt_text }}"/>
             {% endif %}
           {% endif %}
 
@@ -56,6 +56,6 @@
     <div class="modularitem">
       {# diable regular post handling - hibbittsdesign.org #}
       {# <h3>{{ page.title }}</h3> #}
-      <p>{{ page.content }}</p>
+      <p>{{ page.content|raw }}</p>
     </div>
 </div>

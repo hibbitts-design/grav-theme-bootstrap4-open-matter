@@ -10,7 +10,7 @@
         {% if content %}
             {{ content|raw }}
         {% else %}
-            {{ page.content }}
+            {{ page.content|raw }}
         {% endif %}
 
         {% for button in page.header.buttons %}
