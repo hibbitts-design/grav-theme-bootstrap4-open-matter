@@ -1,9 +1,15 @@
+# v1.3.0
+## 11/07/2018
+
+1. [](#improved)
+    * Twig 2.0 compatibility🎉
+
 # v1.2.5
 ## 10/30/2018
 
 1. [](#improved)
     * Added check for page visibility in Custom Content List page collections (to support creating archive folders within page folders)
-    * Updated item blueprints to set default page visibility to true 
+    * Updated item blueprints to set default page visibility to true
     * Updated example pages in theme '_demo' folder
 
 # v1.2.4
