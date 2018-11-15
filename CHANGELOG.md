@@ -1,3 +1,11 @@
+# v1.4.2
+## 11/16/2018
+
+1. [](#new)
+    * Added support for global image header, sidebar, and footer
+1. [](#improved)
+    * Adjusted space between custom menu item icons and text labels
+
 # v1.4.1
 ## 11/15/2018
 
