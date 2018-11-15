@@ -6,6 +6,9 @@
   {% set firstfolderofpath = arrayofpath[1] %}
   {% set site_title = pages.find('/' ~ firstfolderofpath ~ config.system.home.alias).header.site_title %}
   {% set footer_content = pages.find('/' ~ firstfolderofpath ~ '/footer').content %}
+  {% if footer_content == empty %}
+    {% set footer_content = pages.find('/footer').content %}
+  {% endif %}
 {% else %}
   {% set site_title = site.title|e('html') %}
   {% set footer_content = pages.find('/footer').content %}

@@ -7,6 +7,9 @@
   {% set arrayofpath = uri.path|split('/') %}
   {% set firstfolderofpath = arrayofpath[1] %}
   {% set sidebar_page_content = pages.find('/' ~ firstfolderofpath ~ '/sidebar').content %}
+  {% if sidebar_page_content == empty %}
+    {% set sidebar_page_content = pages.find('/sidebar').content %}
+  {% endif %}
 {% else %}
   {% set sidebar_page_content = pages.find('/sidebar').content %}
 {% endif %}
