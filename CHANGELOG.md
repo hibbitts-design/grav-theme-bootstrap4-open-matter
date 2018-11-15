@@ -5,6 +5,7 @@
     * Added support for global image header, sidebar, and footer
 1. [](#improved)
     * Adjusted space between custom menu item icons and text labels
+    * Updated example pages in theme '_demo' folder
 
 # v1.4.1
 ## 11/15/2018
