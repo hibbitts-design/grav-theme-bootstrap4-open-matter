@@ -4,8 +4,10 @@
 {% if multi_course_hub %}
   {% set arrayofpath = uri.path|split('/') %}
   {% set firstfolderofpath = arrayofpath[1] %}
+  {% set site_title = pages.find('/' ~ firstfolderofpath ~ config.system.home.alias).header.site_title %}
   {% set footer_content = pages.find('/' ~ firstfolderofpath ~ '/footer').content %}
 {% else %}
+  {% set site_title = site.title|e('html') %}
   {% set footer_content = pages.find('/footer').content %}
 {% endif %}
 
@@ -19,7 +21,7 @@
 
         {% include 'partials/metadata.html.twig' %}
 
-        <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+        <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site_title }}</title>
         <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png', true) }}" />
 
         {% block stylesheets %}
