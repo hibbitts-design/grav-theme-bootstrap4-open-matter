@@ -11,6 +11,9 @@
   {% set firstfolderofpath = arrayofpath[1] %}
   {% if firstfolderofpath %}
     {% set background_image = pages.find('/' ~ firstfolderofpath ~ '/headerimage').media.images|first %}
+    {% if background_image == empty %}
+      {% set background_image = pages.find('/headerimage').media.images|first %}
+    {% endif %}
     {% set site_title = pages.find('/' ~ firstfolderofpath ~ config.system.home.alias).header.site_title %}
     {% set base_url_relative = base_url_relative ~ '/' ~ firstfolderofpath ~ config.system.home.alias %}
     {% set pages = page.evaluate([{'@page.children':'/' ~ firstfolderofpath }]) %}
@@ -97,9 +100,10 @@
                       {% endif %}
                       <a class="nav-link {{mclass}}" href="{{ mitem.url }}" target="{{ mitem.target }}">
                         {% if mitem.icon %}
+                          <i class="fa fa-{{ mitem.icon }}"></i>{{ mitem.text }}
+                        {% else %}
                           <i class="fa fa-{{ mitem.icon }}"></i>
                         {% endif %}
-                        {{ mitem.text }}
                       </a>
                     </li>
                   {% endfor %}
