@@ -1,8 +1,15 @@
 {% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (base_url_relative~'/'~blog.slug) : blog.url %}
 {% set new_base_url = blog.url == '/' ? '' : blog.url %}
+{% set multi_course_hub = theme_var('multi_course_hub.enabled') %}
 
-{% set sidebar_page = pages.find('/sidebar') %}
-{% set sidebar_page_content =  sidebar_page.content %}
+{# multi-course hub compatibility - hibbittsdesign.org #}
+{% if multi_course_hub %}
+  {% set arrayofpath = uri.path|split('/') %}
+  {% set firstfolderofpath = arrayofpath[1] %}
+  {% set sidebar_page_content = pages.find('/' ~ firstfolderofpath ~ '/sidebar').content %}
+{% else %}
+  {% set sidebar_page_content = pages.find('/sidebar').content %}
+{% endif %}
 
 <h1 class="hidden">{{sidebar_page.title}}</h1>
 
@@ -52,7 +59,7 @@
 {% if sidebar_page.header.position == 'bottom' %}
   {% if sidebar_page_content is not empty %}
     <div class="sidebar-content">
-      {{ sidebar_page_content }}
+      {{ sidebar_page_content|raw }}
     </div>
   {% endif %}
 {% endif %}

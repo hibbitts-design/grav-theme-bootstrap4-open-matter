@@ -1,3 +1,5 @@
+{% set multi_course_hub = theme_var('multi_course_hub.enabled') %}
+
 {% embed 'partials/base.html.twig' %}
 
   {% if page.header.show_sidebar is defined %}
@@ -27,6 +29,14 @@
   {% endif %}
 
   {% block content %}
+
+  {# multi-course hub compatibility - hibbittsdesign.org #}
+    {% if multi_course_hub %}
+      {% set arrayofpath = uri.path|split('/') %}
+      {% set toplevelpage = arrayofpath[1] %}
+    {% else %}
+      {% set toplevelpage = 'pages' %}
+    {% endif %}
 
     <div class="main-content">
       <div class="container">
@@ -93,52 +103,52 @@
                 {% set siblings = page.parent.children() %}
                 {% set children = page.children() %}
 
-                {% if not(page.parent.slug == 'pages') %}
+                {% if not(page.parent.slug == toplevelpage ) %}
 
                   <p>
 
-                    {% if not siblings.isFirst(page.path) %}
-                      {% if page.children.count == 0 %}
-                        <a class="btn btn-primary" href="{{ siblings.nextSibling(page.path).url }}">
-                          <i class="fa fa-chevron-left"></i>
-                          {{ siblings.nextSibling(page.path).title }}</a>
+                      {% if not siblings.isFirst(page.path) %}
+                        {% if page.children.count == 0 %}
+                          <a class="btn btn-primary" href="{{ siblings.nextSibling(page.path).url }}">
+                            <i class="fa fa-chevron-left"></i>
+                            {{ siblings.nextSibling(page.path).title }}</a>
+                        {% else %}
+                          <a class="btn btn-primary" href="{{ siblings.nextSibling(page.path).url }}">
+                            <i class="fa fa-chevron-left"></i>
+                            {{ siblings.nextSibling(page.path).title }}</a>
+                        {% endif %}
                       {% else %}
-                        <a class="btn btn-primary" href="{{ siblings.nextSibling(page.path).url }}">
-                          <i class="fa fa-chevron-left"></i>
-                          {{ siblings.nextSibling(page.path).title }}</a>
+                        {% if not(page.parent.parent.slug == toplevelpage) %}
+                          <a class="btn btn-primary" href="{{ page.parent.url }}">
+                            <i class="fa fa-chevron-left"></i>
+                            {{ page.parent.title }}</a>
+                        {% endif %}
                       {% endif %}
-                    {% else %}
-                      {% if not(page.parent.parent.slug == 'pages') %}
-                        <a class="btn btn-primary" href="{{ page.parent.url }}">
-                          <i class="fa fa-chevron-left"></i>
-                          {{ page.parent.title }}</a>
-                      {% endif %}
-                    {% endif %}
 
-                    {% if not siblings.isLast(page.path) %}
-                      {% if page.children.count == 0 %}
-                        <a class="btn btn-primary" href="{{ siblings.prevSibling(page.path).url }}">{{ siblings.prevSibling(page.path).title }}
-                          <i class="fa fa-chevron-right"></i>
-                        </a>
-                      {% else %}
-                        <a class="btn btn-primary" href="{{ page.children|first.url }}">{{ page.children|first.title }}
-                          <i class="fa fa-chevron-right"></i>
-                        </a>
-                      {% endif %}
-                    {% else %}
-                      {% if not(page.parent.parent.slug == 'pages') %}
-                        {% set siblings = page.parent.parent.children() %}
-                        {% if not siblings.isLast(page.parent.path) %}
-                          <a class="btn btn-primary" href="{{ siblings.prevSibling(page.parent.path).url }}">{{ siblings.prevSibling(page.parent.path).title }}
+                      {% if not siblings.isLast(page.path) %}
+                        {% if page.children.count == 0 %}
+                          <a class="btn btn-primary" href="{{ siblings.prevSibling(page.path).url }}">{{ siblings.prevSibling(page.path).title }}
+                            <i class="fa fa-chevron-right"></i>
+                          </a>
+                        {% else %}
+                          <a class="btn btn-primary" href="{{ page.children|first.url }}">{{ page.children|first.title }}
                             <i class="fa fa-chevron-right"></i>
                           </a>
                         {% endif %}
                       {% else %}
-                        <a class="btn btn-primary" href="{{ page.children|first.url }}">{{ page.children|first.title }}
-                          <i class="fa fa-chevron-right"></i>
-                        </a>
+                        {% if not(page.parent.parent.slug == toplevelpage) %}
+                          {% set siblings = page.parent.parent.children() %}
+                          {% if not siblings.isLast(page.parent.path) %}
+                            <a class="btn btn-primary" href="{{ siblings.prevSibling(page.parent.path).url }}">{{ siblings.prevSibling(page.parent.path).title }}
+                              <i class="fa fa-chevron-right"></i>
+                            </a>
+                          {% endif %}
+                        {% else %}
+                          <a class="btn btn-primary" href="{{ page.children|first.url }}">{{ page.children|first.title }}
+                            <i class="fa fa-chevron-right"></i>
+                          </a>
+                        {% endif %}
                       {% endif %}
-                    {% endif %}
 
                   </p>
 

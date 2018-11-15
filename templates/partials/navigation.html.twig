@@ -3,8 +3,32 @@
 {% set navbar_bg_color = theme_var('navbar_bg_color') %}
 {% set navbar_position = theme_var('navbar_position') %}
 {% set navbar_breakpoint = theme_var('navbar_breakpoint') %}
+{% set multi_course_hub = theme_var('multi_course_hub.enabled') %}
 
-{% set background_image = pages.find('/headerimage').media.images|first %}
+{# multi-course hub compatibility - hibbittsdesign.org #}
+{% if multi_course_hub %}
+  {% set arrayofpath = uri.path|split('/') %}
+  {% set firstfolderofpath = arrayofpath[1] %}
+  {% if firstfolderofpath %}
+    {% set background_image = pages.find('/' ~ firstfolderofpath ~ '/headerimage').media.images|first %}
+    {% set site_title = pages.find('/' ~ firstfolderofpath ~ config.system.home.alias).header.site_title %}
+    {% set base_url_relative = base_url_relative ~ '/' ~ firstfolderofpath ~ config.system.home.alias %}
+    {% set pages = page.evaluate([{'@page.children':'/' ~ firstfolderofpath }]) %}
+  {% else %}
+    {% set background_image = pages.find('/headerimage').media.images|first %}
+    {% set arrayofpath = config.system.home.alias|split('/') %}
+    {% set firstfolderofpath = arrayofpath[1] %}
+    {% set site_title = site.title|e('html') %}
+    {% set pages = pages.children.visible %}
+  {% endif %}
+{% else %}
+  {% set background_image = pages.find('/headerimage').media.images|first %}
+  {% set arrayofpath = config.system.home.alias|split('/') %}
+  {% set firstfolderofpath = arrayofpath[1] %}
+  {% set site_title = site.title|e('html') %}
+  {% set pages = pages.children.visible %}
+{% endif %}
+
 {% if background_image and not(navbar_position == 'fixed-bottom') %}
   <div class="myheader" style="background-image: url({{ background_image.url }});"></div>
 {% endif %}
@@ -21,16 +45,18 @@
 
 <nav class="navbar {{ navbar_position }} navbar-expand-{{ navbar_breakpoint }} {{ navbar_style }} {{ navbar_bg }}" {{ navbar_bg_color|raw }};" role="navigation">
     <div class="container">
-        <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url_relative }}">{{ site.title|e('html') }}</a>
+        <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url_relative }}">{{ site_title }}</a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="navbar-collapse collapse justify-content-end">
             <ul class="navbar-nav">
-                {% for page in pages.children.visible %}
+
+              {% for page in pages %}
+                {% if page.visible %}
                 {# Supress home menu link - hibbittsdesign.org #}
-                  {% if not(theme_var('hidehomemenulink') and page.home()) %}
+                  {% if not(theme_var('hidehomemenulink') and (page.home() or page.slug == 'home')) %}
                     {# Set all pages to use active page style - hibbittsdesign.org#}
                     {% set current_page = 'active' %}
                     {% if config.themes.bootstrap4.dropdown.enabled and page.children.visible.count > 0 %}
@@ -51,7 +77,9 @@
                         <li class="nav-item {{ current_page }}"><a class="nav-link" href="{{ page.url }}">{{ page.menu }}</a></li>
                     {% endif %}
                   {% endif %}
-                {% endfor %}
+                {% endif %}
+              {% endfor %}
+
                 {% for mitem in site.menu %}
                     <li class="nav-item active">
                         {% set icon = mitem.icon ? '<i class="fa fa-fw fa-' ~ mitem.icon ~ '"></i> ' : '' %}

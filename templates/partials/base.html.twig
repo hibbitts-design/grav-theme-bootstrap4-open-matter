@@ -1,3 +1,14 @@
+{% set multi_course_hub = theme_var('multi_course_hub.enabled') %}
+
+{# multi-course hub compatibility - hibbittsdesign.org #}
+{% if multi_course_hub %}
+  {% set arrayofpath = uri.path|split('/') %}
+  {% set firstfolderofpath = arrayofpath[1] %}
+  {% set footer_content = pages.find('/' ~ firstfolderofpath ~ '/footer').content %}
+{% else %}
+  {% set footer_content = pages.find('/footer').content %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="{{ grav.language.getLanguage ?: 'en' }}">
     <head>
@@ -82,9 +93,8 @@
                   {% if theme_var('git_sync_edit_theme_link_location') == 'footer' %}
                     <p>{% include 'partials/git_sync_theme_link.html.twig' %}</p>
                   {% endif %}
-                  {% set content = pages.find('/footer').content %}
-                  {% if content %}
-                    {{ content|raw }}
+                  {% if footer_content %}
+                    {{ footer_content|raw }}
                   {% endif %}
                   </div>
               </div>
