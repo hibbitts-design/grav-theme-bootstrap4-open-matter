@@ -1,3 +1,11 @@
+# v1.4.1
+## 11/15/2018
+
+1. [](#improved)
+    * Revised page titles to better indicate current course
+1. [](#bugfix)
+    * Fixed ChangeLog format
+
 # v1.4.0
 ## 11/15/2018
 
@@ -81,6 +89,7 @@
 1. [](#bugfix)
     * Corrected filename for Grava11y (Accessibility for Grav) Plugin
 
+# v1.1.4
 ## 10/14/2018
 
 1. [](#new)
