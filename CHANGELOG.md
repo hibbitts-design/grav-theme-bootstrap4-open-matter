@@ -1,3 +1,10 @@
+# v1.4.0
+## 11/15/2018
+
+1. [](#new)
+    * Added experimental support for multiple courses within one hub (i.e. multi-course hub) with each course having it's own image header, site menu, sidebar and footer (enabled with theme option `multi_course_hub` to `true`)
+    * Added new 'multi-course-hub' example site in theme '_demo' folder
+
 # v1.3.0
 ## 11/07/2018
 
