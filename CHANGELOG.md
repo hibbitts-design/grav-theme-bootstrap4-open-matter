@@ -1,14 +1,20 @@
+# v1.4.5
+## 11/16/2018
+
+1. [](#improved)
+    * Updated example pages in theme '_demo' folder
+
 # v1.4.4
 ## 11/16/2018
 
-1. [](#bugfix)
-    * Additional updates to example pages in theme '_demo' folder to address ZIP-related error messages during theme install on Windows
+1. [](#improved)
+    * Updated example pages in theme '_demo' folder
 
 # v1.4.3
-## 11/16/2018
+## 11/15/2018
 
-1. [](#bugfix)
-    * Updated example pages in theme '_demo' folder to address ZIP-related error messages during theme install on Windows
+1. [](#improved)
+    * Updated example pages in theme '_demo' folder
 
 # v1.4.2
 ## 11/15/2018
