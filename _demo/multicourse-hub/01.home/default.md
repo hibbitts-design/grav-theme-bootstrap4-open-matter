@@ -8,7 +8,7 @@ body_classes: title-center title-h1h2
 
 Congratulations! You have installed the **Base Grav Package** that provides a **simple page** and the default **Quark** theme to get you started.
 
-!! If you see a **404 Error** when you click `Typography` in the menu, please refer to the [troubleshooting guide](http://learn.getgrav.org/troubleshooting/page-not-found).
+!! If you see a **404 Error** when you click on an item in the menu above, please refer to the [troubleshooting guide](http://learn.getgrav.org/troubleshooting/page-not-found).
 
 ### Find out all about Grav
 
