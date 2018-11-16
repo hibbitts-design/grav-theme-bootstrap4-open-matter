@@ -1,3 +1,9 @@
+# v1.4.3
+## 11/16/2018
+
+1. [](#bugfix)
+    * Updated example pages in theme '_demo' folder to address ZIP-related error messages during theme install on Windows
+
 # v1.4.2
 ## 11/16/2018
 
