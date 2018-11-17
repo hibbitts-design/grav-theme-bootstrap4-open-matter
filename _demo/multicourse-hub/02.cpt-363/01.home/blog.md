@@ -27,5 +27,4 @@ feed:
     description: 'Grav CMS Open Matter Course Hub Description'
     limit: 10
 hide_page_title: true
-site_title: CPT-363
 ---
