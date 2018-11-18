@@ -3,7 +3,7 @@
 
 1. [](#improved)
     * Title of each course hub is now set by the title of the top-level course hub page (i.e. `default.md`) instead of an additional `site_title` frontmatter variable in the homepage of the course (i.e. `home.md`)
-    * Improved overall support for multiple courses within one hub
+    * Made support for multiple courses within one course hub more robust
     * Updated example pages in theme '_demo' folder
 
 # v1.4.6
