@@ -1,3 +1,11 @@
+# v1.4.7
+## 11/17/2018
+
+1. [](#improved)
+    * Title of each course hub is now set by the title of the top-level course hub page (i.e. `default.md`) instead of an additional `site_title` frontmatter variable in the homepage of the course (i.e. `home.md`)
+    * Improved overall support for multiple courses within one hub
+    * Updated example pages in theme '_demo' folder
+
 # v1.4.6
 ## 11/16/2018
 
@@ -43,7 +51,7 @@
 ## 11/15/2018
 
 1. [](#new)
-    * Added experimental support for multiple courses within one hub (i.e. multi-course hub) with each course having it's own image header, site menu, sidebar and footer (enabled with theme option `multi_course_hub` to `true`)
+    * Added experimental support for multiple courses within one hub (i.e. multicourse hub) with each course having it's own image header, site menu, sidebar and footer (enabled with theme option `multi_course_hub` to `true`)
     * Added new 'multi-course-hub' example site in theme '_demo' folder
 
 # v1.3.0
