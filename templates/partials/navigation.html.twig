@@ -10,25 +10,24 @@
   {% set arrayofpath = uri.path|split('/') %}
   {% set firstfolderofpath = arrayofpath[1] %}
   {% if firstfolderofpath %}
+    {% set base_url_relative = base_url_relative ~ '/' ~ firstfolderofpath ~ config.system.home.alias %}
+    {% set site_title = pages.find('/' ~ firstfolderofpath ).title %}
+    {% if site_title == empty %}
+      {% set site_title = site.title|e('html') %}
+    {% endif %}
     {% set background_image = pages.find('/' ~ firstfolderofpath ~ '/headerimage').media.images|first %}
     {% if background_image == empty %}
       {% set background_image = pages.find('/headerimage').media.images|first %}
     {% endif %}
-    {% set site_title = pages.find('/' ~ firstfolderofpath ~ config.system.home.alias).header.site_title %}
-    {% set base_url_relative = base_url_relative ~ '/' ~ firstfolderofpath ~ config.system.home.alias %}
     {% set pages = page.evaluate([{'@page.children':'/' ~ firstfolderofpath }]) %}
   {% else %}
-    {% set background_image = pages.find('/headerimage').media.images|first %}
-    {% set arrayofpath = config.system.home.alias|split('/') %}
-    {% set firstfolderofpath = arrayofpath[1] %}
     {% set site_title = site.title|e('html') %}
+    {% set background_image = pages.find('/headerimage').media.images|first %}
     {% set pages = pages.children.visible %}
   {% endif %}
 {% else %}
-  {% set background_image = pages.find('/headerimage').media.images|first %}
-  {% set arrayofpath = config.system.home.alias|split('/') %}
-  {% set firstfolderofpath = arrayofpath[1] %}
   {% set site_title = site.title|e('html') %}
+  {% set background_image = pages.find('/headerimage').media.images|first %}
   {% set pages = pages.children.visible %}
 {% endif %}
 
@@ -77,7 +76,12 @@
                             </div>
                         </li>
                     {% else %}
-                        <li class="nav-item {{ current_page }}"><a class="nav-link" href="{{ page.url }}">{{ page.menu }}</a></li>
+                        {% if not (page.routable) %}
+                          {% set page_url = page.url ~ config.system.home.alias %}
+                        {% else %}
+                          {% set page_url = page.url %}
+                        {% endif %}
+                        <li class="nav-item {{ current_page }}"><a class="nav-link" href="{{ page_url }}">{{ page.menu }}</a></li>
                     {% endif %}
                   {% endif %}
                 {% endif %}
