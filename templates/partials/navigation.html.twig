@@ -76,7 +76,7 @@
                             </div>
                         </li>
                     {% else %}
-                        {% if not (page.routable) %}
+                        {% if multi_course_hub and not (page.routable) %}
                           {% set page_url = page.url ~ config.system.home.alias %}
                         {% else %}
                           {% set page_url = page.url %}
