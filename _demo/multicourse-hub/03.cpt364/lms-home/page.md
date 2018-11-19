@@ -10,11 +10,11 @@ hide_git_sync_repo_link: true
 protectEdit: true
 ---
 
-[plugin:content-inject](/cpt-363/home/_important-reminders)
+[plugin:content-inject](/cpt364/home/_important-reminders)
 
-[plugin:page-inject](/cpt-363/home/_class-preparations)
+[plugin:page-inject](/cpt364/_class-preparations)
 
 <hr>
 
 ## Web Pick of the Week
-[plugin:page-inject](/cpt-363/web-pick-of-the-week/)
+[plugin:page-inject](/cpt364/web-pick-of-the-week/)

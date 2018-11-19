@@ -6,32 +6,32 @@ hide_git_sync_repo_link: false
 cache_enable: false
 ---
 
-## [:fa-calendar-o:Week 1 (May 9 - 15)](/cpt-363/home/module-01)
+## [:fa-calendar-o:Week 1 (May 9 - 15)](/cpt363/home/module-01)
 **What is usability and user experience design?**  
 :fa-desktop:[Course Overview](https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf)  
 :fa-desktop:[Introduction to UX Design](https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf)  
 :fa-book:[Usability 101: Introduction to Usability](https://www.nngroup.com/articles/usability-101-introduction-to-usability/)  
 
-## [:fa-calendar-o:Week 2 (May 16 - 22)](/cpt-363/home/module-02)
+## [:fa-calendar-o:Week 2 (May 16 - 22)](/cpt363/home/module-02)
 **What does a holistic user experience design process look like?**  
 :fa-pencil:[Course Reflection Log](https://sso.canvaslms.com/courses/1413912/assignments/9519528) due Aug 3rd  
 :fa-desktop:[The Process of UX Design](https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf)  
 :fa-book:[The Evolution of UX Process Methodology](https://uxplanet.org/the-evolution-of-ux-process-methodology-47f52557178b)  
 
-## [:fa-calendar-o:Week 3 (May 23 - 29)](/cpt-363/home/module-03)
+## [:fa-calendar-o:Week 3 (May 23 - 29)](/cpt363/home/module-03)
 **How to make more strategic design decisions?**   
 :fa-pencil:[Journey Map](https://canvas.sfu.ca/courses/38847/assignments/292821) assignment due Jun 12th  
 :fa-folder:[Informed Consent Materials](https://sso.canvaslms.com/courses/1413912/files/folder/Handouts/Informed%20Consent)  
 :fa-desktop:[Strategic UX Design](https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf)  
 :fa-book:[What is a User Journey Map?](https://www.aytech.ca/blog/user-journey-map/)  
 
-## [:fa-calendar-o:Week 4 (May 30 - Jun 5)](/cpt-363/home/module-04)
+## [:fa-calendar-o:Week 4 (May 30 - Jun 5)](/cpt363/home/module-04)
 **How to explore and communicate possible design solutions?**   
 :fa-desktop:[Prototyping](https://paulhibbitts.net/cmpt-363-182/pdfs/cmpt-363-182-prototyping.pdf)  
 :fa-book:[The Skeptic’s Guide To Low-Fidelity Prototyping](https://www.smashingmagazine.com/2014/10/the-skeptics-guide-to-low-fidelity-prototyping/)  
 :fa-users:In-class office hours (tentative)  
 
-## [:fa-calendar-o:Week 5 (Jun 6 - 12)](/cpt-363/home/module-05)
+## [:fa-calendar-o:Week 5 (Jun 6 - 12)](/cpt363/home/module-05)
 **How to plan, conduct, and summarize usability tests?**  
 :fa-desktop:[Usability Testing](https://paulhibbitts.net/cmpt-363-182/pdfs/cmpt-363-182-usability-testing.pdf)  
 :fa-book:[The Art of Guerrilla Usability Testing](http://www.uxbooth.com/articles/the-art-of-guerrilla-usability-testing/)  
