@@ -1,9 +1,16 @@
+# v1.4.8
+## 11/18/2018
+
+1. [](#improved)
+    * Improved course title handling within one course hub
+    * Updated example pages in theme '_demo' folder
+
 # v1.4.7
 ## 11/17/2018
 
 1. [](#improved)
     * Title of each course hub is now set by the title of the top-level course hub page (i.e. `default.md`) instead of an additional `site_title` frontmatter variable in the homepage of the course (i.e. `home.md`)
-    * Made support for multiple courses within one course hub more robust
+    * Improved course navigation handling within one course hub
     * Updated example pages in theme '_demo' folder
 
 # v1.4.6
