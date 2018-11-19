@@ -1,3 +1,9 @@
+# v1.4.9
+## 11/18/2018
+
+1. [](#improved)
+    * Updated example pages in theme '_demo' folder
+
 # v1.4.8
 ## 11/18/2018
 
