@@ -5,7 +5,7 @@ visible: false
 position: top
 ---
 
-## CPT-363 Course Facilitator
+## Course Facilitator
 Some Name  
 <somename@somewhere.edu>   
 
