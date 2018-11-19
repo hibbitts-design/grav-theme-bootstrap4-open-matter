@@ -5,7 +5,7 @@ visible: false
 position: top
 ---
 
-## CPT-365 Course Facilitator
+## CPT-364 Course Facilitator
 Some Name  
 <somename@somewhere.edu>   
 
@@ -25,7 +25,7 @@ Fridays 12:00-1:00pm
 [Grades](https://sso.canvaslms.com/courses/1413912/grades)  
 
 ## Web Pick of the Week
-[plugin:page-inject](/cpt-365/web-pick-of-the-week/)
+[plugin:page-inject](/cpt-364/web-pick-of-the-week/)
 
 ## Twitter Feed
 [twitter url="https://twitter.com/hibbittsdesign/lists/cpt-363" text="A Twitter list by @hibbittsdesign" height="600"]
