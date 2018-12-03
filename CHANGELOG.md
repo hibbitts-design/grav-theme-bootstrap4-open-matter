@@ -1,3 +1,10 @@
+# v1.5.1
+## 12/03/2018
+
+1. [](#improved)
+    * Improved experimental support for multiple courses within one hub
+    * Improved compatibility when using the Page Inject Plugin for several page templates
+
 # v1.5.0
 ## 11/19/2018
 
