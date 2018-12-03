@@ -1,5 +1,15 @@
+{# no tab indents for Page Inject Plugin compatibility - hibbittsdesign.org #}
+{% set multi_course_hub = theme_var('multi_course_hub.enabled') %}
+
 {% block content %}
+{# multi-course hub compatibility - hibbittsdesign.org #}
+{% if multi_course_hub %}
+{% set arrayofpath = uri.path|split('/') %}
+{% set firstfolderofpath = arrayofpath[1] %}
+{% set page = (page.find('/' ~ firstfolderofpath ~ '/' ~ page.parent.slug).children.order('{page.parent.header.content.order.by}','desc').visible|first) %}
+{% else %}
 {% set page = (page.find('/' ~ page.parent.slug).children.order('{page.parent.header.content.order.by}','desc').visible|first) %}
+{% endif %}
 {% set templatename = page.template ~ '.html.twig' %}
-{% include templatename with {'content' : page.content} %}
+{% include templatename with {'content' : page.content|raw} %}
 {% endblock %}
