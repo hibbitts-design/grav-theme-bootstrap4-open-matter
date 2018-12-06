@@ -1,5 +1,5 @@
 name: 'Bootstrap4 Open Matter'
-version: 1.5.2
+version: 1.5.3
 description: "A custom version of the Bootstrap4 theme for open blogs, course hubs and more. Includes Git Sync and 'chromeless' content embedding."
 icon: bold
 author:
@@ -248,11 +248,11 @@ form:
                             _self: 'Open in the same frame as clicked'
             multicoursehub:
                 type: section
-                title: 'Multi-course Hub'
+                title: 'MultiCourse Hub'
                 underline: true
             multi_course_hub.enabled:
                 type: toggle
-                label: 'Enable Multi-course Hub Mode'
+                label: 'Enable MultiCourse Hub Mode'
                 highlight: 1
                 default: 0
                 options:
