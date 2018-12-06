@@ -1,3 +1,10 @@
+# v1.5.3
+## 12/06/2018
+
+1. [](#improved)
+    * Revised theme blueprints and templates to use the term 'MultiCourse'
+    * Updated example pages in theme '_demo' folder
+
 # v1.5.2
 ## 12/05/2018
 
@@ -84,7 +91,7 @@
 
 1. [](#new)
     * Added experimental support for multiple courses within one hub (i.e. multicourse hub) with each course having it's own image header, site menu, sidebar and footer (enabled with theme option `multi_course_hub` to `true`)
-    * Added new 'multi-course-hub' example site in theme '_demo' folder
+    * Added new 'MultiCourse-hub' example site in theme '_demo' folder
 
 # v1.3.0
 ## 11/07/2018
