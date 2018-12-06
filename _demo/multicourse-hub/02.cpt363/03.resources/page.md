@@ -64,3 +64,5 @@ published: true
 *   [Interaction Design Association Vimeo Channels](http://vimeo.com/ixdaglobal/channels)  
 *   [NNgroup YouTube Channel](https://www.youtube.com/user/NNgroup/videos)  
 *   [UX Mastery YouTube Channel](https://www.youtube.com/channel/UCXmQyv8sAjmvgCCgvRKi9hw)
+
+*Note: this page is shared between two courses by using the [Page Inject Plugin](https://github.com/getgrav/grav-plugin-page-inject).*
