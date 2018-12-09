@@ -1,3 +1,9 @@
+# v1.5.5
+## 12/09/2018
+
+1. [](#bugfix)
+    * Fixed display of expected site name for top-level site pages
+
 # v1.5.4
 ## 12/08/2018
 
