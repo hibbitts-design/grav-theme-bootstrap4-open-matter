@@ -4,8 +4,12 @@
 {% if multi_course_hub %}
   {% set arrayofpath = uri.path|split('/') %}
   {% set firstfolderofpath = arrayofpath[1] %}
-  {% set site_title = pages.find('/' ~ firstfolderofpath ).title %}
-  {% if site_title == empty %}
+  {% if firstfolderofpath %}
+    {% set site_title = pages.find('/' ~ firstfolderofpath ).title %}
+    {% if site_title == empty %}
+      {% set site_title = site.title|e('html') %}
+    {% endif %}
+  {% else %}
     {% set site_title = site.title|e('html') %}
   {% endif %}
   {% set footer_content = pages.find('/' ~ firstfolderofpath ~ '/footer').content %}
