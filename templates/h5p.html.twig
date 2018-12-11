@@ -3,8 +3,8 @@
 {% if page.header.display_page_title is defined and not (displaypagetitle is defined)%}
 {% set displaypagetitle = page.header.display_page_title %}
 {% endif %}
-{% if page.header.display_hp5_content_title is defined and not (displaycontenttitle is defined)%}
-{% set displaycontenttitle = page.header.display_hp5_content_title %}
+{% if page.header.display_h5p_content_title is defined and not (displaycontenttitle is defined)%}
+{% set displaycontenttitle = page.header.display_h5p_content_title %}
 {% endif %}
 {% block content %}
 <div class="h5p-content-wrapper">
@@ -14,7 +14,7 @@
 <strong>{{page.title}}</strong><br>
 {% endif %}
 {% endif %}
-{% set h5pcontentid = page.header.hp5_content_id %}
+{% set h5pcontentid = page.header.h5p_content_id %}
 {% if h5pcontentid|contains('http') %}
 {% set h5pcontenturl = h5pcontentid %}
 {% else %}

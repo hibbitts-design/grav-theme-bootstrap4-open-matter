@@ -1,4 +1,4 @@
-{% set h5pcontentid = page.header.hp5_content_id %}
+{% set h5pcontentid = page.header.h5p_content_id %}
 {% if h5pcontentid|contains('http') %}
   {% set h5pcontenturl = h5pcontentid %}
 {% else %}
@@ -9,4 +9,4 @@
 {% endif %}
 {% set h5pcontenturl = h5pembedrootpath ~ h5pcontentid %}
 {% endif %}
-{% block content %}<a class="newwindow external-link" href="{{ h5pcontenturl }}"> {{ page.header.hp5_content_title }}</a><br>{% endblock %}
+{% block content %}<a class="newwindow external-link" href="{{ h5pcontenturl }}"> {{ page.header.h5p_content_title }}</a><br>{% endblock %}

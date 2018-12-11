@@ -16,16 +16,16 @@ form:
                   size: long
                   label: Page Title
 
-                header.hp5_content_title:
+                header.h5p_content_title:
                     ordering@: 2
                     type: text
                     size: long
                     label: H5P Content Title
 
-                header.display_hp5_content_title:
+                header.display_h5p_content_title:
                     ordering@: 3
                     type: toggle
-                    label: Display HP5 Content Title
+                    label: Display H5P Content Title
                     default: 0
                     highlight: 1
                     options:
@@ -34,7 +34,7 @@ form:
                     validate:
                         type: bool
 
-                header.hp5_content_id:
+                header.h5p_content_id:
                     ordering@: 4
                     type: integer
                     size: short
@@ -47,7 +47,7 @@ form:
                     size: large
                     label: 'How-to Tip'
                     markdown: false
-                    content: "To display this item within another page, enter '[plugin:page-inject](/hp5/PAGE)' in your Markdown content area."
+                    content: "To display this item within another page, enter '[plugin:page-inject](/h5p/PAGE)' in your Markdown content area."
 
         options:
           fields:
