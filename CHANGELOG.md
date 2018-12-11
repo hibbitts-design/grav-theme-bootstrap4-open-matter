@@ -1,3 +1,10 @@
+# v1.5.6
+## 12/11/2018
+
+1. [](#improved)
+    * Added option to hide or show content titles for custom content type templates and blueprints
+    * Updated example pages in theme '_demo' folder
+
 # v1.5.5
 ## 12/09/2018
 
