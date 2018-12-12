@@ -14,6 +14,11 @@
 <strong>{{page.title}}</strong><br>
 {% endif %}
 {% endif %}
+{% if displaycontenttitle is defined %}
+{% if displaycontenttitle %}
+{{ page.header.h5p_content_title_title }}
+{% endif %}
+{% endif %}
 {% set h5pcontentid = page.header.h5p_content_id %}
 {% if h5pcontentid|contains('http') %}
 {% set h5pcontenturl = h5pcontentid %}
