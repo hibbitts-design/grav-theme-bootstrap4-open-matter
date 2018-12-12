@@ -57,3 +57,10 @@ form:
                 default: null
                 validate:
                     type: URL
+
+          advanced:
+            fields:
+              columns:
+                fields:
+                  ordering:
+                    default: 1
