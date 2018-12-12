@@ -58,9 +58,9 @@ form:
                 validate:
                     type: URL
 
-          advanced:
-            fields:
-              columns:
-                fields:
-                  ordering:
-                    default: 1
+        advanced:
+          fields:
+            columns:
+              fields:
+                ordering:
+                  default: 1
