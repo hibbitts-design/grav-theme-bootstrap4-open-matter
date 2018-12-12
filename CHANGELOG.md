@@ -1,3 +1,11 @@
+# v1.5.8
+## 12/12/2018
+
+1. [](#improved)
+    * Updated H5P and SpeakerDeck templates
+1. [](#bugfix)
+    * Removed deprecated Twitter feed template and blueprint
+
 # v1.5.7
 ## 12/11/2018
 
