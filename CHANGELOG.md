@@ -1,3 +1,9 @@
+# v1.5.9
+## 12/12/2018
+
+1. [](#improved)
+    * Section-type pages now have the Folder Numeric Prefix option enabled by default (so Section pages can be manually sorted)
+
 # v1.5.8
 ## 12/12/2018
 
