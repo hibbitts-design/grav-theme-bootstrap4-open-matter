@@ -56,7 +56,7 @@
 
                         {# Added display of featured post - hibbittsdesign.org #}
                         {% for post in taxonomy.findTaxonomy({'tag': "featured"}) %}
-                          {% if (post.header.hide_from_post_list != true) and (post.parent.slug == page.slug) %}
+                          {% if (post.header.hide_from_post_list != true) and (post.path starts with page.path) %}
                             {% include 'partials/blog_item.html.twig' with {'page':post, 'truncate':true} %}
                           {% endif %}
                         {% endfor %}
