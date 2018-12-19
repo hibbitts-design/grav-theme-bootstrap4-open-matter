@@ -40,24 +40,28 @@
 
                         {{ page.content|raw }}
 
-                        {% set siblings = page.collection({ items: '@self.siblings'}) %}
-                        {% for page in siblings %}
-                          {# Added check for hiding post in list - hibbittsdesign.org #}
-                          {% if page.header.hide_from_course_list != true and page.template == 'course' %}
-                            <h2><a href="{{ page.url ~ '/home' }}">{{ page.title }}</a></h2>
-                            {% set course_image = pages.find('/' ~ page.slug ~ '/headerimage').media.images|first %}
-                            {{ course_image.cropZoom(1200,300).html() }}
-                            {{ page.content|raw }}
-                          {% endif %}
-                        {% endfor %}
+                        <div class="card-columns">
+                          {% set siblings = page.collection({ items: '@self.siblings'}) %}
+                          {% for page in siblings %}
+                            {# Added check for hiding post in list - hibbittsdesign.org #}
+                            {% if page.header.hide_from_course_list != true and page.template == 'course' %}
+                              <div class="card">
+                                <div class="card-body">
+                                  {% set course_image = pages.find('/' ~ page.slug ~ '/headerimage').media.images|first %}
+                                  <img class="card-img-top" src="{{course_image.url}}" alt="Card image cap">
+                                  <h2 class="card-title"><a href="{{ page.url ~ '/home' }}">{{ page.title }}</a></h2>
+                                  <p class="card-text">{{ page.content|raw }}</p>
+                                </div>
+                              </div>
+                            {% endif %}
+                          {% endfor %}
+                        </div>
 
                         {# Git repository edit link - hibbittsdesign.org #}
                         {% if ( page.header.git_sync_repo_link_display is defined and page.header.git_sync_repo_link_display == 'page' ) or (( theme_var('display_of_git_sync_repo_link') == 'page' and page.header.git_sync_repo_link_display is not defined ) and not (page.header.hide_git_sync_repo_link)) %}
                           <br>
                           {% include 'partials/git_sync_repo_link_note.html.twig' %}
                         {% endif %}
-
-                    </div>
 
                     {# Check content display flag - hibbittsdesign.org #}
                     {% if not (grav.uri.param('chromeless') or grav.uri.param('embedded')) and not(theme_var('chromeless.enabled')) and (show_sidebar) %}
