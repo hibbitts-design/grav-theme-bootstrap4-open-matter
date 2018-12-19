@@ -1,3 +1,9 @@
+# v1.6.2
+## 12/19/2018
+
+1. [](#improved)
+    * Added two column display of courses (using Bootstrap 4 Cards) on course list page
+
 # v1.6.1
 ## 12/19/2018
 
