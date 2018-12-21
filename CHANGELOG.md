@@ -1,3 +1,9 @@
+# v1.6.3
+## 12/21/2018
+
+1. [](#improved)
+    * Updated CSS style of MultiCourse list cards
+
 # v1.6.2
 ## 12/19/2018
 
