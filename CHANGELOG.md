@@ -1,3 +1,9 @@
+# v1.6.6
+## 12/22/2018
+
+1. [](#new)
+    * Added menubar item template and blueprint for easier editing of course-specific menubar items (replaced 'menu_classes' with more specific 'menu_target' option)
+
 # v1.6.5
 ## 12/22/2018
 
