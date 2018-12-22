@@ -1,3 +1,9 @@
+# v1.6.4
+## 12/21/2018
+
+1. [](#improved)
+    * Added `menu_icon` and `menu_class` to support menu icon and class for redirect-type pages
+
 # v1.6.3
 ## 12/21/2018
 
