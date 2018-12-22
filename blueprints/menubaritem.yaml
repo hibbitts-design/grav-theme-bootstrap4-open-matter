@@ -1,0 +1,66 @@
+title: Menubar Item Options
+'@extends':
+    type: default
+    context: blueprints://pages
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+            fields:
+                header.title:
+                  replace@: true
+                  type: text
+                  size: long
+                  label: Menubar Item Title
+
+                header.menu_icon:
+                    ordering@: 2
+                    type: text
+                    size: small
+                    label: Menubar Item Font Awesome Icon
+                    default: null
+                    validate:
+                        type: text
+
+                header.redirect:
+                    ordering@: 3
+                    type: text
+                    size: long
+                    label: Menubar Item URL
+                    validate:
+                      required: true
+                      type: URL
+
+                header.menu_target:
+                      ordering@: 4
+                      type: select
+                      label: Menubar Item Target
+                      default: _self
+                      size: medium
+                      options:
+                          _blank: 'Open in a new window'
+                          _parent: 'Open in the parent frame'
+                          _top: 'Open in the full body of the window'
+                          _self: 'Open in the same frame as clicked'
+
+                content:
+                  unset@: true
+                header.media_order:
+                  unset@: true
+
+        options:
+          fields:
+            publishing:
+              fields:
+                header.published:
+                  default: 1
+
+        advanced:
+          fields:
+            overrides:
+              fields:
+                header.visible:
+                  default: 1
