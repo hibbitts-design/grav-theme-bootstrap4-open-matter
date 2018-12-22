@@ -1,8 +1,14 @@
+# v1.6.5
+## 12/22/2018
+
+1. [](#improved)
+    * Updated 'menu_class' page header option to 'menu_classes' to better match existing option names
+
 # v1.6.4
 ## 12/21/2018
 
 1. [](#improved)
-    * Added `menu_icon` and `menu_class` to support menu icon and class for redirect-type pages
+    * Added 'menu_icon' and 'menu_class' to support menu icon and class for redirect-type pages
 
 # v1.6.3
 ## 12/21/2018
