@@ -84,7 +84,7 @@
                           {% set page_url = page.url %}
                           {% set page_menu = page.menu %}
                         {% endif %}
-                        <li class="nav-item {{ current_page }}"><a class="nav-link" href="{{ page_url }}">{{ page_menu }}</a></li>
+                        <li class="nav-item {{ current_page }}"><a class="nav-link {{ page.header.menu_class }}" href="{{ page_url }}">{% if page.header.menu_icon %}<i class="fa fa-{{ page.header.menu_icon }}"></i>{% endif %}{{ page_menu }}</a></li>
                     {% endif %}
                   {% endif %}
                 {% endif %}
