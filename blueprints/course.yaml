@@ -5,26 +5,62 @@ title: Course Options
 
 form:
   fields:
-
     tabs:
       type: tabs
       active: 1
-
       fields:
-        blog:
-          type: tab
-          title: Course List Item
+        content:
+            fields:
+                header.title:
+                  replace@: true
+                  type: text
+                  size: small
+                  label: Course Name
 
+                header.course_description:
+                  ordering@: 2
+                  replace@: true
+                  type: text
+                  size: long
+                  label: Course Description
+
+                header.hide_from_course_list:
+                    ordering@: 3
+                    type: toggle
+                    label: Display this Item in Course List
+                    help: Determines if this page (i.e. course) will appear in the course list
+                    default: 0
+                    highlight: 0
+                    options:
+                        0:  Yes
+                        1:  No
+                    validate:
+                        type: bool
+
+                header.course_home:
+                    ordering@: 4
+                    type: text
+                    size: small
+                    label: Course Home Page
+                    description: For example, 'home'.
+                    validate:
+                      required: true
+
+                content:
+                  unset@: true
+                header.media_order:
+                  unset@: true
+
+        options:
           fields:
+            publishing:
+              fields:
+                header.published:
+                  default: 1
 
-            header.hide_from_course_list:
-                type: toggle
-                label: Display this Item in Course List
-                help: Determines if this page (i.e. course) will appear in the course list
-                default: 0
-                highlight: 0
-                options:
-                    0:  Yes
-                    1:  No
-                validate:
-                    type: bool
+        advanced:
+          fields:
+            overrides:
+              fields:
+                header.visible:
+                  default: 0
