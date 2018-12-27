@@ -1,20 +1,20 @@
 {% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (base_url_relative~'/'~blog.slug) : blog.url %}
 {% set new_base_url = blog.url == '/' ? '' : blog.url %}
 {% set multi_course_hub = theme_var('multi_course_hub.enabled') %}
+{% set arrayofpath = uri.path|split('/') %}
+{% set firstfolderofpath = arrayofpath[1] %}
 
 {# MultiCourse hub compatibility - hibbittsdesign.org #}
-{% if multi_course_hub %}
-  {% set arrayofpath = uri.path|split('/') %}
-  {% set firstfolderofpath = arrayofpath[1] %}
-  {% set sidebar_page_content = pages.find('/' ~ firstfolderofpath ~ '/sidebar').content %}
+{% if multi_course_hub or page.find('/' ~ firstfolderofpath).template == 'course' %}
+  {% set sidebar_page_content = page.find('/' ~ firstfolderofpath ~ '/sidebar').content %}
   {% if sidebar_page_content == empty %}
-    {% set sidebar_page_content = pages.find('/sidebar').content %}
+    {% set sidebar_page_content = page.find('/sidebar').content %}
   {% endif %}
 {% else %}
-  {% set sidebar_page_content = pages.find('/sidebar').content %}
+  {% set sidebar_page_content = page.find('/sidebar').content %}
 {% endif %}
 
-<h1 class="hidden">{{sidebar_page.title}}</h1>
+<h1 class="hidden">{{page.title}}</h1>
 
 {% if config.plugins.simplesearch.enabled %}
 <div class="sidebar-content">

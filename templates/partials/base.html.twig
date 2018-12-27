@@ -1,24 +1,21 @@
 {% set multi_course_hub = theme_var('multi_course_hub.enabled') %}
+{% set arrayofpath = uri.path|split('/') %}
+{% set firstfolderofpath = arrayofpath[1] %}
 
 {# MultiCourse hub compatibility - hibbittsdesign.org #}
-{% if multi_course_hub %}
-  {% set arrayofpath = uri.path|split('/') %}
-  {% set firstfolderofpath = arrayofpath[1] %}
+{% if multi_course_hub or page.find('/' ~ firstfolderofpath).template == 'course' %}
   {% if firstfolderofpath %}
-    {% set site_title = pages.find('/' ~ firstfolderofpath ).title %}
-    {% if site_title == empty %}
-      {% set site_title = site.title|e('html') %}
-    {% endif %}
+    {% set site_title = page.find('/' ~ firstfolderofpath ).title %}
   {% else %}
     {% set site_title = site.title|e('html') %}
   {% endif %}
-  {% set footer_content = pages.find('/' ~ firstfolderofpath ~ '/footer').content %}
+  {% set footer_content = page.find('/' ~ firstfolderofpath ~ '/footer').content %}
   {% if footer_content == empty %}
-    {% set footer_content = pages.find('/footer').content %}
+    {% set footer_content = page.find('/footer').content %}
   {% endif %}
 {% else %}
   {% set site_title = site.title|e('html') %}
-  {% set footer_content = pages.find('/footer').content %}
+  {% set footer_content = page.find('/footer').content %}
 {% endif %}
 
 <!DOCTYPE html>
@@ -85,7 +82,7 @@
         {% if not (grav.uri.param('chromeless') or grav.uri.param('embedded')) and not(theme_var('chromeless.enabled')) %}
           <div class="footer">
               <div class="container">
-                {% if pages.find('/footer').header.footer_scroll %}
+                {% if page.find('/footer').header.footer_scroll %}
                   {# added top of page navigation element - hibbittsdesign.org #}
                   <div class="up-arrow">
                     <a href="#" id="top" title="Top of Page">

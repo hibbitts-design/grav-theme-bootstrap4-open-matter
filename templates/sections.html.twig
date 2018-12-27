@@ -1,4 +1,6 @@
 {% set multi_course_hub = theme_var('multi_course_hub.enabled') %}
+{% set arrayofpath = uri.path|split('/') %}
+{% set firstfolderofpath = arrayofpath[1] %}
 
 {% embed 'partials/base.html.twig' %}
 
@@ -31,9 +33,8 @@
   {% block content %}
 
   {# MultiCourse hub compatibility - hibbittsdesign.org #}
-    {% if multi_course_hub %}
-      {% set arrayofpath = uri.path|split('/') %}
-      {% set toplevelpage = arrayofpath[1] %}
+  {% if multi_course_hub or page.find('/' ~ firstfolderofpath).template == 'course' %}
+      {% set toplevelpage = firstfolderofpath %}
     {% else %}
       {% set toplevelpage = 'pages' %}
     {% endif %}
