@@ -197,17 +197,6 @@ form:
                 type: section
                 title: 'Menubar'
                 underline: true
-            hidehomemenulink:
-                type: toggle
-                label: 'Hide Homepage Link in Menubar'
-                help: 'Determines if the link to the Homepage is included in the menubar.'
-                default: 0
-                highlight: 1
-                options:
-                    1: 'Yes'
-                    0: 'No'
-                validate:
-                    type: bool
             displaycustommenus.enabled:
                 type: toggle
                 label: 'Display Custom Menu Items'
