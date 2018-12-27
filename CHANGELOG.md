@@ -1,3 +1,13 @@
+# v1.6.7
+## 12/27/2018
+
+1. [](#new)
+    * Added the ability to hide courses from a course list page and set custom course home page
+1. [](#improved)
+    * Revised MultiCourse feature to be more robust and automatic detection is now supported (manual theme option will be soon removed once further testing is complete)
+    * Removed theme option to hide homepage in menubar (set the 'visible' option to 'false' on homepage for same functionality)
+    * Updated example pages in theme '_demo' folder
+
 # v1.6.6
 ## 12/22/2018
 
