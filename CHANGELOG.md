@@ -1,3 +1,9 @@
+# v1.6.8
+## 12/27/2018
+
+1. [](#improved)
+    * Removed unneeded theme option for MultiCourse feature (automatic detection is now fully supported)
+
 # v1.6.7
 ## 12/27/2018
 
@@ -184,8 +190,8 @@
 ## 11/15/2018
 
 1. [](#new)
-    * Added experimental support for multiple courses within one hub (i.e. multicourse hub) with each course having it's own image header, site menu, sidebar and footer (enabled with theme option `multi_course_hub` to `true`)
-    * Added new 'MultiCourse-hub' example site in theme '_demo' folder
+    * Added experimental support for multiple courses within one hub (i.e. MultiCourse Hub) with each course having it's own image header, site menu, sidebar and footer (enabled with theme option `multi_course_hub` to `true`)
+    * Added new 'multicourse-hub' example site in theme '_demo' folder
 
 # v1.3.0
 ## 11/07/2018
