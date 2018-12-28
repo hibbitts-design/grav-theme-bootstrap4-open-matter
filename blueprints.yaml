@@ -1,5 +1,5 @@
 name: 'Bootstrap4 Open Matter'
-version: 1.6.7
+version: 1.6.8
 description: "A custom version of the Bootstrap4 theme for open blogs, course hubs and more. Includes Git Sync and 'chromeless' content embedding."
 icon: bold
 author:
@@ -235,22 +235,6 @@ form:
                             _parent: 'Open in the parent frame'
                             _top: 'Open in the full body of the window'
                             _self: 'Open in the same frame as clicked'
-            multicoursehub:
-                type: section
-                title: 'MultiCourse Hub'
-                underline: true
-            multi_course_hub.enabled:
-                type: toggle
-                label: 'Enable MultiCourse Hub Mode'
-                help: 'Determines if the presentation of multiple course (each within its own folder) is enabled.'
-                description: 'When enabled, multiple courses can be presented within a single Course Hub, where the page folders for each course are contained in a top-level site folder.'
-                highlight: 1
-                default: 0
-                options:
-                    1: 'Yes'
-                    0: 'No'
-                validate:
-                    type: bool
 
         bootstrap4_options:
           type: tab
