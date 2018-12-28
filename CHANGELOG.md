@@ -1,5 +1,5 @@
 # v1.6.8
-## 12/27/2018
+## 12/28/2018
 
 1. [](#improved)
     * Removed unneeded theme option for MultiCourse feature (automatic detection is now fully supported)
