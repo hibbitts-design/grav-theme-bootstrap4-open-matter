@@ -1,3 +1,4 @@
+{% if page.header.published %}
 <div class="list-item-modular">
 
     {% set header_image = page.header.header_image|defined(true) %}
@@ -59,3 +60,4 @@
       <p>{{ page.content|raw }}</p>
     </div>
 </div>
+{% endif %}

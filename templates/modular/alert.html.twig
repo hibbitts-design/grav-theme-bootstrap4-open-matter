@@ -1,3 +1,4 @@
+{% if page.header.published %}
 {% if page.header.alert_style is defined %}
   {% set alert_style = page.header.alert_style %}
 {% else %}
@@ -13,3 +14,4 @@
     </div>
   </div>
 </div>
+{% endif %}
