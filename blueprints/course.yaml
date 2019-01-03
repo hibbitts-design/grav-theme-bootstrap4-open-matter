@@ -46,11 +46,6 @@ form:
                     validate:
                       required: true
 
-                content:
-                  unset@: true
-                header.media_order:
-                  unset@: true
-
         options:
           fields:
             publishing:

@@ -40,7 +40,7 @@
 
                         {{ page.content|raw }}
 
-                        <div class="card-columns">
+                        <div class="card-deck">
                           {% set siblings = page.collection({ items: '@self.siblings'}) %}
                           {% for page in siblings %}
                             {# Added check for hiding post in list - hibbittsdesign.org #}
@@ -60,7 +60,10 @@
                                     <img class="card-img-top" src="{{course_image.url}}" alt="Card image cap">
                                   {% endif %}
                                   <h2 class="card-title"><a href="{{ page.url ~ '/' ~ course_home }}">{{ page.title }}</a></h2>
-                                  <p class="card-text">{{ page.header.course_description }}</p>
+                                  {% if page.header.course_description %}
+                                    <p class="card-text">{{ page.header.course_description }}</p>
+                                  {% endif %}
+                                  {{ page.find('/' ~ page.slug).content|raw}}
                                 </div>
                               </div>
                             {% endif %}
