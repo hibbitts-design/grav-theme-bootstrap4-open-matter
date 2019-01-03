@@ -1,3 +1,10 @@
+# v1.6.9
+## 01/03/2019
+
+1. [](#improved)
+    * Course list cards can now display course page content
+    * Added check for page header 'published' for modular home page items
+
 # v1.6.8
 ## 12/28/2018
 
