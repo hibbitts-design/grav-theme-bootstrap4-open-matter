@@ -1,3 +1,11 @@
+# v1.7.0
+## 01/04/2019
+
+1. [](#improved)
+    * Updated example pages in theme '_demo' folder
+1. [](#bugfix)
+    * Fixed malformed link for MultiCourse home page
+
 # v1.6.9
 ## 01/03/2019
 
