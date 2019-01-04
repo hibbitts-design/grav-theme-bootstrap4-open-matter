@@ -13,7 +13,9 @@
     {% if course_home is empty %}
         {% set course_home = config.system.home.alias %}
     {% endif %}
-    {% set base_url_relative = base_url_relative ~ '/' ~ firstfolderofpath ~ '/' ~ course_home %}
+    {% if firstfolderofpath %}
+      {% set base_url_relative = base_url_relative ~ '/' ~ firstfolderofpath ~ '/' ~ course_home %}
+    {% endif %}
     {% if page.find('/' ~ firstfolderofpath).routable %}
       {% set site_title = page.find('/' ~ firstfolderofpath ).title %}
     {% else %}
