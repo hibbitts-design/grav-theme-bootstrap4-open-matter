@@ -59,9 +59,14 @@
                                   {% if course_image is not empty %}
                                     <img class="card-img-top" src="{{course_image.url}}" alt="Card image cap">
                                   {% endif %}
-                                  <h2 class="card-title"><a href="{{ page.url ~ '/' ~ course_home }}">{{ page.title }}</a></h2>
-                                  {% if page.header.course_description %}
-                                    <p class="card-text">{{ page.header.course_description }}</p>
+                                  {% if page.header.course_list_title %}
+                                    {% set course_title = page.header.course_list_title %}
+                                  {% else %}
+                                    {% set course_title = page.title %}
+                                  {% endif %}
+                                  <h2 class="card-title"><a href="{{ page.url ~ '/' ~ course_home }}">{{ course_title }}</a></h2>
+                                  {% if page.header.course_list_description %}
+                                    <p class="card-text">{{ page.header.course_list_description }}</p>
                                   {% endif %}
                                   {{ page.find('/' ~ page.slug).content|raw}}
                                 </div>

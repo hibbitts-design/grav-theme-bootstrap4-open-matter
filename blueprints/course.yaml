@@ -15,17 +15,25 @@ form:
                   replace@: true
                   type: text
                   size: small
-                  label: Course Name
+                  label: Course Title
 
-                header.course_description:
+                header.course_list_title:
                   ordering@: 2
                   replace@: true
                   type: text
+                  size: medium
+                  label: Course List Title
+                  description: If empty, Course Title is displayed.
+
+                header.course_list_description:
+                  ordering@: 3
+                  replace@: true
+                  type: text
                   size: long
-                  label: Course Description
+                  label: Course List Description
 
                 header.hide_from_course_list:
-                    ordering@: 3
+                    ordering@: 4
                     type: toggle
                     label: Display this Item in Course List
                     help: Determines if this page (i.e. course) will appear in the course list
@@ -38,14 +46,13 @@ form:
                         type: bool
 
                 header.course_home:
-                    ordering@: 4
+                    ordering@: 5
                     type: text
                     size: small
                     label: Course Home Page
                     description: For example, 'home'.
                     validate:
                       required: true
-
         options:
           fields:
             publishing:
