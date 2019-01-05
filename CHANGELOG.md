@@ -1,3 +1,10 @@
+# v1.7.1
+## 01/05/2019
+
+1. [](#improved)
+    * Added optional course list title for courses
+    * Updated example pages in theme '_demo' folder
+
 # v1.7.0
 ## 01/04/2019
 
