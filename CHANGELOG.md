@@ -1,3 +1,9 @@
+# v1.7.3
+## 01/08/2019
+
+1. [](#bugfix)
+    * Custom menu items without icons are now presented correctly
+
 # v1.7.2
 ## 01/07/2019
 
