@@ -1,0 +1,37 @@
+{# no tab indents for Page Inject Plugin compatibility - hibbittsdesign.org #}
+{% if page.header.published %}
+{% if page.header.display_page_title is defined and not (displaypagetitle is defined)%}
+{% set displaypagetitle = page.header.display_page_title %}
+{% endif %}
+{% if page.header.display_iframe_title is defined and not (displaycontenttitle is defined)%}
+{% set displaycontenttitle = page.header.display_iframe_title %}
+{% endif %}
+{% block content %}
+{{ page.content|raw }}
+{% if displaypagetitle is defined %}
+{% if displaypagetitle %}
+<strong>{{page.title}}</strong>
+{% endif %}
+{% endif %}
+{% if displaycontenttitle is defined %}
+{% if displaycontenttitle %}
+{% if displaypagetitle is defined %}
+{% if displaypagetitle %}
+<br>
+{% endif %}
+{% endif %}
+{{ page.header.iframe_title }}
+{% endif %}
+{% else %}
+{{ page.header.iframe_title }}
+{% endif %}
+{% set iframeaspectratio = page.header.iframe_aspect_ratio %}
+{% if iframeaspectratio is empty %}
+  {% set iframeaspectratio = '4by3' %}
+{% endif %}
+<div class="embed-responsive embed-responsive-{{ iframeaspectratio }}">
+<iframe src="{{ page.header.iframe_url }}" width="640" height="480"></iframe>
+</div>
+<br>
+{% endblock %}
+{% endif %}
