@@ -1,3 +1,13 @@
+# v1.7.4
+## 01/14/2019
+
+1. [](#new)
+    * Added iFrame template, blueprint, and shortcode (with responsive support for 4by3 and 16by9 aspect ratios)
+1. [](#improved)
+    * Added option for custom Git Sync link text in page headers
+1. [](#bugfix)
+    * Fixed display of Git Sync link on custom content list and page rss feeds pages
+
 # v1.7.3
 ## 01/08/2019
 
