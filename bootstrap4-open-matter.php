@@ -40,7 +40,7 @@ class Bootstrap4OpenMatter extends Theme
     {
         $config = (array) $this->config->get('plugins');
         if ($config['shortcode-core']['fontawesome']['load'] == 'true') {
-            $grav['assets']->addCss('//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css', null, false, 'presentation');
+            $this->grav['assets']->addCss('//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css', null, false, 'presentation');
         }
     }
 }
