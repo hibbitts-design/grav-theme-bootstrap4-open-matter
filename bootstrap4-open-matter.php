@@ -14,7 +14,8 @@ class Bootstrap4OpenMatter extends Theme
         return [
             'onThemeInitialized'  => ['onThemeInitialized', 0],
             'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
-            'onTwigSiteVariables' => ['onTwigSiteVariables', 0]
+            'onTwigSiteVariables' => ['onTwigSiteVariables', 0],
+            'onAssetsInitialized' => ['onAssetsInitialized', 0]
         ];
     }
 
@@ -35,5 +36,11 @@ class Bootstrap4OpenMatter extends Theme
             $this->grav['assets']->add('theme://editor-buttons/admin/js/shortcode-h5p.js');
         }
     }
-
+    public function onAssetsInitialized()
+    {
+        $config = (array) $this->config->get('plugins');
+        if ($config['shortcode-core']['fontawesome']['load'] == 'true') {
+            $grav['assets']->addCss('//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css', null, false, 'presentation');
+        }
+    }
 }
