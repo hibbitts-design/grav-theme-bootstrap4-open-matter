@@ -1,3 +1,9 @@
+# v1.7.5
+## 01/21/2019
+
+1. [](#bugfix)
+    * Fixed check for theme 'chromeless' option and display of Next/Prev Post buttons
+
 # v1.7.4
 ## 01/14/2019
 
