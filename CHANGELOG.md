@@ -1,3 +1,9 @@
+# v1.7.6
+## 01/25/2019
+
+1. [](#bugfix)
+    * Removed default custom menubar entry
+
 # v1.7.5
 ## 01/21/2019
 
