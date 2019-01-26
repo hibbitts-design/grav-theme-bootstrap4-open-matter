@@ -14,9 +14,3 @@ streams:
        '':
        - user/themes/bootstrap4-open-matter
        - user/themes/bootstrap4
-
-menu:
-  -
-    text: Grav
-    icon: arrow-circle-right
-    url: 'http://getgrav.org/'
