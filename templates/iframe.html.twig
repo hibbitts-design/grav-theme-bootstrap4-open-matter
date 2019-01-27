@@ -6,6 +6,9 @@
 {% if page.header.display_iframe_title is defined and not (displaycontenttitle is defined)%}
 {% set displaycontenttitle = page.header.display_iframe_title %}
 {% endif %}
+{% if page.header.display_iframe_links is defined and not (displaycontentlinks is defined)%}
+{% set displaycontentlinks = page.header.display_iframe_links %}
+{% endif %}
 {% block content %}
 {{ page.content|raw }}
 {% if displaypagetitle is defined %}
@@ -27,7 +30,18 @@
 {% endif %}
 {% set iframeaspectratio = page.header.iframe_aspect_ratio %}
 {% if iframeaspectratio is empty %}
-  {% set iframeaspectratio = '4by3' %}
+{% set iframeaspectratio = '4by3' %}
+{% endif %}
+{% if displaycontentlinks is defined %}
+{% if displaycontentlinks %}
+{% set loopindex = 0 %}
+{% if page.header.iframe_links is defined %}(
+{% for litem in page.header.iframe_links %}
+{% if loopindex > 0 %} | {% endif %}<a class="newwindow external-link" href="{{ litem.url }}"><i class="fa {{litem.icon}}" aria-hidden="true"></i>{{litem.text}}</a>
+{% set loopindex = loopindex + 1 %}
+{% endfor %}
+){% endif %}
+{% endif %}
 {% endif %}
 <div class="embed-responsive embed-responsive-{{ iframeaspectratio }}">
 <iframe src="{{ page.header.iframe_url }}" width="640" height="480"></iframe>

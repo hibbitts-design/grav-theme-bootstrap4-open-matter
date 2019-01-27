@@ -52,6 +52,30 @@ form:
                         4by3: 4by3
                         16by9: 16by9
 
+                header.iframe_links:
+                    ordering@: 6
+                    name: iframelinks
+                    type: list
+                    label: 'iFrame Links'
+                    fields:
+                        .text:
+                            type: text
+                            label: Text
+                            description: 'Text label for link item.'
+                        .icon:
+                            type: text
+                            label: Icon
+                            description: 'Font Awesome icon for link item.'
+                        .url:
+                            type: text
+                            label: URL
+                            description: 'URL for link item.'
+
+                content:
+                  unset@: true
+                header.media_order:
+                  unset@: true
+
         options:
           fields:
             publishing:
