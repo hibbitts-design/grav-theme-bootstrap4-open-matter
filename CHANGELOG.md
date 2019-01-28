@@ -1,3 +1,9 @@
+# v1.8.1
+## 01/29/2019
+
+1. [](#improved)
+    * Improved handling of embedded item summary pages
+
 # v1.8.0
 ## 01/28/2019
 
