@@ -34,13 +34,14 @@
 {% endif %}
 {% if displaycontentlinks is defined %}
 {% if displaycontentlinks %}
+<br>
 {% set loopindex = 0 %}
-{% if page.header.iframe_links is defined %}(
+{% if page.header.iframe_links is defined %}
 {% for litem in page.header.iframe_links %}
 {% if loopindex > 0 %} | {% endif %}<a class="newwindow external-link" href="{{ litem.url }}"><i class="fa {{litem.icon}}" aria-hidden="true"></i>{{litem.text}}</a>
 {% set loopindex = loopindex + 1 %}
 {% endfor %}
-){% endif %}
+{% endif %}
 {% endif %}
 {% endif %}
 <div class="embed-responsive embed-responsive-{{ iframeaspectratio }}">
