@@ -1,3 +1,9 @@
+# v1.7.8
+## 01/27/2019
+
+1. [](#improved)
+    * Adjusted display of optional link items for embedded iFrames
+
 # v1.7.7
 ## 01/27/2019
 
