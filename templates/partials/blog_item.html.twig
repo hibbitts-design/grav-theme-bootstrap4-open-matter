@@ -144,7 +144,7 @@
             {% endif %}
 
             {# check summary only flag - hibbittsdesign.org #}
-            {% if not (grav.uri.param('summaryonly')) and not (grav.uri.param('onlysummary')) %}
+            {% if not (grav.uri.param('summaryonly') or grav.uri.param('onlysummary')) %}
               {% if content is not empty  %}
                     <p>{{ content|raw }}</p>
               {% else %}
@@ -152,7 +152,7 @@
               {% endif %}
 
               {# Creative Commons License -  hibbittsdesign.org #}
-              {% if not (grav.uri.param('chromeless') or grav.uri.param('embedded')) and not(theme_var('chromeless.enabled')) and (theme_var('cc_license.enabled') and not(page.header.hide_cc_license) and not (grav.uri.param('onlysummary'))) %}
+              {% if not (grav.uri.param('chromeless') or grav.uri.param('embedded')) and not(theme_var('chromeless.enabled')) and (theme_var('cc_license.enabled') and not(page.header.hide_cc_license) and not (grav.uri.param('onlysummary') or grav.uri.param('summaryonly'))) %}
                 <p>{% include 'partials/creative_commons_license.html.twig' %}</p>
               {% endif %}
 
