@@ -12,7 +12,7 @@
             {% endif %}
             {{ page.content|raw }}
             {# Creative Commons License -  hibbittsdesign.org #}
-            {% if theme_var('cc_license.enabled') and not(page.header.hide_cc_license) %}
+            {% if not (grav.uri.param('chromeless') or grav.uri.param('embedded')) and not(theme_var('chromeless.enabled')) and (theme_var('cc_license.enabled') and not(page.header.hide_cc_license)) %}
               <p>{% include 'partials/creative_commons_license.html.twig' %}</p>
             {% endif %}
             {# Git repository edit link - hibbittsdesign.org #}
