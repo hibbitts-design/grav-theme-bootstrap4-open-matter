@@ -1,3 +1,9 @@
+# v1.8.0
+## 01/28/2019
+
+1. [](#improved)
+    * Added 'onlysummary' alias for the URL parameter 'summaryonly'
+
 # v1.7.9
 ## 01/28/2019
 
