@@ -1,3 +1,9 @@
+# v1.8.4
+## 02/05/2019
+
+1. [](#new)
+    * Added options to show or hide Section Page Sidebar and change Section Navbar alignment (left or right)
+
 # v1.8.3
 ## 02/04/2019
 
