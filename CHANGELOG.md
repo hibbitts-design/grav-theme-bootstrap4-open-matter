@@ -1,8 +1,14 @@
+# v1.8.3
+## 02/04/2019
+
+1. [](#new)
+    * Added option to show or hide Section Page Next/Prev buttons
+
 # v1.8.2
 ## 02/03/2019
 
 1. [](#new)
-    * Added support for 'visible' option setting in Section-type pages.
+    * Added support for 'visible' option setting in Section-type pages
 
 # v1.8.1
 ## 01/29/2019
