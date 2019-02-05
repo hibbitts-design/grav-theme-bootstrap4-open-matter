@@ -1,3 +1,9 @@
+# v1.8.6
+## 02/06/2019
+
+1. [](#new)
+    * Added support for H5P content to be hosted on H5P.com (in addition to H5P.org and your own local server)
+
 # v1.8.4
 ## 02/05/2019
 
