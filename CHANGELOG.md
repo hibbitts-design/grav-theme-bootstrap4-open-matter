@@ -1,3 +1,9 @@
+# v1.8.6
+## 02/07/2019
+
+1. [](#improved)
+    * iFrame template now supports both complete URLs and local Grav site page paths
+
 # v1.8.5
 ## 02/06/2019
 
