@@ -39,7 +39,7 @@
 {% if page.header.iframe_links is defined %}
 {% for litem in page.header.iframe_links %}
 {% if litem.source|first == '/' %}
-{% set litem_source = base_source ~ litem.source %}
+{% set litem_source = base_url ~ litem.source %}
 {% else %}
 {% set litem_source = litem.source %}
 {% endif %}
