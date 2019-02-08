@@ -1,3 +1,9 @@
+# v1.8.7
+## 02/08/2019
+
+1. [](#improved)
+    * iFrame link and title only templates now support both complete URLs and local Grav site page paths
+
 # v1.8.6
 ## 02/07/2019
 
