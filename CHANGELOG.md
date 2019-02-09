@@ -3,6 +3,8 @@
 
 1. [](#bugfix)
     * Fixed RSS and Atom feeds for pages with embedded iFrame or Topics
+1. [](#improved)
+    * Additional templates for RSS and Atom feeds no longer contains duplicated Twig code (embed is used instead)
 
 # v1.8.7
 ## 02/08/2019
