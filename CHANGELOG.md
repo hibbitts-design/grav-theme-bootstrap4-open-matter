@@ -1,3 +1,9 @@
+# v1.8.8
+## 02/08/2019
+
+1. [](#bugfix)
+    * Fixed RSS and Atom feeds for pages with embedded iFrame or Topics
+
 # v1.8.7
 ## 02/08/2019
 
