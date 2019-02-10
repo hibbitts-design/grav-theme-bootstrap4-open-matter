@@ -26,8 +26,12 @@ presentation:
 
 ---
 
+[youtube]https://www.youtube.com/watch?v=Nj6x01wg2WA[/youtube]
+
+---
 
 [.background-color: #618B25]
+[.build-lists: true]
 
 # Topics to Explore
 1. Topic One  
