@@ -46,7 +46,7 @@
 ## 02/03/2019
 
 1. [](#new)
-    * Added support for 'visible' option setting in Section-type pages
+    * Added support for 'visible' option setting in Section-type pages. For existing Section-type pages, ensure that any current 'visible: false' values are removed for those pages to be included.
 
 # v1.8.1
 ## 01/29/2019
