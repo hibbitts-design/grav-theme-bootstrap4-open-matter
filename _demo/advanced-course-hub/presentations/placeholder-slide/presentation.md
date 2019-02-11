@@ -44,7 +44,7 @@ presentation:
 
 # Slides Placeholder
 
-### Topic One
+### [fa=fa-rocket] Topic One
 
 ---
 
@@ -52,7 +52,7 @@ presentation:
 
 # Slides Placeholder
 
-### Topic Two
+### [fa=fa-rocket] Topic Two
 
 ---
 
@@ -60,7 +60,7 @@ presentation:
 
 # Slides Placeholder
 
-### Topic Three
+### [fa=fa-rocket] Topic Three
 
 ---
 
