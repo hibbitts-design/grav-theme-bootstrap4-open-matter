@@ -1,3 +1,10 @@
+# v1.9.1
+## 02/15/2019
+
+1. [](#improved)
+    * Added more robust support for MultiCourse feature using the Presentation Plugin
+    * Added support for default aspect ratio when using the Presentation Plugin
+
 # v1.9.0
 ## 02/13/2019
 
