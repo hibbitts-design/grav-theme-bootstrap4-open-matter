@@ -1,3 +1,9 @@
+# v1.9.2
+## 02/24/2019
+
+1. [](#improved)
+    * Added defaults for sample content, textscale and fonts with blueprint for Presentation Plugin
+
 # v1.9.1
 ## 02/15/2019
 
