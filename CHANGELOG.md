@@ -1,3 +1,9 @@
+# v1.9.3
+## 02/24/2019
+
+1. [](#improved)
+    * Added 'Gill Sans MT' to default font family for Presentation pages
+
 # v1.9.2
 ## 02/24/2019
 
