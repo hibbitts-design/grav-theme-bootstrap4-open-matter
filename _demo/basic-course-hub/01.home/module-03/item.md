@@ -9,11 +9,10 @@ header_image_creditlink: 'https://www.flickr.com/photos/emiliokuffer/6384294717/
 header_image_alt_text: 'Bullseye'
 ---
 
-## How to make more strategic design decisions?
-
-
-### Slides to be Discussed
-[Strategic UX Design](https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf)  
+## How to make more strategic design decisions?  
+[User Experience Strategy](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-4)  
+[Current State and Future State](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-5)  
+[Journey Mapping](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-6)  
 
 ===
 
@@ -24,7 +23,7 @@ header_image_alt_text: 'Bullseye'
 
 ### Presented Slides  
 Strategic UX Design
-[pdf url="https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf"]  
+[presentation="presentation/placeholder-slide"]
 
 ### Supplemental Materials  
 [Customer Journey Mapping](https://www.youtube.com/watch?v=a40QYgO-_aM)  

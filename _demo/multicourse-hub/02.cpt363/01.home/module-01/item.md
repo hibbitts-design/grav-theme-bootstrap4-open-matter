@@ -2,22 +2,23 @@
 title: 'Week 1 (May 9 - 15)'
 published: true
 date: '09-05-2018 00:00'
-hide_from_post_list: false
-hide_git_sync_repo_link: true
+header_image_alt_text: 'SFU Academic Quadrangle'
 header_image_credit: 'Julian Schüngel, Flickr.com'
 header_image_creditlink: 'https://www.flickr.com/photos/medevac71/10610701655/'
-header_image_alt_text: 'SFU Academic Quadrangle'
+hide_from_post_list: false
+continue_link: true
+hide_git_sync_repo_link: true
 ---
 
 ## What is usability and user experience design?
 
 ### What is this course all about?
-[Course Overview](https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf)
+[Course Overview](../../presentation/placeholder-slide?target=_blank)
 
 ### What is usability and user experience design?
-[HCI, UI, IA, IxD, and UX](https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf#page=3)  
-[Design Thinking](https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf#page=4)  
-[Usability and UCD](https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf#page=5)  
+[HCI, UI, IA, IxD, and UX](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-4)  
+[Design Thinking](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-5?target=_blank)  
+[Usability and UCD](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-6?target=_blank)  
 
 ===
 
@@ -28,10 +29,10 @@ header_image_alt_text: 'SFU Academic Quadrangle'
 
 ### Presented Slides  
 Course Overview
-[pdf url="https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf"]  
+[presentation="/presentation/placeholder-slide"]
 
 Introduction to UX Design
-[pdf url="https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf"]  
+[presentation="/presentation/placeholder-slide"]
 
 ### Supplemental Materials  
 [Interaction Design History](http://www.slideshare.net/mrettig/interaction-design-history)  

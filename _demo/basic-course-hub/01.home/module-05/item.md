@@ -9,10 +9,10 @@ header_image_creditlink: 'https://www.flickr.com/photos/lucamascaro/4642289926/i
 header_image_alt_text: 'Usability testing'
 ---
 
-## How to plan, conduct, and summarize usability tests?
-
-### Slides to be Discussed
-[Usability Testing](https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf)  
+## How to plan, conduct, and summarize usability tests?  
+[Testing Methods](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-4)  
+[Conducting Tests](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-5)  
+[Analysis and Reporting](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-6)  
 
 ===
 
@@ -23,7 +23,7 @@ header_image_alt_text: 'Usability testing'
 
 ### Presented Slides  
 Usability Testing
-[pdf url="https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf"]  
+[presentation="presentation/placeholder-slide"]
 
 ### Supplemental Materials  
 [Rocket Surgery Made Easy by Steve Krug: Usability Demo](https://www.youtube.com/watch?v=QckIzHC99Xc)  

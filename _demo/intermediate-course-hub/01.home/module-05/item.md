@@ -10,9 +10,9 @@ header_image_alt_text: 'Usability testing'
 ---
 
 ## How to plan, conduct, and summarize usability tests?  
-[Testing Methods](https://paulhibbitts.net/cmpt-363-182/pdfs/cmpt-363-182-usability-testing.pdf#page=5)  
-[Conducting Tests](https://paulhibbitts.net/cmpt-363-182/pdfs/cmpt-363-182-usability-testing.pdf#page=31)  
-[Analysis and Reporting](https://paulhibbitts.net/cmpt-363-182/pdfs/cmpt-363-182-usability-testing.pdf#page=101)  
+[Testing Methods](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-4)  
+[Conducting Tests](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-5)  
+[Analysis and Reporting](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-6)  
 
 ===
 
@@ -23,7 +23,7 @@ header_image_alt_text: 'Usability testing'
 
 ### Presented Slides  
 Usability Testing
-[pdf url="https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf"]  
+[presentation="presentation/placeholder-slide"]
 
 ### Supplemental Materials  
 [Rocket Surgery Made Easy by Steve Krug: Usability Demo](https://www.youtube.com/watch?v=QckIzHC99Xc)  

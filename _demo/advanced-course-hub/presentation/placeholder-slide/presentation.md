@@ -3,12 +3,9 @@ title: Placeholder Slide
 textsize:
     scale: '1.125'
 style:
-    header-font-family: 'GillSans,Arial'
-    block-font-family: 'GillSans,Arial'
-    justify-content: center
+    header-font-family: 'GillSans,''Gill Sans MT'',Arial'
+    block-font-family: 'GillSans,''Gill Sans MT'',Arial'
 horizontal: true
-presentation:
-    parser: DecksetParser
 ---
 
 # Slides Placeholder

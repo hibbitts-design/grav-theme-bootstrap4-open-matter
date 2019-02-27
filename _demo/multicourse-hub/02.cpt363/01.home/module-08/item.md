@@ -10,9 +10,9 @@ header_image_alt_text: 'Interview in coffee shop'
 ---
 
 ## How to understand and communicate people's needs and behaviours?
-[Needsfinding](https://paulhibbitts.net/cmpt-363-182/pdfs/cmpt-363-182-user-research.pdf#page=8)  
-[User Models](https://paulhibbitts.net/cmpt-363-182/pdfs/cmpt-363-182-user-research.pdf#page=44)  
-[Stories of Usage](https://paulhibbitts.net/cmpt-363-182/pdfs/cmpt-363-182-user-research.pdf#page=65)  
+[Needsfinding](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-4)  
+[User Models](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-5)  
+[Stories of Usage](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-6)  
 
 ===
 
@@ -23,7 +23,7 @@ header_image_alt_text: 'Interview in coffee shop'
 
 ### Presented Slides  
 User Research
-[pdf url="https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf"]  
+[presentation="presentation/placeholder-slide"]
 
 ### Assignments
 [User Research Report](https://sso.canvaslms.com/courses/1413912/assignments/9519534)  
