@@ -1,3 +1,9 @@
+# v2.0.0-beta.2
+## 02/27/2019
+
+1. [](#bugfix)
+    * Added missing 'testing' flag for release
+
 # v2.0.0-beta.1
 ## 02/27/2019
 
