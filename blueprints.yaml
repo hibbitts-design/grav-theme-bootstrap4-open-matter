@@ -1,5 +1,5 @@
 name: 'Bootstrap4 Open Matter'
-version: 1.9.3
+version: 2.0.0-beta.1
 description: "A custom version of the Bootstrap4 theme for open blogs, course hubs and more. Includes Git Sync and 'chromeless' content embedding."
 icon: bold
 author:
@@ -32,6 +32,8 @@ dependencies:
   - markdown-notices
   - page-inject
   - pagination
+  - presentation
+  - presentation-deckset
   - problems
   - taxonomylist
   - twigfeeds
