@@ -1,3 +1,9 @@
+# v2.0.0-beta.3
+## 02/27/2019
+
+1. [](#bugfix)
+    * Revised Grav version dependency
+
 # v2.0.0-beta.2
 ## 02/27/2019
 
