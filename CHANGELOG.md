@@ -1,3 +1,9 @@
+# v2.0.0-beta.5
+## 03/04/2019
+
+1. [](#improved)
+    * Added 'hideheaderimage' as a URL parameter to hide the header image for blog posts
+
 # v2.0.0-beta.4
 ## 02/28/2019
 
