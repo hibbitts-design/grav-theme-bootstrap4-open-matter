@@ -1,3 +1,9 @@
+# v2.0.0-beta.6
+## 03/04/2019
+
+1. [](#improved)
+    * Added option to include link for iFrame content title
+
 # v2.0.0-beta.5
 ## 03/04/2019
 
