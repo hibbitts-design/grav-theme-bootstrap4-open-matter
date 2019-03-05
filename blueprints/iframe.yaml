@@ -43,8 +43,20 @@ form:
                     validate:
                       required: true
 
-                header.iframe_aspect_ratio:
+                header.display_iframe_title_link:
                     ordering@: 5
+                    type: toggle
+                    label: Set iFrame Title as a Link to Source
+                    default: 0
+                    highlight: 1
+                    options:
+                        1:  Yes
+                        0:  No
+                    validate:
+                        type: bool
+
+                header.iframe_aspect_ratio:
+                    ordering@: 6
                     type: select
                     label: iFrame Aspect Ratio
                     default: 4by3
@@ -54,10 +66,10 @@ form:
                         16by9: 16by9
 
                 header.iframe_links:
-                    ordering@: 6
+                    ordering@: 7
                     name: iframelinks
                     type: list
-                    label: 'iFrame Links'
+                    label: 'Additional iFrame Links'
                     fields:
                         .text:
                             type: text
