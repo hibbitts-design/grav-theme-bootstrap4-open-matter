@@ -1,3 +1,9 @@
+# v2.0.0-beta.7
+## 03/05/2019
+
+1. [](#improved)
+    * Updated iFrame template blueprint to include option to make set iframe title as a link to source
+
 # v2.0.0-beta.6
 ## 03/04/2019
 
