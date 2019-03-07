@@ -17,7 +17,7 @@ presentation:
 [.header: alignment(center)]
 [.text: alignment(center)]
 
-# CMPT 363
+# CPT 364
 
 ### Slides Placeholder
 
@@ -28,7 +28,7 @@ presentation:
 
 [.background-color: #FFFFFF]
 
-![fit](http://hibbittsdesign.org/images/ux-toolkit-8-no-numbers.png "Diagram of user experience design process/techniques")
+![fit](https://hibbittsdesign.org/images/ux-toolkit-8-no-numbers.png "Diagram of user experience design process/techniques")
 
 ---
 
