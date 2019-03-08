@@ -5,8 +5,11 @@ textsize:
 style:
     header-font-family: 'GillSans,''Gill Sans MT'',Arial'
     block-font-family: 'GillSans,''Gill Sans MT'',Arial'
+    justify-content: center
 horizontal: true
 ---
+[.header: alignment(center)]
+[.text: alignment(center)]
 
 # Slides Placeholder
 
