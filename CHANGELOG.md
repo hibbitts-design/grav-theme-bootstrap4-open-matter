@@ -1,3 +1,9 @@
+# v2.0.0-beta.10
+## 03/13/2019
+
+1. [](#improved)
+    * Updated customized Presentation Plugin Blueprint
+
 # v2.0.0-beta.9
 ## 03/08/2019
 
