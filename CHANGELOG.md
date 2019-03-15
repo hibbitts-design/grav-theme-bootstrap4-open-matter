@@ -1,3 +1,9 @@
+# v2.0.0-beta.13
+## 03/15/2019
+
+1. [](#improved)
+    * Updated theme Blueprint keywords
+
 # v2.0.0-beta.12
 ## 03/15/2019
 
