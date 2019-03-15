@@ -10,9 +10,9 @@ header_image_alt_text: 'Usability testing'
 ---
 
 ## How to plan, conduct, and summarize usability tests?  
-[Testing Methods](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-4)  
-[Conducting Tests](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-5)  
-[Analysis and Reporting](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-6)  
+[Testing Methods](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-4)  
+[Conducting Tests](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-5)  
+[Analysis and Reporting](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-6)  
 
 ===
 

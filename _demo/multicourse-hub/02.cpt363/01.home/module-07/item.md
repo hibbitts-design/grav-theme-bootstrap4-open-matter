@@ -10,9 +10,9 @@ header_image_alt_text: 'iOS family of devices pile (2015)'
 ---
 
 ## How to design for mobile and multi-device usage?
-['Mobile' Design Principles](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-4)  
-[Touch Interaction Design](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-5)  
-[Responsive Web Design (RWD)](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-6)  
+['Mobile' Design Principles](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-4)  
+[Touch Interaction Design](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-5)  
+[Responsive Web Design (RWD)](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-6)  
 
 ===
 

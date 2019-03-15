@@ -10,9 +10,9 @@ header_image_alt_text: 'Dampening and inking the plate'
 ---
 
 ## What are the essentials of effective visual communication?  
-[Typography](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-4)  
-[Grouping, Visual Hierarchy and Grids](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-5)  
-[Visual Design Principles](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-6)  
+[Typography](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-4)  
+[Grouping, Visual Hierarchy and Grids](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-5)  
+[Visual Design Principles](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-6)  
 
 ===
 

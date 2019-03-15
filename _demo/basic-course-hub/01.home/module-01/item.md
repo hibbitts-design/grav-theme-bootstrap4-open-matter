@@ -13,12 +13,12 @@ hide_git_sync_repo_link: true
 ## What is usability and user experience design?
 
 ### What is this course all about?
-[Course Overview](../../presentation/placeholder-slide?target=_blank)
+[Course Overview](../../presentations/placeholder-slide?target=_blank)
 
 ### What is usability and user experience design?
-[HCI, UI, IA, IxD, and UX](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-4)  
-[Design Thinking](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-5?target=_blank)  
-[Usability and UCD](../../presentation/placeholder-slide?target=_blank#/placeholder-slide-6?target=_blank)  
+[HCI, UI, IA, IxD, and UX](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-4)  
+[Design Thinking](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-5?target=_blank)  
+[Usability and UCD](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-6?target=_blank)  
 
 ===
 
