@@ -149,7 +149,7 @@ form:
                 label: 'H5P Content Embed Source URL'
                 default: 'https://h5p.org/h5p/embed/'
                 help: 'Enter the embed source URL path up to, but not including, the H5P Content ID.'
-                description: 'H5P embed source URL path up to, but not including, the Content ID. For example, ''https://h5p.org/h5p/embed/'' or ''https://[organization].h5p.com/content/''.'
+                description: 'H5P embed source URL path up to, but not including, the Content ID. For example, ''https://h5p.org/h5p/embed/'' or ''https://[organization].h5p.com/content/'' or ''https://yourWPsite/h5p/wp-admin/admin-ajax.php?action=h5p_embed&id=''.'
                 validate:
                     type: URL
             creativecommonslicenseoptions:
