@@ -1,19 +1,13 @@
 ---
 title: Placeholder Slide
-textsize:
-    scale: '1.125'
-style:
-    header-font-family: 'GillSans,''Gill Sans MT'',Arial'
-    block-font-family: 'GillSans,''Gill Sans MT'',Arial'
-    justify-content: center
-horizontal: true
 ---
+
 [.header: alignment(center)]
 [.text: alignment(center)]
 
-# Slides Placeholder
+# CPT 363
 
-### CPT 363
+### Slides Placeholder
 
 > “A work in progress. And the possibilities are endless.”
 -- Elizabeth Eulberg

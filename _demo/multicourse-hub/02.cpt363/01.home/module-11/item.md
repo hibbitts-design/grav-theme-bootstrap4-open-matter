@@ -23,7 +23,7 @@ header_image_alt_text: 'Dampening and inking the plate'
 
 ### Presented Slides  
 Visual Design Essentials
-[presentation="presentation/placeholder-slide"]
+[presentation="presentations/placeholder-slide"]
 
 ### Assignments
 [Usability Tested Mockups](https://sso.canvaslms.com/courses/1413912/assignments/9519533)  

@@ -23,7 +23,7 @@ header_image_alt_text: 'Bullseye'
 
 ### Presented Slides  
 Strategic UX Design
-[presentation="presentation/placeholder-slide"]
+[presentation="presentations/placeholder-slide"]
 
 ### Supplemental Materials  
 [Customer Journey Mapping](https://www.youtube.com/watch?v=a40QYgO-_aM)  

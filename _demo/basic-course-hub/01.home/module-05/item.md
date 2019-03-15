@@ -23,7 +23,7 @@ header_image_alt_text: 'Usability testing'
 
 ### Presented Slides  
 Usability Testing
-[presentation="presentation/placeholder-slide"]
+[presentation="presentations/placeholder-slide"]
 
 ### Supplemental Materials  
 [Rocket Surgery Made Easy by Steve Krug: Usability Demo](https://www.youtube.com/watch?v=QckIzHC99Xc)  

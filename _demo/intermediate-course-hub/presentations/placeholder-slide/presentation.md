@@ -1,17 +1,5 @@
 ---
-title: 'Placeholder Slide'
-textsize:
-    scale: '1.125'
-    modifier: 1
-style:
-    header-font-family: 'GillSans,Arial'
-    block-font-family: 'GillSans,Arial'
-    justify-content: center
-horizontal: true
-shortcodes: true
-presentation:
-    content: Content
-    parser: DecksetParser
+title: Placeholder Slide
 ---
 
 [.header: alignment(center)]

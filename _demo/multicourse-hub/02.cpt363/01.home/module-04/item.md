@@ -23,7 +23,7 @@ header_image_alt_text: 'Paper-based prototype'
 
 ### Presented Slides  
 Prototyping
-[presentation="presentation/placeholder-slide"]
+[presentation="presentations/placeholder-slide"]
 
 ### Supplemental Materials  
 [UI Sketching Conventions](https://www.youtube.com/watch?v=MwidSAlbEB8)  

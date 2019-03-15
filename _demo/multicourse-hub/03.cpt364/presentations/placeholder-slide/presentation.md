@@ -1,18 +1,11 @@
 ---
-title: Placeholder Slide
-textsize:
-    scale: '1.125'
-style:
-    header-font-family: 'GillSans,''Gill Sans MT'',Arial'
-    block-font-family: 'GillSans,''Gill Sans MT'',Arial'
-    justify-content: center
-horizontal: true
+title: 'Placeholder Slide'
 ---
 
 [.header: alignment(center)]
 [.text: alignment(center)]
 
-# CPT 363
+# CPT 364
 
 ### Slides Placeholder
 
