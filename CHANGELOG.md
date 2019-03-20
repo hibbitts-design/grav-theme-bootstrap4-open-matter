@@ -1,3 +1,9 @@
+# v1.9.4
+## 03/20/2019
+
+1. [](#bugfix)
+    * Removed 'Presentation' folder in theme '_demo' folder intended for 2.0 release
+
 # v1.9.3
 ## 02/24/2019
 
