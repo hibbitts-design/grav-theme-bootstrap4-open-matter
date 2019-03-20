@@ -1,5 +1,5 @@
 name: 'Bootstrap4 Open Matter'
-version: 1.9.4
+version: 1.9.5
 description: "A custom version of the Bootstrap4 theme for open blogs, course hubs and more. Includes Git Sync and 'chromeless' content embedding."
 icon: bold
 author:
@@ -315,7 +315,6 @@ form:
                 options:
                     top: Top
                     sticky-top: 'Sticky Top'
-                    fixed-bottom: 'Fixed Bottom'
             navbar_breakpoint:
                 type: select
                 label: 'NavBar Breakpoint'
