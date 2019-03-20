@@ -71,6 +71,13 @@
                           {% endif %}
                         {% endfor %}
 
+                        {# Creative Commons License -  hibbittsdesign.org #}
+                        {% if not (grav.uri.param('chromeless') or grav.uri.param('embedded')) and not(theme_var('chromeless.enabled')) and (theme_var('cc_license.enabled') and not(page.header.hide_cc_license)) %}
+                          <br>
+                          {% include 'partials/creative_commons_license.html.twig' %}
+                          <br>
+                        {% endif %}
+
                         {# Git repository edit link - hibbittsdesign.org #}
                         {% if ( page.header.git_sync_repo_link_display is defined and page.header.git_sync_repo_link_display == 'page' ) or (( theme_var('display_of_git_sync_repo_link') == 'page' and page.header.git_sync_repo_link_display is not defined ) and not (page.header.hide_git_sync_repo_link)) %}
                           <br>

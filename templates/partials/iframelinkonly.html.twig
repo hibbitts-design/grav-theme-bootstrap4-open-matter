@@ -1,1 +1,6 @@
-{% block content %}<a class="newwindow external-link" href="{{ page.header.iframe_url }}">{{ page.header.iframe_title }}</a><br>{% endblock %}
+{% if page.header.iframe_source|first == '/' %}
+{% set iframesource = base_url ~ page.header.iframe_source %}
+{% else %}
+{% set iframesource = page.header.iframe_source %}
+{% endif %}
+{% block content %}<a class="newwindow external-link" href="{{ iframesource }}">{{ page.header.iframe_title }}</a><br>{% endblock %}

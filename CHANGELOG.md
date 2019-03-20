@@ -1,3 +1,130 @@
+# v1.9.4
+## 03/20/2019
+
+1. [](#bugfix)
+    * Removed 'Presentation' folder in theme '_demo' folder intended for 2.0 release
+
+# v1.9.3
+## 02/24/2019
+
+1. [](#improved)
+    * Added 'Gill Sans MT' to default font family for Presentation pages
+
+# v1.9.2
+## 02/24/2019
+
+1. [](#improved)
+    * Added defaults for sample content, textscale and fonts with blueprint for Presentation Plugin
+
+# v1.9.1
+## 02/15/2019
+
+1. [](#improved)
+    * Added more robust support for MultiCourse feature using the Presentation Plugin
+    * Added support for default aspect ratio when using the Presentation Plugin
+
+# v1.9.0
+## 02/13/2019
+
+1. [](#improved)
+    * For improved support of the Presentation Plugin, Markdown links with "=_target" are now handled better
+
+# v1.8.9
+## 02/09/2019
+
+1. [](#improved)
+    * Better support for flat lists of Section-type pages
+
+# v1.8.8
+## 02/08/2019
+
+1. [](#bugfix)
+    * Fixed RSS and Atom feeds for pages with embedded iFrame or Topics
+1. [](#improved)
+    * Additional templates for RSS and Atom feeds no longer contains duplicated Twig code (embed is used instead)
+
+# v1.8.7
+## 02/08/2019
+
+1. [](#improved)
+    * iFrame link and title only templates now support both complete URLs and local Grav site page paths
+
+# v1.8.6
+## 02/07/2019
+
+1. [](#improved)
+    * iFrame template and blueprint now supports both complete URLs and local Grav site page paths
+
+# v1.8.5
+## 02/06/2019
+
+1. [](#new)
+    * Added support for H5P content to be hosted on H5P.com (in addition to H5P.org and your own local server)
+
+# v1.8.4
+## 02/05/2019
+
+1. [](#new)
+    * Added options to show or hide Section Page Sidebar and change Section Navbar alignment (left or right)
+
+# v1.8.3
+## 02/04/2019
+
+1. [](#new)
+    * Added option to show or hide Section Page Next/Prev buttons
+
+# v1.8.2
+## 02/03/2019
+
+1. [](#new)
+    * Added support for 'visible' option setting in Section-type pages. For existing Section-type pages, ensure that any current 'visible: false' values are removed for those pages to be included.
+
+# v1.8.1
+## 01/29/2019
+
+1. [](#improved)
+    * Improved handling of embedded item summary pages
+
+# v1.8.0
+## 01/28/2019
+
+1. [](#improved)
+    * Added 'onlysummary' alias for the URL parameter 'summaryonly'
+
+# v1.7.9
+## 01/28/2019
+
+1. [](#improved)
+    * When displaying pages in 'chromeless' mode, a Creative Commons License is no longer displayed (it is assumed that this would be included in the parent system i.e. LMS)
+1. [](#bugfix)
+    * Fixed display of additional text for a Creative Commons License
+
+# v1.7.8
+## 01/27/2019
+
+1. [](#improved)
+    * Adjusted display of optional link items for embedded iFrames
+
+# v1.7.7
+## 01/27/2019
+
+1. [](#improved)
+    * Added optional link items for each iFrame displayed
+1. [](#bugfix)
+    * Fixed check for site-wide 'chromeless' option for custom content lists
+
+# v1.7.6
+## 01/25/2019
+
+1. [](#bugfix)
+    * Removed default custom menubar entry
+
+# v1.7.5
+## 01/21/2019
+
+1. [](#bugfix)
+    * Fixed check for theme 'chromeless' option and display of Next/Prev Post buttons
+
 # v1.7.4
 ## 01/14/2019
 

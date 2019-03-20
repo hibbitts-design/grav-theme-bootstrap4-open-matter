@@ -32,17 +32,6 @@ form:
                 validate:
                     type: bool
 
-            header.show_sidebar:
-                type:                      toggle
-                label:                     Display Sidebar on Page
-                highlight:                 1
-                default:                   1
-                options:
-                    1:                     Yes
-                    0:                     No
-                validate:
-                    type:                  bool
-
             gitsync:
                 type: section
                 title: Git Sync Link
@@ -68,3 +57,45 @@ form:
                 default: null
                 validate:
                     type: URL
+
+        sectionpages:
+          type: tab
+          title: Sections Pages
+
+          fields:
+
+            appearance:
+              type: section
+              title: Appearance
+              underline: true
+
+            header.sections_nav_align:
+                type: select
+                size: small
+                label: Section Navbar Alignment
+                default: left
+                options:
+                    left: Left
+                    right: Right
+
+            header.hide_next_prev_page_buttons:
+                type: toggle
+                label: Display Next/Prev Section Buttons
+                default: 0
+                highlight: 0
+                options:
+                    0:  Yes
+                    1:  No
+                validate:
+                    type: bool
+
+            header.show_sidebar:
+                type: toggle
+                label: Display Sidebar on Section Pages
+                default: 1
+                highlight: 1
+                options:
+                    1:  Yes
+                    0:  No
+                validate:
+                    type: bool

@@ -1,1 +1,6 @@
-{% block content %}{{ page.header.iframe_title }}<br>{% endblock %}
+{% if page.header.iframe_source|first == '/' %}
+{% set iframesource = base_url ~ page.header.iframe_source %}
+{% else %}
+{% set iframesource = page.header.iframe_source %}
+{% endif %}
+{% block content %}{{ iframesource }}<br>{% endblock %}
