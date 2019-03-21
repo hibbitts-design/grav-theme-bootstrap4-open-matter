@@ -1,3 +1,9 @@
+# v2.0.0-beta.15
+## 03/21/2019
+
+1. [](#improved)
+    * Support for dynamic height footer content (thanks @OleVik)
+
 # v2.0.0-beta.14
 ## 03/16/2019
 
