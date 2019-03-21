@@ -36,12 +36,12 @@
             {% if theme_var('theme_stylesheet') != 'default' %}
               {% do assets.addCss("theme://css/bootswatch/#{ theme_var('theme_stylesheet') }/bootstrap.min.css", 100) %}
             {% else %}
-              {% do assets.addCss('theme://css/bootstrap/bootstrap.min.css', 100) %}
+              {% do assets.addCss('theme://css/bootstrap/bootstrap.min.css') %}
             {% endif %}
-            {% do assets.addCss('theme://css/theme.css',98) %}
-            {% do assets.addCss('theme://css/custom.css',99) %}
-            {% do assets.add('theme://css/font-awesome.min.css',97) %}
-            {% do assets.add('theme://css-compiled/theme.css',96) %}
+            {% do assets.add('theme://css/font-awesome.min.css') %}
+            {% do assets.add('theme://css-compiled/theme.css') %}
+            {% do assets.addCss('theme://css/theme.css') %}
+            {% do assets.addCss('theme://css/custom.css') %}
         {% endblock %}
         {{ assets.css()|raw }}
 
@@ -88,10 +88,6 @@
                     <a href="#" id="top" title="Top of Page">
                       <i class="fa fa-angle-up" aria-hidden="true"></i>
                     </a>
-                  </div>
-                {% else %}
-                  <div class="up-arrow">
-                    &nbsp;
                   </div>
                 {% endif %}
                 {# use footer folder page for content - hibbittsdesign.org #}
