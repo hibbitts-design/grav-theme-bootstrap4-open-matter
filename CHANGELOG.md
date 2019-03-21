@@ -1,8 +1,14 @@
+# v1.9.6
+## 03/21/2019
+
+1. [](#bugfix)
+    * Fixed course list page layout with dynamic height footer
+
 # v1.9.5
 ## 03/21/2019
 
 1. [](#improved)
-    * Support for dynamic height Footer content (thanks @OleVik)
+    * Support for dynamic height footer content (thanks @OleVik)
 
 # v1.9.4
 ## 03/20/2019
