@@ -1,3 +1,9 @@
+# v2.0.0-beta.16
+## 03/22/2019
+
+1. [](#new)
+    * Implement assets rendering using **Deferred Block** Twig extension
+
 # v2.0.0-beta.15
 ## 03/21/2019
 
