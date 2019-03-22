@@ -19,7 +19,7 @@
 {% endif %}
 
 <!DOCTYPE html>
-<html lang="{{ grav.language.getLanguage ?: 'en' }}">
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
     <head>
         {% block head %}
         <meta charset="utf-8" />
@@ -43,7 +43,6 @@
             {% do assets.addCss('theme://css/theme.css') %}
             {% do assets.addCss('theme://css/custom.css') %}
         {% endblock %}
-        {{ assets.css()|raw }}
 
         {% block javascripts %}
             {% do assets.add('jquery', 101) %}
@@ -57,7 +56,11 @@
                 {% do assets.add('theme://js/html5shiv-printshiv.min.js') %}
             {% endif %}
         {% endblock %}
-        {{ assets.js()|raw }}
+
+        {% block assets deferred %}
+            {{ assets.css()|raw }}
+            {{ assets.js()|raw }}
+        {% endblock %}
 
         {% endblock head %}
     </head>
