@@ -1,5 +1,5 @@
 name: 'Bootstrap4 Open Matter'
-version: 2.0.0-beta.15
+version: 2.0.0-beta.16
 testing: true
 description: "A custom version of the Bootstrap4 theme for open blogs, course hubs and more. Includes Git Sync and 'chromeless' content embedding."
 icon: bold
@@ -15,7 +15,7 @@ bugs: 'https://github.com/hibbitts-design/grav-theme-bootstrap4-open-matter/issu
 license: MIT
 
 dependencies:
-  - { name: grav, version: '>=1.6.0-rc.3' }
+  - { name: grav, version: '>=1.6.0-rc.4' }
   - admin
   - auto-date
   - archives
