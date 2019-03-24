@@ -1,3 +1,9 @@
+# v2.0.0-beta.17
+## 03/24/2019
+
+1. [](#improved)
+    * Removed unneeded 'fullwidthpage' and 'sidebarpage' templates and blueprints
+
 # v2.0.0-beta.16
 ## 03/22/2019
 
