@@ -1,3 +1,9 @@
+# v2.0.0-beta.18
+## 03/24/2019
+
+1. [](#improved)
+    * Added paragraph wrapper to Bootstrap button, H5P, and Swipe Shortcodes
+
 # v2.0.0-beta.17
 ## 03/24/2019
 
