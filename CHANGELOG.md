@@ -1,3 +1,9 @@
+# v2.0.0-beta.19
+## 03/25/2019
+
+1. [](#improved)
+    * Added insert Presentation Shortcode button into Editor toolbar (removed previous PDF Shortcode button)
+
 # v2.0.0-beta.18
 ## 03/24/2019
 
