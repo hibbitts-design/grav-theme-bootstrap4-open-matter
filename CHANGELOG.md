@@ -1,3 +1,11 @@
+# v2.0.0-beta.20
+## 03/26/2019
+
+1. [](#improved)
+    * Changed iframe tags to Shortcodes
+    * Added paragraph wrapper to iFrame, PDF, Speakerdeck and Presentation Shortcodes
+    * Updated example pages in theme '_demo' folder
+
 # v2.0.0-beta.19
 ## 03/25/2019
 
