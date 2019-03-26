@@ -1,3 +1,9 @@
+# v2.0.0-beta.22
+## 03/26/2019
+
+1. [](#improved)
+    * Updated example pages in theme '_demo' folder
+
 # v2.0.0-beta.21
 ## 03/26/2019
 
