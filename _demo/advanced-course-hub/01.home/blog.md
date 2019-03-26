@@ -27,6 +27,5 @@ modular_content:
 feed:
     description: 'Grav CMS Open Matter Course Hub Description'
     limit: 10
-protectEdit: true
 hide_page_title: true
 ---
