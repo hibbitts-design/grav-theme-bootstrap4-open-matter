@@ -1,6 +1,6 @@
 ---
 title: Read Me
-published: false
+published: true
 hide_page_title: true
 ---
 
