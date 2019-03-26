@@ -27,7 +27,7 @@ hide_git_sync_repo_link: true
 
 ### Supplemental Materials  
 [Interaction Design History](http://www.slideshare.net/mrettig/interaction-design-history)  
-[iframe url="http://www.slideshare.net/slideshow/embed_code/key/aTtcFNn7i55UVK"]
+[iframe url="https://www.slideshare.net/slideshow/embed_code/key/aTtcFNn7i55UVK"]
 
 ### Handouts
 [Course Overview](https://sso.canvaslms.com/courses/1413912/files/folder/Handouts/Course%20Overview)  
