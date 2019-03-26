@@ -27,7 +27,7 @@ hide_git_sync_repo_link: true
 
 ### Supplemental Materials  
 [What People Are Really Doing Video](http://vimeo.com/album/169777/video/7099570)  
-<div class="embed-responsive embed-responsive-4by3"><iframe src="https://player.vimeo.com/video/7099570" width="500" height="275" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+[iframe url="https://player.vimeo.com/video/7099570"]
 
 ### Required Reading  
 [plugin:page-inject](/all-readings/week-08)

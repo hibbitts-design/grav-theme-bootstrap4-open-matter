@@ -23,7 +23,7 @@ hide_git_sync_repo_link: true
 
 ### Supplemental Materials  
 [UI Sketching Conventions](https://www.youtube.com/watch?v=MwidSAlbEB8)  
-<div class="embed-responsive embed-responsive-4by3"><iframe width="560" height="315" src="https://www.youtube.com/embed/MwidSAlbEB8" frameborder="0" allowfullscreen></iframe></div>
+[plugin:youtube](https://www.youtube.com/watch?v=MwidSAlbEB8)
 
 ### Handouts
 [4-UP BROWSERS + GRID](https://sso.canvaslms.com/courses/1413912/files/folder/Handouts/Sketching%20Templates/sneakpeekit-4-browsers)  

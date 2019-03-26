@@ -27,7 +27,7 @@ Strategic UX Design
 
 ### Supplemental Materials  
 [Customer Journey Mapping](https://www.youtube.com/watch?v=a40QYgO-_aM)  
-<div class="embed-responsive embed-responsive-4by3"><iframe width="560" height="315" src="https://www.youtube.com/embed/a40QYgO-_aM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+[plugin:youtube](https://www.youtube.com/watch?v=a40QYgO-_aM)
 
 ### Assignments
 [Journey Map](https://sso.canvaslms.com/courses/1413912/assignments/9519531)  

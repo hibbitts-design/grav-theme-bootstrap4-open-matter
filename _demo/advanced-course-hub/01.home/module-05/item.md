@@ -23,7 +23,7 @@ hide_git_sync_repo_link: true
 
 ### Supplemental Materials  
 [Rocket Surgery Made Easy by Steve Krug: Usability Demo](https://www.youtube.com/watch?v=QckIzHC99Xc)  
-<div class="embed-responsive embed-responsive-4by3"><iframe width="560" height="315" src="https://www.youtube.com/embed/QckIzHC99Xc" frameborder="0" allowfullscreen></iframe></div>
+[plugin:youtube](https://www.youtube.com/watch?v=QckIzHC99Xc)
 
 ### Required Reading  
 [plugin:page-inject](/all-readings/week-05)

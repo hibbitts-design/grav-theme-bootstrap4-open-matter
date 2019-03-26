@@ -31,7 +31,7 @@ User Research
 
 ### Supplemental Materials  
 [What People Are Really Doing Video](http://vimeo.com/album/169777/video/7099570)  
-<div class="embed-responsive embed-responsive-4by3"><iframe src="https://player.vimeo.com/video/7099570" width="500" height="275" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+[iframe url="https://player.vimeo.com/video/7099570"]
 
 ### Required Reading  
 [embedly url="http://www.smashingmagazine.com/2013/09/5-step-process-conducting-user-research/"]
