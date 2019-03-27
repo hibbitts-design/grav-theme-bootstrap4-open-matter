@@ -6,13 +6,13 @@ hide_from_post_list: false
 hide_git_sync_repo_link: true
 ---
 
-## What is this course all about?
-[Course Overview](https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf)
+### What is this course all about?
+[Course Overview](../../presentations/placeholder-slide?target=_blank)
 
-## What is usability and user experience design?
-[HCI, UI, IA, IxD, and UX](https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf#page=3)  
-[Design Thinking](https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf#page=4)  
-[Usability and UCD](https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf#page=5)  
+### What is usability and user experience design?
+[HCI, UI, IA, IxD, and UX](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-4)  
+[Design Thinking](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-5?target=_blank)  
+[Usability and UCD](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-6?target=_blank)  
 
 ===
 

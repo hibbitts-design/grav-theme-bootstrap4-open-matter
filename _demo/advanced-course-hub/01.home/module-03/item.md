@@ -7,9 +7,9 @@ hide_git_sync_repo_link: true
 ---
 
 ## How to make more strategic design decisions?  
-[User Experience Strategy](https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf#page=3)  
-[Current State and Future State](https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf#page=4)  
-[Journey Mapping](https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf#page=5)  
+[User Experience Strategy](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-4)  
+[Current State and Future State](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-5)  
+[Journey Mapping](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-6)  
 
 ===
 

@@ -7,9 +7,9 @@ hide_git_sync_repo_link: true
 ---
 
 ## How to explore and communicate possible design solutions?
-[Forms and Methods](https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf#page=3)  
-[Design Scenarios](https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf#page=4)  
-[Sketching and Storyboarding](https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf#page=5)  
+[Forms and Methods](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-4)  
+[Design Scenarios](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-5)  
+[Sketching and Storyboarding](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-6)  
 
 ===
 
