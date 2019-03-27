@@ -1,3 +1,9 @@
+# v2.0.0-beta.24
+## 03/27/2019
+
+1. [](#bugfix)
+    * Set background color to transparent for displaying pages chromelessly in iFrames
+
 # v2.0.0-beta.23
 ## 03/27/2019
 
