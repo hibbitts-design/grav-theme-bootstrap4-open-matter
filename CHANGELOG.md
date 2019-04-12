@@ -1,155 +1,27 @@
-# v2.0.0-beta.25
-## 04/09/2019
-
-1. [](#improved)
-    * Twig 2.0 compatibility for Page menu items including Font Awesome icons
-
-# v2.0.0-beta.24
-## 03/27/2019
-
-1. [](#bugfix)
-    * Set background color to transparent for displaying pages chromelessly in iFrames
-
-# v2.0.0-beta.23
-## 03/27/2019
-
-1. [](#improved)
-    * Updated example pages in theme '_demo' folder
-
-# v2.0.0-beta.22
-## 03/26/2019
-
-1. [](#improved)
-    * Updated example pages in theme '_demo' folder
-
-# v2.0.0-beta.21
-## 03/26/2019
-
-1. [](#improved)
-    * Updated example pages in theme '_demo' folder
-
-# v2.0.0-beta.20
-## 03/26/2019
-
-1. [](#improved)
-    * Changed iframe tags to Shortcodes
-    * Added paragraph wrapper to iFrame, PDF, Speakerdeck and Presentation Shortcodes
-    * Updated example pages in theme '_demo' folder
-
-# v2.0.0-beta.19
-## 03/25/2019
-
-1. [](#improved)
-    * Added insert Presentation Shortcode button into Editor toolbar (removed previous PDF Shortcode button)
-
-# v2.0.0-beta.18
-## 03/24/2019
-
-1. [](#improved)
-    * Added paragraph wrapper to Bootstrap button, H5P, and Swipe Shortcodes
-
-# v2.0.0-beta.17
-## 03/24/2019
-
-1. [](#improved)
-    * Removed unneeded 'fullwidthpage' and 'sidebarpage' templates and blueprints
-
-# v2.0.0-beta.16
+# v1.9.7
 ## 03/22/2019
 
 1. [](#new)
+    * Set Dependency of Grav 1.5.10+ which has support for new **Deferred Block** Twig extension
     * Implement assets rendering using **Deferred Block** Twig extension
 
-# v2.0.0-beta.15
+# v1.9.6
+## 03/21/2019
+
+1. [](#bugfix)
+    * Fixed course list page layout with dynamic height footer
+
+# v1.9.5
 ## 03/21/2019
 
 1. [](#improved)
     * Support for dynamic height footer content (thanks @OleVik)
 
-# v2.0.0-beta.14
-## 03/16/2019
-
-1. [](#improved)
-    * Updated example pages in theme '_demo' folder
-
-# v2.0.0-beta.13
-## 03/15/2019
-
-1. [](#improved)
-    * Updated theme Blueprint keywords
-
-# v2.0.0-beta.12
-## 03/15/2019
-
-1. [](#improved)
-    * Updated example pages in theme '_demo' folder
-
-# v2.0.0-beta.11
-## 03/14/2019
-
-1. [](#improved)
-    * Updated example pages in theme '_demo' folder
-
-# v2.0.0-beta.10
-## 03/13/2019
-
-1. [](#improved)
-    * Updated customized Presentation Plugin Blueprint
-
-# v2.0.0-beta.9
-## 03/08/2019
-
-1. [](#improved)
-    * Updated example pages in theme '_demo' folder
-
-# v2.0.0-beta.8
-## 03/07/2019
-
-1. [](#improved)
-    * Updated example pages in theme '_demo' folder
-
-# v2.0.0-beta.7
-## 03/05/2019
-
-1. [](#improved)
-    * Updated iFrame template blueprint to include option to make set iframe title as a link to source
-
-# v2.0.0-beta.6
-## 03/04/2019
-
-1. [](#improved)
-    * Added option to include link for iFrame content title
-
-# v2.0.0-beta.5
-## 03/04/2019
-
-1. [](#improved)
-    * Added 'hideheaderimage' as a URL parameter to hide the header image for blog posts
-
-# v2.0.0-beta.4
-## 02/28/2019
-
-1. [](#improved)
-    * Updated example pages in theme '_demo' folder
-
-# v2.0.0-beta.3
-## 02/27/2019
+# v1.9.4
+## 03/20/2019
 
 1. [](#bugfix)
-    * Revised Grav version dependency
-
-# v2.0.0-beta.2
-## 02/27/2019
-
-1. [](#bugfix)
-    * Added missing 'testing' flag for release
-
-# v2.0.0-beta.1
-## 02/27/2019
-
-1. [](#new)
-    * Added Presentation (which requires Grav 1.6) Plugin as dependency
-    * Updated example pages in theme '_demo' folder to include use of the Presentation Plugin
+    * Removed 'Presentation' folder in theme '_demo' folder intended for 2.0 release
 
 # v1.9.3
 ## 02/24/2019
