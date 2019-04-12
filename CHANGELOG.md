@@ -1,3 +1,19 @@
+# v2.0.0
+## 04/12/2019
+
+1. [](#new)
+    * Set Grav dependency to 1.6+
+    * Added Presentation Plugin as dependency
+    * Added insert Presentation Shortcode button into Editor toolbar
+    * Added example pages in theme '_demo' folder to include use of the Presentation Plugin
+    * Implement assets rendering using **Deferred Block** Twig extension
+1. [](#improved)
+    * Added 'hideheaderimage' as a URL parameter to hide the header image for blog posts
+    * Added option to include link for iFrame content title
+    * Support for dynamic height footer content (thanks @OleVik)
+    * Removed unneeded 'fullwidthpage' and 'sidebarpage' templates and blueprints
+    * Added paragraph wrapper to Bootstrap button, H5P, and Swipe Shortcodes
+
 # v1.9.7
 ## 03/22/2019
 
