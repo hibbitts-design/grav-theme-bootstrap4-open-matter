@@ -1,5 +1,5 @@
 name: 'Bootstrap4 Open Matter'
-version: 1.9.7
+version: 2.0.0
 description: "A custom version of the Bootstrap4 theme for open blogs, course hubs and more. Includes Git Sync and 'chromeless' content embedding."
 icon: bold
 author:
@@ -9,12 +9,12 @@ author:
 homepage: 'https://github.com/hibbitts-design/grav-theme-bootstrap4-open-matter'
 demo: 'https://demo.hibbittsdesign.org/grav-theme-bootstrap4-open-matter/'
 docs: 'https://github.com/hibbitts-design/grav-theme-bootstrap4-open-matter/blob/master/README.md'
-keywords: 'open, resources, oer, git, gitsync, chromeless'
+keywords: 'open, courses, resources, oer, git, gitsync, chromeless'
 bugs: 'https://github.com/hibbitts-design/grav-theme-bootstrap4-open-matter/issues'
 license: MIT
 
 dependencies:
-  - { name: grav, version: '>=1.5.10' }
+  - { name: grav, version: '>=1.6.0' }
   - admin
   - auto-date
   - archives
@@ -32,6 +32,8 @@ dependencies:
   - markdown-notices
   - page-inject
   - pagination
+  - presentation
+  - presentation-deckset
   - problems
   - taxonomylist
   - twigfeeds
@@ -146,7 +148,7 @@ form:
                 label: 'H5P Content Embed Source URL'
                 default: 'https://h5p.org/h5p/embed/'
                 help: 'Enter the embed source URL path up to, but not including, the H5P Content ID.'
-                description: 'H5P embed source URL path up to, but not including, the Content ID. For example, ''https://h5p.org/h5p/embed/'' or ''https://[organization].h5p.com/content/''.'
+                description: 'H5P embed source URL path up to, but not including, the Content ID. For example, ''https://h5p.org/h5p/embed/'' or ''https://[organization].h5p.com/content/'' or ''https://yourWPsite/h5p/wp-admin/admin-ajax.php?action=h5p_embed&id=''.'
                 validate:
                     type: URL
             creativecommonslicenseoptions:

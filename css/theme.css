@@ -375,3 +375,7 @@ figure.caption-right figcaption {
   height: auto!important;
   padding: 1em;
 }
+
+body.chromeless {
+  background-color: transparent;
+}

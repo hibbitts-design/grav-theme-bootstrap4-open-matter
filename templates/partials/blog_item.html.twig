@@ -58,6 +58,8 @@
 
         </div>
 
+        {% if not (grav.uri.param('hideheaderimage')) %}
+
         {% if big_header %}
             {{ page.media.images|first.cropResize(1200,600).html('','blog-header-image') }}
             {% else %}
@@ -100,6 +102,8 @@
 
               {% endif %}
             {% endif %}
+
+          {% endif %}
           </div>
 
     <div class="list-blog-padding">

@@ -6,8 +6,16 @@
 {% if page.header.display_iframe_title is defined and not (displaycontenttitle is defined)%}
 {% set displaycontenttitle = page.header.display_iframe_title %}
 {% endif %}
+{% if page.header.display_iframe_title_link is defined and not (displaycontenttitlelink is defined)%}
+{% set displaycontenttitlelink = page.header.display_iframe_title_link %}
+{% endif %}
 {% if page.header.display_iframe_links is defined and not (displaycontentlinks is defined)%}
 {% set displaycontentlinks = page.header.display_iframe_links %}
+{% endif %}
+{% if page.header.iframe_source | first == '/' %}
+{% set iframesource = base_url ~ page.header.iframe_source %}
+{% else %}
+{% set iframesource = page.header.iframe_source %}
 {% endif %}
 {% block content %}
 {{ page.content|raw }}
@@ -23,10 +31,24 @@
 <br>
 {% endif %}
 {% endif %}
-{{ page.header.iframe_title }}
+{% if displaycontenttitlelink %}
+{% if page.header.iframe_source | first == '/' %}
+{% set iframesource = base_url ~ page.header.iframe_source %}
+{% else %}
+{% set iframesource = page.header.iframe_source %}
 {% endif %}
+{{ dump (iframesource) }}
+<a class="newwindow external-link" href="{{ iframesource }}">{{ page.header.iframe_title }}</a>
 {% else %}
 {{ page.header.iframe_title }}
+{% endif %}
+{% endif %}
+{% else %}
+{% if displaycontenttitlelink %}
+<a class="newwindow external-link" href="{{ iframesource }}">{{ page.header.iframe_title }}</a>
+{% else %}
+{{ page.header.iframe_title }}
+{% endif %}
 {% endif %}
 {% set iframeaspectratio = page.header.iframe_aspect_ratio %}
 {% if iframeaspectratio is empty %}
@@ -38,21 +60,20 @@
 {% set loopindex = 0 %}
 {% if page.header.iframe_links is defined %}
 {% for litem in page.header.iframe_links %}
-{% if litem.source|first == '/' %}
+{% if litem.source | first == '/' %}
 {% set litem_source = base_url ~ litem.source %}
 {% else %}
 {% set litem_source = litem.source %}
 {% endif %}
-{% if loopindex > 0 %} | {% endif %}<a class="newwindow external-link" href="{{ litem_source }}"><i class="fa {{litem.icon}}" aria-hidden="true"></i>{{litem.text}}</a>
+{% if loopindex > 0 %}
+|
+{% endif %}
+<a class="newwindow external-link" href="{{ litem_source }}">
+<i class="fa {{litem.icon}}" aria-hidden="true"></i>{{litem.text}}</a>
 {% set loopindex = loopindex + 1 %}
 {% endfor %}
 {% endif %}
 {% endif %}
-{% endif %}
-{% if page.header.iframe_source|first == '/' %}
-{% set iframesource = base_url ~ page.header.iframe_source %}
-{% else %}
-{% set iframesource = page.header.iframe_source %}
 {% endif %}
 <div class="embed-responsive embed-responsive-{{ iframeaspectratio }}">
 <iframe src="{{ iframesource }}" width="640" height="480"></iframe>

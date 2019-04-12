@@ -9,10 +9,10 @@ header_image_creditlink: 'https://www.flickr.com/photos/rdolishny/2760207306/'
 header_image_alt_text: 'The Pay and Go box at the new North Oshawa medical clinic'
 ---
 
-## How to conduct a usability inspection?
-
-### Slides to be Discussed  
-[User Interface Inspections](https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf)   
+## How to conduct a usability inspection?   
+[Cognitive Walkthroughs](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-4)  
+[Conducting Heuristic Evaluations](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-5)  
+[Nielsen’s Heuristics](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-6))  
 
 ===
 
@@ -23,11 +23,11 @@ header_image_alt_text: 'The Pay and Go box at the new North Oshawa medical clini
 
 ### Presented Slides  
 User Interface Inspections
-[pdf url="https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf"]  
+[presentation="presentations/placeholder-slide"]
 
 ### Supplemental Materials  
 [Design Heuristics Lecture with Scott Klemmer](https://www.youtube.com/playlist?list=PLVtu1bDQijari7LfHOoSTdcpbWIkwZWIA)  
-<div class="embed-responsive embed-responsive-4by3"><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLVtu1bDQijari7LfHOoSTdcpbWIkwZWIA" frameborder="0" allowfullscreen></iframe></div>
+[iframe url="https://www.youtube.com/embed/videoseries?list=PLVtu1bDQijari7LfHOoSTdcpbWIkwZWIA"]
 
 ### Assignments
 [Usability Inspection](https://sso.canvaslms.com/courses/1413912/assignments/9519532)   

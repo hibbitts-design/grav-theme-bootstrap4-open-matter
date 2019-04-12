@@ -9,6 +9,5 @@ content:
     order:
         by: folder
         dir: asc
-    limit: 0
-protectEdit: true    
+    limit: 0   
 ---

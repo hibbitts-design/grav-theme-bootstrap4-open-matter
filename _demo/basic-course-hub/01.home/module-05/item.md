@@ -9,10 +9,10 @@ header_image_creditlink: 'https://www.flickr.com/photos/lucamascaro/4642289926/i
 header_image_alt_text: 'Usability testing'
 ---
 
-## How to plan, conduct, and summarize usability tests?
-
-### Slides to be Discussed
-[Usability Testing](https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf)  
+## How to plan, conduct, and summarize usability tests?  
+[Testing Methods](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-4)  
+[Conducting Tests](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-5)  
+[Analysis and Reporting](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-6)  
 
 ===
 
@@ -23,11 +23,11 @@ header_image_alt_text: 'Usability testing'
 
 ### Presented Slides  
 Usability Testing
-[pdf url="https://demo.hibbittsdesign.org/cpt-363-2018/pdfs/cpt-363-slides-placeholder.pdf"]  
+[presentation="presentations/placeholder-slide"]
 
 ### Supplemental Materials  
 [Rocket Surgery Made Easy by Steve Krug: Usability Demo](https://www.youtube.com/watch?v=QckIzHC99Xc)  
-<div class="embed-responsive embed-responsive-4by3"><iframe width="560" height="315" src="https://www.youtube.com/embed/QckIzHC99Xc" frameborder="0" allowfullscreen></iframe></div>
+[plugin:youtube](https://www.youtube.com/watch?v=QckIzHC99Xc)
 
 ### Required Reading  
 [embedly url="http://www.uxbooth.com/articles/the-art-of-guerrilla-usability-testing/"]
