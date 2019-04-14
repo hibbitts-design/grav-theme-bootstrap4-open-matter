@@ -71,8 +71,8 @@ form:
 
             header.display_child_page_title_link:
                 type: toggle
-                label: Display Child Page Title Source Links
-                help: Determines if child page title link to source are displayed
+                label: Set Child Page Titles as Link to Source
+                help: Determines if a link to source (if applicable) is added to child page titles
                 default: 0
                 highlight: 1
                 options:
@@ -95,8 +95,8 @@ form:
 
             header.display_content_title_link:
                 type: toggle
-                label: Display Content Title Source Links
-                help: Determines if content title link to source are displayed
+                label: Set Content Titles as Link to Source
+                help: Determines if a link to source (if applicable) is added to content titles
                 default: 0
                 highlight: 1
                 options:
