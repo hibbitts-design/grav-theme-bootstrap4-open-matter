@@ -3,6 +3,9 @@
 {% if page.header.display_page_title is defined and not (displaypagetitle is defined)%}
 {% set displaypagetitle = page.header.display_page_title %}
 {% endif %}
+{% if page.header.display_page_title_link is defined and not (displaypagetitlelink is defined)%}
+{% set displaypagetitlelink = page.header.display_page_title_link %}
+{% endif %}
 {% if page.header.display_iframe_title is defined and not (displaycontenttitle is defined)%}
 {% set displaycontenttitle = page.header.display_iframe_title %}
 {% endif %}
@@ -21,7 +24,11 @@
 {{ page.content|raw }}
 {% if displaypagetitle is defined %}
 {% if displaypagetitle %}
+{% if displaypagetitlelink %}
+<strong><a class="newwindow external-link" href="{{ iframesource }}">{{ page.title }}</a></strong>
+{% else %}
 <strong>{{page.title}}</strong>
+{% endif %}
 {% endif %}
 {% endif %}
 {% if displaycontenttitle is defined %}
@@ -37,7 +44,6 @@
 {% else %}
 {% set iframesource = page.header.iframe_source %}
 {% endif %}
-{{ dump (iframesource) }}
 <a class="newwindow external-link" href="{{ iframesource }}">{{ page.header.iframe_title }}</a>
 {% else %}
 {{ page.header.iframe_title }}
