@@ -62,7 +62,7 @@ form:
                 label: Display Child Page Titles
                 help: Determines if child page titles are displayed
                 default: 0
-                highlight: 0
+                highlight: 1
                 options:
                     1:  Yes
                     0:  No
@@ -71,10 +71,10 @@ form:
 
             header.display_child_page_title_link:
                 type: toggle
-                label: Display Child Page Title Links
-                help: Determines if child page title links are displayed
+                label: Display Child Page Title Source Links
+                help: Determines if child page title link to source are displayed
                 default: 0
-                highlight: 0
+                highlight: 1
                 options:
                     1:  Yes
                     0:  No
@@ -85,7 +85,7 @@ form:
                 type: toggle
                 label: Display Content Titles
                 help: Determines if content titles are displayed
-                default: 1
+                default: 0
                 highlight: 1
                 options:
                     1:  Yes
@@ -95,9 +95,9 @@ form:
 
             header.display_content_title_link:
                 type: toggle
-                label: Display Content Title Links
-                help: Determines if content title links are displayed
-                default: 1
+                label: Display Content Title Source Links
+                help: Determines if content title link to source are displayed
+                default: 0
                 highlight: 1
                 options:
                     1:  Yes
