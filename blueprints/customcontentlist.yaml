@@ -57,10 +57,22 @@ form:
                 validate:
                     type:                  bool
 
-            header.display_child_page_titles:
+            header.display_child_page_title:
                 type: toggle
                 label: Display Child Page Titles
                 help: Determines if child page titles are displayed
+                default: 0
+                highlight: 0
+                options:
+                    1:  Yes
+                    0:  No
+                validate:
+                    type: bool
+
+            header.display_child_page_title_link:
+                type: toggle
+                label: Display Child Page Title Links
+                help: Determines if child page title links are displayed
                 default: 0
                 highlight: 0
                 options:
@@ -73,6 +85,18 @@ form:
                 type: toggle
                 label: Display Content Titles
                 help: Determines if content titles are displayed
+                default: 1
+                highlight: 1
+                options:
+                    1:  Yes
+                    0:  No
+                validate:
+                    type: bool
+
+            header.display_content_title_link:
+                type: toggle
+                label: Display Content Title Links
+                help: Determines if content title links are displayed
                 default: 1
                 highlight: 1
                 options:
