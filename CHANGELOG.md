@@ -1,3 +1,10 @@
+# v2.0.1
+## 04/14/2019
+
+1. [](#improved)
+    * Added support for optional direct link on iFrame page and content titles
+    * Updated example pages in theme '_demo' folder
+
 # v2.0.0
 ## 04/12/2019
 
