@@ -32,7 +32,7 @@
           {% if not templatename %}
             {% set templatename = child.template ~ '.html.twig' %}
           {% endif %}
-            <p>{% include templatename with {'page':child, 'displaypagetitle':page.header.display_child_page_titles, 'displaypagetitlelink':page.header.display_child_page_titles_link, 'displaycontenttitle':page.header.display_content_title,  'displaycontenttitlelink':page.header.display_content_title_links, 'displaycontentlinks':page.header.display_content_links} %}</p>
+            <p>{% include templatename with {'page':child, 'displaypagetitle':page.header.display_child_page_titles, 'displaypagetitlelink':page.header.display_child_page_titles_link, 'displaycontenttitle':page.header.display_content_title,  'displaycontenttitlelink':page.header.display_content_titles_link, 'displaycontentlinks':page.header.display_content_links} %}</p>
         {% endfor %}
 
         {# Git repository edit link - hibbittsdesign.org #}

@@ -93,7 +93,7 @@ form:
                 validate:
                     type: bool
 
-            header.display_content_title_links:
+            header.display_content_titles_link:
                 type: toggle
                 label: Set Content Titles as Link to Source
                 help: Determines if a link to source (if applicable) is added to content titles
