@@ -1,3 +1,10 @@
+# v2.0.2
+## 04/14/2019
+
+1. [](#improved)
+    * Improved compatibility of custom content list pages with previous theme releases
+    * Updated example pages in theme '_demo' folder
+
 # v2.0.1
 ## 04/14/2019
 
