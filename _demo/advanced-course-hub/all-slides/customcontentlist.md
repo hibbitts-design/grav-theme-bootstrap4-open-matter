@@ -10,8 +10,8 @@ content:
     items: '@self.children'
     limit: 0
 show_sidebar: true
-display_child_page_title: true
-display_child_page_title_link: true
+display_child_page_titles: true
+display_child_page_titles_link: true
 display_content_title: false
 display_content_title_link: false
 display_content_links: false
