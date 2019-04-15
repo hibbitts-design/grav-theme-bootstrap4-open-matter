@@ -57,7 +57,7 @@ form:
                 validate:
                     type:                  bool
 
-            header.display_child_page_title:
+            header.display_child_page_titles:
                 type: toggle
                 label: Display Child Page Titles
                 help: Determines if child page titles are displayed
@@ -69,7 +69,7 @@ form:
                 validate:
                     type: bool
 
-            header.display_child_page_title_link:
+            header.display_child_page_titles_link:
                 type: toggle
                 label: Set Child Page Titles as Link to Source
                 help: Determines if a link to source (if applicable) is added to child page titles
