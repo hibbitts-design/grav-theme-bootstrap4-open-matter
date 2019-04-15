@@ -1,3 +1,10 @@
+# v2.0.3
+## 04/15/2019
+
+1. [](#improved)
+    * Added option to show/hide custom content item links
+    * Updated example pages in theme '_demo' folder
+
 # v2.0.2
 ## 04/14/2019
 
