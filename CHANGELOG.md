@@ -1,3 +1,9 @@
+# v2.0.4
+## 04/16/2019
+
+1. [](#improved)
+    * Removed unneeded Atom and RSS feed Twig templates (thanks @rhuk for the new Page Inject Plugin release)
+
 # v2.0.3
 ## 04/15/2019
 
