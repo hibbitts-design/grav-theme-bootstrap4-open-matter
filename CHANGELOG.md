@@ -1,5 +1,5 @@
 # v2.0.5
-## XX/XX/2019
+## 04/17/2019
 
 1. [](#improved)
     * Updated example pages in theme '_demo' folder
