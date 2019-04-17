@@ -7,6 +7,8 @@
 {% set displaycontenttitle = page.header.display_pdf_title %}
 {% endif %}
 {% block content %}
+<div class="pdf-wrapper">
+<p>
 {{ page.content|raw }}
 {% if displaypagetitle is defined %}
 {% if displaypagetitle %}
@@ -28,6 +30,7 @@
 <div class="embed-responsive embed-responsive-4by3">
 <iframe src="https://docs.google.com/gview?url={{ page.header.pdf_url }}&embedded=true" width="640" height="480"></iframe>
 </div>
-<br>
+</p>
+</div>
 {% endblock %}
 {% endif %}
