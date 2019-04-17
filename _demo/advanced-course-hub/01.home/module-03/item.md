@@ -28,6 +28,9 @@ hide_git_sync_repo_link: true
 ### Assignments
 [Journey Map](https://sso.canvaslms.com/courses/1413912/assignments/9519531)  
 
+### Quick Quiz
+[plugin:page-inject](/h5p/journey-map)
+
 ### Required Reading  
 [plugin:page-inject](/all-readings/week-03)
 

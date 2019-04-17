@@ -30,6 +30,9 @@ hide_git_sync_repo_link: true
 ### Assignments
 [Course Reflection Log](https://sso.canvaslms.com/courses/1413912/assignments/9519528)  
 
+### Quick Quiz
+[plugin:page-inject](/h5p/usability)
+
 ### Recommended Reading  
 [plugin:page-inject](/all-readings/week-02)
 
