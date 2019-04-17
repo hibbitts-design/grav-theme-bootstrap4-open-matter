@@ -1,3 +1,10 @@
+# v2.0.6
+## 04/17/2019
+
+1. [](#improved)
+    * Added paragraph wrapper to embedly, h5p, iframe, pdf, speakerdeck and swipedeck templates
+    * Updated example pages in theme '_demo' folder
+
 # v2.0.5
 ## 04/17/2019
 
