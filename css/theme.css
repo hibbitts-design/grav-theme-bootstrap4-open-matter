@@ -145,8 +145,12 @@ h6, .h6 {
   height: 280px;
 }
 
-.card-columns {
-    column-count: 2;
+.card-deck > .card
+{
+    min-width: 340px;
+    flex-wrap: wrap;
+    flex: initial;
+    margin-bottom: 30px;
 }
 
 @media only screen and (min-width: 960px) and (max-width: 1140px) {
@@ -159,9 +163,6 @@ h6, .h6 {
   .myheader {
       height: 220px;
   }
-  .card-columns {
-      column-count: 1;
-  }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
@@ -171,17 +172,11 @@ h6, .h6 {
   .container {
       max-width:720px;
   }
-  .card-columns {
-      column-count: 1;
-  }
 }
 
 @media only screen and (max-width: 576px) {
   .myheader {
       height: 130px;
-  }
-  .card-columns {
-      column-count: 1;
   }
 }
 

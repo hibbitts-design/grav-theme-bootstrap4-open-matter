@@ -50,7 +50,7 @@
                     {% else %}
                       {% set course_home = 'home' %}
                     {% endif %}
-                    <div class="card">
+                    <div class="card col-lg-3">
                       <div class="card-body">
                         {% set course_image = page.find('/' ~ page.slug ~ '/headerimage').media.images | first %}
                         {% if course_image is empty %}
