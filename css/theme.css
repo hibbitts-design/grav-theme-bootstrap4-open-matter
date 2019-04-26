@@ -147,7 +147,7 @@ h6, .h6 {
 
 .card-deck > .card
 {
-    min-width: 340px;
+    min-width: 350px;
     flex-wrap: wrap;
     flex: initial;
     margin-bottom: 30px;
@@ -292,7 +292,7 @@ h4, .h4, h5, .h5 {
 
 .card-img-top {
     width: 100%;
-    height: 18vw;
+    height: 14vw;
     object-fit: cover;
 }
 
