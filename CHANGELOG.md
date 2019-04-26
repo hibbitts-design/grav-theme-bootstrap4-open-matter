@@ -1,8 +1,14 @@
+# v2.1.4
+## 04/26/2019
+
+1. [](#improved)
+    * Further improvements to the display of course list page with larger number of courses
+
 # v2.1.3
 ## 04/26/2019
 
 1. [](#improved)
-    * Improved dispplay of course list page with larger number of courses
+    * Improvements to the display of course list page with larger number of courses
 
 # v2.1.2
 ## 04/25/2019
