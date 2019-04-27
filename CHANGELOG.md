@@ -1,3 +1,9 @@
+# v2.1.5
+## 04/27/2019
+
+1. [](#improved)
+    * Adjust display of course list items for better display on smaller screens
+
 # v2.1.4
 ## 04/26/2019
 
