@@ -147,7 +147,7 @@ h6, .h6 {
 
 .card-deck > .card
 {
-    min-width: 350px;
+    min-width: 30%;
     flex-wrap: wrap;
     flex: initial;
     margin-bottom: 30px;
