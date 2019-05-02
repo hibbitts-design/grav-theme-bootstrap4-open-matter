@@ -1,8 +1,7 @@
 ---
-title: 'Placeholder Slide'
+title: Placeholder Slide
 ---
 
-[.header: alignment(center)]
 [.text: alignment(center)]
 
 # CPT 363
