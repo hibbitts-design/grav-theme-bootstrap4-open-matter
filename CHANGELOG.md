@@ -1,3 +1,11 @@
+# v2.1.8
+## 05/03/2019
+
+1. [](#new)
+    * Initial support for Presentation list pages
+1. [](#improved)
+    * Updated demo pages in theme '_demo' folder
+
 # v2.1.7
 ## 05/02/2019
 
