@@ -350,6 +350,10 @@ figure.caption-right figcaption {
     text-align: right;
 }
 
+.presentation-list-item {
+    padding-bottom: .25rem;
+}
+
 .pagination {
     color: #767676!important;
 }
