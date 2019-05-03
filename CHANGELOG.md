@@ -1,3 +1,9 @@
+# v2.1.9
+## 05/03/2019
+
+1. [](#new)
+    * Improved layout of Presentation list pages
+
 # v2.1.8
 ## 05/03/2019
 
