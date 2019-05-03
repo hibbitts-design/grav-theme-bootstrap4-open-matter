@@ -1,3 +1,9 @@
+# v2.2.0
+## 05/04/2019
+
+1. [](#bugfix)
+    * Fixed an incorrect references to site config setting (which should have been theme config)
+
 # v2.1.9
 ## 05/03/2019
 
