@@ -3,6 +3,7 @@
 
 1. [](#improved)
     * Added default page collection frontmatter for new Sections and Presentations pages
+    * Added sort options and order for Sections pages
 
 # v2.2.1
 ## 05/04/2019
