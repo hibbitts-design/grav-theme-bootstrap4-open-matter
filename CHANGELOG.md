@@ -1,3 +1,9 @@
+# v2.2.2
+## 05/04/2019
+
+1. [](#improved)
+    * Added default page collection frontmatter for new Sections and Presentations pages
+
 # v2.2.1
 ## 05/04/2019
 
