@@ -1,3 +1,9 @@
+# v2.2.1
+## 05/04/2019
+
+1. [](#improved)
+    * Improved support for custom Git Sync Link text on individual pages
+
 # v2.2.0
 ## 05/04/2019
 
