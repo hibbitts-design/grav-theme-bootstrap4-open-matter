@@ -23,6 +23,11 @@ form:
           title: Presentation List
 
           fields:
+
+            header.content.items:
+              type: hidden
+              default: '@self.children'
+
             header.content.order.by:
               type: select
               label: Order By
@@ -36,7 +41,7 @@ form:
             header.content.order.dir:
               type: select
               label: Order
-              default: desc
+              default: asc
               options:
                 asc: Ascending
                 desc: Descending
