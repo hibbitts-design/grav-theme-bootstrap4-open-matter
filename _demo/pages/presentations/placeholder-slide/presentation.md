@@ -9,7 +9,7 @@ title: Placeholder Slide
 
 ### Slides Placeholder
 
-> “A work in progress. And the possibilities are endless.”
+> > “A work in progress. And the possibilities are endless.”
 -- Elizabeth Eulberg
 
 ---
