@@ -34,7 +34,7 @@ _Effectively working in a team and both verbal and written communication skills 
 
 ## Course Assignments (tentative)
 Individual (46%)
-* Weekly Reading Quizzes: 6%
+* Module Reading Quizzes: 6%
 * Usability Inspection (including required peer reviews): 25%
 * Project Brief - Individual Component: 1%
 * User Research and Usability Testing - Individual Component: 7%

@@ -1,5 +1,5 @@
 ---
-title: 'Week 11 (Jul 18 - 24)'
+title: 'Module 11 (Jul 18 - 24)'
 published: false
 date: '18-07-2018 00:00'
 hide_from_post_list: false
@@ -19,14 +19,14 @@ hide_git_sync_repo_link: true
 [Jul 18th Class One-minute Summaries](https://sso.canvaslms.com/courses/1413912/assignments/9519518)
 
 ### Presented Slides  
-[plugin:page-inject](/all-slides/week-11)
+[plugin:page-inject](/module-presentations/module-11)
 
 ### Assignments
 [Usability Tested Mockups](https://sso.canvaslms.com/courses/1413912/assignments/9519533)  
 [Informed Consent Materials](https://sso.canvaslms.com/courses/1413912/files/folder/Handouts/Informed%20Consent)  
 
 ### Required Reading  
-[plugin:page-inject](/all-readings/week-11)
+[plugin:page-inject](/module-readings/module-11)
 
 ### Supplemental Readings  
 [plugin:content-inject](/ux-techniques-guide/what-are-the-essentials-of-effective-visual-communication/grids)  

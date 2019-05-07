@@ -1,5 +1,5 @@
 ---
-title: 'Week 2 (May 16 - 22)'
+title: 'Module 2 (May 16 - 22)'
 published: true
 date: '16-05-2018 00:00'
 hide_from_post_list: false
@@ -19,7 +19,7 @@ hide_git_sync_repo_link: true
 [May 16th Class One-minute Summaries](https://sso.canvaslms.com/courses/1413912/assignments/9519525)
 
 ### Presented Slides  
-[plugin:page-inject](/all-slides/week-02)
+[plugin:page-inject](/module-presentations/module-02)
 
 ### CPT-363 UX Design Process/Toolkit
 ![CPT-363 UX Design Process/Toolkit Diagram](/images/ux-design-process-v4.png)
@@ -34,7 +34,7 @@ hide_git_sync_repo_link: true
 [plugin:page-inject](/h5p/usability)
 
 ### Recommended Reading  
-[plugin:page-inject](/all-readings/week-02)
+[plugin:page-inject](/module-readings/module-02)
 
 ### Supplemental Readings  
 [plugin:content-inject](/ux-techniques-guide/what-does-a-holistic-user-experience-design-process-look-like/agile-ux)  

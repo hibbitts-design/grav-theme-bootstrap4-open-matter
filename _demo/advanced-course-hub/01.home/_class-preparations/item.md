@@ -6,7 +6,7 @@ published: true
 ## Jun 6th Class Preparations
 
 ### Required Reading
-[plugin:page-inject](/all-readings/week-05)
+[plugin:page-inject](/module-readings/module-05)
 
 [button url="https://sso.canvaslms.com/courses/1413912/quizzes/3212425" target="_blank" label="Required Reading Quiz" type="primary" classes="external-link"]  
 

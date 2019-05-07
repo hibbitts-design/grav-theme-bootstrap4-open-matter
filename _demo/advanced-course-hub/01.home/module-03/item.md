@@ -1,5 +1,5 @@
 ---
-title: 'Week 3 (May 23 - 29)'
+title: 'Module 3 (May 23 - 29)'
 published: true
 date: '23-05-2018 00:00'
 hide_from_post_list: false
@@ -19,7 +19,7 @@ hide_git_sync_repo_link: true
 [May 23rd Class One-minute Summaries](https://sso.canvaslms.com/courses/1413912/assignments/9519524)
 
 ### Presented Slides  
-[plugin:page-inject](/all-slides/week-03)
+[plugin:page-inject](/module-presentations/module-03)
 
 ### Supplemental Materials  
 [Customer Journey Mapping](https://www.youtube.com/watch?v=a40QYgO-_aM)  
@@ -32,7 +32,7 @@ hide_git_sync_repo_link: true
 [plugin:page-inject](/h5p/journey-map)
 
 ### Required Reading  
-[plugin:page-inject](/all-readings/week-03)
+[plugin:page-inject](/module-readings/module-03)
 
 ### Supplemental Readings  
 [plugin:content-inject](/ux-techniques-guide/how-to-understand-and-communicate-peoples-needs-and-behaviors/interviews)  

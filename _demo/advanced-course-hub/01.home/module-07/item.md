@@ -1,5 +1,5 @@
 ---
-title: 'Week 7 (Jun 20 - 26)'
+title: 'Module 7 (Jun 20 - 26)'
 published: false
 date: '20-06-2018 00:00'
 hide_from_post_list: false
@@ -19,14 +19,14 @@ hide_git_sync_repo_link: true
 [Jun 20th Class One-minute Summaries](https://canvas.sfu.ca/courses/38847/assignments/292817)
 
 ### Presented Slides  
-[plugin:page-inject](/all-slides/week-07)
+[plugin:page-inject](/module-presentations/module-07)
 
 ### Handouts
 [One-Page Touch Interaction Design Checklist](https://sso.canvaslms.com/courses/1413912/files/folder/Handouts/Touch%20Interaction%20Checklist)  
 [Responsive Web Design Sketch Sheets](http://jeremypalford.com/wp-content/uploads/2013/07/JPA-Responsive-Web-Design-Sketch-Sheets.zip)  
 
 ### Required Reading  
-[plugin:page-inject](/all-readings/week-07)
+[plugin:page-inject](/module-readings/module-07)
 
 ### Supplemental Readings  
 [plugin:content-inject](/ux-techniques-guide/how-to-design-for-mobile-and-multidevice-usage/designing-for-touch)  

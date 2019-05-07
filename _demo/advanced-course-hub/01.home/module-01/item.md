@@ -1,5 +1,5 @@
 ---
-title: 'Week 1 (May 9 - 15)'
+title: 'Module 1 (May 9 - 15)'
 published: true
 date: '09-05-2018 00:00'
 hide_from_post_list: false
@@ -22,8 +22,8 @@ hide_git_sync_repo_link: true
 [May 9th Class One-minute Summaries](https://sso.canvaslms.com/courses/1413912/assignments/9519517)
 
 ### Presented Slides  
-[plugin:page-inject](/all-slides/week-01-1)  
-[plugin:page-inject](/all-slides/week-01-2)  
+[plugin:page-inject](/module-presentations/module-01-1)  
+[plugin:page-inject](/module-presentations/module-01-2)  
 
 ### Supplemental Materials  
 [Interaction Design History](http://www.slideshare.net/mrettig/interaction-design-history)  
@@ -33,7 +33,7 @@ hide_git_sync_repo_link: true
 [Course Overview](https://sso.canvaslms.com/courses/1413912/files/folder/Handouts/Course%20Overview)  
 
 ### Recommended Reading  
-[plugin:page-inject](/all-readings/week-01)
+[plugin:page-inject](/module-readings/module-01)
 
 ### Supplemental Readings  
 [plugin:content-inject](/ux-techniques-guide/what-does-a-holistic-user-experience-design-process-look-like/design-ethics)  

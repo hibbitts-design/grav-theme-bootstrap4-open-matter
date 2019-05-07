@@ -1,5 +1,5 @@
 ---
-title: 'Week 8 (Jun 27 - Jul 3)'
+title: 'Module 8 (Jun 27 - Jul 3)'
 published: false
 date: '27-06-2018 00:00'
 hide_from_post_list: false
@@ -19,7 +19,7 @@ hide_git_sync_repo_link: true
 [Jun 27 Class One-minute Summaries](https://sso.canvaslms.com/courses/1413912/assignments/9519519)
 
 ### Presented Slides  
-[plugin:page-inject](/all-slides/week-08)
+[plugin:page-inject](/module-presentations/module-08)
 
 ### Assignments
 [User Research Report](https://sso.canvaslms.com/courses/1413912/assignments/9519534)  
@@ -30,7 +30,7 @@ hide_git_sync_repo_link: true
 [iframe url="https://player.vimeo.com/video/7099570"]
 
 ### Required Reading  
-[plugin:page-inject](/all-readings/week-08)
+[plugin:page-inject](/module-readings/module-08)
 
 ### Supplemental Readings  
 [plugin:content-inject](/ux-techniques-guide/how-to-understand-and-communicate-peoples-needs-and-behaviors/contextual-inquiry)  
