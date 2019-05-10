@@ -1,5 +1,5 @@
 ---
-title: 'Sections Page'
+title: 'Multi-Section Page'
 published: true
 hide_page_title: true
 show_sidebar: false
@@ -10,6 +10,8 @@ content:
         by: folder
         dir: asc
     limit: 0    
+    taxonomy:
+        tag: [view1,view2]
 ---
 
 # Sections
