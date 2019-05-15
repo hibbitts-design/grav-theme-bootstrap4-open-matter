@@ -1,18 +1,6 @@
-{% set multi_course_hub = theme_var('multi_course_hub.enabled') %}
-{% set arrayofpath = uri.path | split('/') %}
-{% set firstfolderofpath = arrayofpath[1] %}
-
-{# MultiCourse hub compatibility - hibbittsdesign.org #}
-{% if (multi_course_hub or grav['pages'].find('/' ~ firstfolderofpath).template == 'course') and not (fullpagepath) %}
-    {% set src = firstfolderofpath ~ '/' ~ src %}
-{% endif %}
-
-<h2>
-    <a class="newwindow external-link" href="{{ presentation_base_url }}/{{ src }}">{{ page.find('/' ~ src ).title }}</a>
-</h2>
-
 <p>
-    <div class="embed-responsive embed-responsive-4by3">
-        <iframe src="{{ presentation_base_url }}/{{ src }}" frameborder="0" allowfullscreen="allowfullscreen" class="{{ class }}"></iframe>
-    </div>
+  <a class="newwindow external-link" href="{{ presentation_base_url }}/{{ src }}">{{ page.find('/' ~ src ).title }}</a>{% include 'partials/git_sync_repo_link.html.twig' with {presentationslides: true} %}
+  <div class="embed-responsive embed-responsive-4by3">
+    <iframe src="{{ presentation_base_url }}/{{ src }}" frameborder="0" allowfullscreen="allowfullscreen" class="{{ class }}"></iframe>
+  </div>
 </p>
