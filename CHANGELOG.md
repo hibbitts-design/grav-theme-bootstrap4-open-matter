@@ -1,3 +1,13 @@
+# v2.2.9
+## 05/15/2019
+
+1. [](#new)
+    * Added additional Presentation templates to only display title or title + link of Presentation
+    * Added automatic Git Sync Link support for embedded Presentations
+1. [](#improved)
+    * Links of embedded background images in Presentations are automatically opened in a new Browser window
+    * Updated demo pages in theme '_demo' folder
+
 # v2.2.8
 ## 05/14/2019
 
