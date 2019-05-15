@@ -10,9 +10,9 @@ header_image_alt_text: 'Complex sound mixer'
 ---
 
 ## How to design products for how people think, learn and feel?
-[Conceptual Models](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-4)  
-[Design for Emotion](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-5)  
-[Accessible and Inclusive Design](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-6)  
+[Conceptual Models](../../presentations/module-10#/module-10-4?target=_blank)  
+[Design for Emotion](../../presentations/module-10#/module-10-5?target=_blank)  
+[Accessible and Inclusive Design](../../presentations/module-10#/module-10-6?target=_blank)  
 
 ===
 
@@ -22,8 +22,7 @@ header_image_alt_text: 'Complex sound mixer'
 [Jul 11th Class One-minute Summaries](https://sso.canvaslms.com/courses/1413912/assignments/9519526)
 
 ### Presented Slides  
-Interaction Design
-[presentation="presentations/placeholder-slide"]
+[presentation="presentations/module-10"]
 
 ### Handouts
 [10 Simple Things Writers Can Do To Improve Web Accessibility](http://www.seamlesscms.com/Insights/Content-Accessibility)  

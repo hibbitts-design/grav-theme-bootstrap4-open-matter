@@ -7,7 +7,7 @@ hide_git_sync_repo_link: true
 
 # CPT 363
 
-### Slides Placeholder
+### Slides Placeholder - Module 6
 
 > “A work in progress. And the possibilities are endless.”
 -- Elizabeth Eulberg
