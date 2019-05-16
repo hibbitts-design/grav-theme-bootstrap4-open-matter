@@ -1,3 +1,9 @@
+# v2.3.0
+## 05/15/2019
+
+1. [](#bugfix)
+    * Fixed the handling of custom Git Sync URLs on pages
+
 # v2.2.9
 ## 05/15/2019
 
