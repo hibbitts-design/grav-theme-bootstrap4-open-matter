@@ -1,3 +1,9 @@
+# v2.3.1
+## 05/16/2019
+
+1. [](#improved)
+    * Updated page blueprints with custom Git Sync URLs
+
 # v2.3.0
 ## 05/15/2019
 

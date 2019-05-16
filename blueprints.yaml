@@ -1,5 +1,5 @@
 name: 'Bootstrap4 Open Matter'
-version: 2.3.0
+version: 2.3.1
 description: "A custom version of the Bootstrap4 theme for open blogs, course hubs and more. Includes Git Sync and 'chromeless' content embedding."
 icon: bold
 author:
@@ -104,7 +104,7 @@ form:
                 type: input.text
                 size: medium
                 label: 'Custom Git Sync Link Text'
-                description: 'Link text, e.g. ''View Page in GitHub''.'
+                description: 'Link text, e.g. ''View Page on GitHub''.'
                 validate:
                     type: text
             git_sync_repo_link:
