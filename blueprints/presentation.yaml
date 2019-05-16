@@ -234,7 +234,7 @@ form:
                     type: input.text
                     size: medium
                     label: 'Custom Git Sync Link Text'
-                    description: 'Link text, e.g. ''View Slides in GitHub''.'
+                    description: 'Link text, e.g. ''View Slides on GitHub''.'
                     validate:
                         type: text
                 header.git_sync_repo_link:
