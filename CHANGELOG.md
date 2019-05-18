@@ -1,3 +1,9 @@
+# v2.3.3
+## 05/18/2019
+
+1. [](#improved)
+    * Additional support for Alt tag on blog post header images (no longer requires image credit link)
+
 # v2.3.2
 ## 05/16/2019
 
