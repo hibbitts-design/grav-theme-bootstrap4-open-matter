@@ -4,6 +4,19 @@ Bootstrap4 Open Matter theme is a [Grav](http://github.com/getgrav/grav) inherit
 
 ![Bootstrap4 Open Matter](assets/readme_1.png)
 
+## Bootstrap4 Open Matter Features
+
+* Integrated support for the [Git Sync](https://github.com/trilbymedia/grav-plugin-git-sync) Plugin (i.e. view/edit pages in GitHub)
+* 'Chromeless' page display (i.e. only display page content) for embedding pages in a 3rd party system
+* Markdown-based sidebar widget
+* Built-in Shortcodes - including Button, Embed.ly, H5P, iFrame, PDF, SpeakerDeck, Swipe and Twitter
+* Featured posts (i.e. sticky posts)
+* Option to toggle page summaries (i.e. summaries are not displayed with page content)
+* Enhanced support for the [Presentation Plugin](https://github.com/OleVik/grav-plugin-presentation)
+* Easy-to-use interface to create custom menubar items
+* Creative Commons license display
+* Web accessibility enhancements (i.e. hidden H1 page titles)
+
 # Installation
 
 Installing the Bootstrap4 Open Matter theme can be done in one of two ways. Our GPM (Grav Package Manager) installation method enables you to quickly and easily install the theme with a simple terminal command, while the manual method enables you to do so via a zip file.
