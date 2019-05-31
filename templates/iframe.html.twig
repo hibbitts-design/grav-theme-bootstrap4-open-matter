@@ -21,6 +21,7 @@
 {% set iframesource = page.header.iframe_source %}
 {% endif %}
 {% block content %}
+<div class="iframe-wrapper">
 <p>
 {{ page.content|raw }}
 {% if displaypagetitle is defined %}
@@ -82,9 +83,8 @@
 {% endif %}
 {% endif %}
 {% endif %}
-<div class="embed-responsive embed-responsive-{{ iframeaspectratio }}">
-<iframe src="{{ iframesource }}" width="640" height="480"></iframe>
-</div>
+<p><span class="embed-responsive embed-responsive-{{ iframeaspectratio }}"><iframe src="{{ iframesource }}" width="640" height="480"></iframe></span></p>
 </p>
+</div>
 {% endblock %}
 {% endif %}
