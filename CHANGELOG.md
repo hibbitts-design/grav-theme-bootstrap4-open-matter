@@ -1,3 +1,11 @@
+# v2.3.4
+## 05/31/2019
+
+1. [](#bugfix)
+    * Corrected path to theme Shortcodes
+1. [](#improved)
+    * Updated demo pages in theme '_demo' folder
+
 # v2.3.3
 ## 05/18/2019
 
