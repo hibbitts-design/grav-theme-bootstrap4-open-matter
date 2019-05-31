@@ -25,7 +25,7 @@ class Bootstrap4OpenMatter extends Theme
 
     public function onShortcodeHandlers()
     {
-        $this->grav['shortcode']->registerAllShortcodes('theme://shortcodes');
+        $this->grav['shortcode']->registerAllShortcodes('user://themes/bootstrap4-open-matter/shortcodes');
     }
 
     public function onTwigSiteVariables()
