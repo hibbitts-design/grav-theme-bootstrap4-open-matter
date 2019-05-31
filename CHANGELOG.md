@@ -1,3 +1,9 @@
+# v2.3.6
+## 05/31/2019
+
+1. [](#improved)
+    * Improved display of iFrame template items with associated text labels
+
 # v2.3.5
 ## 05/31/2019
 
