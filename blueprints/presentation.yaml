@@ -223,7 +223,7 @@ form:
                     type: toggle
                     label: Display Git Sync Link with Presentation
                     help: Determines if a Git Sync Link is displayed with this presentation
-                    default: 0
+                    default: 1
                     highlight: 0
                     options:
                         0:  Yes
