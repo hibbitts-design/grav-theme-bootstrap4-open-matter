@@ -1,6 +1,6 @@
 <p>
-  <a class="newwindow external-link" href="{{ presentation_base_url }}/{{ src }}">{{ page.find('/' ~ src ).title }}</a>{% include 'partials/git_sync_repo_link.html.twig' with {presentationslides: true} %}
-  <div class="embed-responsive embed-responsive-4by3">
-    <iframe src="{{ presentation_base_url }}/{{ src }}" frameborder="0" allowfullscreen="allowfullscreen" class="{{ class }}"></iframe>
-  </div>
+{% if not page.find('/' ~ src ).header.hide_title %}<a class="newwindow external-link" href="{{ presentation_base_url }}/{{ src }}">{{ page.find('/' ~ src ).title }}</a>{% include 'partials/git_sync_repo_link.html.twig' with {presentationslides: true} %}{% endif %}
+<div class="embed-responsive embed-responsive-4by3">
+  <iframe src="{{ presentation_base_url }}/{{ src }}" frameborder="0" allowfullscreen="allowfullscreen" class="{{ class }}"></iframe>
+</div>
 </p>
