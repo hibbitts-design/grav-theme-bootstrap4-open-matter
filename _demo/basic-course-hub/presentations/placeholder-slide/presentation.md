@@ -1,6 +1,5 @@
 ---
 title: Placeholder Slide
-hide_git_sync_link: true
 ---
 
 [.text: alignment(center)]
