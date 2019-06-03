@@ -10,9 +10,9 @@ header_image_alt_text: 'Usability testing'
 ---
 
 ## How to plan, conduct, and summarize usability tests?  
-[Testing Methods](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-4)  
-[Conducting Tests](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-5)  
-[Analysis and Reporting](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-6)  
+[Testing Methods](../../presentations/placeholder-slides?target=_blank#/placeholder-slide-4)  
+[Conducting Tests](../../presentations/placeholder-slides?target=_blank#/placeholder-slide-5)  
+[Analysis and Reporting](../../presentations/placeholder-slides?target=_blank#/placeholder-slide-6)  
 
 ===
 
@@ -23,7 +23,7 @@ header_image_alt_text: 'Usability testing'
 
 ### Presented Slides  
 Usability Testing
-[presentation="cpt363/presentations/placeholder-slide"]
+[presentation="cpt363/presentations/placeholder-slides"]
 
 ### Supplemental Materials  
 [Rocket Surgery Made Easy by Steve Krug: Usability Demo](https://www.youtube.com/watch?v=QckIzHC99Xc)  

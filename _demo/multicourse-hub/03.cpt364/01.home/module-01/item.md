@@ -13,12 +13,12 @@ hide_git_sync_repo_link: true
 ## What is usability and user experience design?
 
 ### What is this course all about?
-[Course Overview](../../presentations/placeholder-slide?target=_blank)
+[Course Overview](../../presentations/placeholder-slides?target=_blank)
 
 ### What is usability and user experience design?
-[HCI, UI, IA, IxD, and UX](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-4)  
-[Design Thinking](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-5?target=_blank)  
-[Usability and UCD](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-6?target=_blank)  
+[HCI, UI, IA, IxD, and UX](../../presentations/placeholder-slides?target=_blank#/placeholder-slide-4)  
+[Design Thinking](../../presentations/placeholder-slides?target=_blank#/placeholder-slide-5?target=_blank)  
+[Usability and UCD](../../presentations/placeholder-slides?target=_blank#/placeholder-slide-6?target=_blank)  
 
 ===
 
@@ -29,10 +29,10 @@ hide_git_sync_repo_link: true
 
 ### Presented Slides  
 Course Overview
-[presentation="cpt364/presentations/placeholder-slide"]
+[presentation="cpt364/presentations/placeholder-slides"]
 
 Introduction to UX Design
-[presentation="cpt364/presentations/placeholder-slide"]
+[presentation="cpt364/presentations/placeholder-slides"]
 
 ### Supplemental Materials  
 [Interaction Design History](http://www.slideshare.net/mrettig/interaction-design-history)  

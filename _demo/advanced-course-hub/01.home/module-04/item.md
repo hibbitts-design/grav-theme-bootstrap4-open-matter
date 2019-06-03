@@ -7,9 +7,9 @@ hide_git_sync_repo_link: true
 ---
 
 ## How to explore and communicate possible design solutions?
-[Forms and Methods](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-4)  
-[Design Scenarios](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-5)  
-[Sketching and Storyboarding](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-6)  
+[Forms and Methods](../../presentations/placeholder-slides?target=_blank#/placeholder-slide-4)  
+[Design Scenarios](../../presentations/placeholder-slides?target=_blank#/placeholder-slide-5)  
+[Sketching and Storyboarding](../../presentations/placeholder-slides?target=_blank#/placeholder-slide-6)  
 
 ===
 

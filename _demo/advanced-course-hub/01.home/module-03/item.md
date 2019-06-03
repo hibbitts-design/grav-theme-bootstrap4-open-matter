@@ -7,9 +7,9 @@ hide_git_sync_repo_link: true
 ---
 
 ## How to make more strategic design decisions?  
-[User Experience Strategy](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-4)  
-[Current State and Future State](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-5)  
-[Journey Mapping](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-6)  
+[User Experience Strategy](../../presentations/placeholder-slides?target=_blank#/placeholder-slide-4)  
+[Current State and Future State](../../presentations/placeholder-slides?target=_blank#/placeholder-slide-5)  
+[Journey Mapping](../../presentations/placeholder-slides?target=_blank#/placeholder-slide-6)  
 
 ===
 

@@ -10,9 +10,9 @@ header_image_alt_text: 'Bullseye'
 ---
 
 ## How to make more strategic design decisions?  
-[User Experience Strategy](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-4)  
-[Current State and Future State](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-5)  
-[Journey Mapping](../../presentations/placeholder-slide?target=_blank#/placeholder-slide-6)  
+[User Experience Strategy](../../presentations/placeholder-slides?target=_blank#/placeholder-slide-4)  
+[Current State and Future State](../../presentations/placeholder-slides?target=_blank#/placeholder-slide-5)  
+[Journey Mapping](../../presentations/placeholder-slides?target=_blank#/placeholder-slide-6)  
 
 ===
 
@@ -23,7 +23,7 @@ header_image_alt_text: 'Bullseye'
 
 ### Presented Slides  
 Strategic UX Design
-[presentation="cpt363/presentations/placeholder-slide"]
+[presentation="cpt363/presentations/placeholder-slides"]
 
 ### Supplemental Materials  
 [Customer Journey Mapping](https://www.youtube.com/watch?v=a40QYgO-_aM)  
