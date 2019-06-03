@@ -1,3 +1,12 @@
+# v2.3.8
+## 06/03/2019
+
+1. [](#new)
+    * Added option to hide Presentation title
+1. [](#improved)
+    * Restored default for new Presentations to not automatically display Git Sync link when embedded
+    * Updated demo pages in theme '_demo' folder
+
 # v2.3.7
 ## 06/01/2019
 
