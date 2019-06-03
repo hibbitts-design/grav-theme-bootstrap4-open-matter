@@ -23,7 +23,7 @@ header_image_alt_text: 'Complex sound mixer'
 
 ### Presented Slides  
 Interaction Design
-[presentation="presentations/placeholder-slide"]
+[presentation="cpt363/presentations/placeholder-slide"]
 
 ### Handouts
 [10 Simple Things Writers Can Do To Improve Web Accessibility](http://www.seamlesscms.com/Insights/Content-Accessibility)  

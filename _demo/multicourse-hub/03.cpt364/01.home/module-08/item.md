@@ -23,7 +23,7 @@ header_image_alt_text: 'Interview in coffee shop'
 
 ### Presented Slides  
 User Research
-[presentation="presentations/placeholder-slide"]
+[presentation="cpt364/presentations/placeholder-slide"]
 
 ### Assignments
 [User Research Report](https://sso.canvaslms.com/courses/1413912/assignments/9519534)  

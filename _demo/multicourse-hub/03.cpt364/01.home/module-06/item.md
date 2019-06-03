@@ -23,7 +23,7 @@ header_image_alt_text: 'The Pay and Go box at the new North Oshawa medical clini
 
 ### Presented Slides  
 User Interface Inspections
-[presentation="presentations/placeholder-slide"]
+[presentation="cpt364/presentations/placeholder-slide"]
 
 ### Supplemental Materials  
 [Design Heuristics Lecture with Scott Klemmer](https://www.youtube.com/playlist?list=PLVtu1bDQijari7LfHOoSTdcpbWIkwZWIA)  

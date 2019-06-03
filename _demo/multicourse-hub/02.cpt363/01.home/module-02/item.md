@@ -23,7 +23,7 @@ header_image_alt_text: 'Information architecture'
 
 ### Presented Slides  
 The Process of UX Design  
-[presentation="presentations/placeholder-slide"]
+[presentation="cpt363/presentations/placeholder-slide"]
 
 ### CPT-363 UX Design Process/Toolkit
 ![CPT-363 UX Design Process/Toolkit Diagram](ux-design-process-v4.png)

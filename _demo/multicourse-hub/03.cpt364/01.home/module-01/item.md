@@ -29,10 +29,10 @@ hide_git_sync_repo_link: true
 
 ### Presented Slides  
 Course Overview
-[presentation="presentations/placeholder-slide"]
+[presentation="cpt364/presentations/placeholder-slide"]
 
 Introduction to UX Design
-[presentation="presentations/placeholder-slide"]
+[presentation="cpt364/presentations/placeholder-slide"]
 
 ### Supplemental Materials  
 [Interaction Design History](http://www.slideshare.net/mrettig/interaction-design-history)  

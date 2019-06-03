@@ -23,7 +23,7 @@ header_image_alt_text: 'iOS family of devices pile (2015)'
 
 ### Presented Slides  
 Mobile and Multi-device Design
-[presentation="presentations/placeholder-slide"]
+[presentation="cpt363/presentations/placeholder-slide"]
 
 ### Handouts
 [One-Page Touch Interaction Design Checklist](https://sso.canvaslms.com/courses/1413912/files/folder/Handouts/Touch%20Interaction%20Checklist)  
