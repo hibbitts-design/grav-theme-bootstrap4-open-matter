@@ -1,3 +1,9 @@
+# v2.4.1
+## 06/04/2019
+
+1. [](#bugfix)
+    * Restored missing open bracket for Git Sync Link with Presentations
+
 # v2.4.0
 ## 06/03/2019
 
