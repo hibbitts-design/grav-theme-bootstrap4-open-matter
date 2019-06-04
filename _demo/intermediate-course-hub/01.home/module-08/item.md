@@ -10,9 +10,9 @@ header_image_alt_text: 'Interview in coffee shop'
 ---
 
 ## How to understand and communicate people's needs and behaviours?
-[Needsfinding](../../presentations/module-08#/module-08-4?target=_blank)  
-[User Models](../../presentations/module-08#/module-08-5?target=_blank)  
-[Stories of Usage](../../presentations/module-08#/module-08-6?target=_blank)  
+[Needsfinding](../../presentations/module-08?target=_blank#/module-08-4)  
+[User Models](../../presentations/module-08?target=_blank#/module-08-5)  
+[Stories of Usage](../../presentations/module-08?target=_blank#/module-08-6)  
 
 ===
 

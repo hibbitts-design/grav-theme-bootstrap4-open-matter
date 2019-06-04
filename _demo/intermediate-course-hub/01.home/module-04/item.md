@@ -10,9 +10,9 @@ header_image_alt_text: 'Paper-based prototype'
 ---
 
 ## How to explore and communicate possible design solutions?
-[Forms and Methods](../../presentations/module-04#/module-04-4?target=_blank)  
-[Design Scenarios](../../presentations/module-04#/module-04-5?target=_blank)  
-[Sketching and Storyboarding](../../presentations/module-04#/module-04-6?target=_blank)  
+[Forms and Methods](../../presentations/module-04?target=_blank#/module-04-4)  
+[Design Scenarios](../../presentations/module-04?target=_blank#/module-04-5)  
+[Sketching and Storyboarding](../../presentations/module-04?target=_blank#/module-04-6)  
 
 ===
 

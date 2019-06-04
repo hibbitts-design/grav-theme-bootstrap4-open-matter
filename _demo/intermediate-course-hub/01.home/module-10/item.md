@@ -10,9 +10,9 @@ header_image_alt_text: 'Complex sound mixer'
 ---
 
 ## How to design products for how people think, learn and feel?
-[Conceptual Models](../../presentations/module-10#/module-10-4?target=_blank)  
-[Design for Emotion](../../presentations/module-10#/module-10-5?target=_blank)  
-[Accessible and Inclusive Design](../../presentations/module-10#/module-10-6?target=_blank)  
+[Conceptual Models](../../presentations/module-10?target=_blank#/module-10-4)  
+[Design for Emotion](../../presentations/module-10?target=_blank#/module-10-5)  
+[Accessible and Inclusive Design](../../presentations/module-10?target=_blank#/module-10-6)  
 
 ===
 

@@ -10,9 +10,9 @@ header_image_alt_text: 'The Pay and Go box at the new North Oshawa medical clini
 ---
 
 ## How to conduct a usability inspection?   
-[Cognitive Walkthroughs](../../presentations/module-06#/module-06-4?target=_blank)  
-[Conducting Heuristic Evaluations](../../presentations/module-06#/module-02-5?target=_blank))  
-[Nielsen’s Heuristics](../../presentations/module-06#/module-06-6?target=_blank) 
+[Cognitive Walkthroughs](../../presentations/module-06?target=_blank#/module-06-4)  
+[Conducting Heuristic Evaluations](../../presentations/module-06?target=_blank#/module-06-5)  
+[Nielsen’s Heuristics](../../presentations/module-06?target=_blank#/module-06-6))  
 
 ===
 

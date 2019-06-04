@@ -1,15 +1,18 @@
 ---
-title: 'Module 6 (Jun 13 - 19)'
+title: 'Week 6 (Jun 13 - 19)'
 published: false
 date: '13-06-2018 00:00'
 hide_from_post_list: false
 hide_git_sync_repo_link: true
+header_image_credit: 'Rick Dolishny, Flickr.com'
+header_image_creditlink: 'https://www.flickr.com/photos/rdolishny/2760207306/'
+header_image_alt_text: 'The Pay and Go box at the new North Oshawa medical clinic'
 ---
 
-### How to conduct a usability inspection?   
-[Cognitive Walkthroughs](https://paulhibbitts.net/cmpt-363-182/pdfs/cmpt-363-182-user-interface-inspections.pdf#page=6)  
-[Conducting Heuristic Evaluations](https://paulhibbitts.net/cmpt-363-182/pdfs/cmpt-363-182-user-interface-inspections.pdf#page=17)  
-[Nielsen’s Heuristics](https://paulhibbitts.net/cmpt-363-182/pdfs/cmpt-363-182-user-interface-inspections.pdf#page=38)  
+## How to conduct a usability inspection?   
+[Cognitive Walkthroughs](../../presentations/module-06#/module-06-4?target=_blank)  
+[Conducting Heuristic Evaluations](../../presentations/module-06#/module-02-5?target=_blank))  
+[Nielsen’s Heuristics](../../presentations/module-06#/module-06-6?target=_blank) 
 
 ===
 
@@ -19,7 +22,7 @@ hide_git_sync_repo_link: true
 [Jun 13th Class One-minute Summaries](https://sso.canvaslms.com/courses/1413912/assignments/9519520)
 
 ### Presented Slides  
-[plugin:page-inject](/module-presentations/module-06)
+[presentation="presentations/module-06"]
 
 ### Supplemental Materials  
 [Design Heuristics Lecture with Scott Klemmer](https://www.youtube.com/playlist?list=PLVtu1bDQijari7LfHOoSTdcpbWIkwZWIA)  
@@ -30,8 +33,4 @@ hide_git_sync_repo_link: true
 [Usability Inspection Report Template](https://sso.canvaslms.com/courses/1413912/files/folder/Handouts/Usability%20Inspection%20Report%20Template)
 
 ### Required Reading  
-[plugin:page-inject](/module-readings/module-06)
-
-### Supplemental Readings  
-[plugin:content-inject](/ux-techniques-guide/how-to-conduct-a-usability-inspection/cognitive-walkthroughs)  
-[plugin:content-inject](/ux-techniques-guide/how-to-conduct-a-usability-inspection/heuristic-evaluations)  
+[embedly url="https://www.uxmatters.com/mt/archives/2014/06/an-overview-of-expert-heuristic-evaluations.php"]

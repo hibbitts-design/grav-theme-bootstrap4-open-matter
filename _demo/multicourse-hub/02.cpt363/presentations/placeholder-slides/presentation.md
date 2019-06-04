@@ -30,19 +30,19 @@ title: Placeholder Slides Title
 
 ---
 
-# Slides Placeholder
+# Placeholder Slides
 
 ### Topic One
 
 ---
 
-# Slides Placeholder
+# Placeholder Slides
 
 ### Topic Two
 
 ---
 
-# Slides Placeholder
+# Placeholder Slides
 
 ### Topic Three
 

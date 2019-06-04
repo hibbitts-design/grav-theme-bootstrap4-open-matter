@@ -1,15 +1,18 @@
 ---
-title: 'Module 11 (Jul 18 - 24)'
+title: 'Week 11 (Jul 18 - 24)'
 published: false
 date: '18-07-2018 00:00'
 hide_from_post_list: false
 hide_git_sync_repo_link: true
+header_image_credit: 'Pat Armstrong, Flickr.com'
+header_image_creditlink: 'https://www.flickr.com/photos/poisontofu/4762082009/'
+header_image_alt_text: 'Dampening and inking the plate'
 ---
 
-### What are the essentials of effective visual communication?  
-[Typography](https://paulhibbitts.net/cmpt-363-182/pdfs/cmpt-363-182-visual-design-essentials.pdf#page=7)  
-[Grouping, Visual Hierarchy and Grids](https://paulhibbitts.net/cmpt-363-182/pdfs/cmpt-363-182-visual-design-essentials.pdf#page=24)  
-[Visual Design Principles](https://paulhibbitts.net/cmpt-363-182/pdfs/cmpt-363-182-visual-design-essentials.pdf#page=36)  
+## What are the essentials of effective visual communication?  
+[Typography]((../../presentations/module-02#/module-11-4?target=_blank)  
+[Grouping, Visual Hierarchy and Grids](../../presentations/module-11#/module-11-5?target=_blank)  
+[Visual Design Principles](../../presentations/module-11#/module-11-6?target=_blank)  
 
 ===
 
@@ -19,18 +22,11 @@ hide_git_sync_repo_link: true
 [Jul 18th Class One-minute Summaries](https://sso.canvaslms.com/courses/1413912/assignments/9519518)
 
 ### Presented Slides  
-[plugin:page-inject](/module-presentations/module-11)
+[presentation="presentations/module-11"]
 
 ### Assignments
 [Usability Tested Mockups](https://sso.canvaslms.com/courses/1413912/assignments/9519533)  
 [Informed Consent Materials](https://sso.canvaslms.com/courses/1413912/files/folder/Handouts/Informed%20Consent)  
 
 ### Required Reading  
-[plugin:page-inject](/module-readings/module-11)
-
-### Supplemental Readings  
-[plugin:content-inject](/ux-techniques-guide/what-are-the-essentials-of-effective-visual-communication/grids)  
-[plugin:content-inject](/ux-techniques-guide/what-are-the-essentials-of-effective-visual-communication/hierarchy)  
-[plugin:content-inject](/ux-techniques-guide/what-are-the-essentials-of-effective-visual-communication/icons)  
-[plugin:content-inject](/ux-techniques-guide/what-are-the-essentials-of-effective-visual-communication/layout)  
-[plugin:content-inject](/ux-techniques-guide/what-are-the-essentials-of-effective-visual-communication/typography)  
+[embedly url="http://www.uxbooth.com/articles/accessibility-visual-design/"]

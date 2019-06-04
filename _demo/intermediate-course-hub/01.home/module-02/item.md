@@ -10,9 +10,9 @@ header_image_alt_text: 'Information architecture'
 ---
 
 ## What does a holistic user experience design process look like?
-[Software Development Processes](../../presentations/module-02#/module-02-4?target=_blank)    
-[User Experience Design Processes](../../presentations/module-02#/module-02-5?target=_blank)    
-[Our Design Process (aka Toolkit)](../../presentations/module-02#/module-02-6?target=_blank)    
+[Software Development Processes](../../presentations/module-02?target=_blank#/module-02-4)  
+[User Experience Design Processes](../../presentations/module-02?target=_blank#/module-02-5)  
+[Our Design Process (aka Toolkit)](../../presentations/module-02?target=_blank#/module-02-6)  
 
 ===
 

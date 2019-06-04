@@ -10,9 +10,9 @@ header_image_alt_text: 'Bullseye'
 ---
 
 ## How to make more strategic design decisions?  
-[User Experience Strategy](../../presentations/module-03#/module-03-4?target=_blank)  
-[Current State and Future State](../../presentations/module-03#/module-03-5?target=_blank)  
-[Journey Mapping](../../presentations/module-03#/module-03-6?target=_blank)  
+[User Experience Strategy](../../presentations/module-03?target=_blank#/module-03-4)  
+[Current State and Future State](../../presentations/module-03?target=_blank#/module-03-5)  
+[Journey Mapping](../../presentations/module-03?target=_blank#/module-03-6)  
 
 ===
 

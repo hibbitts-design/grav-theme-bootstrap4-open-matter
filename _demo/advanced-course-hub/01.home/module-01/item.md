@@ -1,18 +1,24 @@
 ---
-title: 'Module 1 (May 9 - 15)'
+title: 'Week 1 (May 9 - 15)'
 published: true
 date: '09-05-2018 00:00'
+header_image_alt_text: 'SFU Academic Quadrangle'
+header_image_credit: 'Julian Schüngel, Flickr.com'
+header_image_creditlink: 'https://www.flickr.com/photos/medevac71/10610701655/'
 hide_from_post_list: false
+continue_link: true
 hide_git_sync_repo_link: true
 ---
+
+## What is usability and user experience design?
 
 ### What is this course all about?
 [Course Overview](../../presentations/placeholder-slides?target=_blank)
 
 ### What is usability and user experience design?
-[HCI, UI, IA, IxD, and UX](../../presentations/placeholder-slides?target=_blank#/placeholder-slide-4)  
-[Design Thinking](../../presentations/placeholder-slides?target=_blank#/placeholder-slide-5?target=_blank)  
-[Usability and UCD](../../presentations/placeholder-slides?target=_blank#/placeholder-slide-6?target=_blank)  
+[HCI, UI, IA, IxD, and UX](../../presentations/module-01#/module-01-4?target=_blank)  
+[Design Thinking](../../presentations/module-01#/module-01-5?target=_blank)  
+[Usability and UCD](../../presentations/module-01#/module-01-6?target=_blank)  
 
 ===
 
@@ -22,21 +28,16 @@ hide_git_sync_repo_link: true
 [May 9th Class One-minute Summaries](https://sso.canvaslms.com/courses/1413912/assignments/9519517)
 
 ### Presented Slides  
-[plugin:page-inject](/module-presentations/module-01-1)  
-[plugin:page-inject](/module-presentations/module-01-2)  
+[presentation="presentations/placeholder-slides"]  
+
+[presentation="presentations/module-01"]
 
 ### Supplemental Materials  
-[Interaction Design History](http://www.slideshare.net/mrettig/interaction-design-history)  
-[iframe url="https://www.slideshare.net/slideshow/embed_code/key/aTtcFNn7i55UVK"]
+[Elements of User Experience by Jesse James Garrett](https://qofr.files.wordpress.com/2016/11/q-of-r-presentation-11.pdf)  
+[pdf url="https://qofr.files.wordpress.com/2016/11/q-of-r-presentation-11.pdf"]
 
 ### Handouts
 [Course Overview](https://sso.canvaslms.com/courses/1413912/files/folder/Handouts/Course%20Overview)  
 
 ### Recommended Reading  
-[plugin:page-inject](/module-readings/module-01)
-
-### Supplemental Readings  
-[plugin:content-inject](/ux-techniques-guide/what-does-a-holistic-user-experience-design-process-look-like/design-ethics)  
-[plugin:content-inject](/ux-techniques-guide/what-is-usability-and-user-experience-design/usability)  
-[plugin:content-inject](/ux-techniques-guide/what-does-a-holistic-user-experience-design-process-look-like/user-centered-design)  
-[plugin:content-inject](/ux-techniques-guide/what-is-usability-and-user-experience-design/user-experience-design)  
+[embedly url="http://www.uxbooth.com/articles/the-art-of-guerrilla-usability-testing/"]

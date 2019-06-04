@@ -16,9 +16,9 @@ hide_git_sync_repo_link: true
 [Course Overview](../../presentations/placeholder-slides?target=_blank)
 
 ### What is usability and user experience design?
-[HCI, UI, IA, IxD, and UX](../../presentations/module-01#/module-01-4?target=_blank)  
-[Design Thinking](../../presentations/module-01#/module-01-5?target=_blank)  
-[Usability and UCD](../../presentations/module-01#/module-01-6?target=_blank)  
+[HCI, UI, IA, IxD, and UX](../../presentations/module-01?target=_blank#/module-01-4)  
+[Design Thinking](../../presentations/module-01?target=_blank#/module-01-5?target=_blank)  
+[Usability and UCD](../../presentations/module-01?target=_blank#/module-01-6?target=_blank)  
 
 ===
 
@@ -28,11 +28,13 @@ hide_git_sync_repo_link: true
 [May 9th Class One-minute Summaries](https://sso.canvaslms.com/courses/1413912/assignments/9519517)
 
 ### Presented Slides  
+[presentation="presentations/placeholder-slides"]
+
 [presentation="presentations/module-01"]
 
 ### Supplemental Materials  
-[Interaction Design History](http://www.slideshare.net/mrettig/interaction-design-history)  
-[iframe url="https://www.slideshare.net/slideshow/embed_code/key/aTtcFNn7i55UVK"]
+[Elements of User Experience by Jesse James Garrett](https://qofr.files.wordpress.com/2016/11/q-of-r-presentation-11.pdf)  
+[pdf url="https://qofr.files.wordpress.com/2016/11/q-of-r-presentation-11.pdf"]
 
 ### Handouts
 [Course Overview](https://sso.canvaslms.com/courses/1413912/files/folder/Handouts/Course%20Overview)  

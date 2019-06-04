@@ -10,6 +10,7 @@ content:
     order:
         by: date
         dir: desc
+    pagination: '1'
 hero_scroll: false
 show_sidebar: true
 hide_post_summary: true
@@ -18,7 +19,6 @@ hide_post_date: true
 hide_post_taxonomy: true
 continue_link_as_button: false
 hide_git_sync_repo_link: false
-hide_front_edit_button: true
 modular_content:
     items: '@self.modular'
     order:
