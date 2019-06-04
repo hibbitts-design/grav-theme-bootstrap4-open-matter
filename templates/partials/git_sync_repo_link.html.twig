@@ -114,7 +114,8 @@
           {% else %}
             {% set git_repo_link_text = theme_var('custom_git_sync_repo_link_text') %}
           {% endif %}
-        {% endif %}<a class="{{ link_classes }}" href="{{ git_repo_link_url }}" title="{{ git_repo_link_text }}" target="_blank"><i class="fa fa-{{ git_repo_link_icon }}" aria-hidden="true"></i>{{ git_repo_link_text }}</a>{% if presentationslides %}){% endif %}
+        {% endif %}
+        {% if presentationslides %}({% endif %}<a class="{{ link_classes }}" href="{{ git_repo_link_url }}" title="{{ git_repo_link_text }}" target="_blank"><i class="fa fa-{{ git_repo_link_icon }}" aria-hidden="true"></i>{{ git_repo_link_text }}</a>{% if presentationslides %}){% endif %}
       {% endif %}
     {% endif %}
   {% endif %}
