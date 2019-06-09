@@ -1,25 +1,26 @@
 {# no tab indents for Page Inject Plugin compatibility - hibbittsdesign.org #}
 {% set multi_course_hub = theme_var('multi_course_hub.enabled') %}
-{% set arrayofpath = uri.path|split('/') %}
+{% set arrayofpath = uri.path | split('/') %}
 {% set firstfolderofpath = arrayofpath[1] %}
 {% set secondfolderofpath = arrayofpath[2] %}
 
 {% block content %}
 {# MultiCourse hub compatibility - hibbittsdesign.org #}
 {% if multi_course_hub or page.find('/' ~ firstfolderofpath).template == 'course' %}
-{% set p = (page.find('/' ~ firstfolderofpath ~ '/' ~ page.parent.slug).children.order('{page.parent.header.content.order.by}','desc').visible|first) %}
+{% set p = (page.find('/' ~ firstfolderofpath ~ '/' ~ page.parent.slug).children.order('{page.parent.header.content.order.by}', 'desc').visible | first) %}
 {% if p is empty %}
-{% set p = (page.find('/' ~ page.parent.slug).children.order('{page.parent.header.content.order.by}','desc').visible|first) %}
+{% set p = (page.find('/' ~ page.parent.slug).children.order('{page.parent.header.content.order.by}', 'desc').visible | first) %}
 {% endif %}
-{% else %}
 {% elseif page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).template == 'course' %}
-{% set p = (page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath ~ '/' ~ page.parent.slug).children.order('{page.parent.header.content.order.by}','desc').visible|first) %}
+{% set p = (page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath ~ '/' ~ page.parent.slug).children.order('{page.parent.header.content.order.by}', 'desc').visible | first) %}
 {% if p is empty %}
-{% set p = (page.find('/' ~ page.parent.slug).children.order('{page.parent.header.content.order.by}','desc').visible|first) %}
+{% set p = (page.find('/' ~ page.parent.slug).children.order('{page.parent.header.content.order.by}', 'desc').visible | first) %}
 {% endif %}
 {% else %}
-{% set p = (page.find('/' ~ page.parent.slug).children.order('{page.parent.header.content.order.by}','desc').visible|first) %}
+{% set p = (page.find('/' ~ page.parent.slug).children.order('{page.parent.header.content.order.by}', 'desc').visible | first) %}
 {% endif %}
 {% set templatename = p.template ~ '.html.twig' %}
-{% include templatename with {'page' : p} %}
+{% include templatename with {
+'page' : p
+} %}
 {% endblock %}
