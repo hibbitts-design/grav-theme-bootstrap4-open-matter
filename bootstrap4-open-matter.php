@@ -31,8 +31,8 @@ class Bootstrap4OpenMatter extends Theme
     public function onTwigSiteVariables()
     {
         if ($this->isAdmin() && ($this->grav['config']->get('plugins.shortcode-core.enabled'))) {
-            $this->grav['assets']->add('theme://editor-buttons/admin/js/shortcode-presentation.js');
-            $this->grav['assets']->add('theme://editor-buttons/admin/js/shortcode-h5p.js');
+            $this->grav['assets']->add('user://themes/bootstrap4-open-matter/editor-buttons/admin/js/shortcode-presentation.js');
+            $this->grav['assets']->add('user://themes/bootstrap4-open-matter/editor-buttons/admin/js/shortcode-h5p.js');
         }
     }
 
