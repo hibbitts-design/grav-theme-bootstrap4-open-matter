@@ -1,3 +1,13 @@
+# v2.4.5
+## 06/08/2019
+
+1. [](#new)
+    * MultiCourse Hubs that support grouped (i.e. by term) courses
+1. [](#improved)
+    * Sections pages are now supported within a parent folder
+    * Improved path to theme Admin Editor Buttons
+    * Updated demo pages in theme '_demo' folder
+
 # v2.4.4
 ## 06/05/2019
 
