@@ -1,3 +1,9 @@
+# v2.4.6
+## 06/08/2019
+
+1. [](#improved)
+    * Fixed template for display of latest content item
+
 # v2.4.5
 ## 06/08/2019
 
