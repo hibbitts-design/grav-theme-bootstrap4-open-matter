@@ -6,6 +6,8 @@
 {% set multi_course_hub = theme_var('multi_course_hub.enabled') %}
 {% set arrayofpath = uri.path|split('/') %}
 {% set firstfolderofpath = arrayofpath[1] %}
+{% set secondfolderofpath = arrayofpath[2] %}
+{% set course_name_term_separator = theme_var('course_name_term_separator') %}
 
 {# MultiCourse hub compatibility - hibbittsdesign.org #}
 {% if multi_course_hub or page.find('/' ~ firstfolderofpath).template == 'course' %}
@@ -26,6 +28,21 @@
       {% set background_image = page.find('/headerimage').media.images|first %}
     {% endif %}
     {% set pages = page.evaluate([{'@page.children':'/' ~ firstfolderofpath }]) %}
+{% elseif page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).template == 'course' %}
+    {% set course_home = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).header.course_home %}
+    {% if course_home is empty %}
+        {% set course_home = config.system.home.alias %}
+    {% endif %}
+    {% set base_url_relative = base_url_relative ~ '/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath ~ '/' ~ course_home %}
+    {% set site_title = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).header.course_site_title %}
+    {% if site_title is empty %}
+      {% set site_title = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).title %}
+    {% endif %}
+    {% set background_image = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath ~ '/headerimage').media.images|first %}
+    {% if background_image == empty %}
+      {% set background_image = page.find('/headerimage').media.images|first %}
+    {% endif %}
+    {% set pages = page.evaluate([{'@page.children':'/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath}]) %}
 {% else %}
   {% set site_title = site.title|e('html') %}
   {% set background_image = page.find('/headerimage').media.images|first %}

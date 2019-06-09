@@ -1,6 +1,7 @@
 {% set multi_course_hub = theme_var('multi_course_hub.enabled') %}
 {% set arrayofpath = uri.path|split('/') %}
 {% set firstfolderofpath = arrayofpath[1] %}
+{% set secondfolderofpath = arrayofpath[2] %}
 
 {# MultiCourse hub compatibility - hibbittsdesign.org #}
 {% if multi_course_hub or page.find('/' ~ firstfolderofpath).template == 'course' %}
@@ -10,6 +11,15 @@
     {% set site_title = site.title|e('html') %}
   {% endif %}
   {% set footer_content = page.find('/' ~ firstfolderofpath ~ '/footer').content %}
+  {% if footer_content == empty %}
+    {% set footer_content = page.find('/footer').content %}
+  {% endif %}
+{% elseif page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).template == 'course' %}
+  {% set site_title = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).header.course_site_title %}
+  {% if site_title is empty %}
+    {% set site_title = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).title %}
+  {% endif %}
+  {% set footer_content = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath ~ '/footer').content %}
   {% if footer_content == empty %}
     {% set footer_content = page.find('/footer').content %}
   {% endif %}
