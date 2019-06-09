@@ -42,13 +42,6 @@
 
     {% set activetag = uri.param('tag') %}
 
-    {# MultiCourse hub compatibility - hibbittsdesign.org #}
-    {% if multi_course_hub or page.find('/' ~ firstfolderofpath).template == 'course' %}
-      {% set toplevelpage = firstfolderofpath %}
-    {% else %}
-      {% set toplevelpage = 'pages' %}
-    {% endif %}
-
     <div class="main-content">
       <div class="container">
         <div class="row">
@@ -133,7 +126,7 @@
                     }
                   }) %}
 
-                  {% if not(page.parent.slug == toplevelpage) %}
+                  {% if not(page.template == 'sections') %}
 
                     {% if not siblings.isFirst(page.path) %}
                       {% if children | length != 0 %}
@@ -155,7 +148,7 @@
                         {% endif %}
                       {% endif %}
                     {% else %}
-                      {% if not(page.parent.parent.slug == toplevelpage) %}
+                      {% if not(page.parent.template == 'sections') %}
                         <a class="btn btn-primary" href="{% if activetag %}{{ page.parent.url ~ '/tag:' ~ activetag }}{% else %}{{ page.parent.url }}{% endif %}">
                           <i class="fa fa-chevron-left"></i>
                           {{ page.parent.title }}</a>
@@ -175,7 +168,7 @@
                         </a>
                       {% endif %}
                     {% else %}
-                      {% if not(page.parent.parent.slug == toplevelpage) %}
+                      {% if not(page.parent.template == 'sections') %}
                         {% set siblings = page.collection({
                           items: {
                             '@page.children.visible': page.parent.parent.route
