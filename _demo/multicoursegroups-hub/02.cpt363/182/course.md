@@ -1,7 +1,7 @@
 ---
 title: 'CPT363 Summer 2018'
 course_site_title: 'CPT363 182'
-course_list_description: 'This would be a short description of the CPT363 182 course.'
+course_list_description: 'This would be a short description of the CPT363 Summer 2018 course.'
 hide_from_course_list: false
 course_home: home
 published: true
