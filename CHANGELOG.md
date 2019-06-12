@@ -1,3 +1,9 @@
+# v2.4.8
+## 06/12/2019
+
+1. [](#new)
+    * Course page `published:false` frontmatter option automatically sets all subsequent course child pages to be unavailable (thanks @ricardo118)
+
 # v2.4.7
 ## 06/10/2019
 
