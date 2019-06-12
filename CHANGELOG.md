@@ -2,7 +2,7 @@
 ## 06/12/2019
 
 1. [](#improved)
-    * Removed Markdown Fontawesome Plugin dependency
+    * Removed Markdown Font Awesome Plugin dependency
     * Updated demo pages in theme '_demo' folder
 
 # v2.4.8
