@@ -1,3 +1,10 @@
+# v2.5.1
+## 06/16/2019
+
+1. [](#improved)
+    * Updated theme blueprints YAML for Grav 1.7x YAML Linter
+    * Updated demo pages in theme '_demo' folder
+
 # v2.5.0
 ## 06/13/2019
 
