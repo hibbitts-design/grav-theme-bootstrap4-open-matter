@@ -1,5 +1,5 @@
 # v2.5.1
-## 06/16/2019
+## 06/15/2019
 
 1. [](#improved)
     * Updated theme blueprints YAML for Grav 1.7x YAML Linter
