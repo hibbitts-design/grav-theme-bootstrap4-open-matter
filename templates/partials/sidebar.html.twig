@@ -56,7 +56,7 @@
 {% if config.plugins.taxonomylist.enabled %}
 <div class="sidebar-content">
     <h2>{{ 'SIDEBAR.POPULAR_TAGS.HEADLINE'|t }}</h2>
-    {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
+    {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag', 'children_only': true} %}
 </div>
 {% endif %}
 
