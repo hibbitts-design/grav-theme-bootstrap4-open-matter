@@ -1,5 +1,6 @@
 ---
 title: 'Home in LMS'
+published: true
 visible: false
 hide_page_title: true
 show_sidebar: false
