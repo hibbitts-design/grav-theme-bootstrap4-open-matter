@@ -1,4 +1,10 @@
 # v2.5.4
+## 07/05/2019
+
+1. [](#bugfix)
+    * Updated Taxonomy List template to support only including child page taxonomy items
+
+# v2.5.4
 ## 07/02/2019
 
 1. [](#improved)
