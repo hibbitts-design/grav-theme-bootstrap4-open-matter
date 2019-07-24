@@ -1,3 +1,9 @@
+# v2.5.6
+## 07/24/2019
+
+1. [](#improved)
+    * Improved Git Sync Link appearance for emebedded Presentations
+
 # v2.5.5
 ## 07/05/2019
 
