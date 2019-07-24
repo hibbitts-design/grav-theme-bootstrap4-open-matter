@@ -1,3 +1,9 @@
+# v2.5.7
+## 07/24/2019
+
+1. [](#bugfix)
+    * Support option to hide Git Sync Link for emebedded Presentations
+
 # v2.5.6
 ## 07/24/2019
 
