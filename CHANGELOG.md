@@ -1,3 +1,9 @@
+# v2.5.8
+## 07/28/2019
+
+1. [](#new)
+    * Added Link template and blueprint
+
 # v2.5.7
 ## 07/24/2019
 
