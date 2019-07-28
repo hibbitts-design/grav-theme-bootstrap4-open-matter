@@ -1,0 +1,50 @@
+title: Link Options
+'@extends':
+    type: default
+    context: blueprints://pages
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+            fields:
+                header.title:
+                  replace@: true
+                  type: text
+                  size: long
+                  label: Page Title
+
+                header.link_text:
+                    ordering@: 2
+                    type: text
+                    size: long
+                    label: Link Text
+
+                header.link_url:
+                    ordering@: 3
+                    type: text
+                    size: long
+                    label: Link URL
+                    validate:
+                      type: URL
+
+                content:
+                  unset@: true
+                header.media_order:
+                  unset@: true
+
+        options:
+          fields:
+            publishing:
+              fields:
+                header.published:
+                  default: 1
+
+        advanced:
+          fields:
+            overrides:
+              fields:
+                header.visible:
+                  default: 1
