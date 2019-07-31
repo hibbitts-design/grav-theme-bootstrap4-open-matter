@@ -1,3 +1,9 @@
+# v2.5.9
+## 07/31/2019
+
+1. [](#improved)
+    * Updated demo pages in theme '_demo' folder
+
 # v2.5.8
 ## 07/28/2019
 
