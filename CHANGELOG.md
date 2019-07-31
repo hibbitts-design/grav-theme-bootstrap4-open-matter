@@ -1,3 +1,9 @@
+# v2.6.0
+## 08/01/2019
+
+1. [](#bugfix)
+    * Restored missing square brackets on example Schedule pages
+
 # v2.5.9
 ## 07/31/2019
 
