@@ -34,10 +34,10 @@
           {% endif %}
         {% endif %}
       {% endif %}
-      {% if presentationslides %}({% endif %}
+      {% if not presentationslides %}
       <a class="{{ link_classes }}" href="{{ git_repo_link_url }}" title="{{ git_repo_link_text }}" target="_blank">
         <i class="fa fa-{{ git_repo_link_icon }}" aria-hidden="true"></i>{{ git_repo_link_text }}</a>
-      {% if presentationslides %}){% endif %}
+      {% endif %}
     {% else %}
       {% if page.header.git_sync_repo_link %}
         {% set git_repo_link_url = page.header.git_sync_repo_link %}
@@ -116,10 +116,10 @@
             {% endif %}
           {% endif %}
         {% endif %}
-        {% if presentationslides %}({% endif %}
+        {% if not presentationslides %}
         <a class="{{ link_classes }}" href="{{ git_sync_repo_link}}" title="{{ git_repo_link_text }}" target="_blank">
           <i class="fa fa-{{ git_repo_link_icon }}" aria-hidden="true"></i>{{ git_repo_link_text }}</a>
-        {% if presentationslides %}){% endif %}
+        {% endif %}
       {% else %}
         {% if (page.children.count) and (not presentationslides) %}
           {% set git_repo_link_url = (git_repo_link_url | replace({
