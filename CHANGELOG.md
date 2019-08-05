@@ -1,3 +1,11 @@
+# v2.6.1
+## 08/05/2019
+
+1. [](#new)
+    * Added example Presentation Hub site pages in theme '_demo' folder
+1. [](#improved)
+    * Adjusted display of Git Sync Link display with embedded Presentatations
+
 # v2.6.0
 ## 08/01/2019
 
