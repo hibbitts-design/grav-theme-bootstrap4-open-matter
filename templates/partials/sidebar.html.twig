@@ -5,22 +5,13 @@
 {% set firstfolderofpath = arrayofpath[1] %}
 {% set secondfolderofpath = arrayofpath[2] %}
 
-{# MultiCourse hub compatibility - hibbittsdesign.org #}
-{% if multi_course_hub or page.find('/' ~ firstfolderofpath).template == 'course' %}
+{# MultiCourse hub and Presentation hub compatibility - hibbittsdesign.org #}
+{% set sidebar_page_content = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath ~ '/sidebar').content %}
+{% if sidebar_page_content == empty %}
   {% set sidebar_page_content = page.find('/' ~ firstfolderofpath ~ '/sidebar').content %}
   {% if sidebar_page_content == empty %}
     {% set sidebar_page_content = page.find('/sidebar').content %}
   {% endif %}
-{% elseif page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).template == 'course' %}
-  {% set sidebar_page_content = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath ~ '/sidebar').content %}
-  {% if sidebar_page_content == empty %}
-    {% set sidebar_page_content = page.find('/' ~ firstfolderofpath ~ '/sidebar').content %}
-    {% if sidebar_page_content == empty %}
-      {% set sidebar_page_content = page.find('/sidebar').content %}
-    {% endif %}
-  {% endif %}
-{% else %}
-  {% set sidebar_page_content = page.find('/sidebar').content %}
 {% endif %}
 
 <h1 class="hidden">{{page.title}}</h1>
