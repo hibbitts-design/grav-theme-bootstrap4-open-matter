@@ -1,3 +1,10 @@
+# v2.6.2
+## 08/07/2019
+
+1. [](#improved)
+    * Updated custom sidebars to support multiple courses and presentation lists
+    * Updated demo pages in theme '_demo' folder
+
 # v2.6.1
 ## 08/05/2019
 
