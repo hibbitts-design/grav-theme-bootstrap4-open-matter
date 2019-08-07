@@ -1,7 +1,5 @@
 ---
 title: 'Placeholder Slides - 2 Title'
-hide_git_sync_repo_link: false
-hide_title: false
 ---
 
 [.text: alignment(center)]
