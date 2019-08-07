@@ -11,9 +11,10 @@ cache_enable: false
 
 1. Go to the Admin [**Pages**](/admin/pages) page
 2. Tap the **New Presentation** button
-3. Name your new Page
-4. Edit the default page Markdown
-5. Tap **Save**` and then view your page
+3. Name your new Page and tap **Continue**
+5. Tap **Save** and then view your page
+
+To help get you going, the Markdown for a two-slide presentation is included in the new page.
 
 !!! In addition to [Grav Markdown](https://learn.getgrav.org/16/content/markdown) and standard [Presentation Plugin usage](https://github.com/OleVik/grav-plugin-presentation#usage), [Deckset Syntax](https://docs.deckset.com/English.lproj/) commands are available with the pre-installed [Deckset Presentation Plugin](https://github.com/OleVik/grav-plugin-presentation-deckset).
 
@@ -21,7 +22,7 @@ cache_enable: false
 
 1. Go to the Admin [**Pages**](/admin/pages) page
 2. Tap the **New Presentation List** button
-3. Name your new list of Presentations
+3. Name your new list of Presentations and tap **Continue**
 4. Tap **Save** and then view your page
 
 To create a Presentation slide deck on your new list of Presentations page choose the name of that page as the **Parent Page** once you tap the **New Presentation** button.
