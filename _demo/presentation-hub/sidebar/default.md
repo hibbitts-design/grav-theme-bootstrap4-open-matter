@@ -15,7 +15,7 @@ cache_enable: false
 4. Edit the default page Markdown
 5. Tap **Save**` and then view your page
 
-!!! In addition to standard Markdown, [Deckset Syntax](https://docs.deckset.com/English.lproj/) commands are available with the pre-installed [Deckset Presentation Plug](https://github.com/OleVik/grav-plugin-presentation-deckset).
+!!! In addition to [Grav Markdown](https://learn.getgrav.org/16/content/markdown) and standard [Presentation Plugin usage](https://github.com/OleVik/grav-plugin-presentation#usage), [Deckset Syntax](https://docs.deckset.com/English.lproj/) commands are available with the pre-installed [Deckset Presentation Plugin](https://github.com/OleVik/grav-plugin-presentation-deckset).
 
 #### Want to create a new list of Presentations?
 
