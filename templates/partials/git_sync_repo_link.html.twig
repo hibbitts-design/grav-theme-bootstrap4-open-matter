@@ -41,6 +41,8 @@
     {% else %}
       {% if page.header.git_sync_repo_link %}
         {% set git_repo_link_url = page.header.git_sync_repo_link %}
+      {% elseif presentationpagepath %}
+        {% set git_repo_link_url = git_repo_link_url ~ presentationpagepath %}
       {% else %}
         {% set git_repo_link_url = git_repo_link_url ~ ('/' ~ page.filePathClean) | replace({'/user/': '/'}) %}
       {% endif %}
@@ -85,19 +87,23 @@
       {% set git_sync_repo_link = (git_sync_repo | replace({'.git': '/'})) %}
       {% if 'github' in git_sync_repo_link %}
         {% set git_repo_link_icon = "github" %}
-        {% set git_repo_link_url = (git_sync_repo | replace({'.git': '/'})) ~ 'blob/master' ~ (page.filePathClean) | replace({'user/': '/'}) %}
+        {% set git_repo_link_url = (git_sync_repo | replace({'.git': '/'})) ~ 'blob/master' | replace({'user/': '/'}) %}
       {% elseif 'gitlab' in git_sync_repo_link %}
         {% set git_repo_link_icon = "gitlab" %}
-        {% set git_repo_link_url = (git_sync_repo | replace({'.git': '/'})) ~ 'blob/master' ~ (page.filePathClean) | replace({'user/': '/'}) %}
+        {% set git_repo_link_url = (git_sync_repo | replace({'.git': '/'})) ~ 'blob/master' | replace({'user/': '/'}) %}
       {% elseif 'bitbucket' in git_sync_repo_link %}
         {% set git_repo_link_icon = "bitbucket" %}
-        {% set git_repo_link_url = (git_sync_repo | replace({'.git': '/'})) ~ 'src/master' ~ (page.filePathClean) | replace({'user/': '/'}) %}
+        {% set git_repo_link_url = (git_sync_repo | replace({'.git': '/'})) ~ 'src/master' | replace({'user/': '/'}) %}
       {% else %}
         {% set git_repo_link_icon = "git" %}
-        {% set git_repo_link_url = (git_sync_repo | replace({'.git': '/'})) ~ 'blob/master' ~ (page.filePathClean) | replace({'user/': '/'}) %}
+        {% set git_repo_link_url = (git_sync_repo | replace({'.git': '/'})) ~ 'blob/master' | replace({'user/': '/'}) %}
       {% endif %}
       {% if page.header.git_sync_repo_link %}
         {% set git_repo_link_url = page.header.git_sync_repo_link %}
+      {% elseif presentationpagepath %}
+        {% set git_repo_link_url = git_repo_link_url ~ presentationpagepath %}
+      {% else %}
+        {% set git_repo_link_url = git_repo_link_url ~ ('/' ~ page.filePathClean) | replace({'/user/': '/'}) %}
       {% endif %}
       {% if theme_var('custom_git_sync_repo_link_icon')is not empty %}
         {% set git_repo_link_icon = theme_var('custom_git_sync_repo_link_icon') %}
