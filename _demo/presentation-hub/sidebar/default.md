@@ -41,3 +41,9 @@ Depending on the specifics of the destination Website, a [class](https://www.w3s
 [prism classes="language-html"]
 <div class="embed-responsive embed-responsive-4by3"><iframe src="https://demo.hibbittsdesign.org/grav-open-matter-course-hub/presentations/placeholder-slides" width="800" height="640" allowfullscreen="allowfullscreen"></iframe></div>
 [/prism]
+
+#### Want to embed a Presentation into a Page on this Website?
+
+Use the enhanced Presentation Shortcode, to not only embed a Presentation but also automatically provide a link to view the Presentation fullscreen and, if configured, Git Sync Link (i.e. GitHub, GitLab, Gitea, etc.).
+
+For example, like this: [&#112;&#114;&#101;&#115;&#101;&#110;&#116;&#097;&#116;&#105;&#111;&#110;="/&#112;&#114;&#101;&#115;&#101;&#110;&#116;&#097;&#116;&#105;&#111;&#110;&#115;/&#112;&#108;&#097;&#099;&#101;&#104;&#111;&#108;&#100;&#101;&#114;&#045;&#115;&#108;&#105;&#100;&#101;&#115;"]
