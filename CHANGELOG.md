@@ -1,3 +1,12 @@
+# v2.6.3
+## 08/08/2019
+
+1. [](#bugfix)
+    * Fixed automatic Git Sync Link for Presentations in a Presentation List page
+1. [](#improved)
+    * Updated custom sidebars to support multiple courses and presentation lists
+    * Updated demo pages in theme '_demo' folder
+
 # v2.6.2
 ## 08/07/2019
 
