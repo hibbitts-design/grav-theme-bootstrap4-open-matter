@@ -1,3 +1,10 @@
+# v2.6.4
+## 08/08/2019
+
+1. [](#improved)
+    * Fine tuning of automatic Git Sync Link for embedded Presentations
+    * Improved support for custom Git Sync Link text for pages and presentations
+
 # v2.6.3
 ## 08/08/2019
 
