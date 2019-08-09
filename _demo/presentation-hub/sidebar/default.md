@@ -4,9 +4,9 @@ routable: false
 visible: false
 ---
 
-### 🚀Getting Started
+## 🚀Getting Started
 
-#### Want to create a new Presentation?
+### Want to create a new Presentation?
 
 1. Go to the Admin [**Pages**](/admin/pages) page
 2. Tap the **New Presentation** button
@@ -17,7 +17,7 @@ To help get you going, the Markdown for a two-slide presentation is included in 
 
 !!! In addition to [Grav Markdown](https://learn.getgrav.org/16/content/markdown) and standard [Presentation Plugin usage](https://github.com/OleVik/grav-plugin-presentation#usage), [Deckset Syntax](https://docs.deckset.com/English.lproj/) commands are available with the pre-installed [Deckset Presentation Plugin](https://github.com/OleVik/grav-plugin-presentation-deckset).
 
-#### Want to create a new list of Presentations?
+### Want to create a new list of Presentations?
 
 1. Go to the Admin [**Pages**](/admin/pages) page
 2. Tap the **New Presentation List** button
@@ -28,7 +28,7 @@ To create a Presentation slide deck on your new list of Presentations page choos
 
 To move an existing Presentation slide deck to another Presentation List, tap the **Move** button when editing a Presentation page and then choose the destination Presentation List.
 
-#### Want to embed a Presentation into another Website?
+### Want to embed a Presentation into another Website?
 
 View the full-screen version of the slides you want to embed and copy the URL. You can embed these slides into another Website by using an [iframe](https://www.w3schools.com/tags/tag_iframe.asp), for example like this:
 
@@ -42,8 +42,8 @@ Depending on the specifics of the destination Website, a [class](https://www.w3s
 <div class="embed-responsive embed-responsive-4by3"><iframe src="https://demo.hibbittsdesign.org/grav-open-matter-course-hub/presentations/placeholder-slides" width="800" height="640" allowfullscreen="allowfullscreen"></iframe></div>
 [/prism]
 
-#### Want to embed a Presentation into a Page on this Website?
+### Want to embed a standard Grav page into another Website?
 
-Use the enhanced Presentation Shortcode, to not only embed a Presentation but also automatically provide a link to view the Presentation fullscreen and, if configured, Git Sync Link (i.e. GitHub, GitLab, Gitea, etc.).
+You can use the `chromeless` URL flag to seamlessly embed the content of a standard Grav page (including one or more Presentations), without the usual site chrome such as the navigation bar, sidebar and footer.
 
-For example, like this: [&#112;&#114;&#101;&#115;&#101;&#110;&#116;&#097;&#116;&#105;&#111;&#110;="/&#112;&#114;&#101;&#115;&#101;&#110;&#116;&#097;&#116;&#105;&#111;&#110;&#115;/&#112;&#108;&#097;&#099;&#101;&#104;&#111;&#108;&#100;&#101;&#114;&#045;&#115;&#108;&#105;&#100;&#101;&#115;"]
+An example chromeless URL would be: [https://demo.hibbittsdesign.org/grav-skeleton-open-matter-presentation-hub-site/page-with-presentation/chromeless:true](https://demo.hibbittsdesign.org/grav-skeleton-open-matter-presentation-hub-site/page-with-presentation/chromeless:true)
