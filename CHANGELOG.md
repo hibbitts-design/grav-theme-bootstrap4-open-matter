@@ -2,7 +2,7 @@
 ## 08/10/2019
 
 1. [](#improved)
-    * Added support to hide Git Sync Link for each emebedded Presentation
+    * Added support to hide Git Sync Link for each embedded Presentation
     * Updated Presentation blueprint Git Sync options
 
 # v2.6.5
@@ -40,7 +40,7 @@
 1. [](#new)
     * Added example Presentation Hub site pages in theme '_demo' folder
 1. [](#improved)
-    * Adjusted display of Git Sync Link display with embedded Presentatations
+    * Adjusted display of Git Sync Link display with embedded Presentations
 
 # v2.6.0
 ## 08/01/2019
