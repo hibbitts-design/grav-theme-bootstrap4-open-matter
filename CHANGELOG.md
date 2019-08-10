@@ -1,3 +1,10 @@
+# v2.6.6
+## 08/10/2019
+
+1. [](#improved)
+    * Added support to hide Git Sync Link for each emebedded Presentation
+    * Updated Presentation blueprint Git Sync options
+
 # v2.6.5
 ## 08/09/2019
 
