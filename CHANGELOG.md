@@ -1,3 +1,9 @@
+# v2.6.7
+## 08/11/2019
+
+1. [](#bugfix)
+    * Set ShortCode Core Plugin 4.1.2 as a dependency
+
 # v2.6.6
 ## 08/10/2019
 
