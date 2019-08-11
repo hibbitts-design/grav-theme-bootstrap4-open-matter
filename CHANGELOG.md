@@ -1,3 +1,9 @@
+# v2.6.8
+## 08/11/2019
+
+1. [](#bugfix)
+    * Set ShortCode Core Plugin 4.1.2 as a dependency (changed blueprint syntax)
+
 # v2.6.7
 ## 08/11/2019
 
