@@ -38,7 +38,7 @@ dependencies:
   - taxonomylist
   - twigfeeds
   - twigpcre
-  - { name: shortcode-core, version: '=4.1.2' }
+  - { name: shortcode-core, version: '4.1.2' }
   - youtube
   - bootstrap4
 
