@@ -1,5 +1,5 @@
 name: 'Bootstrap4 Open Matter'
-version: 2.6.8
+version: 2.6.9
 description: "A custom version of the Bootstrap4 theme for open blogs, course hubs and more. Includes Git Sync and 'chromeless' content embedding."
 icon: bold
 author:
@@ -38,7 +38,7 @@ dependencies:
   - taxonomylist
   - twigfeeds
   - twigpcre
-  - { name: shortcode-core, version: '=4.1.2' }
+  - shortcode-core
   - youtube
   - bootstrap4
 

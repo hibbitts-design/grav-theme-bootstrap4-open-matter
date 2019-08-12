@@ -1,3 +1,11 @@
+# v2.6.9
+## 08/12/2019
+
+1. [](#improved)
+    * Restored support for dropdown (i.e. child page) menu items with current page highlight
+1. [](#bugfix)
+    * Removed ShortCode Core Plugin 4.1.2 as a dependency (not needed after Shortcode Core 4.14 update)
+
 # v2.6.8
 ## 08/11/2019
 
@@ -8,7 +16,7 @@
 ## 08/11/2019
 
 1. [](#bugfix)
-    * Set ShortCode Core Plugin 4.1.2 as a dependency
+    * Set ShortCode Core Plugin 4.1.2 as a dependency to avoid issues with 4.1.3 updated
 
 # v2.6.6
 ## 08/10/2019
