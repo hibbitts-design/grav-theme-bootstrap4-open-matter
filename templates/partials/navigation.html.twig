@@ -87,8 +87,7 @@
                               <a href="{{ page.url }}" class="dropdown-item {{ current_parent }}">{{ page.menu }}</a>
                               <div class="dropdown-divider"></div>
                               {% for child in page.children.visible %}
-                                  {# Set all child pages to use active page style - hibbittsdesign.org#}
-                                  {% set current_child = 'active' %}
+                                  {% set current_child = (child.active or child.activeChild) ? 'active' : '' %}
                                   <a href="{{ child.url }}" class="dropdown-item {{ current_child }}">{{ child.menu }}</a>
                               {% endfor %}
                           </div>
