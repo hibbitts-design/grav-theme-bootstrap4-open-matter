@@ -1,10 +1,9 @@
-{% set multi_course_hub = theme_var('multi_course_hub.enabled') %}
 {% set arrayofpath = uri.path|split('/') %}
 {% set firstfolderofpath = arrayofpath[1] %}
 {% set secondfolderofpath = arrayofpath[2] %}
 
 {# MultiCourse hub compatibility - hibbittsdesign.org #}
-{% if multi_course_hub or page.find('/' ~ firstfolderofpath).template == 'course' %}
+{% if page.find('/' ~ firstfolderofpath).template == 'course' %}
   {% if firstfolderofpath %}
     {% set site_title = page.find('/' ~ firstfolderofpath ).title %}
   {% else %}

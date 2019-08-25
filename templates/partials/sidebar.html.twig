@@ -1,6 +1,5 @@
 {% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (base_url_relative~'/'~blog.slug) : blog.url %}
 {% set new_base_url = blog.url == '/' ? '' : blog.url %}
-{% set multi_course_hub = theme_var('multi_course_hub.enabled') %}
 {% set arrayofpath = uri.path|split('/') %}
 {% set firstfolderofpath = arrayofpath[1] %}
 {% set secondfolderofpath = arrayofpath[2] %}
