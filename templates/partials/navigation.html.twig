@@ -3,14 +3,12 @@
 {% set navbar_bg_color = theme_var('navbar_bg_color') %}
 {% set navbar_position = theme_var('navbar_position') %}
 {% set navbar_breakpoint = theme_var('navbar_breakpoint') %}
-{% set multi_course_hub = theme_var('multi_course_hub.enabled') %}
 {% set arrayofpath = uri.path|split('/') %}
 {% set firstfolderofpath = arrayofpath[1] %}
 {% set secondfolderofpath = arrayofpath[2] %}
-{% set course_name_term_separator = theme_var('course_name_term_separator') %}
 
 {# MultiCourse hub compatibility - hibbittsdesign.org #}
-{% if multi_course_hub or page.find('/' ~ firstfolderofpath).template == 'course' %}
+{% if page.find('/' ~ firstfolderofpath).template == 'course' %}
     {% set course_home = page.find('/' ~ firstfolderofpath ).header.course_home %}
     {% if course_home is empty %}
         {% set course_home = config.system.home.alias %}
@@ -79,7 +77,7 @@
                 {% if page.visible %}
                   {# Set all pages to use active page style - hibbittsdesign.org#}
                   {% set current_page = 'active' %}
-                  {% if config.themes.bootstrap4.dropdown.enabled and page.children.visible.count > 0 %}
+                  {% if theme_var('dropdown.enabled') and page.children.visible.count > 0 %}
                       <li class="nav-item dropdown {{ current_page }}">
                           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ page.menu }}</a>
                           <div class="dropdown-menu">
@@ -93,14 +91,17 @@
                           </div>
                       </li>
                   {% else %}
-                      {% if multi_course_hub and not (page.routable) %}
-                        {% set page_url = page.url ~ config.system.home.alias %}
-                        {% set page_menu = page.menu|upper %}
-                      {% else %}
-                        {% set page_url = page.url %}
-                        {% set page_menu = page.menu %}
+                    {% if not (page.find('/' ~ page.slug).template == 'course') %}
+                      {% set page_url = page.url %}
+                    {% else %}
+                      {% set course_home = page.find('/' ~ page.slug).header.course_home %}
+                      {% if course_home is empty %}
+                          {% set course_home = config.system.home.alias %}
                       {% endif %}
-                      <li class="nav-item {{ current_page }}"><a class="nav-link external-link" href="{{ page_url }}" {% if page.header.menu_target %} target="{{ page.header.menu_target }}"{% endif %}>{% if page.header.menu_icon %}<i class="fa fa-{{ page.header.menu_icon }}"></i>{% endif %}{{ page_menu }}</a></li>
+                      {% set page_url = page.url ~ '/' ~ course_home %}
+                    {% endif %}
+                    {% set page_menu = page.menu %}
+                    <li class="nav-item {{ current_page }}"><a class="nav-link external-link" href="{{ page_url }}" {% if page.header.menu_target %} target="{{ page.header.menu_target }}" {% endif %}>{% if page.header.menu_icon %}<i class="fa fa-{{ page.header.menu_icon }}"></i>{% endif %}{{ page_menu }}</a></li>
                   {% endif %}
                 {% endif %}
               {% endfor %}
