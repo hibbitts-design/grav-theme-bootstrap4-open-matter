@@ -2,7 +2,7 @@
 ## 08/26/2019
 
 1. [](#improved)
-    * MultiCourse course or coursegroup items no longer displayed in Navbar
+    * MultiCourse course or coursegroup items are automatically excluded from Navbar
 
 # v2.7.0
 ## 08/25/2019
