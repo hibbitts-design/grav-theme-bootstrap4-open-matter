@@ -1,8 +1,14 @@
+# v2.7.1
+## 08/26/2019
+
+1. [](#improved)
+    * MultiCourse course or coursegroup items no longer displayed in Navbar
+
 # v2.7.0
 ## 08/25/2019
 
 1. [](#improved)
-    * Better handling of MultiCourse courses items on Navbar
+    * Better handling of MultiCourse course items on Navbar
     * Removed deprecated theme 'multi_course_hub.enabled' option
     * Removed deprecated theme 'course_name_term_separator' option
     * Use system config of home page instead of fixed name of 'home'
