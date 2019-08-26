@@ -1,3 +1,14 @@
+# v2.7.0
+## 08/25/2019
+
+1. [](#improved)
+    * Better handling of MultiCourse courses items on Navbar
+    * Removed deprecated theme 'multi_course_hub.enabled' option
+    * Removed deprecated theme 'course_name_term_separator' option
+    * Use system config of home page instead of fixed name of 'home'
+1. [](#bugfix)
+    * Fixed 'dropdown.enabled' setting for active theme (and not just parent bootstrap4 theme)
+
 # v2.6.9
 ## 08/12/2019
 
