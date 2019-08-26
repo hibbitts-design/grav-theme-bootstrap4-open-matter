@@ -91,17 +91,11 @@
                           </div>
                       </li>
                   {% else %}
-                    {% if not (page.find('/' ~ page.slug).template == 'course') %}
+                    {% if not (page.find('/' ~ page.slug).template == 'course' or page.find('/' ~ page.slug).template == 'coursegroup') %}
                       {% set page_url = page.url %}
-                    {% else %}
-                      {% set course_home = page.find('/' ~ page.slug).header.course_home %}
-                      {% if course_home is empty %}
-                          {% set course_home = config.system.home.alias %}
-                      {% endif %}
-                      {% set page_url = page.url ~ '/' ~ course_home %}
+                      {% set page_menu = page.menu %}
+                      <li class="nav-item {{ current_page }}"><a class="nav-link" href="{{ page_url }}" {% if page.header.menu_target %} target="{{ page.header.menu_target }}" {% endif %}>{% if page.header.menu_icon %}<i class="fa fa-{{ page.header.menu_icon }}"></i>{% endif %}{{ page_menu }}</a></li>
                     {% endif %}
-                    {% set page_menu = page.menu %}
-                    <li class="nav-item {{ current_page }}"><a class="nav-link external-link" href="{{ page_url }}" {% if page.header.menu_target %} target="{{ page.header.menu_target }}" {% endif %}>{% if page.header.menu_icon %}<i class="fa fa-{{ page.header.menu_icon }}"></i>{% endif %}{{ page_menu }}</a></li>
                   {% endif %}
                 {% endif %}
               {% endfor %}
