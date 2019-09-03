@@ -1,3 +1,12 @@
+# v2.7.2
+## 09/03/2019
+
+1. [](#new)
+    * Added links templates to provide an auto-generated index of all links within a folder
+    * Added new linkbutton template (to display link as a button)
+1. [](#improved)
+    * Added option for Course List card widths (3-6)
+
 # v2.7.1
 ## 08/26/2019
 
