@@ -4,6 +4,12 @@
   {% set header_image_media = page.media.images | first %}
 {% endif %}
 
+{% if header.card_width is defined %}
+  {% set card_width = header.card_width %}
+{% else %}
+  {% set card_width = 3 %}
+{% endif %}
+
 {% if page.header.show_sidebar is defined %}
   {% set show_sidebar = page.header.show_sidebar %}
 {% else %}
@@ -51,7 +57,7 @@
                     {% else %}
                       {% set course_home = config.system.home.alias|trim('/') %}
                     {% endif %}
-                    <div class="card col-lg-3">
+                    <div class="card col-lg-{{ card_width }}">
                       <div class="card-body">
                         {% set course_image = page.find('/' ~ page.slug ~ '/headerimage').media.images | first %}
                         {% if course_image is empty %}
@@ -84,7 +90,7 @@
                         {% else %}
                           {% set course_home = 'home' %}
                         {% endif %}
-                        <div class="card col-lg-3">
+                        <div class="card col-lg-{{ card_width }}">
                           <div class="card-body">
                             {% set course_image = page.find('/' ~ course_folder ~ '/' ~ p.slug ~ '/headerimage').media.images | first %}
                             {% if course_image is empty %}
