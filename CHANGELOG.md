@@ -1,3 +1,11 @@
+# v2.7.3
+## 09/12/2019
+
+1. [](#improved)
+    * Revised options for Course List card column widths (3,4,5,8 and 12)
+1. [](#bugfix)    
+    * Support CTRL + click to open links in new tab as expected
+
 # v2.7.2
 ## 09/03/2019
 
@@ -5,7 +13,7 @@
     * Added links templates to provide an auto-generated index of all links within a folder
     * Added new linkbutton template (to display link as a button)
 1. [](#improved)
-    * Added option for Course List card widths (3-6)
+    * Added option for Course List card column widths (3-6)
 
 # v2.7.1
 ## 08/26/2019
