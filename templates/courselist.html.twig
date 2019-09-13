@@ -64,7 +64,7 @@
                           {% set course_image = page.find('/' ~ page.slug ~ '/' ~ course_home).media.images | first %}
                         {% endif %}
                         {% if course_image is not empty %}
-                          <img class="card-img-top" src="{{course_image.url}}" alt="Card image cap">
+                          <a href="{{ page.url ~ '/' ~ course_home }}"><img class="card-img-top" src="{{course_image.url}}" alt="Card image cap"></a>
                         {% endif %}
                         {% if page.header.course_list_title %}
                           {% set course_title = page.header.course_list_title %}
@@ -97,7 +97,7 @@
                               {% set course_image = page.find('/' ~ course_folder ~ '/' ~ p.slug ~ '/' ~ course_home).media.images | first %}
                             {% endif %}
                             {% if course_image is not empty %}
-                              <img class="card-img-top" src="{{course_image.url}}" alt="Card image cap">
+                              <a href="{{ p.url ~ '/' ~ course_home }}"><img class="card-img-top" src="{{course_image.url}}" alt="Card image cap"></a>
                             {% endif %}
                             {% if p.header.course_site_title %}
                               {% set course_title = p.header.course_site_title %}
