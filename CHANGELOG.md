@@ -1,3 +1,9 @@
+# v2.7.4
+## 09/13/2019
+
+1. [](#improved)
+    * Set image within Course List cards to be clickable
+
 # v2.7.3
 ## 09/12/2019
 
