@@ -1,3 +1,9 @@
+# v2.7.5
+## 09/16/2019
+
+1. [](#improved)
+    * Updated JS to be the same as Quark Open Publishing JS
+
 # v2.7.4
 ## 09/13/2019
 
