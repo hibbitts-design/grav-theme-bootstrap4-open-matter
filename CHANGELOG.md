@@ -1,3 +1,9 @@
+# v2.7.6
+## 09/18/2019
+
+1. [](#improved)
+    * Added initial support for header image paths in modular items (without filename, first image is automatically used)
+
 # v2.7.5
 ## 09/16/2019
 
