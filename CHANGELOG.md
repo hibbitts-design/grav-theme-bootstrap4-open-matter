@@ -3,6 +3,7 @@
 
 1. [](#improved)
     * Added initial support for header image paths in modular items (without filename, first image is automatically used)
+    * Initial image path blueprint support in modular items
 
 # v2.7.5
 ## 09/16/2019
