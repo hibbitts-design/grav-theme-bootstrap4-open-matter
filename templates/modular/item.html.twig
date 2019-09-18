@@ -6,6 +6,7 @@
     {% set header_image_width  = page.header.header_image_width|defined(1200) %}
     {% set header_image_height = page.header.header_image_height|defined(400) %}
     {% set header_image_file = page.header.header_image_file %}
+    {% set header_image_path = page.header.header_image_path %}
 
     <div class="list-blog-header">
 
@@ -18,6 +19,8 @@
             {% set image_basename = image_parts.basename %}
             {% set image_page = image_parts.dirname == '.' ? page : page.find(image_parts.dirname) %}
             {% set header_image_media = image_page.media[image_basename] %}
+          {% elseif header_image_path %}
+            {% set header_image_media = page.find(header_image_path).media.images|first %}
           {% else %}
             {% set header_image_media = page.media.images|first %}
           {% endif %}
