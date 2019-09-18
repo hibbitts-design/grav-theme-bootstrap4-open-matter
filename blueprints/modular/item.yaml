@@ -36,6 +36,13 @@ form:
               help: image filename that exists in the page folder. If not provided, will use the first image found.
               placeholder: 'For example: myimage.jpg'
 
+            header.header_image_path:
+              type: text
+              toggleable: true
+              label: Image Path
+              help: Path to page folder with image (first image found will be used).
+              placeholder: 'For example: /home/module-01'
+
             header.header_image_width:
               type: text
               toggleable: true
