@@ -1,3 +1,11 @@
+# v2.7.7
+## 09/30/2019
+
+1. [](#improved)
+    * Made Course List card column width options more understandable
+1. [](#bugfix)
+    * Fixed display of Sidebar on Course List pages
+
 # v2.7.6
 ## 09/18/2019
 
