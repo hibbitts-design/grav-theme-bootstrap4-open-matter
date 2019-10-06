@@ -28,10 +28,10 @@
           {% set feed_items = [] %}
           {% for name, feed in twig_feeds %}
             {% for item in feed.items %}
-              {% if (page.header.rss_feed_text_filter is defined) and (item.content|contains(page.header.rss_feed_text_filter)) or (page.header.rss_feed_text_filter is empty) %}
+              {% if (page.header.rss_feed_text_filter is defined) and (item.description|contains(page.header.rss_feed_text_filter)) or (page.header.rss_feed_text_filter is empty) %}
                 {% set index = index + 1 %}
                 {% set item = item|merge({ 'retrievedTitle': feed.title }) %}
-                {% set item = item|merge({ 'sortDate': item.date.date }) %}
+                {% set item = item|merge({ 'sortDate': item.lastModified }) %}
                 {% set feed_items = feed_items|merge({ (index): (item) }) %}
               {% endif %}
             {% endfor %}
@@ -55,24 +55,24 @@
 
           {% for index, item in feed_items|sort_by_key('sortDate')|reverse|slice(start, perPage) %}
             <h2>
-            <a class="newwindow external-link" href="{{ item.url }}">{{ item.title }}</a>
+            <a class="newwindow external-link" href="{{ item.link }}">{{ item.title }}</a>
             </h2>
-            <time>{{ item.date.date|date("m/d/Y") }}</time>, {{ item.retrievedTitle }}
+            <time>{{ item.lastModified|date("m/d/Y") }}</time>, {{ item.retrievedTitle }}
             {% if page.header.rss_feed_header_images and not (page.header.rss_feed_preview_paragraphs == 'all') %}
-              <p>{{ item.content|preg_get('/(<img(?:(\s*(class)\s*=\s*\x22([^\x22]+)\x22*)+|[^>]+?)*>)/')|raw }}</p>
+              <p>{{ item.description|preg_get('/(<img(?:(\s*(class)\s*=\s*\x22([^\x22]+)\x22*)+|[^>]+?)*>)/')|raw }}</p>
             {% endif %}
-            {% set paragraphs = item.content | split('</p>') %}
+            {% set paragraphs = item.description | split('</p>') %}
             {% set firstParagraph = paragraphs[0] ~ '</p>' %}
             {% set secondParagraph = paragraphs[1] ~ '</p>' %}
             {% if not (page.header.rss_feed_preview_paragraphs == 'none') %}
               {% if page.header.rss_feed_preview_paragraphs == 'all' %}
-                {{ item.content }}
+                {{ item.description }}
               {% else %}
                 <p>{{ firstParagraph | striptags }}</p>
                 {% if page.header.rss_feed_preview_paragraphs == 'two' %}
                 <p>{{ secondParagraph | striptags }}</p>
               {% endif %}
-                <p><a class="newwindow external-link" href="{{ item.url }}">{{ 'BLOG.ITEM.CONTINUE_READING'|t }}</a></p><br>
+                <p><a class="newwindow external-link" href="{{ item.link }}">{{ 'BLOG.ITEM.CONTINUE_READING'|t }}</a></p><br><br>
               {% endif %}
             {% endif %}
           {% endfor %}
