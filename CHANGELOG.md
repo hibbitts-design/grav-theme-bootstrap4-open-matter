@@ -3,6 +3,7 @@
 
 1. [](#improved)
     * Updated PageRSSFeeds template for TwigFeeds 4.0 Beta
+    * Updated demo pages in theme '_demo' folder
 
 # v2.7.7
 ## 09/30/2019
