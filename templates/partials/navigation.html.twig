@@ -61,6 +61,10 @@
     {% set navbar_bg_color = '' %}
 {% endif %}
 
+{% if base_url is empty %}
+    {% set base_url = base_url_absolute %}
+{% endif %}
+
 <nav class="navbar {{ navbar_position }} navbar-expand-{{ navbar_breakpoint }} {{ navbar_style }} {{ navbar_bg }}" {{ navbar_bg_color|raw }};" role="navigation">
     <div class="container">
         <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url_relative }}">{{ site_title }}</a>
