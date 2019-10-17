@@ -1,3 +1,9 @@
+# v2.7.8-beta.2
+## 10/16/2019
+
+1. [](#bugfix)
+    * MultiCourse home page link now works with root install of Grav
+
 # v2.7.8-beta.1
 ## 10/06/2019
 
