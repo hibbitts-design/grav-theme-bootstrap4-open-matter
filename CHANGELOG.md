@@ -1,3 +1,12 @@
+# v2.7.8
+## 10/17/2019
+
+1. [](#improved)
+    * Updated PageRSSFeeds template for TwigFeeds 4.0 Beta
+    * Updated demo pages in theme '_demo' folder
+1. [](#bugfix)
+    * MultiCourse home page link now works with root install of Grav
+
 # v2.7.8-beta.2
 ## 10/16/2019
 
