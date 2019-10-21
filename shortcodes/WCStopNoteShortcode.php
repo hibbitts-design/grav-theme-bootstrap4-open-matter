@@ -10,16 +10,17 @@ class WCStopNoteShortcode extends Shortcode
 {
     public function init()
     {
-        $this->shortcode->getHandlers()->add('stopnote', function(ShortcodeInterface $sc) {
+        $this->shortcode->getHandlers()->add('wc', function(ShortcodeInterface $sc) {
 
             // Get shortcode content and parameters
             $str = $sc->getContent();
 
             $stopnotetitle = $sc->getParameter('title', $sc->getBbCode());
+            $tag = $sc->getParameter('tag', $sc->getBbCode());
             $stopnotemessage = $sc->getParameter('message', $sc->getBbCode());
 
             if (!empty($stopnotetitle)) {
-                $output = '<p><stop-note title="'.$stopnotetitle.'"><span slot="message">'.$stopnotemessage.'</span></stop-note></p>';
+                $output = '<p><'.$tag.' title="'.$stopnotetitle.'"><span slot="message">'.$stopnotemessage.'</span></'.$tag.'></p>';
 
                 return $output;
             }
