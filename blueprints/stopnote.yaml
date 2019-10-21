@@ -1,0 +1,42 @@
+title: Stop Note Options
+'@extends':
+    type: default
+    context: blueprints://pages
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+            fields:
+                header.title:
+                  replace@: true
+                  type: text
+                  size: long
+                  label: Stop Note Title
+
+                header.stop_note_message:
+                    ordering@: 2
+                    type: text
+                    size: long
+                    label: Stop Note Message
+
+                content:
+                  unset@: true
+                header.media_order:
+                  unset@: true
+
+        options:
+          fields:
+            publishing:
+              fields:
+                header.published:
+                  default: 1
+
+        advanced:
+          fields:
+            overrides:
+              fields:
+                header.visible:
+                  default: 1
