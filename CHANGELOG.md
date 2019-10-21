@@ -1,7 +1,7 @@
 # v2.7.9
 ## 10/21/2019
 
-1. [](new)
+1. [](#new)
     * Included experimental Web Components ShortCode 'StopNote' ([stopnote title="" message=""]), which is made possible by the Web Components Plugin by @btopro.
     * Included experimental Web Components template and blueprint 'StopNote', which is made possible by the Web Components Plugin by @btopro.
 
