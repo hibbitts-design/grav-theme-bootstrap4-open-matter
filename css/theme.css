@@ -225,12 +225,12 @@ ol.breadcrumb {
   padding-left: 0;
 }
 
-.listbullet li {
+.listbullet ul li {
   padding-left: 1em;
   text-indent: -1em;
 }
 
-.listbullet li:before {
+.listbullet ul li:before {
   content: '\2713';
   padding-right: 5px;
 }
