@@ -1,3 +1,9 @@
+# v2.8.1
+## 11/18/2019
+
+1. [](#bugfix)
+    * Updated Alert modular template to only use checkmarks for unordered lists
+
 # v2.8.0
 ## 11/08/2019
 
