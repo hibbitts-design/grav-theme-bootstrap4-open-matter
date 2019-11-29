@@ -1,3 +1,10 @@
+# v2.8.5
+## 11/29/2019
+
+1. [](#improved)
+    * Streamlined blueprints options and text labels, and removed subsequently unneeded blueprints
+    * Removed unused custompagetypes blueprint and template (deprecated with customcontentlist)
+
 # v2.8.4
 ## 11/27/2019
 
