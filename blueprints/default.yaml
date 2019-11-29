@@ -1,4 +1,4 @@
-title: Course Hub Page Options
+title: Git Sync Options
 '@extends':
     type: default
     context: blueprints://pages
