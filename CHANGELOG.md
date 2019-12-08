@@ -1,3 +1,11 @@
+# v2.8.6
+## 12/07/2019
+
+1. [](#improved)
+    * Reorganized theme options for Git Sync Link and Custom Menu Items (thanks to @MakaryGo for the initial suggestion)
+    * Renamed template/blueprint of PageAccordion to Accordion, PageRSSFeeds to RSSFeeds,  MenubarItem to Menuitem, CustomContentList to CustomPageTypes, and LatestContentItem to LatestCustomPageType
+    * Updated demo pages in theme '_demo' folder
+
 # v2.8.5
 ## 11/29/2019
 
