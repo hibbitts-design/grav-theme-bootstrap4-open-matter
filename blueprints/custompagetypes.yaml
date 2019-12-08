@@ -1,4 +1,4 @@
-title: Custom Content List
+title: Custom Page Types
 '@extends':
     type: default
     context: blueprints://pages
@@ -20,7 +20,7 @@ form:
 
         customcontentlist:
           type: tab
-          title: Custom Content List
+          title: Custom Page Types
 
           fields:
             header.content.order.by:
