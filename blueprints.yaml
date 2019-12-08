@@ -59,7 +59,7 @@ form:
               underline: true
             chromeless.enabled:
               type: toggle
-              label: 'Hide Site Menubar, Sidebar and Footer'
+              label: 'Hide Site Menu, Sidebar and Footer'
               highlight: 1
               default: 0
               options:
