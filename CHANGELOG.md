@@ -1,5 +1,5 @@
 # v2.8.6
-## 12/07/2019
+## 12/08/2019
 
 1. [](#improved)
     * Reorganized theme options for Git Sync Link and Custom Menu Items (thanks to @MakaryGo for the initial suggestion)
