@@ -1,3 +1,9 @@
+# v2.8.7
+## 12/08/2019
+
+1. [](#improved)
+  * Changed reference of "Menubar" to "Menu" in theme setting 
+
 # v2.8.6
 ## 12/08/2019
 
