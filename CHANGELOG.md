@@ -1,8 +1,16 @@
+# v2.8.8
+## 12/09/2019
+
+1. [](#new)
+  * Added CSS style for Topics index page
+1. [](#improved)
+  * Updated demo pages in theme '_demo' folder
+
 # v2.8.7
 ## 12/08/2019
 
 1. [](#improved)
-  * Changed reference of "Menubar" to "Menu" in theme setting 
+  * Changed reference of "Menubar" to "Menu" in theme setting
 
 # v2.8.6
 ## 12/08/2019
