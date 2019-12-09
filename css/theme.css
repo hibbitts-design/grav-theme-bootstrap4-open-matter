@@ -378,3 +378,16 @@ figure.caption-right figcaption {
 body.chromeless {
   background-color: transparent;
 }
+
+.topics h3 {
+    width: 2.5em;
+    color: white;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 1.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    background: #666666;
+}
