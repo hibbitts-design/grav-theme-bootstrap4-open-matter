@@ -1,3 +1,9 @@
+# v2.9.0
+## 12/18/2019
+
+1. [](#new)
+  * Support for custom links (e.g. PDFs) with embedded Presentations
+
 # v2.8.9
 ## 12/17/2019
 
