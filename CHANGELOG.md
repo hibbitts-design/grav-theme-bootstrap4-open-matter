@@ -1,3 +1,9 @@
+# v2.8.9
+## 12/17/2019
+
+1. [](#new)
+  * Added Anchors Plugin as dependency, for use with the Topics index page
+
 # v2.8.8
 ## 12/09/2019
 
@@ -62,7 +68,7 @@
 ## 10/21/2019
 
 1. [](#new)
-    * Included experimental Web Components ShortCode 'StopNote' ([stopnote title="" message=""]), which is made possible by the Web Components Plugin by @btopro.
+    * Included experimental Web Components ShortCode 'StopNote' ([wcstopnote title="" message=""]), which is made possible by the Web Components Plugin by @btopro.
     * Included experimental Web Components template and blueprint 'StopNote', which is made possible by the Web Components Plugin by @btopro.
 
 # v2.7.8
