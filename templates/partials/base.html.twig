@@ -5,6 +5,7 @@
 {# MultiCourse hub compatibility - hibbittsdesign.org #}
 {% if page.find('/' ~ firstfolderofpath).template == 'course' %}
   {% if firstfolderofpath %}
+    {% set favicon = page.find('/' ~ firstfolderofpath ~ '/favicon' ).media.images|first %}
     {% set site_title = page.find('/' ~ firstfolderofpath ).title %}
   {% else %}
     {% set site_title = site.title|e('html') %}
@@ -14,6 +15,10 @@
     {% set footer_content = page.find('/footer').content %}
   {% endif %}
 {% elseif page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).template == 'course' %}
+  {% set favicon = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath ~ '/favicon' ).media.images|first %}
+  {% if favicon is empty %}
+    {% set favicon = page.find('/' ~ firstfolderofpath ~ '/favicon' ).media.images|first %}
+  {% endif %}
   {% set site_title = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).header.course_site_title %}
   {% if site_title is empty %}
     {% set site_title = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).title %}
@@ -23,8 +28,15 @@
     {% set footer_content = page.find('/footer').content %}
   {% endif %}
 {% else %}
+  {% set favicon = page.find('/favicon' ).media.images|first %}
   {% set site_title = site.title|e('html') %}
   {% set footer_content = page.find('/footer').content %}
+{% endif %}
+
+{% if favicon == empty %}
+  {% set favicon_url = 'theme://images/favicon.png' %}
+{% else %}
+  {% set favicon_url = favicon.url %}
 {% endif %}
 
 <!DOCTYPE html>
@@ -38,7 +50,7 @@
         {% include 'partials/metadata.html.twig' %}
 
         <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site_title }}</title>
-        <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png', true) }}" />
+        <link rel="icon" type="image/png" href="{{ url(favicon_url,true) }}" />
 
         {% block stylesheets %}
             {# load theme.css and custom.css files - hibbittsdesign.org #}
