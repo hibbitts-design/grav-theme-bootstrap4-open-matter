@@ -1,4 +1,4 @@
-title: Stop Note Options
+title: Web Component Stop Note Options
 '@extends':
     type: default
     context: blueprints://pages

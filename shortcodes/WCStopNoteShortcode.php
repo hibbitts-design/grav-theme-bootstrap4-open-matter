@@ -4,13 +4,13 @@ namespace Grav\Plugin\Shortcodes;
 use Grav\Common\Utils;
 use Thunder\Shortcode\Shortcode\ShortcodeInterface;
 
-// [stopnote title="Important Reminder" message="Midterm exam is on June 20th."]
+// [wcstopnote title="Important Reminder" message="Midterm exam is on June 20th."]
 
 class WCStopNoteShortcode extends Shortcode
 {
     public function init()
     {
-        $this->shortcode->getHandlers()->add('stopnote', function(ShortcodeInterface $sc) {
+        $this->shortcode->getHandlers()->add('wcstopnote', function(ShortcodeInterface $sc) {
 
             // Get shortcode content and parameters
             $str = $sc->getContent();
