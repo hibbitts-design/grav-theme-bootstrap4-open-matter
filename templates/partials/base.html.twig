@@ -34,7 +34,12 @@
 {% endif %}
 
 {% if favicon == empty %}
-  {% set favicon_url = 'theme://images/favicon.png' %}
+  {% set favicon = page.find('/favicon' ).media.images|first %}
+    {% if favicon == empty %}
+      {% set favicon_url = 'theme://images/favicon.png' %}
+    {% else %}
+      {% set favicon_url = favicon.url %}
+    {% endif %}
 {% else %}
   {% set favicon_url = favicon.url %}
 {% endif %}
