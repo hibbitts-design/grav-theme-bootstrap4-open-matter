@@ -1,3 +1,9 @@
+# v2.9.2
+## 12/19/2019
+
+1. [](#improved)
+  * Improved handling of Favicons for MultiCourse Hubs.
+
 # v2.9.1
 ## 12/19/2019
 
