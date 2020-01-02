@@ -2,7 +2,7 @@
 ## 01/02/2020
 
 1. [](#improved)
-  * Updated CSS for left/right image alignment
+  * Updated CSS for left/right image alignment (thanks to @OleVik)
 
 # v2.9.2
 ## 12/19/2019
