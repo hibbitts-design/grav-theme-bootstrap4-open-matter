@@ -1,3 +1,9 @@
+# v2.9.3
+## 01/02/2020
+
+1. [](#improved)
+  * Updated CSS for left/right image alignment
+
 # v2.9.2
 ## 12/19/2019
 
