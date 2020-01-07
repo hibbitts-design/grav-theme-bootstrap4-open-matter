@@ -1,3 +1,9 @@
+# v2.9.5
+## 01/07/2020
+
+1. [](#bugfix)
+  * Single course home page link now fully works with root install of Grav
+
 # v2.9.4
 ## 01/06/2020
 
