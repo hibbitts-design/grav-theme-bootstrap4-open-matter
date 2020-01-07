@@ -16,14 +16,10 @@ license: MIT
 dependencies:
   - { name: grav, version: '>=1.6.0' }
   - admin
-  - anchors
   - auto-date
-  - archives
-  - breadcrumbs
   - email
   - error
   - external_links
-  - feed
   - form
   - git-sync
   - grava11y
@@ -36,7 +32,6 @@ dependencies:
   - presentation-deckset
   - prism-highlight
   - problems
-  - taxonomylist
   - twigfeeds
   - twigpcre
   - shortcode-core
