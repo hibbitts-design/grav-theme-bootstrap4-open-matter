@@ -1,3 +1,9 @@
+# v2.9.4
+## 01/06/2020
+
+1. [](#improved)
+  * Changed default demo content from Blog to Basic Course Hub site
+
 # v2.9.3
 ## 01/02/2020
 
