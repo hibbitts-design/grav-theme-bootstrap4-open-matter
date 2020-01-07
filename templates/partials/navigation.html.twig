@@ -14,7 +14,7 @@
         {% set course_home = config.system.home.alias %}
     {% endif %}
     {% if firstfolderofpath %}
-      {% set base_url_relative = base_url_relative ~ '/' ~ firstfolderofpath ~ '/' ~ course_home %}
+      {% set base_url = base_url ~ '/' ~ firstfolderofpath ~ '/' ~ course_home %}
     {% endif %}
     {% if page.find('/' ~ firstfolderofpath).routable %}
       {% set site_title = page.find('/' ~ firstfolderofpath ).title %}
@@ -31,7 +31,7 @@
     {% if course_home is empty %}
         {% set course_home = config.system.home.alias %}
     {% endif %}
-    {% set base_url_relative = base_url_relative ~ '/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath ~ '/' ~ course_home %}
+    {% set base_url = base_url ~ '/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath ~ '/' ~ course_home %}
     {% set site_title = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).header.course_site_title %}
     {% if site_title is empty %}
       {% set site_title = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).title %}
@@ -61,13 +61,9 @@
     {% set navbar_bg_color = '' %}
 {% endif %}
 
-{% if base_url is empty %}
-    {% set base_url = base_url_absolute %}
-{% endif %}
-
 <nav class="navbar {{ navbar_position }} navbar-expand-{{ navbar_breakpoint }} {{ navbar_style }} {{ navbar_bg }}" {{ navbar_bg_color|raw }};" role="navigation">
     <div class="container">
-        <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url_relative }}">{{ site_title }}</a>
+        <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url }}">{{ site_title }}</a>
         {% if (pages|first) or (theme_var('display_of_git_sync_repo_link') == 'menu' or theme_var('display_of_git_sync_repo_link') == empty) %}
           <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
