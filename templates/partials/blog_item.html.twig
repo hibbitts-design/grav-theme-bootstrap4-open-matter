@@ -42,7 +42,7 @@
         <div class="list-blog-meta my-3">
             {% if not (page.parent.header.hide_post_date) %}
                 <span class="list-blog-date">
-                <i class="fa fa-calendar"></i> <span>{{ page.date|date("F j, Y, g:i a") }}</span>
+                <i class="fa fa-calendar"></i> <span>{{ page.date|date(system.pages.dateformat.short) }}</span>
               </span>
             {% endif %}
 
