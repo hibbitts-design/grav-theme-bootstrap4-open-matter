@@ -1,3 +1,13 @@
+# v2.9.7
+## 01/21/2020
+
+1. [](#improved)
+  * Blog post date format is now determined from system config setting
+  * Vertical centering of footer content improved when minimal page content is present
+  * Updated demo pages in theme '_demo' folder
+1. [](#bugfix)
+  * Restored display of taxonomy tags on blog post pages (Sections pages now use the `filter` taxonomy item, which is also needed to be in Taxonomy `site.yaml` config)
+
 # v2.9.6
 ## 01/07/2020
 
