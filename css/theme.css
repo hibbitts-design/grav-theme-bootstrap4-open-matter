@@ -186,8 +186,8 @@ body {
 }
 
 .main-content {
-    min-height: 65%;
-    min-height: 65vh;
+    min-height: 85%;
+    min-height: 85vh;
     margin-top: 0;
     padding-top: 2rem;
     padding-bottom: 5rem;
