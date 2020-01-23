@@ -3,7 +3,7 @@
 {% set secondfolderofpath = arrayofpath[2] %}
 
 {# MultiCourse hub compatibility - hibbittsdesign.org #}
-{% if page.find('/' ~ firstfolderofpath).template == 'course' %}
+{% if page.find('/' ~ firstfolderofpath).template == 'course' or page.find('/' ~ firstfolderofpath).template == 'subsite' %}
   {% if firstfolderofpath %}
     {% set favicon = page.find('/' ~ firstfolderofpath ~ '/favicon' ).media.images|first %}
     {% set site_title = page.find('/' ~ firstfolderofpath ).title %}
@@ -14,12 +14,15 @@
   {% if footer_content == empty %}
     {% set footer_content = page.find('/footer').content %}
   {% endif %}
-{% elseif page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).template == 'course' %}
+{% elseif page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).template == 'course' or  page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).template == 'subsite' %}
   {% set favicon = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath ~ '/favicon' ).media.images|first %}
   {% if favicon is empty %}
     {% set favicon = page.find('/' ~ firstfolderofpath ~ '/favicon' ).media.images|first %}
   {% endif %}
   {% set site_title = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).header.course_site_title %}
+  {% if site_title is empty %}
+    {% set site_title = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).header.subsite_site_title %}
+  {% endif %}
   {% if site_title is empty %}
     {% set site_title = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).title %}
   {% endif %}

@@ -1,0 +1,42 @@
+title: Subsite List Page Options
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+
+          subsitelistoptions:
+            type: tab
+            title: Subsite List
+
+            fields:
+
+                blogpostoptions:
+                    type: section
+                    title: "Appearance"
+                    underline: true
+
+                header.card_width:
+                    type: select
+                    label: 'Subsite List Card Width (in columns)'
+                    default: none
+                    size: medium
+                    options:
+                        3: 3 Cards per Row (without Sidebar)
+                        5: 2 Cards per Row
+                        12: 1 Card per Row
+
+                header.card_order_dir:
+                  type: select
+                  label: Order
+                  default: asc
+                  size: small
+                  options:
+                    asc: Ascending
+                    desc: Descending
