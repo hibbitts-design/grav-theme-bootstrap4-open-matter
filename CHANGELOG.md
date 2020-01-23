@@ -1,3 +1,10 @@
+# v2.9.8
+## 01/23/2020
+
+1. [](#improved)
+  * Added support of `subsite` and `subsitelist` templates for broader use of multisite (e.g. multicourse) sites
+  * Updated demo pages in theme '_demo' folder
+
 # v2.9.7
 ## 01/21/2020
 
