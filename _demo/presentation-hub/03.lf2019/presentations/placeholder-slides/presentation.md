@@ -1,10 +1,10 @@
 ---
-title: Developing and Sharing OER with Grav
+title: An Introduction to the Modern File-based Grav CM
 ---
 
 [.text: alignment(center)]
 
-# Developing and Sharing OER with Grav
+# An Introduction to the Grav CMS
 
 ### Placeholder Slides
 

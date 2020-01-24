@@ -7,4 +7,4 @@ hide_git_sync_repo_link: false
 visible: false
 ---
 
-[presentation="lf2020/presentations/placeholder-slides"]
+[presentation="lf2019/presentations/placeholder-slides"]
