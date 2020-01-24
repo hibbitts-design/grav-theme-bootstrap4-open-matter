@@ -2,7 +2,7 @@
 title: Read Me
 published: true
 visible: true
-hide_page_title: true
+show_sidebar: false
 ---
 
 ## Create, Publish, and Share Markdown-based Slides with Grav Presentation Hub!

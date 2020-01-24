@@ -8,5 +8,3 @@ subsite_home: home
 page-inject:
     processed_content: true
 ---
-
-[plugin:content-inject](home/_important-reminders)
