@@ -2,7 +2,6 @@
 title: 'Resources'
 published: true
 visible: true
-hide_page_title: true
 ---
 # Workshop Resources
 
