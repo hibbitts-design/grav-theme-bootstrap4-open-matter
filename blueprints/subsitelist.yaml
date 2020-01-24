@@ -17,7 +17,7 @@ form:
 
             fields:
 
-                blogpostoptions:
+                blogpostappearance:
                     type: section
                     title: "Appearance"
                     underline: true
@@ -32,7 +32,18 @@ form:
                         5: 2 Cards per Row
                         12: 1 Card per Row
 
-                header.card_order_dir:
+                header.content.order.by:
+                  type: select
+                  label: Order By
+                  default: date
+                  size: small
+                  options:
+                    folder: Folder
+                    title: Title
+                    date: Date
+                    default: Folder
+
+                header.content.order.dir:
                   type: select
                   label: Order
                   default: asc
