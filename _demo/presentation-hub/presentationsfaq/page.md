@@ -32,17 +32,17 @@ To move an existing Presentation slide deck to another Presentation List, tap th
 View the full-screen version of the slides you want to embed and copy the URL. You can embed these slides into another Website by using an [iframe](https://www.w3schools.com/tags/tag_iframe.asp), for example like this:
 
 [prism classes="language-html"]
-<iframe src="https://demo.hibbittsdesign.org/grav-skeleton-open-matter-presentation-hub-site/lf2020/presentations/placeholder-slides/" width="800" height="640" allowfullscreen="allowfullscreen"></iframe>
+<iframe src="https://demo.hibbittsdesign.org/grav-open-matter-presentation-hub/lf2020/presentations/placeholder-slides/" width="800" height="640" allowfullscreen="allowfullscreen"></iframe>
 [/prism]
 
 Depending on the specifics of the destination Website, a [class](https://www.w3schools.com/html/html_classes.asp) might need to be added to make the slides responsive when viewed on different size screens. For example, if your Website uses the Bootstrap Responsive Framework the iframe code would be:
 
 [prism classes="language-html"]
-<div class="embed-responsive embed-responsive-4by3"><iframe src="https://demo.hibbittsdesign.org/grav-skeleton-open-matter-presentation-hub-site/lf2020/presentations/placeholder-slides/" width="800" height="640" allowfullscreen="allowfullscreen"></iframe></div>
+<div class="embed-responsive embed-responsive-4by3"><iframe src="https://demo.hibbittsdesign.org/grav-open-matter-presentation-hub/lf2020/presentations/placeholder-slides/" width="800" height="640" allowfullscreen="allowfullscreen"></iframe></div>
 [/prism]
 
 ## How do I embed a standard Grav page into another Website?
 
 You can use the `chromeless` URL flag to seamlessly embed the content of a standard Grav page (including one or more Presentations), without the usual site chrome such as the navigation bar, sidebar and footer.
 
-An example chromeless URL would be: [https://demo.hibbittsdesign.org/grav-skeleton-open-matter-presentation-hub-site/lf2020/home/chromeless:true](https://demo.hibbittsdesign.org/grav-skeleton-open-matter-presentation-hub-site/lf2020/home/chromeless:true)
+An example chromeless URL would be: [https://demo.hibbittsdesign.org/grav-open-matter-presentation-hub/lf2020/home/chromeless:true](https://demo.hibbittsdesign.org/grav-open-matter-presentation-hub/lf2020/home/chromeless:true)
