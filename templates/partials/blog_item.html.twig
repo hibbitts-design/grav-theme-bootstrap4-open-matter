@@ -164,9 +164,7 @@
               {% if ( page.header.git_sync_repo_link_display is defined and page.header.git_sync_repo_link_display == 'page' ) or (( theme_var('display_of_git_sync_repo_link') == 'page' and page.header.git_sync_repo_link_display is not defined ) and not (page.header.hide_git_sync_repo_link)) %}
                 <br>
                 <hr>
-                <br>
-                {% include 'partials/git_sync_repo_link_note.html.twig' %}
-                <br>
+                <p>{% include 'partials/git_sync_repo_link_note.html.twig' %}</p>
               {% endif %}
 
               {% set show_prev_next = true %}
