@@ -1,3 +1,11 @@
+# v2.9.9
+## 01/24/2020
+
+1. [](#improved)
+  * Added ordering and direction options for subsite list pages
+  * Added support for CC License display for subsite list pages
+  * Updated demo pages in theme '_demo' folder
+
 # v2.9.8
 ## 01/23/2020
 
