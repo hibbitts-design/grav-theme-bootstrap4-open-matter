@@ -1,3 +1,10 @@
+# v3.0.0
+## 01/24/2020
+
+1. [](#improved)
+  * Improved placement of CC License and Git Sync Links within pages
+  * Updated demo pages in theme '_demo' folder
+
 # v2.9.9
 ## 01/24/2020
 
