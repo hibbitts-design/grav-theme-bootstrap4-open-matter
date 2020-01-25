@@ -4,7 +4,7 @@ title: An Introduction to the Modern File-based Grav CMS
 
 [.text: alignment(center)]
 
-# An Introduction to the Grav CMS
+# An Introduction to the Modern File-based Grav CMS
 
 ### Placeholder Slides
 
