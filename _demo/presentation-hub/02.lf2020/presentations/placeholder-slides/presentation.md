@@ -1,10 +1,10 @@
 ---
-title: Developing and Sharing OER with Grav
+title: Using Grav as an Open Personal Publishing Platform
 ---
 
 [.text: alignment(center)]
 
-# Developing and Sharing OER with Grav
+# Using Grav as an Open Personal Publishing Platform
 
 ### Placeholder Slides
 
