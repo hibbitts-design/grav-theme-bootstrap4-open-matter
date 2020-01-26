@@ -1,3 +1,10 @@
+# v3.0.1
+## 01/26/2020
+
+1. [](#improved)
+  * Updated demo pages in theme '_demo' folder
+  * Updated customized template for embedded Presentations with most recent Presentation Plugin release
+
 # v3.0.0
 ## 01/24/2020
 
@@ -317,13 +324,13 @@
 ## 07/24/2019
 
 1. [](#bugfix)
-    * Support option to hide Git Sync Link for emebedded Presentations
+    * Support option to hide Git Sync Link for embedded Presentations
 
 # v2.5.6
 ## 07/24/2019
 
 1. [](#improved)
-    * Improved Git Sync Link appearance for emebedded Presentations
+    * Improved Git Sync Link appearance for embedded Presentations
 
 # v2.5.5
 ## 07/05/2019
