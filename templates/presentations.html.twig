@@ -28,7 +28,7 @@
         {% for child in collection %}
           {% if child.template == 'presentation' %}
             <div class="presentation-list-item">
-              <p>{% include 'partials/presentation_iframe.html.twig' with {'src': child.route|trim('/'),'fullpagepath':true } %}</p>
+              <p>{% include 'partials/presentation_iframe.html.twig' with {'src': child.route|trim('/')} %}</p>
             </div>
           {% endif %}
         {% endfor %}
