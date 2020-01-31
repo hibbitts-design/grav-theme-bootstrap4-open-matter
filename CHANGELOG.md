@@ -1,3 +1,12 @@
+# v3.0.6
+## 01/31/2020
+
+1. [](#new)
+  * Support for Navbar background color for each subsite
+1. [](#improved)
+  * Improved Presentation page blueprint
+  * Updated demo pages in theme '_demo' folder
+
 # v3.0.5
 ## 01/28/2020
 
