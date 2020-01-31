@@ -5,7 +5,7 @@ visible: true
 hide_page_title: true
 ---
 
-[presentation="/presentations/placeholder-slides"]
+[presentation="/home/placeholder-slides"]
 
 The above Presentation is displayed using the Presentation Shortcode, which will automatically provide a link to view each Presentation fullscreen and, if configured, a Git Sync Link (i.e. GitHub, GitLab, Gitea, etc.).
 
