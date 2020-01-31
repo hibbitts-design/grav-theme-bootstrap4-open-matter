@@ -253,8 +253,8 @@ form:
                       description: 'Text label for link.'
                     .icon:
                       type: text
-                      label: Icon
-                      description: 'Font Awesome icon for link.'
+                      label: Font Awesome Icon
+                      description: ''Short name, e.g. ''file''.'
                     .url:
                       type: text
                       label: URL
