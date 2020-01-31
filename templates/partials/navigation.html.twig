@@ -9,6 +9,9 @@
 
 {# MultiCourse hub compatibility - hibbittsdesign.org #}
 {% if page.find('/' ~ firstfolderofpath).template == 'course' or page.find('/' ~ firstfolderofpath).template == 'subsite' %}
+    {% if page.find('/' ~ firstfolderofpath ).header.navbar_bg_color %}
+      {% set navbar_bg_color = page.find('/' ~ firstfolderofpath ).header.navbar_bg_color %}
+    {% endif %}
     {% set course_home = page.find('/' ~ firstfolderofpath ).header.course_home %}
     {% if course_home is empty %}
         {% set course_home = page.find('/' ~ firstfolderofpath ).header.subsite_home %}
@@ -30,6 +33,9 @@
     {% endif %}
     {% set pages = page.evaluate([{'@page.children':'/' ~ firstfolderofpath }]) %}
 {% elseif page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).template == 'course' or page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).template == 'subsite' %}
+    {% if page.find('/' ~ firstfolderofpath ).header.navbar_bg_color %}
+      {% set navbar_bg_color = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).header.navbar_bg_color %}
+    {% endif %}
     {% set course_home = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).header.course_home %}
     {% if course_home is empty %}
         {% set course_home = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).header.subsite_home %}

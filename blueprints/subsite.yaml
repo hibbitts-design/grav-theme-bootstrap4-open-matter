@@ -53,6 +53,14 @@ form:
                     description: For example, 'home'.
                     validate:
                       required: true
+
+                header.navbar_bg_color:
+                    ordering@: 6
+                    type: colorpicker
+                    label: 'Subsite NavBar Background Color'
+                    description: "If set, will be used for Subsite's NavBar Background."
+                    size: small
+
         options:
           fields:
             publishing:
