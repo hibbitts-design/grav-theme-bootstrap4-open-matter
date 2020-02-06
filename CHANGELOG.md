@@ -1,3 +1,9 @@
+# v3.0.7
+## 02/06/2020
+
+1. [](#new)
+  * Support for Menu property in Sections pages (thanks to @awrog for the suggestion and initial Twig)
+
 # v3.0.6
 ## 01/31/2020
 
