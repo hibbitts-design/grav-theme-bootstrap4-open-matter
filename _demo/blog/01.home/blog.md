@@ -21,6 +21,7 @@ feed:
     description: 'Sample Blog Description'
     limit: 10
 pagination: true
+child_type: item
 ---
 
 # My **Open Matter** Blog
