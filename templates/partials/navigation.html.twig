@@ -20,7 +20,9 @@
         {% set course_home = config.system.home.alias %}
     {% endif %}
     {% if firstfolderofpath %}
-      {% set base_url = base_url ~ '/' ~ firstfolderofpath ~ '/' ~ course_home %}
+      {% if not (firstfolderofpath in base_url) %}
+        {% set base_url = base_url ~ '/' ~ firstfolderofpath ~ '/' ~ course_home %}
+      {% endif %}
     {% endif %}
     {% if page.find('/' ~ firstfolderofpath).routable %}
       {% set site_title = page.find('/' ~ firstfolderofpath ).title %}
@@ -43,7 +45,9 @@
     {% if course_home is empty %}
         {% set course_home = config.system.home.alias %}
     {% endif %}
-    {% set base_url = base_url ~ '/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath ~ '/' ~ course_home %}
+    {% if not (firstfolderofpath ~ '/' ~ secondfolderofpath in base_url) %}
+      {% set base_url = base_url ~ '/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath ~ '/' ~ course_home %}
+    {% endif %}
     {% set site_title = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).header.course_site_title %}
     {% if site_title is empty %}
       {% set site_title = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).header.subsite_site_title %}
