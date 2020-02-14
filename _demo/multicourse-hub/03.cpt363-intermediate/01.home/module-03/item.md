@@ -22,7 +22,7 @@ header_image_alt_text: 'Bullseye'
 [May 23rd Class One-minute Summaries](https://sso.canvaslms.com/courses/1413912/assignments/9519524)
 
 ### Presented Slides  
-[presentation="presentations/module-03"]
+[presentation="cpt363-intermediate/presentations/module-03"]
 
 ### Supplemental Materials  
 [Customer Journey Mapping](https://www.youtube.com/watch?v=a40QYgO-_aM)  

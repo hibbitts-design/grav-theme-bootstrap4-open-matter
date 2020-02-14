@@ -22,7 +22,7 @@ header_image_alt_text: 'Usability testing'
 [Jun 6th Class One-minute Summaries](https://sso.canvaslms.com/courses/1413912/assignments/9519522)
 
 ### Presented Slides  
-[presentation="presentations/module-05"]
+[presentation="cpt363-advanced/presentations/module-05"]
 
 ### Supplemental Materials  
 [Rocket Surgery Made Easy by Steve Krug: Usability Demo](https://www.youtube.com/watch?v=QckIzHC99Xc)  

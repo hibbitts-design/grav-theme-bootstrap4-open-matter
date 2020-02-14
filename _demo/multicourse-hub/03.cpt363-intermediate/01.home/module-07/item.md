@@ -22,7 +22,7 @@ header_image_alt_text: 'iOS family of devices pile (2015)'
 [Jun 20th Class One-minute Summaries](https://canvas.sfu.ca/courses/38847/assignments/292817)
 
 ### Presented Slides  
-[presentation="presentations/module-07"]
+[presentation="cpt363-intermediate/presentations/module-07"]
 
 ### Handouts
 [One-Page Touch Interaction Design Checklist](https://sso.canvaslms.com/courses/1413912/files/folder/Handouts/Touch%20Interaction%20Checklist)  

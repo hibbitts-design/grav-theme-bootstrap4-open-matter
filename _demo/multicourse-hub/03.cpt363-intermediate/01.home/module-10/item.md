@@ -22,7 +22,7 @@ header_image_alt_text: 'Complex sound mixer'
 [Jul 11th Class One-minute Summaries](https://sso.canvaslms.com/courses/1413912/assignments/9519526)
 
 ### Presented Slides  
-[presentation="presentations/module-10"]
+[presentation="cpt363-intermediate/presentations/module-10"]
 
 ### Handouts
 [10 Simple Things Writers Can Do To Improve Web Accessibility](http://www.seamlesscms.com/Insights/Content-Accessibility)  

@@ -22,7 +22,7 @@ header_image_alt_text: 'Interview in coffee shop'
 [Jun 27 Class One-minute Summaries](https://sso.canvaslms.com/courses/1413912/assignments/9519519)
 
 ### Presented Slides  
-[presentation="presentations/module-08"]
+[presentation="cpt363-basic/presentations/module-08"]
 
 ### Assignments
 [User Research Report](https://sso.canvaslms.com/courses/1413912/assignments/9519534)  

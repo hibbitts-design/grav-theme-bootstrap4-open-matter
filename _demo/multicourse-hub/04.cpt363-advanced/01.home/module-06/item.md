@@ -22,7 +22,7 @@ header_image_alt_text: 'The Pay and Go box at the new North Oshawa medical clini
 [Jun 13th Class One-minute Summaries](https://sso.canvaslms.com/courses/1413912/assignments/9519520)
 
 ### Presented Slides  
-[presentation="presentations/module-06"]
+[presentation="cpt363-advanced/presentations/module-06"]
 
 ### Supplemental Materials  
 [Design Heuristics Lecture with Scott Klemmer](https://www.youtube.com/playlist?list=PLVtu1bDQijari7LfHOoSTdcpbWIkwZWIA)  

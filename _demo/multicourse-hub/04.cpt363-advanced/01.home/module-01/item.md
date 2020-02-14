@@ -23,7 +23,7 @@ hide_git_sync_repo_link: true
 [May 9th Class One-minute Summaries](https://sso.canvaslms.com/courses/1413912/assignments/9519517)
 
 ### Presented Slides  
-[presentation="presentations/module-01"]
+[presentation="cpt363-advanced/presentations/module-01"]
 
 ### Supplemental Materials  
 [Elements of User Experience by Jesse James Garrett](https://qofr.files.wordpress.com/2016/11/q-of-r-presentation-11.pdf)  
