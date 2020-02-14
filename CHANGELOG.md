@@ -1,3 +1,11 @@
+# v3.0.9
+## 02/14/2020
+
+1. [](#new)
+    * Updated demo pages in theme '_demo' folder
+1. [](#bugfix)
+    * Fixed MultiCourse home page link for blog post pages
+
 # v3.0.8
 ## 02/13/2020
 
