@@ -1,3 +1,9 @@
+# v3.1.0
+## 02/19/2020
+
+1. [](#improved)
+    * Removed deprecated course and courselist templates and blueprints (now subsite and subsitelist)
+
 # v3.0.9
 ## 02/14/2020
 
