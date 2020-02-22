@@ -1,3 +1,9 @@
+# v3.1.1
+## 02/22/2020
+
+1. [](#bugfix)
+    * Updated Pagination Twig to handle wider range of URLs correctly (thanks @oleg-sh)
+
 # v3.1.0
 ## 02/19/2020
 
