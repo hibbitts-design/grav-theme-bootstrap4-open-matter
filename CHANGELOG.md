@@ -1,3 +1,9 @@
+# v3.1.2
+## 03/08/2020
+
+1. [](#bugfix)
+    * Revised Bootstrap CSS loading logic to handle non-existent theme config
+
 # v3.1.1
 ## 02/22/2020
 
