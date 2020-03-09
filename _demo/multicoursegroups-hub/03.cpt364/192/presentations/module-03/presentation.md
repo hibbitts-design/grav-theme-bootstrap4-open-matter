@@ -4,7 +4,7 @@ title: Strategic UX Design
 
 [.text: alignment(center)]
 
-# CPT 363
+# CPT 364
 
 ### Placeholder Slides - Module 3
 
@@ -30,19 +30,19 @@ title: Strategic UX Design
 
 ---
 
-# Placeholder Slides - Module 3
+# Placeholder Slides
 
 ### Topic One
 
 ---
 
-# Placeholder Slides - Module 3
+# Placeholder Slides
 
 ### Topic Two
 
 ---
 
-# Placeholder Slides - Module 3
+# Placeholder Slides
 
 ### Topic Three
 

@@ -4,7 +4,7 @@ title: User Research
 
 [.text: alignment(center)]
 
-# CPT 363
+# CPT 364
 
 ### Placeholder Slides - Module 8
 
@@ -30,19 +30,19 @@ title: User Research
 
 ---
 
-# Placeholder Slides - Module 8
+# Placeholder Slides
 
 ### Topic One
 
 ---
 
-# Placeholder Slides - Module 8
+# Placeholder Slides
 
 ### Topic Two
 
 ---
 
-# Placeholder Slides - Module 8
+# Placeholder Slides
 
 ### Topic Three
 

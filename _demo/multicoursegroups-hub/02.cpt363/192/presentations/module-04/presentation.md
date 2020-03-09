@@ -30,19 +30,19 @@ title: Prototyping
 
 ---
 
-# Placeholder Slides - Module 4
+# Placeholder Slides
 
 ### Topic One
 
 ---
 
-# Placeholder Slides - Module 4
+# Placeholder Slides
 
 ### Topic Two
 
 ---
 
-# Placeholder Slides - Module 4
+# Placeholder Slides
 
 ### Topic Three
 

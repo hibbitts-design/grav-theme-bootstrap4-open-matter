@@ -4,7 +4,7 @@ title: Introduction to UX Design
 
 [.text: alignment(center)]
 
-# CPT 363
+# CPT 364
 
 ### Placeholder Slides - Module 1
 
@@ -30,19 +30,19 @@ title: Introduction to UX Design
 
 ---
 
-# Placeholder Slides - Module 1
+# Placeholder Slides
 
 ### Topic One
 
 ---
 
-# Placeholder Slides - Module 1
+# Placeholder Slides
 
 ### Topic Two
 
 ---
 
-# Placeholder Slides - Module 1
+# Placeholder Slides
 
 ### Topic Three
 

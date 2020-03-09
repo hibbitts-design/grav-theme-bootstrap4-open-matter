@@ -30,19 +30,19 @@ title: Interaction Design
 
 ---
 
-# Placeholder Slides - Module 10
+# Placeholder Slides
 
 ### Topic One
 
 ---
 
-# Placeholder Slides - Module 10
+# Placeholder Slides
 
 ### Topic Two
 
 ---
 
-# Placeholder Slides - Module 10
+# Placeholder Slides
 
 ### Topic Three
 

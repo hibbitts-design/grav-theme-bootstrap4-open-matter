@@ -12,8 +12,8 @@ hide_git_sync_repo_link: true
 
 ## What is usability and user experience design?
 [HCI, UI, IA, IxD, and UX](../../presentations/module-01?target=_blank#/module-01-4)  
-[Design Thinking](../../presentations/module-01?target=_blank#/module-01-5)  
-[Usability and UCD](../../presentations/module-01?target=_blank#/module-01-6)  
+[Design Thinking](../../presentations/module-01?target=_blank#/module-01-5?target=_blank)  
+[Usability and UCD](../../presentations/module-01?target=_blank#/module-01-6?target=_blank)  
 
 ===
 

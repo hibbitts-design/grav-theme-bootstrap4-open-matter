@@ -4,7 +4,7 @@ title: Prototyping
 
 [.text: alignment(center)]
 
-# CPT 363
+# CPT 364
 
 ### Placeholder Slides - Module 4
 
@@ -30,19 +30,19 @@ title: Prototyping
 
 ---
 
-# Placeholder Slides - Module 4
+# Placeholder Slides
 
 ### Topic One
 
 ---
 
-# Placeholder Slides - Module 4
+# Placeholder Slides
 
 ### Topic Two
 
 ---
 
-# Placeholder Slides - Module 4
+# Placeholder Slides
 
 ### Topic Three
 

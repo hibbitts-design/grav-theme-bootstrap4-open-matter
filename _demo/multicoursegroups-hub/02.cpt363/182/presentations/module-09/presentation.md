@@ -30,19 +30,19 @@ title: Placeholder Slides - Module 9 Title
 
 ---
 
-# Placeholder Slides - Module 9
+# Placeholder Slides
 
 ### Topic One
 
 ---
 
-# Placeholder Slides - Module 9
+# Placeholder Slides
 
 ### Topic Two
 
 ---
 
-# Placeholder Slides - Module 9
+# Placeholder Slides
 
 ### Topic Three
 

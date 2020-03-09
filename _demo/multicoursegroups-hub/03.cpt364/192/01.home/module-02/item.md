@@ -21,7 +21,7 @@ header_image_alt_text: 'Information architecture'
 ### Summaries and Questions  
 [May 16th Class One-minute Summaries](https://sso.canvaslms.com/courses/1413912/assignments/9519525)
 
-### Presented Slides   
+### Presented Slides  
 [presentation="cpt364/192/presentations/module-02"]
 
 ### CPT-363 UX Design Process/Toolkit

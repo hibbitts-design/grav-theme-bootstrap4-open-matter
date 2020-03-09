@@ -4,7 +4,7 @@ title: User Interface Inspections
 
 [.text: alignment(center)]
 
-# CPT 363
+# CPT 364
 
 ### Placeholder Slides - Module 6
 
@@ -30,19 +30,19 @@ title: User Interface Inspections
 
 ---
 
-# Placeholder Slides - Module 6
+# Placeholder Slides
 
 ### Topic One
 
 ---
 
-# Placeholder Slides - Module 6
+# Placeholder Slides
 
 ### Topic Two
 
 ---
 
-# Placeholder Slides - Module 6
+# Placeholder Slides
 
 ### Topic Three
 

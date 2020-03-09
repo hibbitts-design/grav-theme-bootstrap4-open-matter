@@ -30,19 +30,19 @@ title: Visual Design Essentials
 
 ---
 
-# Placeholder Slides - Module 11
+# Placeholder Slides
 
 ### Topic One
 
 ---
 
-# Placeholder Slides - Module 11
+# Placeholder Slides
 
 ### Topic Two
 
 ---
 
-# Placeholder Slides - Module 11
+# Placeholder Slides
 
 ### Topic Three
 

@@ -30,19 +30,19 @@ title: Mobile and Multi-device Design
 
 ---
 
-# Placeholder Slides - Module 7
+# Placeholder Slides
 
 ### Topic One
 
 ---
 
-# Placeholder Slides - Module 7
+# Placeholder Slides
 
 ### Topic Two
 
 ---
 
-# Placeholder Slides - Module 7
+# Placeholder Slides
 
 ### Topic Three
 

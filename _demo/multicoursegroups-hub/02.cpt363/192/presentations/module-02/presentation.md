@@ -30,19 +30,19 @@ title: The Process of UX Design
 
 ---
 
-# Placeholder Slides - Module 2
+# Placeholder Slides
 
 ### Topic One
 
 ---
 
-# Placeholder Slides - Module 2
+# Placeholder Slides
 
 ### Topic Two
 
 ---
 
-# Placeholder Slides - Module 2
+# Placeholder Slides
 
 ### Topic Three
 

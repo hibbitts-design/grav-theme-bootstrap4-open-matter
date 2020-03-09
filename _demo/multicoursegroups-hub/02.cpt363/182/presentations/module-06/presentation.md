@@ -30,19 +30,19 @@ title: User Interface Inspections
 
 ---
 
-# Placeholder Slides - Module 6
+# Placeholder Slides
 
 ### Topic One
 
 ---
 
-# Placeholder Slides - Module 6
+# Placeholder Slides
 
 ### Topic Two
 
 ---
 
-# Placeholder Slides - Module 6
+# Placeholder Slides
 
 ### Topic Three
 

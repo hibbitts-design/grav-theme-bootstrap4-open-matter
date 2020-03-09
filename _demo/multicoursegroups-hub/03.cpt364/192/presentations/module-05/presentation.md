@@ -4,7 +4,7 @@ title: Usability Testing
 
 [.text: alignment(center)]
 
-# CPT 363
+# CPT 364
 
 ### Placeholder Slides - Module 5
 
@@ -30,19 +30,19 @@ title: Usability Testing
 
 ---
 
-# Placeholder Slides - Module 5
+# Placeholder Slides
 
 ### Topic One
 
 ---
 
-# Placeholder Slides - Module 5
+# Placeholder Slides
 
 ### Topic Two
 
 ---
 
-# Placeholder Slides - Module 5
+# Placeholder Slides
 
 ### Topic Three
 

@@ -30,19 +30,19 @@ title: Usability Testing
 
 ---
 
-# Placeholder Slides - Module 5
+# Placeholder Slides
 
 ### Topic One
 
 ---
 
-# Placeholder Slides - Module 5
+# Placeholder Slides
 
 ### Topic Two
 
 ---
 
-# Placeholder Slides - Module 5
+# Placeholder Slides
 
 ### Topic Three
 

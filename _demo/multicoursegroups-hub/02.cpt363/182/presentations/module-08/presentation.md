@@ -30,19 +30,19 @@ title: User Research
 
 ---
 
-# Placeholder Slides - Module 8
+# Placeholder Slides
 
 ### Topic One
 
 ---
 
-# Placeholder Slides - Module 8
+# Placeholder Slides
 
 ### Topic Two
 
 ---
 
-# Placeholder Slides - Module 8
+# Placeholder Slides
 
 ### Topic Three
 

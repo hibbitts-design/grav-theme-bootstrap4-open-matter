@@ -4,7 +4,7 @@ title: Placeholder Slides - Module 12 Title
 
 [.text: alignment(center)]
 
-# CPT 363
+# CPT 364
 
 ### Placeholder Slides - Module 12
 
@@ -30,19 +30,19 @@ title: Placeholder Slides - Module 12 Title
 
 ---
 
-# Placeholder Slides - Module 12
+# Placeholder Slides
 
 ### Topic One
 
 ---
 
-# Placeholder Slides - Module 12
+# Placeholder Slides
 
 ### Topic Two
 
 ---
 
-# Placeholder Slides - Module 12
+# Placeholder Slides
 
 ### Topic Three
 
