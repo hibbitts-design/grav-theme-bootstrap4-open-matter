@@ -1,3 +1,10 @@
+# v3.1.3
+## 03/09/2020
+
+1. [](#improved)
+    * Added subsite group titles to subsitelist template
+    * Updated demo pages in theme '_demo' folder
+
 # v3.1.2
 ## 03/08/2020
 
