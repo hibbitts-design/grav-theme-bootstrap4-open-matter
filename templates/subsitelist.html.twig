@@ -81,6 +81,9 @@
                       </div>
                     </div>
                   {% elseif page.header.hide_from_subsite_list != true and(page.template == 'subsitegroup') %}
+                    <div class="col-lg-{{ 12 }}">
+                      <h2> {{ page.header.title}} </h2>
+                    </div>
                     {% set subsite_folder = page.slug %}
                     {% set children = page.collection({'items': {'@page.children': page.route}}) %}
                     {% for p in children %}
