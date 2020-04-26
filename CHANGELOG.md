@@ -1,3 +1,12 @@
+# v3.1.5
+## 04/26/2020
+
+1. [](#new)
+    * Added `linktextonly` template for text only display of link items
+    * Added checking for URL value when displaying `link` page types
+1. [](#improved)
+    * Added support for optional display of title links for `embedlycard` page types
+
 # v3.1.4
 ## 03/09/2020
 
