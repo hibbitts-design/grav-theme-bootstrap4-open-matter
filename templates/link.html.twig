@@ -1,1 +1,1 @@
-{% block content %}<a href="{{ page.header.link_url }}">{{ page.header.link_text }}</a>{% endblock %}
+{% block content %}{% if page.header.link_url is not empty %}<a href="{{ page.header.link_url }}">{{ page.header.link_text }}</a>{% else %}{{ page.header.link_text }}{% endif %}{% endblock %}
