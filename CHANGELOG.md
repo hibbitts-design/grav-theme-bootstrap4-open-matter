@@ -1,3 +1,11 @@
+# v3.1.6
+## 04/28/2020
+
+1. [](#new)
+    * Added `badge` shortcode for display of badges
+1. [](#improved)
+    * Added support for optional display of badge with `link` page types
+
 # v3.1.5
 ## 04/26/2020
 
