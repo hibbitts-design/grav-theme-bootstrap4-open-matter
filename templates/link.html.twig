@@ -1,1 +1,1 @@
-{% block content %}{% if page.header.link_url is not empty %}<a href="{{ page.header.link_url }}">{{ page.header.link_text }}</a>{% else %}{{ page.header.link_text }}{% endif %}{% endblock %}
+{% block content %}{% if page.header.link_url is not empty %}<a href="{{ page.header.link_url }}">{{ page.header.link_text }}</a>{% else %}{{ page.header.link_text }}{% endif %}{% if page.header.badge_display is defined %} <span class="badge badge-pill badge-secondary">{{ page.header.badge_label }}</span>{% endif %}{% endblock %}
