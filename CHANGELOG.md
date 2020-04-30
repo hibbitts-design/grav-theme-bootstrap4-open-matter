@@ -1,3 +1,9 @@
+# v3.1.7
+## 04/30/2020
+
+1. [](#bugfix)
+    * Restored list item indent within Important Reminders area for correct display of associated badges
+
 # v3.1.6
 ## 04/28/2020
 
