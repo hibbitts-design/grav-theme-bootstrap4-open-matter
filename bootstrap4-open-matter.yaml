@@ -12,5 +12,5 @@ streams:
      type: ReadOnlyStream
      prefixes:
        '':
-       - user/themes/bootstrap4-open-matter
-       - user/themes/bootstrap4
+       - themes://bootstrap4-open-matter
+       - themes://bootstrap4
