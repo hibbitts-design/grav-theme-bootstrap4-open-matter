@@ -1,3 +1,9 @@
+# v3.1.9
+## 05/26/2020
+
+1. [](#improved)
+    * Updated demo pages in theme '_demo' folder
+
 # v3.1.8
 ## 05/23/2020
 
