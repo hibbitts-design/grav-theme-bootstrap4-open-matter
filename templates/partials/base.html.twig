@@ -75,6 +75,10 @@
             {% do assets.add('theme://css-compiled/theme.css') %}
             {% do assets.addCss('theme://css/theme.css') %}
             {% do assets.addCss('theme://css/custom.css') %}
+            
+            {% if ((grav.uri.param('chromeless') or grav.uri.param('embedded')) or theme_var('chromeless.enabled')) %}
+              {% do assets.addInlineCss('.chromeless-show{display:block}.chromeless-hide{display:none}') %}
+            {% endif %}
         {% endblock %}
 
         {% block javascripts %}
