@@ -1,9 +1,15 @@
+# v3.2.1
+## 06/06/2020
+
+1. [](#new)
+    * Added ShowIfEmbedded and HideIfEmbedded Shortcodes to only show content when embedded (i.e. chromeless) or not
+
 # v3.2.0
 ## 06/04/2020
 
 1. [](#new)
     * Added CSS classes to only show content when chromeless or not chromeless (e.g. '[div class="chromeless-show"]' and [div class="chromeless-hide"]) (thanks @ricardo118)
-    * Added CSS class to force column content to keep together (e.g. '[div class="keeptogether"]')
+    * Added CSS class to force column content to keep together (e.g. '[div class="keeptogether"]'), for use with the Columns Shortcode
 
 # v3.1.9
 ## 05/26/2020
