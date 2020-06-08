@@ -1,3 +1,9 @@
+# v3.2.2
+## 06/08/2020
+
+1. [](#bugfix)
+    * Fixed improperly closed Div within ShowIfEmbedded and HideIfEmbedded Shortcodes
+
 # v3.2.1
 ## 06/06/2020
 
