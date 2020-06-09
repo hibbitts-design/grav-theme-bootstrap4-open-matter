@@ -1,3 +1,9 @@
+# v3.2.3
+## 06/09/2020
+
+1. [](#improved)
+    * Updated Divs for use with the ShowIfEmbedded and HideIfEmbedded Shortcodes
+
 # v3.2.2
 ## 06/08/2020
 
