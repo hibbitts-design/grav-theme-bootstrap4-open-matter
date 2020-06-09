@@ -8,7 +8,7 @@ class HideIfEmbeddedShortcode extends Shortcode
     public function init()
     {
         $this->shortcode->getHandlers()->add('hideifembedded', static function(ShortcodeInterface $sc) {
-            return '<div class="chromeless-hide;">' . $sc->getContent() . '</div>';
+            return '<div class="chromeless-hide">' . $sc->getContent() . '</div>';
         });
     }
 }
