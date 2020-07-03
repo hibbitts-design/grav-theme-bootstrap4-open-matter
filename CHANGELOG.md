@@ -1,3 +1,9 @@
+# v3.2.4
+## 07/03/2020
+
+1. [](#new)
+    * Added GoogleSlides Shortcode ([googleslides url=""]) to display embedded Google Slides
+
 # v3.2.3
 ## 06/09/2020
 
