@@ -11,4 +11,4 @@ page-inject:
     processed_content: true
 ---
 
-[plugin:content-inject](/cpt363/192/home/_important-reminders)
+[plugin:content-inject](/cpt363/192/home/_reminders)
