@@ -10,28 +10,26 @@ header_image_alt_text: 'Bullseye'
 ---
 
 ## How to make more strategic design decisions?  
-[User Experience Strategy](../../presentations/module-03#/module-03-4?target=_blank)  
-[Current State and Future State](../../presentations/module-03#/module-03-5?target=_blank)  
-[Journey Mapping](../../presentations/module-03#/module-03-6?target=_blank)  
+[User Experience Strategy](../../presentations/module-03#/module-03-4)  
+[Current State and Future State](../../presentations/module-03#/module-03-5)  
+[Journey Mapping](../../presentations/module-03#/module-03-6)  
 
 ===
 
 ## **How to make more strategic design decisions?**
 
 ### Summaries and Questions  
-[May 23rd Class One-minute Summaries](https://sso.canvaslms.com/courses/1413912/assignments/9519524)
+[May 23rd Class One-minute Summaries](https://canvas.sfu.ca/courses/55288/assignments)
 
 ### Presented Slides  
-[Placeholder Slides](https://docs.google.com/presentation/d/e/2PACX-1vSPiOUzmRG4EB6ng8KQgOwZEbVuN2u1d5tGVTiAyzlVuO_o4Zjyli3oAf_U_CqXml_6GMUBR9nUyEYb/pub?start=false&loop=false&delayms=3000)
-
-[googleslides url="https://docs.google.com/presentation/d/e/2PACX-1vSPiOUzmRG4EB6ng8KQgOwZEbVuN2u1d5tGVTiAyzlVuO_o4Zjyli3oAf_U_CqXml_6GMUBR9nUyEYb/embed?start=false&loop=false&delayms=3000"]
+[presentation="cpt363-advanced/presentations/module-03"]
 
 ### Supplemental Materials  
 [Customer Journey Mapping](https://www.youtube.com/watch?v=a40QYgO-_aM)  
 [plugin:youtube](https://www.youtube.com/watch?v=a40QYgO-_aM)
 
 ### Assignments
-[Journey Map](https://sso.canvaslms.com/courses/1413912/assignments/9519531)  
+[Journey Map](https://canvas.sfu.ca/courses/55288/assignments)  
 
 ### Quick Quiz
 [h5p id="213958"]

@@ -16,4 +16,4 @@ hide_git_sync_repo_link: true
 ## Paul's Web Pick of the Week
 [plugin:page-inject](/all-web-picks-of-the-week/latest)
 
-[View all of Paul's Web Picks of the Week](https://sso.canvaslms.com/courses/1413912/pages/all-web-picks-of-the-week)
+[View all of Paul's Web Picks of the Week](https://canvas.sfu.ca/courses/55288/pages/all-web-picks-of-the-week)
