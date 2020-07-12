@@ -19,11 +19,11 @@ Fridays 12:00-1:00pm
 
 ## Canvas LMS
 [Calendar](https://canvas.sfu.ca/calendar)  
-[Assignments](https://canvas.sfu.ca/courses/55288/assignments))  
+[Assignments](https://canvas.sfu.ca/courses/55288/assignments)  
 [Quizzes](https://canvas.sfu.ca/courses/55288/quizzes)  
 [Class Discussions](https://canvas.sfu.ca/courses/55288/discussion_topics)  
 [Grades](https://canvas.sfu.ca/courses/55288/gradebook)  
-[Syllabus](https://canvas.sfu.ca/courses/55288/assignments)/syllabus)
+[Syllabus](https://canvas.sfu.ca/courses/55288/assignments/syllabus)
 
 ## Paul's Web Pick of the Week
 [plugin:page-inject](../all-web-picks-of-the-week/latest)
