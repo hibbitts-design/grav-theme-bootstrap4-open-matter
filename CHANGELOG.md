@@ -4,7 +4,6 @@
 1. [](#bugfix)
     * Updated templates for latest RC build (v.15)
 
-
 # v3.3.0
 ## 07/22/2020
 
