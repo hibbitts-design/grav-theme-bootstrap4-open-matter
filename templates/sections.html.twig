@@ -98,13 +98,13 @@
             </ul>
           </div>
 
-          {% if show_sidebar and not(grav.uri.param('chromeless')or grav.uri.param('embedded')or theme_var('chromeless.enabled')) %}
+          {% if show_sidebar and not(grav.uri.param('chromeless') or grav.uri.param('embedded') or theme_var('chromeless.enabled')) %}
             <div class="col-md-5 blog-main order-first order-md-2">
             {% else %}
               <div class="col-md-9 blog-main order-first order-md-2">
               {% endif %}
 
-              {% if not(page.header.hide_page_title)and not(grav.uri.param('hidepagetitle')) %}
+              {% if not(page.header.hide_page_title) and not(grav.uri.param('hidepagetitle')) %}
                 <h1>{{page.title}}</h1>
               {% endif %}
 
@@ -194,13 +194,13 @@
               {% endif %}
 
               {# Creative Commons License -  hibbittsdesign.org #}
-              {% if not(grav.uri.param('chromeless')or grav.uri.param('embedded'))and not(theme_var('chromeless.enabled')) and (theme_var('cc_license.enabled')and not(page.header.hide_cc_license)) %}
+              {% if not(grav.uri.param('chromeless') or grav.uri.param('embedded')) and not(theme_var('chromeless.enabled')) and (theme_var('cc_license.enabled') and not(page.header.hide_cc_license)) %}
                 <p>{% include 'partials/creative_commons_license.html.twig' %}</p>
               {% endif %}
 
               {# Git repository edit link - hibbittsdesign.org #}
               {% if (page.header.git_sync_repo_link_display is defined and page.header.git_sync_repo_link_display == 'page')
-                or((theme_var('display_of_git_sync_repo_link') == 'page' and page.header.git_sync_repo_link_display is not defined)and not(page.header.hide_git_sync_repo_link)) %}
+                or((theme_var('display_of_git_sync_repo_link') == 'page' and page.header.git_sync_repo_link_display is not defined) and not(page.header.hide_git_sync_repo_link)) %}
                 <br>
                 <hr>
                 <p>{% include 'partials/git_sync_repo_link_note.html.twig' %}</p>
@@ -208,7 +208,7 @@
             </div>
 
             {# check content display flag - hibbittsdesign.org #}
-            {% if show_sidebar and not(grav.uri.param('chromeless')or grav.uri.param('embedded')or theme_var('chromeless.enabled')) %}
+            {% if show_sidebar and not(grav.uri.param('chromeless') or grav.uri.param('embedded') or theme_var('chromeless.enabled')) %}
               <div class="col-md-4 blog-sidebar order-last">
                 {% include 'partials/sidebar.html.twig' with {
                   'blog' : page
