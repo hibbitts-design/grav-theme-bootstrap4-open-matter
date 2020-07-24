@@ -1,3 +1,9 @@
+# v3.3.3
+## 07/24/2020
+
+1. [](#improved)
+    * Adjusted visual appearance of badges for link page types
+
 # v3.3.2
 ## 07/24/2020
 
