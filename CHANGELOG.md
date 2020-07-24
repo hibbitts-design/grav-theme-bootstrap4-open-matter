@@ -1,3 +1,10 @@
+# v3.3.2
+## 07/24/2020
+
+1. [](#improved)
+    * Added support of link `url` to badges
+    * Adjusted visual appearance of badges
+
 # v3.3.1
 ## 07/22/2020
 
@@ -95,8 +102,6 @@
 
 1. [](#new)
     * Added `badge` shortcode for display of badges
-1. [](#improved)
-    * Added support for optional display of badge with `link` page types
 
 # v3.1.5
 ## 04/26/2020
