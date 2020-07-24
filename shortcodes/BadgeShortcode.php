@@ -15,14 +15,17 @@ class BadgeShortcode extends Shortcode
 
             $badgetype= $sc->getParameter('type', $sc->getBbCode());
             $badgelabel= $sc->getParameter('label', $sc->getBbCode());
+            $badgeurl= $sc->getParameter('url', $sc->getBbCode());
 
             if (empty($badgetype)) {
               $badgetype = "secondary";
             }
 
-            if (!empty($badgelabel)) {
-                $output = ' <span class="badge badge-pill badge-'.$badgetype.'">'.$badgelabel.'</span>';
-
+            if (!empty($badgelabel) && !empty($badgeurl)) {
+                $output = '<a href="'.$badgeurl.'" class="badge badge-'.$badgetype.'">'.$badgelabel.'</a>';
+                return $output;
+            } elseif (!empty($badgelabel)) {
+                $output = '<span class="badge badge badge-'.$badgetype.'">'.$badgelabel.'</span>';
                 return $output;
             }
 
