@@ -1,3 +1,9 @@
+# v3.3.4
+## 08/16/2020
+
+1. [](#bugfix)
+    * Fixed issue with modular item display on Blog pages
+
 # v3.3.3
 ## 07/24/2020
 
