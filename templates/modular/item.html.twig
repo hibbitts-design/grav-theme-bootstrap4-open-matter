@@ -50,9 +50,10 @@
             {% else %}
               <img src="{{ header_image_media.cropZoom(header_image_width, header_image_height).url|raw }}" alt="{{ image_alt_text }}"/>
             {% endif %}
+            <br>
           {% endif %}
-
         {% endif %}
+
       {% endif %}
 
     </div>
@@ -60,7 +61,7 @@
     <div class="modularitem">
       {# diable regular post handling - hibbittsdesign.org #}
       {# <h3>{{ page.title }}</h3> #}
-      <p>{{ page.content|raw }}</p>
+      {{ page.content|raw }}
     </div>
 </div>
 {% endif %}
