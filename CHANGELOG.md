@@ -1,3 +1,9 @@
+# v3.3.5
+## 09/03/2020
+
+1. [](#new)
+    * Added `target` attribute to badge shortcode
+
 # v3.3.4
 ## 08/16/2020
 
