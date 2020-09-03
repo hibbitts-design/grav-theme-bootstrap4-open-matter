@@ -1,7 +1,13 @@
+# v3.3.6
+## 09/03/2020
+
+1. [](#improved)
+    * Added support for badge types and urls in link page types
+
 # v3.3.5
 ## 09/03/2020
 
-1. [](#new)
+1. [](#improved)
     * Added `target` attribute to badge shortcode
 
 # v3.3.4
