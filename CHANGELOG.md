@@ -1,3 +1,9 @@
+# v3.3.8
+## 09/04/2020
+
+1. [](#bugfix)
+    * Corrected CSS styling for button, badge, and navbar-branding elements
+
 # v3.3.7
 ## 09/04/2020
 
