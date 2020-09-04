@@ -1,3 +1,9 @@
+# v3.3.7
+## 09/04/2020
+
+1. [](#improved)
+    * Updated Link page blueprint to include badge label, type and url
+
 # v3.3.6
 ## 09/03/2020
 
