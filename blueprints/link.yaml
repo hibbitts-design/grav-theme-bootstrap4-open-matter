@@ -30,6 +30,36 @@ form:
                     validate:
                       type: URL
 
+                header.badge_type:
+                    ordering@: 4
+                    type: select
+                    default: secondary
+                    label: Badge Type
+                    toggleable: true
+                    options:
+                        success: Success
+                        info: Info
+                        warning: Warning
+                        danger: Danger
+                        primary: Primary
+                        secondary: Secondary
+                        light: Light
+                        dark: Dark
+
+                header.badge_label:
+                    ordering@: 5
+                    type: text
+                    size: long
+                    label: Badge Text
+
+                header.badge_url:
+                    ordering@: 6
+                    type: text
+                    size: long
+                    label: Badge URL
+                    validate:
+                      type: URL
+
                 content:
                   unset@: true
                 header.media_order:
