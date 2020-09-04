@@ -23,7 +23,7 @@ body {
 
 /* CSS to better match link colors with Canvas LMS (place in custom.css and uncomment) */
 /*
-a:not(.btn) {
+a:not(.btn, .badge) {
   color: #008EE2;
 }
 a:hover:not(.btn), a:focus:not(.btn) {
@@ -35,7 +35,7 @@ a:hover:not(.btn), a:focus:not(.btn) {
 }
 */
 
-a:not(btn) {
+a:not(.btn, .badge) {
   color: #1b6ec2;
   text-decoration: none;
 }
