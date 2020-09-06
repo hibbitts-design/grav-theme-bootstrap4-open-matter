@@ -23,7 +23,11 @@ class BadgeShortcode extends Shortcode
             }
 
             if (empty($badgetarget)) {
-              $badgetarget = "_self";
+              if ($this->config->get('plugins.external_links.enabled')) {
+                  $badgetarget = $this->config->get('plugins.external_links.target');
+              } else {
+                  $badgetarget = "_self";
+              }
             }
 
             if (!empty($badgelabel) && !empty($badgeurl)) {
