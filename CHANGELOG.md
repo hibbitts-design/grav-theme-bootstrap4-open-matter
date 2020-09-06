@@ -1,3 +1,9 @@
+# v3.3.9
+## 09/06/2020
+
+1. [](#improved)
+    * Added support for External Links Plugin target with badge shortcode target
+
 # v3.3.8
 ## 09/04/2020
 
