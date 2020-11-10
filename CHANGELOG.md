@@ -1,3 +1,9 @@
+# v3.4.0
+## 11/09/2020
+
+1. [](#bugfix)
+    * Corrected CSS styling for active page button on RSSFeeds page
+
 # v3.3.9
 ## 09/06/2020
 
