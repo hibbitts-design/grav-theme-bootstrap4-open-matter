@@ -35,7 +35,7 @@ a:hover:not(.btn), a:focus:not(.btn) {
 }
 */
 
-a:not(.btn):not(.badge):not(.navbar-brand) {
+a:not(.btn):not(.badge):not(.navbar-brand):not(.page-link.active) {
   color: #1b6ec2;
   text-decoration: none;
 }
