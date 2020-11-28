@@ -9,20 +9,19 @@ cache_enable: false
 Some Name  
 [safe-email autolink="true"]somename@somewhere.edu[/safe-email]  
 
-In-person office hours:  
-Wednesdays 2:30-4:00pm  
-TBD  
+Online office hours:  
+Mondays 12:00-1:30pm  
+Fridays 12:00-1:00pm  
 
-Virtual office hours chat:  
-Mondays 12:00-1:30pm   
-Fridays 12:00-1:00pm
+Suggestion, concern or complaint?  
+[Anonymous Course Feedback](#)
 
 ## Canvas LMS
-[Calendar](https://canvas.sfu.ca/calendar)  
-[Assignments](https://canvas.sfu.ca/courses/55288/assignments)  
-[Quizzes](https://canvas.sfu.ca/courses/55288/quizzes)  
-[Class Discussions](https://canvas.sfu.ca/courses/55288/discussion_topics)  
-[Grades](https://canvas.sfu.ca/courses/55288/gradebook)  
+[fa icon="calendar"][Calendar](https://canvas.sfu.ca/calendar)  
+[fa icon="pencil"][Assignments](https://canvas.sfu.ca/courses/55288/assignments)  
+[fa icon="check-circle"][Quizzes](https://canvas.sfu.ca/courses/55288/quizzes)  
+[fa icon="comments-o"][Class Discussions](https://canvas.sfu.ca/courses/55288/discussion_topics)  
+[fa icon="list-ul"][Syllabus](https://canvas.sfu.ca/courses/55288/syllabus)  
 
 ## Web Pick of the Week
 [plugin:page-inject](../web-pick-of-the-week/)
