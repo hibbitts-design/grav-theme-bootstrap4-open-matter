@@ -1,3 +1,9 @@
+# v3.4.2
+## 11/29/2020
+
+1. [](#improved)
+    * Updated theme screenshots
+
 # v3.4.1
 ## 11/28/2020
 
