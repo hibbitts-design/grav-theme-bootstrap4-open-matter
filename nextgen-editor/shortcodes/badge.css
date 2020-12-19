@@ -1,0 +1,20 @@
+shortcode-inline[name="badge"] .sc-badge-wrapper {
+  margin: 8px 8px;
+  position: relative;
+}
+
+shortcode-inline[name="badge"] .sc-badge {
+  color: #fff;
+  background-color: #6c757d;
+  display: inline-block;
+  padding: .25em .4em .25em .4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  text-decoration: none;
+}

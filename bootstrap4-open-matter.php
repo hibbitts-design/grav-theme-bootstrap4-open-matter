@@ -16,7 +16,8 @@ class Bootstrap4OpenMatter extends Theme
             'onThemeInitialized'  => ['onThemeInitialized', 0],
             'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
             'onTwigSiteVariables' => ['onTwigSiteVariables', 0],
-            'onPageInitialized' => ['onPageInitialized', 0]
+            'onPageInitialized' => ['onPageInitialized', 0],
+            'registerNextGenEditorPlugin' => ['registerNextGenEditorPluginShortcodes', 0]
         ];
     }
 
@@ -28,6 +29,19 @@ class Bootstrap4OpenMatter extends Theme
     public function onShortcodeHandlers()
     {
         $this->grav['shortcode']->registerAllShortcodes('user://themes/bootstrap4-open-matter/shortcodes');
+    }
+
+    public function registerNextGenEditorPluginShortcodes($event) {
+        $plugins = $event['plugins'];
+
+        $plugins['js'][] = 'user://themes/bootstrap4-open-matter/nextgen-editor/shortcodes/googleslides.js';
+        $plugins['js'][] = 'user://themes/bootstrap4-open-matter/nextgen-editor/shortcodes/button.js';
+        $plugins['css'][] = 'user://themes/bootstrap4-open-matter/nextgen-editor/shortcodes/button.css';
+        $plugins['js'][] = 'user://themes/bootstrap4-open-matter/nextgen-editor/shortcodes/badge.js';
+        $plugins['css'][] = 'user://themes/bootstrap4-open-matter/nextgen-editor/shortcodes/badge.css';
+
+        $event['plugins']  = $plugins;
+        return $event;
     }
 
     public function onTwigSiteVariables()

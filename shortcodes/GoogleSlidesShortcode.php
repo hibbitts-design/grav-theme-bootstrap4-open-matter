@@ -19,6 +19,14 @@ class GoogleSlidesShortcode extends Shortcode
                 $output = '<p><div class="grav-youtube"><iframe src="'.$googleslidesurl.'" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div></p>';
 
                 return $output;
+
+            } else {
+
+              if ($str) {
+
+                  return '<p><div class="grav-youtube"><iframe src="'.$str.'" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div></p>';
+
+              }
             }
 
         });
