@@ -1,3 +1,9 @@
+# v3.4.3
+## 12/19/2020
+
+1. [](#new)
+    * Initial NextGen Editor support for GoogleSlides, Button and Badge shortcodes
+
 # v3.4.2
 ## 11/29/2020
 
@@ -112,7 +118,7 @@
 ## 07/03/2020
 
 1. [](#new)
-    * Added GoogleSlides Shortcode ([googleslides url=""]) to display embedded Google Slides
+    * Added GoogleSlides Shortcode ([googleslides="url"]) to display embedded Google Slides
 
 # v3.2.3
 ## 06/09/2020
