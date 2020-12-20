@@ -1,3 +1,11 @@
+# v3.4.4
+## 12/20/2020
+
+1. [](#new)
+    * Initial NextGen Editor support for PDF shortcode
+1. [](#improved)
+    * Updated demo pages in theme '_demo' folder
+
 # v3.4.3
 ## 12/19/2020
 
