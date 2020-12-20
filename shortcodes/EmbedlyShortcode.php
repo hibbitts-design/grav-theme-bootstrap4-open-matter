@@ -19,6 +19,14 @@ class EmbedlyShortcode extends Shortcode
                 $output = '<a class="embedly-card" data-card-controls="0" data-card-align="left" href="'.$embedlycardurl.'" ></a><script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>';
 
                 return $output;
+
+            } else {
+
+              if ($str) {
+
+                  return '<a class="embedly-card" data-card-controls="0" data-card-align="left" href="'.$str.'" ></a><script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>';
+
+              }
             }
 
         });
