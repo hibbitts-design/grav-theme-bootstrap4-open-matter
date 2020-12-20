@@ -27,10 +27,10 @@ hide_git_sync_repo_link: true
 
 ### Supplemental Materials  
 [Elements of User Experience by Jesse James Garrett](https://qofr.files.wordpress.com/2016/11/q-of-r-presentation-11.pdf)  
-[pdf url="https://qofr.files.wordpress.com/2016/11/q-of-r-presentation-11.pdf"]
+[pdf]https://qofr.files.wordpress.com/2016/11/q-of-r-presentation-11.pdf[/pdf]
 
 ### Handouts
 [Course Overview](https://canvas.sfu.ca/courses/55288/files)  
 
 ### Recommended Reading  
-[embedly url="http://www.uxbooth.com/articles/the-art-of-guerrilla-usability-testing/"]
+[embedly]http://www.uxbooth.com/articles/the-art-of-guerrilla-usability-testing/[/embedly]

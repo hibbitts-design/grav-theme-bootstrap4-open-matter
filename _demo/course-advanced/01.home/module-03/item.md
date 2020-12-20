@@ -35,4 +35,4 @@ header_image_alt_text: 'Bullseye'
 [h5p id="213958"]
 
 ### Required Reading  
-[embedly url="https://www.aytech.ca/blog/user-journey-map/"]
+[embedly]https://www.aytech.ca/blog/user-journey-map/[/embedly]

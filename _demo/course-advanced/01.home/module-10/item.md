@@ -28,4 +28,4 @@ header_image_alt_text: 'Complex sound mixer'
 [10 Simple Things Writers Can Do To Improve Web Accessibility](http://www.seamlesscms.com/Insights/Content-Accessibility)  
 
 ### Required Reading  
-[embedly url="https://medium.com/bridge-collection/a-lean-ux-iteration-on-dropbox-photos-edfa7b245c27#.fdtsczbnj"]
+[embedly]https://medium.com/bridge-collection/a-lean-ux-iteration-on-dropbox-photos-edfa7b245c27#.fdtsczbnj[/embedly]

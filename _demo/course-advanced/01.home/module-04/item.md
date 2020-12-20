@@ -33,4 +33,4 @@ header_image_alt_text: 'Paper-based prototype'
 [4-UP MOBILES + GRID]((https://canvas.sfu.ca/courses/55288/files)  
 
 ### Required Reading  
-[embedly url="https://www.smashingmagazine.com/2014/10/the-skeptics-guide-to-low-fidelity-prototyping/"]
+[embedly]https://www.smashingmagazine.com/2014/10/the-skeptics-guide-to-low-fidelity-prototyping/[/embedly]

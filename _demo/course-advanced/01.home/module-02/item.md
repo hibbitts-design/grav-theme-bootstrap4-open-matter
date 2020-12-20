@@ -37,4 +37,4 @@ header_image_alt_text: 'Information architecture'
 [Course Reflection Log](https://canvas.sfu.ca/courses/55288/assignments)  
 
 ### Recommended Reading  
-[embedly url="https://uxplanet.org/the-evolution-of-ux-process-methodology-47f52557178b"]
+[embedly]https://uxplanet.org/the-evolution-of-ux-process-methodology-47f52557178b[/embedly]

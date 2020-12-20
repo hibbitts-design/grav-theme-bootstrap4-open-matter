@@ -29,4 +29,4 @@ header_image_alt_text: 'Dampening and inking the plate'
 [Informed Consent Materials](https://canvas.sfu.ca/courses/55288/files)  
 
 ### Required Reading  
-[embedly url="http://www.uxbooth.com/articles/accessibility-visual-design/"]
+[embedly]http://www.uxbooth.com/articles/accessibility-visual-design/[/embedly]

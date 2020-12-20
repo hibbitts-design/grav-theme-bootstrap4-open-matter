@@ -29,4 +29,4 @@ header_image_alt_text: 'Usability testing'
 [plugin:youtube](https://www.youtube.com/watch?v=QckIzHC99Xc)
 
 ### Required Reading  
-[embedly url="http://www.uxbooth.com/articles/the-art-of-guerrilla-usability-testing/"]
+[embedly]http://www.uxbooth.com/articles/the-art-of-guerrilla-usability-testing/[/embedly]
