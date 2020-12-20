@@ -17,11 +17,11 @@ Suggestion, concern or complaint?
 [Anonymous Course Feedback](#)
 
 ## Canvas LMS
-[fa icon="calendar"][Calendar](https://canvas.sfu.ca/calendar)  
-[fa icon="pencil"][Assignments](https://canvas.sfu.ca/courses/55288/assignments)  
-[fa icon="check-circle"][Quizzes](https://canvas.sfu.ca/courses/55288/quizzes)  
-[fa icon="comments-o"][Class Discussions](https://canvas.sfu.ca/courses/55288/discussion_topics)  
-[fa icon="list-ul"][Syllabus](https://canvas.sfu.ca/courses/55288/syllabus)  
+[fa="calendar"][/fa][Calendar](https://canvas.sfu.ca/calendar)  
+[fa="pencil"][/fa][Assignments](https://canvas.sfu.ca/courses/55288/assignments)  
+[fa="check-circle"][/fa][Quizzes](https://canvas.sfu.ca/courses/55288/quizzes)  
+[fa="comments-o"][/fa][Class Discussions](https://canvas.sfu.ca/courses/55288/discussion_topics)  
+[fa="list-ul"][/fa][Syllabus](https://canvas.sfu.ca/courses/55288/syllabus)  
 
 ## Twitter Feed
-[twitter url="https://twitter.com/hibbittsdesign/lists/cpt-363" text="A Twitter list by @hibbittsdesign" height="600"]
+[twitter url="https://twitter.com/hibbittsdesign/lists/cpt-363" text="A Twitter list by @hibbittsdesign" height="600"][/twitter]
