@@ -19,6 +19,15 @@ class PDFShortcode extends Shortcode
                 $output = '<p><div class="embed-responsive embed-responsive-4by3"><iframe src="https://docs.google.com/gview?url='.$pdfurl.'&embedded=true" width="640" height="480"></iframe></div></p>';
 
                 return $output;
+
+              } else {
+
+                if ($str) {
+
+                    return '<p><div class="embed-responsive embed-responsive-4by3"><iframe src="https://docs.google.com/gview?url='.$str.'&embedded=true" width="640" height="480"></iframe></div></p>';
+
+                }
+
             }
 
         });

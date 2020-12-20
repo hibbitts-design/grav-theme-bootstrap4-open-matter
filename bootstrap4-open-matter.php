@@ -34,11 +34,12 @@ class Bootstrap4OpenMatter extends Theme
     public function registerNextGenEditorPluginShortcodes($event) {
         $plugins = $event['plugins'];
 
-        $plugins['js'][] = 'user://themes/bootstrap4-open-matter/nextgen-editor/shortcodes/googleslides.js';
-        $plugins['js'][] = 'user://themes/bootstrap4-open-matter/nextgen-editor/shortcodes/button.js';
-        $plugins['css'][] = 'user://themes/bootstrap4-open-matter/nextgen-editor/shortcodes/button.css';
         $plugins['js'][] = 'user://themes/bootstrap4-open-matter/nextgen-editor/shortcodes/badge.js';
         $plugins['css'][] = 'user://themes/bootstrap4-open-matter/nextgen-editor/shortcodes/badge.css';
+        $plugins['js'][] = 'user://themes/bootstrap4-open-matter/nextgen-editor/shortcodes/button.js';
+        $plugins['css'][] = 'user://themes/bootstrap4-open-matter/nextgen-editor/shortcodes/button.css';
+        $plugins['js'][] = 'user://themes/bootstrap4-open-matter/nextgen-editor/shortcodes/googleslides.js';
+        $plugins['js'][] = 'user://themes/bootstrap4-open-matter/nextgen-editor/shortcodes/pdf.js';      
 
         $event['plugins']  = $plugins;
         return $event;
