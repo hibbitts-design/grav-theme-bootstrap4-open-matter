@@ -1,3 +1,9 @@
+# v3.4.7
+## 01/05/2021
+
+1. [](#new)
+    * Initial NextGen Editor support for H5P shortcode
+
 # v3.4.6
 ## 12/21/2020
 
