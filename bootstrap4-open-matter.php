@@ -39,7 +39,8 @@ class Bootstrap4OpenMatter extends Theme
         $plugins['js'][] = 'user://themes/bootstrap4-open-matter/nextgen-editor/shortcodes/button.js';
         $plugins['css'][] = 'user://themes/bootstrap4-open-matter/nextgen-editor/shortcodes/button.css';
         $plugins['js'][] = 'user://themes/bootstrap4-open-matter/nextgen-editor/shortcodes/googleslides.js';
-        $plugins['js'][] = 'user://themes/bootstrap4-open-matter/nextgen-editor/shortcodes/pdf.js';      
+        $plugins['js'][] = 'user://themes/bootstrap4-open-matter/nextgen-editor/shortcodes/h5p.js';
+        $plugins['js'][] = 'user://themes/bootstrap4-open-matter/nextgen-editor/shortcodes/pdf.js';
 
         $event['plugins']  = $plugins;
         return $event;
