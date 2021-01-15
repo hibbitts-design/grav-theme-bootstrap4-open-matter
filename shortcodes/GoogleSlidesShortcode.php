@@ -13,9 +13,6 @@ class GoogleSlidesShortcode extends Shortcode
             // Get shortcode content and parameters
             $str = $sc->getContent();
 
-            print $str;
-            echo "<br>";
-
             $googleslidesurl= $sc->getParameter('url', $sc->getBbCode());
 
             if ($googleslidesurl) {
