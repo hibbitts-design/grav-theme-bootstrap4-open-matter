@@ -26,13 +26,13 @@ header_image_alt_text: 'Bullseye'
 
 ### Supplemental Materials  
 [Customer Journey Mapping](https://www.youtube.com/watch?v=a40QYgO-_aM)  
-[plugin:youtube](https://www.youtube.com/watch?v=a40QYgO-_aM)
+[youtube]https://www.youtube.com/watch?v=a40QYgO-_aM[/youtube]
 
 ### Assignments
 [Journey Map](https://canvas.sfu.ca/courses/55288/assignments)  
 
 ### Quick Quiz
-[h5p id="213958"]
+[h5p]https://h5p.org/h5p/embed/213958[/h5p]
 
 ### Required Reading  
 [embedly]https://www.aytech.ca/blog/user-journey-map/[/embedly]
