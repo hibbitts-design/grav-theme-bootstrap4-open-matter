@@ -1,3 +1,11 @@
+# v3.5.2
+## 01/29/2021
+
+1. [](#bugfix)
+    * Removed unneeded <br> tags in Partial templates
+1. [](#improved)
+    * Updated demo pages in theme '_demo' folder
+
 # v3.5.1
 ## 01/28/2021
 
