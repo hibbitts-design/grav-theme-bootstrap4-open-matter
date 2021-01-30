@@ -1,3 +1,9 @@
+# v3.5.3
+## 01/30/2021
+
+1. [](#improved)
+    * Updated demo pages in theme '_demo' folder (numeric prefixes used for home page modular content ordering, thanks to @ricardo118)
+
 # v3.5.2
 ## 01/29/2021
 
