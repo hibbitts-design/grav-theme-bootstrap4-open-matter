@@ -1,3 +1,9 @@
+# v3.5.4
+## 01/31/2021
+
+1. [](#improved)
+    * Set Course Subsite page blueprint default folder ('home')
+
 # v3.5.3
 ## 01/30/2021
 
