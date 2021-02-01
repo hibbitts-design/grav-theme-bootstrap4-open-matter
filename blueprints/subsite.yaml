@@ -50,7 +50,7 @@ form:
                     type: text
                     size: small
                     label: Subsite Home Page
-                    description: For example, 'home'.
+                    default: 'home'
                     validate:
                       required: true
 
