@@ -1,6 +1,6 @@
 ---
 title: 'Multi-Section Page'
-published: true
+published: false
 hide_page_title: true
 show_sidebar: false
 sections_nav_align: left
