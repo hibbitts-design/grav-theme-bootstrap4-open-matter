@@ -16,7 +16,7 @@ class GoogleSlidesShortcode extends Shortcode
             $googleslidesurl= $sc->getParameter('url', $sc->getBbCode());
 
             if ($googleslidesurl) {
-                $output = '<div class="grav-youtube"><iframe src="'.$googleslidesurl.'" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>';
+                $output = '<span class="embed-responsive embed-responsive-16by9"><iframe src="'.$googleslidesurl.'" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></span>';
 
                 return $output;
 
@@ -24,7 +24,7 @@ class GoogleSlidesShortcode extends Shortcode
 
               if ($str) {
 
-                  return '<div class="grav-youtube"><iframe src="'.$str.'" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>';
+                  return '<span class="embed-responsive embed-responsive-16by9"><iframe src="'.$str.'" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></span>';
 
               }
             }
