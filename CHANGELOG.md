@@ -1,3 +1,9 @@
+# v3.5.7
+## 02/15/2021
+
+1. [](#improved)
+    * Updated GoogleSlides shortcode formatting to use Bootstrap responsive embed class
+
 # v3.5.6
 ## 02/03/2021
 
