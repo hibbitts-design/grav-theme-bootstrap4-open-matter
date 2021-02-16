@@ -1,3 +1,9 @@
+# v3.5.8
+## 02/16/2021
+
+1. [](#improved)
+    * Updated Default Editor PDF and H5P shortcode syntax to be compatible with NextGen shortcode previews
+
 # v3.5.7
 ## 02/15/2021
 
