@@ -1,3 +1,9 @@
+# v3.6.1
+## 02/18/2021
+
+1. [](#improved)
+    * Changed default for Course Subsites List to 2 cards per row
+
 # v3.6.0
 ## 02/17/2021
 
