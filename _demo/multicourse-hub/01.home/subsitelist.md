@@ -1,5 +1,5 @@
 ---
-title: Home
+title: MultiCourse Home
 visible: false
 show_sidebar: false
 hide_page_title: true
