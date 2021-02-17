@@ -1,3 +1,10 @@
+# v3.5.9
+## 02/17/2021
+
+1. [](#bugfix)
+    * Fixed several display format issues with iFrame template and blueprint
+    * Fixed incorrect variable name in iFrame template
+
 # v3.5.8
 ## 02/16/2021
 
