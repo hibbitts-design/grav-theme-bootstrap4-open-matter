@@ -1,11 +1,15 @@
+# v3.6.0
+## 02/17/2021
+
+1. [](#improved)
+    * Updated demo pages in theme '_demo' folder
+
 # v3.5.9
 ## 02/17/2021
 
 1. [](#bugfix)
     * Fixed several display format issues with iFrame template and blueprint
     * Fixed incorrect variable name in iFrame template
-1. [](#improved)
-    * Updated demo pages in theme '_demo' folder
 
 # v3.5.8
 ## 02/16/2021
