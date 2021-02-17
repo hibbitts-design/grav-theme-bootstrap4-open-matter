@@ -65,8 +65,20 @@ form:
                         4by3: 4by3
                         16by9: 16by9
 
-                header.iframe_links:
+                header.display_iframe_links:
                     ordering@: 7
+                    type: toggle
+                    label: Display iFrame Links
+                    default: 0
+                    highlight: 1
+                    options:
+                        1:  Yes
+                        0:  No
+                    validate:
+                        type: bool
+
+                header.iframe_links:
+                    ordering@: 8
                     name: iframelinks
                     type: list
                     label: 'Additional iFrame Links'

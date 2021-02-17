@@ -27,7 +27,9 @@
 {% if displaypagetitle is defined %}
 {% if displaypagetitle %}
 {% if displaypagetitlelink %}
-<strong><a class="newwindow external-link" href="{{ iframesource }}">{{ page.title }}</a></strong>
+<strong>
+<a class="newwindow external-link" href="{{ iframesource }}">{{ page.title }}</a>
+</strong>
 {% else %}
 <strong>{{page.title}}</strong>
 {% endif %}
@@ -64,7 +66,6 @@
 {% endif %}
 {% if displaycontentlinks is defined %}
 {% if displaycontentlinks %}
-{% if page.header.iframe_links | length > 1 %}<br>{% endif %}
 {% set loopindex = 0 %}
 {% if page.header.iframe_links is defined %}
 {% for litem in page.header.iframe_links %}
@@ -73,17 +74,18 @@
 {% else %}
 {% set litem_source = litem.source %}
 {% endif %}
-{% if loopindex > 0 %}|{% endif %}
-{% if page.header.iframe_links | length == 1 %}({% endif %}
-<a class="newwindow external-link" href="{{ litem_source }}">
-<i class="fa {{litem.icon}}" aria-hidden="true"></i>{{litem.text}}</a>
-{% if page.header.iframe_links | length == 1 %}){% endif %}
+ | {% if litem.source %}
+<a class="newwindow external-link" href="{{ litem.source }}">{%endif%}
+{% if litem.icon %}
+<i class="fa {{litem.icon}}" aria-hidden="true"></i>{%endif%}{{litem.text}}{% if litem.source %}</a>{%endif%}
 {% set loopindex = loopindex + 1 %}
 {% endfor %}
 {% endif %}
 {% endif %}
 {% endif %}
-<p><span class="embed-responsive embed-responsive-{{ iframeaspectratio }}"><iframe src="{{ iframesource }}" width="640" height="480"></iframe></span></p>
+<span class="embed-responsive embed-responsive-{{ iframeaspectratio }}">
+<iframe src="{{ iframesource }}" width="640" height="480"></iframe>
+</span>
 </p>
 </div>
 {% endblock %}
