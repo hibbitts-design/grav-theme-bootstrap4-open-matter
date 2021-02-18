@@ -35,7 +35,7 @@ form:
                 header.content.order.by:
                   type: select
                   label: Order By
-                  default: date
+                  default: folder
                   size: small
                   options:
                     folder: Folder
