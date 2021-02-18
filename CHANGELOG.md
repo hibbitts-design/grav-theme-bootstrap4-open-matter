@@ -1,3 +1,9 @@
+# v3.6.2
+## 02/18/2021
+
+1. [](#improved)
+    * Changed default sort order for Course Subsites List
+
 # v3.6.1
 ## 02/18/2021
 
