@@ -1,3 +1,9 @@
+# v3.6.4
+## 02/28/2021
+
+1. [](#improved)
+    * Reduced plugin dependencies, thanks to the new Grav Skeleton build process
+
 # v3.6.3
 ## 02/18/2021
 
