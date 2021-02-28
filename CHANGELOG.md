@@ -1,3 +1,9 @@
+# v3.6.6
+## 02/28/2021
+
+1. [](#bugfix)
+    * Removed unneeded dependencies of Archives, TaxonomyList and SimpleSearch plugins
+
 # v3.6.5
 ## 02/28/2021
 
