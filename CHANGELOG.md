@@ -1,3 +1,10 @@
+# v3.6.5
+## 02/28/2021
+
+1. [](#improved)
+    * Updated Bootstrap to v4.6
+    * Updated Bootswatch to v4.6
+
 # v3.6.4
 ## 02/28/2021
 
