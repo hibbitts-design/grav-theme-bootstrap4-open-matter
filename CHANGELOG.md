@@ -1,3 +1,9 @@
+# v3.6.8
+## 03/01/2021
+
+1. [](#improved)
+    * Removed Breadcrumbs plugin as dependency
+
 # v3.6.7
 ## 03/01/2021
 
