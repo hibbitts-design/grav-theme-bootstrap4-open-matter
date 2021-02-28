@@ -1,7 +1,7 @@
 name: 'Bootstrap4 Open Matter'
 type: theme
 slug: bootstrap4-open-matter
-version: 3.6.7
+version: 3.6.8
 description: "A custom version of the Bootstrap4 theme for open blogs, course hubs and more. Includes Git Sync and 'chromeless' content embedding."
 icon: bold
 author:
@@ -17,7 +17,6 @@ license: MIT
 
 dependencies:
   - { name: grav, version: '>=1.6.0' }
-  - breadcrumbs
   - external_links
   - git-sync
   - grava11y
