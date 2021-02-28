@@ -19,7 +19,6 @@ dependencies:
   - { name: grav, version: '>=1.6.0' }
   - breadcrumbs
   - external_links
-  - feed
   - git-sync
   - grava11y
   - markdown-notices
