@@ -40,9 +40,8 @@ a:not(.btn):not(.badge):not(.navbar-brand) {
   text-decoration: none;
 }
 
-a:hover:not(btn), a:focus:not(btn) {
-  color: #12487f;
-  text-decoration: underline;
+a:hover:not(.btn):not(.badge):not(.navbar-brand):not(.nav-link), a:focus:not(.btn):not(.badge):not(.navbar-brand):not(.nav-link) {
+  color: #008EE2;
 }
 
 .page-link {
