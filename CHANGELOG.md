@@ -1,3 +1,9 @@
+# v3.6.9
+## 03/01/2021
+
+1. [](#bugfix)
+    * Fixed incorrect appearance of hover and focus on some elements
+
 # v3.6.8
 ## 03/01/2021
 
