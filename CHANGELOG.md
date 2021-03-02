@@ -1,3 +1,9 @@
+# v3.7.0
+## 03/02/2021
+
+1. [](#improved)
+    * Updated example CSS customizations for Canvas LMS
+
 # v3.6.9
 ## 03/01/2021
 
