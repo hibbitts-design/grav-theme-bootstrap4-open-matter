@@ -26,12 +26,13 @@ body {
 a:not(.btn):not(.badge):not(.navbar-brand) {
   color: #008EE2;
 }
-a:hover:not(.btn), a:focus:not(.btn) {
+a:hover:not(.btn):not(.badge):not(.navbar-brand):not(.nav-link), a:focus:not(.btn):not(.badge):not(.navbar-brand):not(.nav-link) {
   color: #008EE2;
 }
 .btn-primary {
-    background-color: #3a8ddc!important;
-    border-color: #3a8ddc!important;
+  color: #fff;
+  background-color: #3a8ddc!important;
+  border-color: #3a8ddc!important;
 }
 */
 
