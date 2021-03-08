@@ -8,7 +8,7 @@ visible: false
 ## What’s Happening This Week
 
 ### Important Reminders
-* [Journey Map](https://canvas.sfu.ca/courses/55288/assignments) assignment  due Tue Jun 12 11:59pm PDT
+* [Journey Map](https://canvas.sfu.ca/courses/55288/assignments) assignment due Tue Jun 12 11:59pm PDT
 * [Course Reflection Log](https://canvas.sfu.ca/courses/55288/assignments) assignment due Fri Aug 3rd 11:59pm PDT
 
 ### Required Reading
