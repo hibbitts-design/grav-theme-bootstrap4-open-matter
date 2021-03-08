@@ -75,14 +75,15 @@
             {% do assets.add('theme://css-compiled/theme.css') %}
             {% do assets.addCss('theme://css/theme.css') %}
             {% do assets.addCss('theme://css/custom.css') %}
-            
+
             {% if ((grav.uri.param('chromeless') or grav.uri.param('embedded')) or theme_var('chromeless.enabled')) %}
               {% do assets.addInlineCss('.chromeless-show{display:block}.chromeless-hide{display:none}') %}
             {% endif %}
         {% endblock %}
 
         {% block javascripts %}
-            {% do assets.add('jquery', 101) %}
+            {% do assets.add('jquery', 102) %}
+            {% do assets.add('theme://js/bootstrap.min.js', 101) %}
             {% do assets.add('theme://js/modernizr-custom.js', 100) %}
             {% do assets.add('theme://js/site.js', {group:'bottom'}) %}
             {# load custom js - hibbittsdesign.org #}
