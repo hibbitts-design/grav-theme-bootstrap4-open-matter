@@ -1,3 +1,9 @@
+# v3.7.2
+## 03/10/2021
+
+1. [](#bugfix)
+    * Fixed incorrect appearance of hover and focus on dropdown menu items
+
 # v3.7.1
 ## 03/08/2021
 
