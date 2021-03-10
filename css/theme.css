@@ -36,12 +36,12 @@ a:hover:not(.btn):not(.badge):not(.navbar-brand):not(.nav-link), a:focus:not(.bt
 }
 */
 
-a:not(.btn):not(.badge):not(.navbar-brand) {
+a:not(.btn, .badge, .navbar-brand, .dropdown-item) {
   color: #1b6ec2;
   text-decoration: none;
 }
 
-a:hover:not(.btn):not(.badge):not(.navbar-brand):not(.nav-link), a:focus:not(.btn):not(.badge):not(.navbar-brand):not(.nav-link) {
+a:hover:not(.btn, .badge, .navbar-brand, .nav-link), a:focus:not(.btn, .badge, .navbar-brand, .nav-link) {
   color: #008EE2;
 }
 
