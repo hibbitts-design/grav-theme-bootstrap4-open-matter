@@ -1,3 +1,9 @@
+# v3.7.3
+## 03/19/2021
+
+1. [](#improved)
+    * Removed display of Anchors Plugin link icons on Topics pages
+
 # v3.7.2
 ## 03/10/2021
 
