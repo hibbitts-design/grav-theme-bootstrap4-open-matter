@@ -395,6 +395,10 @@ body.chromeless {
     background: #666666;
 }
 
+.topics .anchorjs-link {
+    display: none;
+}
+
 div.keeptogether {
    display: inline-block;
    width: 100%;
