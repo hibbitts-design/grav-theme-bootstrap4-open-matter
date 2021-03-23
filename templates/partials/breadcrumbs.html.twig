@@ -1,5 +1,12 @@
-{% set crumbs = breadcrumbs.get() %}
+{% set plugincrumbs = breadcrumbs.get() %}
 {% set breadcrumbs_config = config.plugins.breadcrumbs %}
+
+{% set crumbs = [] %}
+{% for crumb in plugincrumbs %}
+   {% if ( crumb.template != "subsitelist" and crumb.template != "subsitegroup"  and crumb.template != "subsite" ) %}
+    {% set crumbs = crumbs|merge([crumb]) %}
+   {% endif %}
+{% endfor %}
 
 {% if crumbs|length > 1 or breadcrumbs_config.show_all %}
     <nav aria-label="breadcrumb">
