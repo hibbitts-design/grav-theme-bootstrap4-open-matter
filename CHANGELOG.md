@@ -1,3 +1,9 @@
+# v3.7.7
+## 06/16/2021
+
+1. [](#new)
+    * Adjusted custom list bullet presentation
+
 # v3.7.6
 ## 04/29/2021
 
