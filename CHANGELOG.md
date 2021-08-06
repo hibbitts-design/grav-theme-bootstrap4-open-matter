@@ -1,3 +1,9 @@
+# v3.7.8
+## 08/06/2021
+
+1. [](#bugfix)
+    * Added check for <a> (anchor tag) without href attribute
+
 # v3.7.7
 ## 06/16/2021
 
