@@ -6,7 +6,7 @@ $(document).ready(function(){
   $('a[target="_top"]').addClass("external-link");
 
   $('.container').on('click', 'a:not(.external-link):not([href^="#"])', function(e){
-     if ($(this).attr('rel') != 'lightbox'){
+     if (($(this).attr('rel') != 'lightbox') && ($(this).attr('href') != null)) {
       e.preventDefault();
       var url  = window.location.href;
       var newurl = $(this).attr('href');
