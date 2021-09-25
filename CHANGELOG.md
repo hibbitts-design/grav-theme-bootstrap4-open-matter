@@ -1,3 +1,9 @@
+# v3.7.9
+## 09/25/2021
+
+1. [](#improved)
+    * Relocated support for NextGen Editor custom media embeds to 'site.js' file to properly support script asset loading
+
 # v3.7.8
 ## 08/06/2021
 
