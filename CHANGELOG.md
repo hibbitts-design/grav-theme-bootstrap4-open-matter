@@ -1,3 +1,9 @@
+# v3.8.1
+## 04/26/2022
+
+1. [](#improved)
+    * Updated example Canvas LMS link colour to the most recent release of Canvas
+
 # v3.8.0
 ## 04/26/2022
 
