@@ -24,10 +24,10 @@ body {
 /* CSS to better match link colors with Canvas LMS (place in custom.css and uncomment) */
 /*
 a:not(.btn):not(.badge):not(.navbar-brand) {
-  color: #008EE2;
+  color: #0374B5;
 }
 a:hover:not(.btn):not(.badge):not(.navbar-brand):not(.nav-link), a:focus:not(.btn):not(.badge):not(.navbar-brand):not(.nav-link) {
-  color: #008EE2;
+  color: #0374B5;
 }
 .btn-primary {
   color: #fff;
@@ -42,7 +42,7 @@ a:not(.btn, .badge, .navbar-brand, .dropdown-item) {
 }
 
 a:hover:not(.btn, .badge, .navbar-brand, .nav-link), a:focus:not(.btn, .badge, .navbar-brand, .nav-link) {
-  color: #008EE2;
+  color: #0374B5;
 }
 
 .page-link {
