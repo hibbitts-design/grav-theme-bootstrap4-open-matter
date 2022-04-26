@@ -98,7 +98,7 @@
             </ul>
           </div>
 
-          {% if show_sidebar and not(grav.uri.param('chromeless') or grav.uri.param('embedded') or theme_var('chromeless.enabled')) %}
+          {% if show_sidebar and not(grav.uri.param('chromeless') or grav.uri.param('embedded') or grav.uri.param('standalone') or theme_var('chromeless.enabled')) %}
             <div class="col-md-5 blog-main order-first order-md-2">
             {% else %}
               <div class="col-md-9 blog-main order-first order-md-2">
@@ -194,7 +194,7 @@
               {% endif %}
 
               {# Creative Commons License -  hibbittsdesign.org #}
-              {% if not(grav.uri.param('chromeless') or grav.uri.param('embedded')) and not(theme_var('chromeless.enabled')) and (theme_var('cc_license.enabled') and not(page.header.hide_cc_license)) %}
+              {% if not(grav.uri.param('chromeless') or grav.uri.param('embedded') or grav.uri.param('standalone')) and not(theme_var('chromeless.enabled')) and (theme_var('cc_license.enabled') and not(page.header.hide_cc_license)) %}
                 <p>{% include 'partials/creative_commons_license.html.twig' %}</p>
               {% endif %}
 
@@ -208,7 +208,7 @@
             </div>
 
             {# check content display flag - hibbittsdesign.org #}
-            {% if show_sidebar and not(grav.uri.param('chromeless') or grav.uri.param('embedded') or theme_var('chromeless.enabled')) %}
+            {% if show_sidebar and not(grav.uri.param('chromeless') or grav.uri.param('embedded') or grav.uri.param('standalone') or theme_var('chromeless.enabled')) %}
               <div class="col-md-4 blog-sidebar order-last">
                 {% include 'partials/sidebar.html.twig' with {
                   'blog' : page

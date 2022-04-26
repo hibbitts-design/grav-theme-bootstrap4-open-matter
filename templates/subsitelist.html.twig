@@ -21,7 +21,7 @@
   {% block content %}
 
     {# check content display flag - hibbittsdesign.org #}
-    {% if not(grav.uri.param('chromeless') or grav.uri.param('embedded')) and not(theme_var('chromeless.enabled')) %}
+    {% if not(grav.uri.param('chromeless') or grav.uri.param('embedded') or grav.uri.param('standalone')) and not(theme_var('chromeless.enabled')) %}
       {# check for hero image - hibbittsdesign.org #}
       {% if header_image_media is not empty %}
         {% include 'partials/hero.html.twig' %}
@@ -32,7 +32,7 @@
       <div class="container">
         <div class="row">
           {# check content display flag - hibbittsdesign.org #}
-          {% if not(grav.uri.param('chromeless') or grav.uri.param('embedded')) and not(theme_var('chromeless.enabled')) and (show_sidebar) %}
+          {% if not(grav.uri.param('chromeless') or grav.uri.param('embedded') or grav.uri.param('standalone')) and not(theme_var('chromeless.enabled')) and (show_sidebar) %}
             <div class="col-md-8 blog-main">
             {% else %}
               <div class="col-md-12 blog-main">
@@ -124,7 +124,7 @@
               </div>
 
               {# Creative Commons License -  hibbittsdesign.org #}
-              {% if not (grav.uri.param('chromeless') or grav.uri.param('embedded')) and not(theme_var('chromeless.enabled')) and (theme_var('cc_license.enabled') and not(page.header.hide_cc_license)) %}
+              {% if not (grav.uri.param('chromeless') or grav.uri.param('embedded') or grav.uri.param('standalone')) and not(theme_var('chromeless.enabled')) and (theme_var('cc_license.enabled') and not(page.header.hide_cc_license)) %}
                 <p>{% include 'partials/creative_commons_license.html.twig' %}</p>
               {% endif %}
               {# Git repository edit link -  hibbittsdesign.org #}
@@ -135,7 +135,7 @@
             </div>
 
             {# Check content display flag - hibbittsdesign.org #}
-            {% if not(grav.uri.param('chromeless') or grav.uri.param('embedded')) and not(theme_var('chromeless.enabled')) and (show_sidebar) %}
+            {% if not(grav.uri.param('chromeless') or grav.uri.param('embedded') or grav.uri.param('standalone')) and not(theme_var('chromeless.enabled')) and (show_sidebar) %}
               <div class="col-md-4 blog-sidebar">
                 {% include 'partials/sidebar.html.twig' with {
                   'blog' : page

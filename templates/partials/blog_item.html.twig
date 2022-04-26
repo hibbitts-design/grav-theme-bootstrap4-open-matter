@@ -156,7 +156,7 @@
               {% endif %}
 
               {# Creative Commons License -  hibbittsdesign.org #}
-              {% if not (grav.uri.param('chromeless') or grav.uri.param('embedded')) and not(theme_var('chromeless.enabled')) and (theme_var('cc_license.enabled') and not(page.header.hide_cc_license) and not (grav.uri.param('onlysummary') or grav.uri.param('summaryonly'))) %}
+              {% if not (grav.uri.param('chromeless') or grav.uri.param('embedded') or grav.uri.param('standalone')) and not(theme_var('chromeless.enabled')) and (theme_var('cc_license.enabled') and not(page.header.hide_cc_license) and not (grav.uri.param('onlysummary') or grav.uri.param('summaryonly'))) %}
                 <p>{% include 'partials/creative_commons_license.html.twig' %}</p>
               {% endif %}
 
@@ -189,7 +189,7 @@
         {% endif %}
 
         {# added check for content display flag - hibbittsdesign.org #}
-        {% if show_prev_next and not (grav.uri.param('chromeless') or grav.uri.param('embedded') or theme_var('chromeless.enabled')) %}
+        {% if show_prev_next and not (grav.uri.param('chromeless') or grav.uri.param('embedded') or grav.uri.param('standalone') or theme_var('chromeless.enabled')) %}
             <p class="text-center mt-4">
                 {% if not page.isLast %}
                     <a class="btn btn-primary" href="{{ page.prevSibling.url }}"><i class="fa fa-chevron-left"></i> {{ 'BLOG.ITEM.PREV_POST'|t }}</a>

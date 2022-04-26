@@ -76,7 +76,7 @@
             {% do assets.addCss('theme://css/theme.css') %}
             {% do assets.addCss('theme://css/custom.css') %}
 
-            {% if ((grav.uri.param('chromeless') or grav.uri.param('embedded')) or theme_var('chromeless.enabled')) %}
+            {% if ((grav.uri.param('chromeless') or grav.uri.param('embedded') or grav.uri.param('standalone')) or theme_var('chromeless.enabled')) %}
               {% do assets.addInlineCss('.chromeless-show{display:block}.chromeless-hide{display:none}') %}
             {% endif %}
         {% endblock %}
@@ -103,10 +103,10 @@
         {% endblock head %}
     </head>
 
-    <body class="{% block body_classes %}{{ page.header.body_classes }}{% if (grav.uri.param('chromeless') or grav.uri.param('embedded')) or (theme_var('chromeless.enabled')) %} chromeless{% endif %}{% endblock %}">
+    <body class="{% block body_classes %}{{ page.header.body_classes }}{% if (grav.uri.param('chromeless') or grav.uri.param('embedded') or grav.uri.param('standalone')) or (theme_var('chromeless.enabled')) %} chromeless{% endif %}{% endblock %}">
 
         {# check content display flag - hibbittsdesign.org #}
-        {% if not (grav.uri.param('chromeless') or grav.uri.param('embedded')) and not(theme_var('chromeless.enabled')) %}
+        {% if not (grav.uri.param('chromeless') or grav.uri.param('embedded') or grav.uri.param('standalone')) and not(theme_var('chromeless.enabled')) %}
 
           {% if config.plugins.langswitcher.enabled %}
               {% include 'partials/langswitcher.html.twig' %}
@@ -120,7 +120,7 @@
         {% block content %}{% endblock %}
         {% block pagination %}{% endblock %}
 
-        {% if not (grav.uri.param('chromeless') or grav.uri.param('embedded')) and not(theme_var('chromeless.enabled')) %}
+        {% if not (grav.uri.param('chromeless') or grav.uri.param('embedded') or grav.uri.param('standalone')) and not(theme_var('chromeless.enabled')) %}
           <div class="footer">
               <div class="container">
                 {% if page.find('/footer').header.footer_scroll %}
