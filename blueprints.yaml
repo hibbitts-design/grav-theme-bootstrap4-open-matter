@@ -1,13 +1,13 @@
 name: 'Bootstrap4 Open Matter'
 type: theme
 slug: bootstrap4-open-matter
-version: 3.8.2
+version: 3.8.3
 description: "A custom version of the Bootstrap4 theme for open blogs, course hubs and more. Includes Git Sync and 'chromeless' content embedding."
 icon: bold
 author:
-    name: 'Hibbitts Design'
+    name: 'HibbittsDesign.org'
     email: hello@hibbittsdesign.org
-    url: 'http://hibbittsdesign.org'
+    url: 'https://hibbittsdesign.org'
 homepage: 'https://github.com/hibbitts-design/grav-theme-bootstrap4-open-matter'
 demo: 'https://demo.hibbittsdesign.org/grav-theme-bootstrap4-open-matter/'
 docs: 'https://github.com/hibbitts-design/grav-theme-bootstrap4-open-matter/blob/master/README.md'
