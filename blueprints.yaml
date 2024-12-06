@@ -24,7 +24,7 @@ dependencies:
   - page-inject
   - pagination
   - shortcode-core
-  - twigfeeds
+  - { name: twigfeeds, version: '=4.0.1' }
   - twigpcre
   - youtube
   - bootstrap4
