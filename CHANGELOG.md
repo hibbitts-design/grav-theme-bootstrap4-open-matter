@@ -1,8 +1,9 @@
 # v3.8.3
-## XX/XX/2024
+## 12/06/2024
 
 1. [](#improved)
     * Changed theme author information to HibbittsDesign.org
+    * Set version 4.0.1 of TwigFeeds plugin as dependency
 
 # v3.8.2
 ## 11/22/2022
