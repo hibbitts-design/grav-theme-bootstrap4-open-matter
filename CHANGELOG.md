@@ -1,3 +1,9 @@
+# v3.8.4
+## 08/25/2025
+
+1. [](#improved)
+    * Updated demo pages in theme '_demo' folder
+
 # v3.8.3
 ## 12/06/2024
 
