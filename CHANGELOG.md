@@ -1,3 +1,9 @@
+# v4.0.2
+## XX/XX/2025
+
+1. [](#improved)
+    * Updated demo pages in theme '_demo' folder
+    
 # v4.0.1
 ## 08/31/2025
 
