@@ -36,6 +36,22 @@ a:hover:not(.btn):not(.badge):not(.navbar-brand):not(.nav-link), a:focus:not(.bt
 }
 */
 
+/* CSS to style Presentation Plugin slides (place in custom.css and uncomment) */
+/*
+.reveal .slides {
+    text-align: left;
+}
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+    text-transform: unset !important;
+}
+.reveal .slides section section img {
+    margin: auto;
+}
+.reveal .slides section section .link-overlay:focus, .reveal .slides section section .link-overlay:hover {
+  outline: none!important;
+}
+*/
+
 /* Dark Theme CSS generated/assisted by Anthropic Claude AI, determined by System OS setting (place in custom.css and uncomment to use) */
 /*
 @media (prefers-color-scheme: dark) {
@@ -485,7 +501,7 @@ right: 0;
 }
 
 #accordion h2, .h2 {
-    font-size: 1.70rem;
+    font-size: 18px;
 }
 
 .header h1 {
