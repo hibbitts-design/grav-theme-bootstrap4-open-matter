@@ -2,7 +2,7 @@
 ## 08/31/2025
 
 1. [](#new)
-    * Refreshed theme (theme-2025.css), including optional dark mode 
+    * Refreshed theme (theme-2025.css), including optional dark mode. Original theme still available (theme-classic.css).
 
 # v3.8.4
 ## 08/25/2025
