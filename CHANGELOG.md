@@ -5,6 +5,7 @@
     * Added 2026 Style theme with accessibility and rendering refinements, plus Dark Mode option for all theme styles. 2025 Style and Classic Style still available via theme settings.
 1. [](#improved)
     * Removed Bootswatch theme stylesheets. Sites using a custom Bootswatch theme should switch to a Theme Style option.
+    * Existing mytheme installations require manual update of mytheme.yaml and mytheme/blueprints.yaml to surface new Theme Style and Dark Mode options.
 
 # v4.0.2
 ## 09/01/2025
