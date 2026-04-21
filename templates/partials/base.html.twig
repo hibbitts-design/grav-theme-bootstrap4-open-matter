@@ -62,18 +62,14 @@
 
         {% block stylesheets %}
             {# load theme.css and custom.css files - hibbittsdesign.org #}
-            {% if theme.theme_stylesheet is defined and theme_var('theme_stylesheet') is not empty %}
-              {% if theme_var('theme_stylesheet') != 'default' %}
-                {% do assets.addCss("theme://css/bootswatch/#{ theme_var('theme_stylesheet') }/bootstrap.min.css", 100) %}
-              {% else %}
-                {% do assets.addCss('theme://css/bootstrap/bootstrap.min.css') %}
-              {% endif %}
-            {% else %}
-              {% do assets.addCss('theme://css/bootstrap/bootstrap.min.css') %}
-            {% endif %}
+            {% do assets.addCss('theme://css/bootstrap/bootstrap.min.css') %}
             {% do assets.add('theme://css/font-awesome.min.css') %}
             {% do assets.add('theme://css-compiled/theme.css') %}
-            {% do assets.addCss('theme://css/theme-2025.css') %}
+            {% set active_theme_css = theme_var('theme_css') ?: '2025' %}
+            {% do assets.addCss('theme://css/theme-' ~ active_theme_css ~ '.css') %}
+            {% if theme_var('dark_mode.enabled') %}
+              {% do assets.addCss('theme://css/theme-' ~ active_theme_css ~ '-dark.css') %}
+            {% endif %}
             {% do assets.addCss('theme://css/custom.css') %}
 
             {% if ((grav.uri.param('chromeless') or grav.uri.param('embedded') or grav.uri.param('standalone')) or theme_var('chromeless.enabled')) %}

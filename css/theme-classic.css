@@ -121,7 +121,7 @@ h5, .h5 {
 }
 
 h6, .h6 {
-  font-size: 1 rem;
+  font-size: 1rem;
 }
 
 .hidden {
@@ -319,8 +319,7 @@ img.right {
 
 img.center {
   display:block;
-  margin:10px
-  auto;
+  margin:10px auto;
 }
 
 figure.image-caption {

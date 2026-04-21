@@ -1,66 +1,20 @@
 /*
 ===============================================================================================================================
-Refreshed Theme CSS.
+2026 Refresh Theme CSS.
 ===============================================================================================================================
 */
 
-/* CSS to set NavBar items to white (place in custom.css and uncomment) */
-/*
-.bg-primary .navbar-nav .active>.nav-link
-{
-    color: #FFFFFF !important;
-}
-*/
-
-/* CSS to better match font family with Canvas LMS (place in custom.css and uncomment) */
-/*
-@import url('https://fonts.googleapis.com/css?family=Lato');
-body {
-  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 16px;
-}
-*/
-
-/* CSS to better match link colors with Canvas LMS (place in custom.css and uncomment) */
-/*
-a:not(.btn):not(.badge):not(.navbar-brand) {
-  color: #0374B5;
-}
-a:hover:not(.btn):not(.badge):not(.navbar-brand):not(.nav-link), a:focus:not(.btn):not(.badge):not(.navbar-brand):not(.nav-link) {
-  color: #0374B5;
-}
-.btn-primary {
-  color: #fff;
-  background-color: #3a8ddc!important;
-  border-color: #3a8ddc!important;
-}
-*/
-
-/* CSS to style Presentation Plugin slides (place in custom.css and uncomment) */
-/*
-.reveal .slides {
-    text-align: left;
-}
-.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-    text-transform: unset !important;
-}
-.reveal .slides section section img {
-    margin: auto;
-}
-.reveal .slides section section .link-overlay:focus, .reveal .slides section section .link-overlay:hover {
-  outline: none!important;
-}
-*/
-
-/* Dark mode is available via theme-2025-dark.css — enable with the Dark Mode toggle in theme settings. */
-
 a:not(.btn, .badge, .navbar-brand, .dropdown-item) {
   color: #1b6ec2;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.2s ease;
 }
 
 a:hover:not(.btn, .badge, .navbar-brand, .nav-link), a:focus:not(.btn, .badge, .navbar-brand, .nav-link) {
   color: #0374B5;
+  text-decoration-color: currentColor;
 }
 
 .page-link {
@@ -83,6 +37,9 @@ a:hover:not(.btn, .badge, .navbar-brand, .nav-link), a:focus:not(.btn, .badge, .
     color: #374151;
     background-color: #f9fafb;
     border-color: #d1d5db;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
 }
 
 .btn-primary {
@@ -105,6 +62,7 @@ a:hover:not(.btn, .badge, .navbar-brand, .nav-link), a:focus:not(.btn, .badge, .
     border-color: #10b981;
     border-radius: 8px;
     font-weight: 500;
+    transition: all 0.2s ease;
 }
 
 .btn-info {
@@ -113,6 +71,7 @@ a:hover:not(.btn, .badge, .navbar-brand, .nav-link), a:focus:not(.btn, .badge, .
     border-color: #06b6d4;
     border-radius: 8px;
     font-weight: 500;
+    transition: all 0.2s ease;
 }
 
 .btn-warning {
@@ -121,6 +80,7 @@ a:hover:not(.btn, .badge, .navbar-brand, .nav-link), a:focus:not(.btn, .badge, .
     border-color: #f59e0b;
     border-radius: 8px;
     font-weight: 500;
+    transition: all 0.2s ease;
 }
 
 .btn-danger {
@@ -129,6 +89,7 @@ a:hover:not(.btn, .badge, .navbar-brand, .nav-link), a:focus:not(.btn, .badge, .
     border-color: #ef4444;
     border-radius: 8px;
     font-weight: 500;
+    transition: all 0.2s ease;
 }
 
 .btn-link {
@@ -137,16 +98,19 @@ a:hover:not(.btn, .badge, .navbar-brand, .nav-link), a:focus:not(.btn, .badge, .
 
 h1, .h1 {
   font-size: 1.95rem;
+  line-height: 1.2;
   letter-spacing: -0.025em;
 }
 
 h2, .h2 {
   font-size: 1.70rem;
+  line-height: 1.3;
   letter-spacing: -0.025em;
 }
 
 h3, .h3 {
   font-size: 1.45rem;
+  letter-spacing: -0.015em;
 }
 
 h4, .h4 {
@@ -167,6 +131,8 @@ body {
     font-size: 18px;
     line-height: 1.6;
     color: #374151;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .main-content {
@@ -186,15 +152,11 @@ body {
 .myheader {
     background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
     background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     background-position: center;
     width: auto;
     height: 280px;
 }
-
 
 .card {
     border: 1px solid #e5e7eb;
@@ -254,19 +216,19 @@ h4, .h4, h5, .h5 {
     margin-bottom: 30px;
 }
 
-@media only screen and (min-width: 960px) and (max-width: 1140px) {
+@media (min-width: 960px) and (max-width: 1140px) {
   .myheader {
       height: 250px;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 960px) {
+@media (min-width: 768px) and (max-width: 960px) {
   .myheader {
       height: 220px;
   }
 }
 
-@media only screen and (min-width: 576px) and (max-width: 768px) {
+@media (min-width: 576px) and (max-width: 768px) {
   .myheader {
       height: 180px;
   }
@@ -275,9 +237,16 @@ h4, .h4, h5, .h5 {
   }
 }
 
-@media only screen and (max-width: 576px) {
+@media (max-width: 576px) {
   .myheader {
       height: 130px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+      transition: none!important;
+      animation: none!important;
   }
 }
 
@@ -343,7 +312,7 @@ right: 0;
   color: #ccc;
 }
 
-#accordion h2, .h2 {
+#accordion h2 {
     font-size: 18px;
 }
 
