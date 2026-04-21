@@ -1,3 +1,11 @@
+# v5.0.0
+## 04/21/2026
+
+1. [](#new)
+    * Added 2026 Style theme with accessibility and rendering refinements, plus Dark Mode option for all theme styles. 2025 Style and Classic Style still available via theme settings.
+1. [](#improved)
+    * Removed Bootswatch theme stylesheets. Sites using a custom Bootswatch theme should switch to a Theme Style option.
+
 # v4.0.2
 ## 09/01/2025
 
