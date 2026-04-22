@@ -1,3 +1,9 @@
+# v5.0.1
+## XX/XX/2026
+
+1. [](#improved)
+    * Update card image to use aspect-ratio 16/9 for consistent display across screen sizes
+
 # v5.0.0
 ## 04/21/2026
 
