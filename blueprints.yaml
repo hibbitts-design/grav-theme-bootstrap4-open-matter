@@ -1,7 +1,7 @@
 name: 'Bootstrap4 Open Matter'
 type: theme
 slug: bootstrap4-open-matter
-version: 5.0.1
+version: 5.0.2
 description: "A customized version of the Bootstrap4 theme for open blogs, course hubs and more. Includes Git Sync and 'chromeless' content display for seamless embedding."
 icon: bold
 author:
@@ -125,9 +125,8 @@ form:
               label: 'Theme Style'
               default: '2026'
               options:
-                '2026': '2026 Style'
-                '2025': '2025 Style'
-                classic: 'Classic Style'
+                '2026': '2026 Refresh'
+                classic: Classic
             dark_mode.enabled:
               type: toggle
               label: 'Dark Mode'
