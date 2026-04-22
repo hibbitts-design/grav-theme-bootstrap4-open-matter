@@ -3,6 +3,7 @@
 
 1. [](#improved)
     * Update card image to use aspect-ratio 16/9 for consistent display across screen sizes
+    * Updated card layout to responsively transition from three to two to one column as screen width decreases.
 
 # v5.0.0
 ## 04/21/2026
