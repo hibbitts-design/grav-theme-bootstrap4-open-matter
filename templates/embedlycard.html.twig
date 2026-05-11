@@ -22,7 +22,11 @@
 {% endif %}
 {% endif %}
 {% endif %}
-<a class="embedly-card" data-card-controls="0" data-card-align="{{page.header.embedly_card_alignment}}"{% if theme_var('dark_mode.enabled') %} data-card-theme="dark"{% endif %} href="{{ page.header.embedly_card_url}}" >{{ page.header.embedly_card_title }}</a>
+{% set dark_mode_mode = theme_var('dark_mode.mode') %}
+<a class="embedly-card" data-card-controls="0" data-card-align="{{page.header.embedly_card_alignment}}"{% if dark_mode_mode == 'enabled' %} data-card-theme="dark"{% endif %} href="{{ page.header.embedly_card_url}}" >{{ page.header.embedly_card_title }}</a>
+{% if dark_mode_mode == 'auto' %}
+<script>if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){document.querySelectorAll('a.embedly-card').forEach(function(e){e.setAttribute('data-card-theme','dark')})}</script>
+{% endif %}
 <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 </p>
 </div>

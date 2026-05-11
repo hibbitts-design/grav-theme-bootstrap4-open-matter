@@ -67,7 +67,7 @@
             {% do assets.add('theme://css-compiled/theme.css') %}
             {% set active_theme_css = theme_var('theme_css') ?: '2025' %}
             {% do assets.addCss('theme://css/theme-' ~ active_theme_css ~ '.css') %}
-            {% if theme_var('dark_mode.enabled') %}
+            {% if theme_var('dark_mode.mode') == 'enabled' %}
               {% do assets.addCss('theme://css/theme-' ~ active_theme_css ~ '-dark.css') %}
             {% endif %}
             {% do assets.addCss('theme://css/custom.css') %}
@@ -93,6 +93,9 @@
 
         {% block assets deferred %}
             {{ assets.css()|raw }}
+            {% if theme_var('dark_mode.mode') == 'auto' %}
+              <link rel="stylesheet" href="{{ url('theme://css/theme-' ~ (theme_var('theme_css') ?: '2025') ~ '-dark.css') }}" media="(prefers-color-scheme: dark)">
+            {% endif %}
             {{ assets.js()|raw }}
         {% endblock %}
 
