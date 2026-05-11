@@ -1,3 +1,9 @@
+# v5.0.4
+## 05/11/2026
+
+1. [](#improved)
+    * Add Embedly card dark mode support with Off/On/Auto (System) setting for bootstrap4-open-matter and mytheme.
+
 # v5.0.3
 ## 05/10/2026
 
