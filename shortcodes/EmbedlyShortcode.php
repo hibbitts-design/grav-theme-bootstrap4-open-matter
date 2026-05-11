@@ -15,8 +15,10 @@ class EmbedlyShortcode extends Shortcode
 
             $embedlycardurl= $sc->getParameter('url', $sc->getBbCode());
 
+            $darkAttr = $this->config->get('theme.dark_mode.enabled') ? ' data-card-theme="dark"' : '';
+
             if ($embedlycardurl) {
-                $output = '<a class="embedly-card" data-card-controls="0" data-card-align="left" href="'.$embedlycardurl.'" ></a><script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>';
+                $output = '<a class="embedly-card" data-card-controls="0" data-card-align="left"' . $darkAttr . ' href="'.$embedlycardurl.'" ></a><script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>';
 
                 return $output;
 
@@ -24,7 +26,7 @@ class EmbedlyShortcode extends Shortcode
 
               if ($str) {
 
-                  return '<a class="embedly-card" data-card-controls="0" data-card-align="left" href="'.$str.'" ></a><script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>';
+                  return '<a class="embedly-card" data-card-controls="0" data-card-align="left"' . $darkAttr . ' href="'.$str.'" ></a><script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>';
 
               }
             }

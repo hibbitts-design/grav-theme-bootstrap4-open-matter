@@ -22,7 +22,7 @@
 {% endif %}
 {% endif %}
 {% endif %}
-<a class="embedly-card" data-card-controls="0" data-card-align="{{page.header.embedly_card_alignment}}" href="{{ page.header.embedly_card_url}}" >{{ page.header.embedly_card_title }}</a>
+<a class="embedly-card" data-card-controls="0" data-card-align="{{page.header.embedly_card_alignment}}"{% if theme_var('dark_mode.enabled') %} data-card-theme="dark"{% endif %} href="{{ page.header.embedly_card_url}}" >{{ page.header.embedly_card_title }}</a>
 <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 </p>
 </div>
