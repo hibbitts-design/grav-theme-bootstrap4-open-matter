@@ -1,3 +1,9 @@
+# v5.0.3
+## 05/10/2026
+
+1. [](#improved)
+    * Add dark mode support for Embedly cards gated on theme dark_mode.enabled option.
+
 # v5.0.2
 ## 04/22/2026
 
