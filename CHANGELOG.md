@@ -1,3 +1,10 @@
+# v5.0.5
+## 06/10/2026
+
+1. [](#bugfix)
+    * Display navbar Logout link text with expected color
+    * Fix accordion formating CSS h2 issue
+
 # v5.0.4
 ## 05/11/2026
 
