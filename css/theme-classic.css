@@ -36,9 +36,14 @@ a:hover:not(.btn):not(.badge):not(.navbar-brand):not(.nav-link), a:focus:not(.bt
 }
 */
 
-a:not(.btn, .badge, .navbar-brand, .dropdown-item) {
+a:not(.btn, .badge, .navbar-brand, .dropdown-item, .nav-link) {
   color: #1b6ec2;
   text-decoration: none;
+}
+
+.navbar-nav .logout {
+    color: inherit;
+    text-decoration: none;
 }
 
 a:hover:not(.btn, .badge, .navbar-brand, .nav-link), a:focus:not(.btn, .badge, .navbar-brand, .nav-link) {
@@ -269,7 +274,7 @@ right: 0;
   color: #ccc;
 }
 
-#accordion h2, .h2 {
+#accordion h2, #accordion .h2 {
     font-size: 1.00rem;
 }
 

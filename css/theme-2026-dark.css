@@ -4,9 +4,14 @@
 ===============================================================================================================================
 */
 
-a:not(.btn, .badge, .navbar-brand, .dropdown-item) {
+a:not(.btn, .badge, .navbar-brand, .dropdown-item, .nav-link) {
     color: #93c5fd;
     text-decoration-color: transparent;
+}
+
+.navbar-nav .logout {
+    color: inherit;
+    text-decoration: none;
 }
 
 a:hover:not(.btn, .badge, .navbar-brand, .nav-link), a:focus:not(.btn, .badge, .navbar-brand, .nav-link) {

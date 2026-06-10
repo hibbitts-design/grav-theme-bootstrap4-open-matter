@@ -4,12 +4,17 @@
 ===============================================================================================================================
 */
 
-a:not(.btn, .badge, .navbar-brand, .dropdown-item) {
+a:not(.btn, .badge, .navbar-brand, .dropdown-item, .nav-link) {
   color: #1b6ec2;
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-color: transparent;
   transition: text-decoration-color 0.2s ease;
+}
+
+.navbar-nav .logout {
+  color: inherit;
+  text-decoration: none;
 }
 
 a:hover:not(.btn, .badge, .navbar-brand, .nav-link), a:focus:not(.btn, .badge, .navbar-brand, .nav-link) {
