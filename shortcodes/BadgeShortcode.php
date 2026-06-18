@@ -8,6 +8,9 @@ class BadgeShortcode extends Shortcode
 {
     public function init()
     {
+        if ($this->shortcode->getHandlers()->has('badge')) {
+            return;
+        }
         $this->shortcode->getHandlers()->add('badge', function(ShortcodeInterface $sc) {
 
             // Get shortcode content and parameters
