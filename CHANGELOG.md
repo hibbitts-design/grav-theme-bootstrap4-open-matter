@@ -1,3 +1,9 @@
+# v5.0.7
+## 06/17/2026
+
+1. [](#bugfix)
+    * Replace any pre-registered badge shortcode handler with the theme's own to ensure compatibility
+
 # v5.0.6
 ## 06/17/2026
 
