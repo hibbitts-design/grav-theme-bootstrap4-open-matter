@@ -1,3 +1,9 @@
+# v5.0.6
+## 06/17/2026
+
+1. [](#bugfix)
+    * Guard against duplicate badge shortcode registration introduced in shortcode-core v6.0.0
+
 # v5.0.5
 ## 06/10/2026
 
