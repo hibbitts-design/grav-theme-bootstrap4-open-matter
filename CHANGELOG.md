@@ -1,3 +1,9 @@
+# v5.0.9
+## 07/10/2026
+
+1. [](#new)
+    * Add self-hosted [linkpreviewcard] shortcode as a working replacement for legacy Embedly card
+
 # v5.0.8
 ## 07/09/2026
 
