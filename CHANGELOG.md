@@ -1,5 +1,5 @@
-# v5.1.90
-## XX/XX/2026
+# v5.1.0
+## 07/11/2026
 
 1. [](#improved)
     * Fix Grav 2 raw HTML/tagfilter escaping in Embedly, H5P, and Twitter shortcodes by moving embed scripts to the Assets API
