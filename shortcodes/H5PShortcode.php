@@ -16,37 +16,24 @@ class H5PShortcode extends Shortcode
 
             $h5pid = $sc->getParameter('id', $sc->getBbCode());
 
+            $h5psrc = null;
+
             if ($h5pid) {
                 $config = Grav::instance()['config'];
                 $h5proot = $config->get('themes.' . $config->get('system.pages.theme') . '.h5pembedrootpath');
 
-                if (strpos($h5proot, 'h5p.com') !== false) {
-                    $output = '<p><iframe src="'.$h5proot.''.$h5pid.'/embed" width="400" height="300" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script></p>';
-                } else {
-                    $output = '<p><iframe src="'.$h5proot.''.$h5pid.'" width="400" height="300" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script></p>';
-                }
-
-                return $output;
-
+                $h5psrc = (strpos($h5proot, 'h5p.com') !== false)
+                    ? $h5proot . $h5pid . '/embed'
+                    : $h5proot . $h5pid;
             } else {
+                $h5purl = $sc->getParameter('url', $sc->getBbCode());
+                $h5psrc = $h5purl ?: $str;
+            }
 
-                $h5purl= $sc->getParameter('url', $sc->getBbCode());
+            if ($h5psrc) {
+                $this->grav['assets']->addJs('https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js');
 
-                if ($h5purl) {
-                    $output = '<p><iframe src="'.$h5purl.'" width="400" height="300" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script></p>';
-
-                    return $output;
-
-                } else {
-
-                    if ($str) {
-                        $output = '<p><iframe src="'.$str.'" width="400" height="300" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script></p>';
-
-                        return $output;
-                    }
-
-                }
-
+                return '<p><iframe src="' . $h5psrc . '" width="400" height="300" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>';
             }
 
         });
