@@ -1,3 +1,11 @@
+# v5.1.1
+## 08/02/2026
+
+1. [](#bugfix)
+    * Handle unreachable Embedly URLs with a clear "no longer available" link instead of a silent broken card
+    * Explicitly zero out image margin sides in the link preview card, for defensive consistency across any theme this shortcode is bundled with
+
+
 # v5.1.0
 ## 07/11/2026
 
