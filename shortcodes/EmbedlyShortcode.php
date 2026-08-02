@@ -1,11 +1,16 @@
 <?php
 namespace Grav\Plugin\Shortcodes;
 
+use Grav\Common\Grav;
+use Grav\Common\HTTP\Client;
 use Grav\Common\Utils;
 use Thunder\Shortcode\Shortcode\ShortcodeInterface;
 
 class EmbedlyShortcode extends Shortcode
 {
+    const REACHABLE_CACHE_SECONDS = 604800;   // 7 days
+    const UNREACHABLE_CACHE_SECONDS = 3600;   // 1 hour
+
     public function init()
     {
         $this->shortcode->getHandlers()->add('embedly', function(ShortcodeInterface $sc) {
@@ -23,19 +28,72 @@ class EmbedlyShortcode extends Shortcode
                 return '';
             }
 
-            $mode = $this->config->get('theme.dark_mode.mode', 'disabled');
-            $darkAttr = ($mode === 'enabled') ? ' data-card-theme="dark"' : '';
+            $title = $sc->getParameter('title', '');
+            $align = $sc->getParameter('align', 'left');
 
-            if ($mode === 'auto') {
-                $this->grav['assets']->addInlineJs(
-                    "if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){document.querySelectorAll('a.embedly-card').forEach(function(e){e.setAttribute('data-card-theme','dark')})}"
-                );
-            }
-
-            $this->grav['assets']->addJs('//cdn.embedly.com/widgets/platform.js', ['loading' => 'async']);
-
-            return '<a class="embedly-card" data-card-controls="0" data-card-align="left"' . $darkAttr . ' href="' . $embedlycardurl . '"></a>';
+            return static::renderCard($embedlycardurl, $this->config->get('theme.dark_mode.mode', 'disabled'), $align, $title);
 
         });
+    }
+
+    /**
+     * Renders the embedly-card anchor, or a plain "unavailable" link if the target
+     * URL isn't reachable. Shared by the shortcode and the standalone embedlycard
+     * page type template, so both stay in sync automatically. $align/$title are only
+     * used by the page type (the shortcode has no way to set them).
+     */
+    public static function renderCard(string $embedlycardurl, string $mode, string $align = 'left', string $title = ''): string
+    {
+        $safeUrl = htmlspecialchars($embedlycardurl, ENT_QUOTES);
+
+        if (!static::isUrlReachable($embedlycardurl)) {
+            return '<a class="embedly-card embedly-card-unavailable" href="' . $safeUrl . '" target="_blank" rel="nofollow noopener noreferrer">This linked content is no longer available</a>';
+        }
+
+        $darkAttr = ($mode === 'enabled') ? ' data-card-theme="dark"' : '';
+        $safeAlign = htmlspecialchars($align ?: 'left', ENT_QUOTES);
+        $safeTitle = htmlspecialchars($title, ENT_QUOTES);
+
+        if ($mode === 'auto') {
+            Grav::instance()['assets']->addInlineJs(
+                "if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){document.querySelectorAll('a.embedly-card').forEach(function(e){e.setAttribute('data-card-theme','dark')})}"
+            );
+        }
+
+        Grav::instance()['assets']->addJs('//cdn.embedly.com/widgets/platform.js', ['loading' => 'async']);
+
+        return '<a class="embedly-card" data-card-controls="0" data-card-align="' . $safeAlign . '"' . $darkAttr . ' href="' . $safeUrl . '">' . $safeTitle . '</a>';
+    }
+
+    public static function isUrlReachable(string $url): bool
+    {
+        if (!preg_match('#^https?://#i', $url)) {
+            return false;
+        }
+
+        $cache = Grav::instance()['cache'];
+        $cacheKey = 'embedly-reachable-' . md5($url);
+        $cached = $cache->fetch($cacheKey);
+
+        if ($cached !== false) {
+            return (bool) $cached['reachable'];
+        }
+
+        $isReachable = false;
+
+        try {
+            $response = Client::getClient()->request('GET', $url, ['timeout' => 5]);
+            $isReachable = $response->getStatusCode() === 200;
+        } catch (\Exception $e) {
+            $isReachable = false;
+        }
+
+        $cache->save(
+            $cacheKey,
+            ['reachable' => $isReachable],
+            $isReachable ? self::REACHABLE_CACHE_SECONDS : self::UNREACHABLE_CACHE_SECONDS
+        );
+
+        return $isReachable;
     }
 }
