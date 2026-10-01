@@ -1,3 +1,10 @@
+# v5.2.1
+## XX/XX/2026
+
+1. [](#improved)
+    * Rewrote README in streamlined style with single screenshot, with demo links now pointing to the Open Course Hub demo
+    * Removed unused README image (assets/readme_1.png)
+
 # v5.2.0
 ## 10/01/2026
 
