@@ -1,5 +1,5 @@
 # v5.1.2
-## XX/XX/2026
+## 10/01/2026
 
 1. [](#bugfix)
     * Git Sync edit links now use the configured remote branch instead of always `master`
