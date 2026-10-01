@@ -12,7 +12,6 @@ Bootstrap4 Open Matter theme is a [Grav](http://github.com/getgrav/grav) inherit
 * Built-in Shortcodes - including Button, Embed.ly, H5P, iFrame, PDF, SpeakerDeck, Swipe and Twitter
 * Featured posts (i.e. sticky posts)
 * Option to toggle page summaries (i.e. summaries are not displayed with page content)
-* Enhanced support for the [Presentation Plugin](https://github.com/OleVik/grav-plugin-presentation)
 * Easy-to-use interface to create custom menubar items
 * Creative Commons license display
 * Web accessibility enhancements (i.e. hidden H1 page titles)

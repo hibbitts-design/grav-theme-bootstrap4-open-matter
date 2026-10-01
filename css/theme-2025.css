@@ -36,22 +36,6 @@ a:hover:not(.btn):not(.badge):not(.navbar-brand):not(.nav-link), a:focus:not(.bt
 }
 */
 
-/* CSS to style Presentation Plugin slides (place in custom.css and uncomment) */
-/*
-.reveal .slides {
-    text-align: left;
-}
-.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-    text-transform: unset !important;
-}
-.reveal .slides section section img {
-    margin: auto;
-}
-.reveal .slides section section .link-overlay:focus, .reveal .slides section section .link-overlay:hover {
-  outline: none!important;
-}
-*/
-
 /* Dark mode is available via theme-2025-dark.css — enable with the Dark Mode toggle in theme settings. */
 
 a:not(.btn, .badge, .navbar-brand, .dropdown-item, .nav-link) {
@@ -411,10 +395,6 @@ figure.caption-left figcaption {
 
 figure.caption-right figcaption {
     text-align: right;
-}
-
-.presentation-list-item {
-    padding-bottom: .25rem;
 }
 
 .pagination {
