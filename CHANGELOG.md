@@ -1,10 +1,19 @@
+# v5.1.2
+## XX/XX/2026
+
+1. [](#bugfix)
+    * Git Sync edit links now use the configured remote branch instead of always `master`
+    * Git Sync edit links now strip only a trailing `.git` from the repository URL (fixes repos such as `name.github.io`)
+    * Fix H5P content title not displaying
+    * Fix latest custom page type ignoring the parent page's content order setting
+    * Only show featured posts that belong to the current blog (previously matched by slug, so same-named blogs in different courses shared featured posts)
+
 # v5.1.1
 ## 08/02/2026
 
 1. [](#bugfix)
     * Handle unreachable Embedly URLs with a clear "no longer available" link instead of a silent broken card
     * Explicitly zero out image margin sides in the link preview card, for defensive consistency across any theme this shortcode is bundled with
-
 
 # v5.1.0
 ## 07/11/2026
