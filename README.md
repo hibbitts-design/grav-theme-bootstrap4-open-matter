@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎓 Bootstrap4 Open Matter
+# 🏫 Bootstrap4 Open Matter
 
 ### Designed to accompany the Open Course Hub and Open MultiCourse Hub Skeletons
 
