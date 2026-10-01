@@ -6,17 +6,17 @@
 {% block content %}
 {# MultiCourse hub compatibility - hibbittsdesign.org #}
 {% if page.find('/' ~ firstfolderofpath).template == 'course' or page.find('/' ~ firstfolderofpath).template == 'subsite' %}
-{% set p = (page.find('/' ~ firstfolderofpath ~ '/' ~ page.parent.slug).children.order('{page.parent.header.content.order.by}', 'desc').visible | first) %}
+{% set p = (page.find('/' ~ firstfolderofpath ~ '/' ~ page.parent.slug).children.order(page.parent.header.content.order.by ?: 'default', 'desc').visible | first) %}
 {% if p is empty %}
-{% set p = (page.find('/' ~ page.parent.slug).children.order('{page.parent.header.content.order.by}', 'desc').visible | first) %}
+{% set p = (page.find('/' ~ page.parent.slug).children.order(page.parent.header.content.order.by ?: 'default', 'desc').visible | first) %}
 {% endif %}
 {% elseif page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).template == 'course' or page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).template == 'subsite' %}
-{% set p = (page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath ~ '/' ~ page.parent.slug).children.order('{page.parent.header.content.order.by}', 'desc').visible | first) %}
+{% set p = (page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath ~ '/' ~ page.parent.slug).children.order(page.parent.header.content.order.by ?: 'default', 'desc').visible | first) %}
 {% if p is empty %}
-{% set p = (page.find('/' ~ page.parent.slug).children.order('{page.parent.header.content.order.by}', 'desc').visible | first) %}
+{% set p = (page.find('/' ~ page.parent.slug).children.order(page.parent.header.content.order.by ?: 'default', 'desc').visible | first) %}
 {% endif %}
 {% else %}
-{% set p = (page.find('/' ~ page.parent.slug).children.order('{page.parent.header.content.order.by}', 'desc').visible | first) %}
+{% set p = (page.find('/' ~ page.parent.slug).children.order(page.parent.header.content.order.by ?: 'default', 'desc').visible | first) %}
 {% endif %}
 {% set templatename = p.template ~ '.html.twig' %}
 {% include templatename with {
