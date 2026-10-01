@@ -16,6 +16,8 @@
 <img alt="Course homepage with weekly reminders, required reading, and a course sidebar with LMS links" src="https://raw.githubusercontent.com/hibbitts-design/grav-theme-bootstrap4-open-matter/refs/heads/master/screenshots/screenshot.webp" width="100%">
 </a>
 
+<p>Open Course Hub – Course homepage</p>
+
 </div>
 
 Bootstrap4 Open Matter adds what open, collaborative course and blog sites need on top of the Bootstrap4 theme: pages that embed cleanly in an LMS, links that open each page's source in your Git repository, and a set of shortcodes and page types for course content.
@@ -29,6 +31,20 @@ Bootstrap4 Open Matter adds what open, collaborative course and blog sites need 
 - **Visual styles** – 2026 Refresh or Classic, with Dark Mode off, on, or following the visitor's system setting
 - **Flexible layout** – a Markdown-based sidebar, NavBar style, colour, position, and breakpoint options, dropdowns, and custom menu items
 - **Open licensing and accessibility** – Creative Commons license display and hidden H1 page titles for screen readers
+
+## When is Bootstrap4 Open Matter a Good Candidate?
+
+Bootstrap4 Open Matter is a good fit when you:
+
+- Want an open course hub or blog with a familiar Bootstrap look
+- Need to embed pages cleanly in an LMS
+- Value Git-based, open authoring of your content
+
+Other options might be better when you:
+
+- Want a more refined course site design – consider [Grav Helios Course Hub](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub)
+- Need only a standard Bootstrap site without these extras – the [Bootstrap4 theme](https://github.com/trilbymedia/grav-theme-bootstrap4) is enough
+- Want zero-server publishing directly from GitHub – consider [Docsify-This](https://docsify-this.net)
 
 ## Quick Start
 
