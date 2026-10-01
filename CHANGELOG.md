@@ -1,3 +1,11 @@
+# v5.2.0
+## 10/01/2026
+
+1. [](#improved)
+    * Removed support for the legacy Presentation plugin (Presentation List page type, presentation blueprints and partials, and related options and CSS)
+    * Removed unused Bootswatch stylesheet files (Bootswatch support was removed in v5.0.0)
+    * Removed legacy NextGen Editor shortcode integration (NextGen Editor has been replaced by Editor Pro)
+
 # v5.1.2
 ## 10/01/2026
 
