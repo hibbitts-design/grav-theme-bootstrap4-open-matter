@@ -8,7 +8,7 @@
 
 [![Grav Discord Chat](https://img.shields.io/discord/501836936584101899.svg?logo=discord&colorB=728ADA&label=Grav%20Discord%20Chat)](https://chat.getgrav.org) [![Latest Release](https://img.shields.io/github/v/release/hibbitts-design/grav-theme-bootstrap4-open-matter?style=flat-square&label=Release)](https://github.com/hibbitts-design/grav-theme-bootstrap4-open-matter/releases/latest) [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/hibbitts-design/grav-theme-bootstrap4-open-matter/blob/master/LICENSE) [![PHP](https://img.shields.io/badge/PHP-%3E%3D8.0.2-8892BF?style=flat-square&logo=php&logoColor=white)](https://learn.getgrav.org/17/basics/requirements)
 
-<p>Try the <a href="https://demo.hibbittsdesign.org/grav-theme-bootstrap4-open-matter/">demo</a></p>
+<p>Try the <a href="https://demo.hibbittsdesign.org/grav-open-course-hub/">demo</a></p>
 
 <p>A free, open-source child theme of the <a href="https://github.com/trilbymedia/grav-theme-bootstrap4">Grav Bootstrap4 theme</a>, built for <a href="https://getgrav.org">Grav CMS</a> with Markdown file-based content, a built-in Admin panel, and no database required. Used by the <a href="https://github.com/hibbitts-design/grav-skeleton-course-hub">Open Course Hub</a> and <a href="https://github.com/hibbitts-design/grav-skeleton-multicourse-hub">Open MultiCourse Hub</a> skeleton packages.</p>
 
