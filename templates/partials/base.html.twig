@@ -80,7 +80,13 @@
         {% endblock %}
 
         {% block javascripts %}
-            {% do assets.add('jquery', 102) %}
+            {# load jQuery, falling back to Grav's bundled jQuery 3 when a site's configured jQuery file no longer exists (e.g. jquery-2.1.4.min.js, removed in Grav 2.0.14) - hibbittsdesign.org #}
+            {% set jquery_asset = config.system.assets.collections.jquery %}
+            {% if jquery_asset is iterable or (jquery_asset and url(jquery_asset)) %}
+                {% do assets.add('jquery', 102) %}
+            {% else %}
+                {% do assets.add('system://assets/jquery/jquery-3.x.min.js', 102) %}
+            {% endif %}
             {% do assets.add('theme://js/bootstrap.min.js', 101) %}
             {% do assets.add('theme://js/modernizr-custom.js', 100) %}
             {% do assets.add('theme://js/site.js', {group:'bottom'}) %}
