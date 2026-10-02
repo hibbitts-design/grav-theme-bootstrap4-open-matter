@@ -12,11 +12,9 @@
 
 <p>A free, open-source child theme of the <a href="https://github.com/trilbymedia/grav-theme-bootstrap4">Grav Bootstrap4 theme</a>, built for <a href="https://getgrav.org">Grav CMS</a> with Markdown file-based content, a built-in Admin panel, and no database required. Used by the <a href="https://github.com/hibbitts-design/grav-skeleton-course-hub">Open Course Hub</a> and <a href="https://github.com/hibbitts-design/grav-skeleton-multicourse-hub">Open MultiCourse Hub</a> skeleton packages.</p>
 
-<a href="https://raw.githubusercontent.com/hibbitts-design/grav-theme-bootstrap4-open-matter/refs/heads/master/screenshots/screenshot.webp">
-<img alt="Course homepage with weekly reminders, required reading, and a course sidebar with LMS links" src="https://raw.githubusercontent.com/hibbitts-design/grav-theme-bootstrap4-open-matter/refs/heads/master/screenshots/screenshot.webp" width="100%">
-</a>
+<a href="https://raw.githubusercontent.com/hibbitts-design/grav-theme-bootstrap4-open-matter/refs/heads/master/screenshots/screenshot.webp"><img alt="Course homepage with weekly reminders, required reading, and a course sidebar with LMS links, in light mode" src="https://raw.githubusercontent.com/hibbitts-design/grav-theme-bootstrap4-open-matter/refs/heads/master/screenshots/screenshot.webp" width="49%"></a> <a href="https://raw.githubusercontent.com/hibbitts-design/grav-theme-bootstrap4-open-matter/refs/heads/master/screenshots/screenshot-dark.webp"><img alt="Course homepage with weekly reminders, required reading, and a course sidebar with LMS links, in dark mode" src="https://raw.githubusercontent.com/hibbitts-design/grav-theme-bootstrap4-open-matter/refs/heads/master/screenshots/screenshot-dark.webp" width="49%"></a>
 
-<p>Open Course Hub – Course homepage</p>
+<p>Open Course Hub – Course homepage in light mode (left) and dark mode (right)</p>
 
 </div>
 
