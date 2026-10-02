@@ -1,3 +1,14 @@
+# v5.2.3
+## XX/XX/2026
+
+1. [](#new)
+    * Optional Instructor(s) line on course cards, using the same field as Helios Course Hub
+1. [](#improved)
+    * Refreshed course cards: whole card clickable, edge-to-edge images, quieter titles
+    * Point demo documentation links to the README on GitHub
+1. [](#bugfix)
+    * Course card images no longer announced as "Card image cap"
+
 # v5.2.2
 ## 10/02/2026
 
