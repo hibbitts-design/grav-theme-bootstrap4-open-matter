@@ -2,7 +2,7 @@
 ## 10/02/2026
 
 1. [](#improved)
-    * Rewrote README in streamlined style with single screenshot, with demo links now pointing to the Open Course Hub demo
+    * Rewrote README in streamlined style with light and dark mode screenshots, with demo links now pointing to the Open Course Hub demo
     * Removed unused README image (assets/readme_1.png)
 1. [](#bugfix)
     * Dark Mode Auto (System) now loads its stylesheet before custom.css, so site customizations are kept as in Dark Mode On
