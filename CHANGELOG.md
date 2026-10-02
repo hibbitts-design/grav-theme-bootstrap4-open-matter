@@ -1,5 +1,5 @@
 # v5.2.2
-## XX/XX/2026
+## 10/02/2026
 
 1. [](#bugfix)
     * jQuery now loads on Grav 2.0.14 and later even when a site's configuration still points to the removed jQuery 2.1.4, falling back to Grav's bundled jQuery 3 (restores Bootstrap menus and theme scripts)
