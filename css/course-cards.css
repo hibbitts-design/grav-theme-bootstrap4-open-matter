@@ -11,7 +11,6 @@ Colours, borders and corner radius come from the active style and Dark Mode; thi
 .course-card {
     width: 100%;
     overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Edge-to-edge image with a consistent shape, so card heights line up */
@@ -38,14 +37,18 @@ Colours, borders and corner radius come from the active style and Dark Mode; thi
 }
 
 .course-card .card-title a {
-    color: inherit;
     text-decoration: none;
+}
+
+/* Title in the heading colour at rest; on hover or keyboard focus the style's own link colour shows through */
+.course-card:not(:hover):not(:focus-within) .card-title a {
+    color: inherit;
 }
 
 .course-card-arrow {
     opacity: 0.6;
     font-weight: 400;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition: opacity 0.2s ease;
 }
 
 .course-card .card-text {
@@ -56,12 +59,7 @@ Colours, borders and corner radius come from the active style and Dark Mode; thi
     font-size: 0.9rem;
 }
 
-/* The whole card is one link: lift on hover, clear ring for keyboard focus */
-.course-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.25);
-}
-
+/* The whole card is one link: the style's usual card hover shadow, plus a clear ring for keyboard focus */
 .course-card:hover .card-title a {
     text-decoration: underline;
     text-underline-offset: 3px;
@@ -69,7 +67,6 @@ Colours, borders and corner radius come from the active style and Dark Mode; thi
 
 .course-card:hover .course-card-arrow {
     opacity: 1;
-    transform: translateX(3px);
 }
 
 .course-card .stretched-link:focus {
@@ -89,16 +86,4 @@ Colours, borders and corner radius come from the active style and Dark Mode; thi
 
 .course-group-title {
     margin: 1rem 0;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .course-card,
-    .course-card-arrow {
-        transition: none;
-    }
-
-    .course-card:hover,
-    .course-card:hover .course-card-arrow {
-        transform: none;
-    }
 }
