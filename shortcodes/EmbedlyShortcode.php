@@ -56,7 +56,8 @@ class EmbedlyShortcode extends Shortcode
 
         if ($mode === 'auto') {
             Grav::instance()['assets']->addInlineJs(
-                "if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){document.querySelectorAll('a.embedly-card').forEach(function(e){e.setAttribute('data-card-theme','dark')})}"
+                "if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){document.querySelectorAll('a.embedly-card').forEach(function(e){e.setAttribute('data-card-theme','dark')})}",
+                ['group' => 'bottom']
             );
         }
 
