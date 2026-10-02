@@ -6,6 +6,7 @@
     * Removed unused README image (assets/readme_1.png)
 1. [](#bugfix)
     * Dark Mode Auto (System) now loads its stylesheet before custom.css, so site customizations are kept as in Dark Mode On
+    * Dark Mode Auto (System) now shows Embedly cards in their dark style
 
 # v5.2.0
 ## 10/01/2026
