@@ -1,5 +1,5 @@
 # v5.2.1
-## XX/XX/2026
+## 10/02/2026
 
 1. [](#improved)
     * Rewrote README in streamlined style with single screenshot, with demo links now pointing to the Open Course Hub demo
