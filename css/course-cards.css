@@ -1,0 +1,104 @@
+/*
+Course cards on the Subsite List page (e.g. the MultiCourse Hub homepage) - hibbittsdesign.org
+Colours, borders and corner radius come from the active style and Dark Mode; this file only shapes the cards.
+*/
+
+.course-card-col {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.course-card {
+    width: 100%;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Edge-to-edge image with a consistent shape, so card heights line up */
+.course-card .card-img-top {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.course-card .card-body {
+    padding: 1.25rem 1.5rem 1.5rem;
+}
+
+/* Quieter title in the heading colour, with an arrow as the "go" cue */
+.course-card .card-title {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.course-card .card-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.course-card-arrow {
+    opacity: 0.6;
+    font-weight: 400;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.course-card .card-text {
+    margin-bottom: 0.5rem;
+}
+
+.course-card-meta {
+    font-size: 0.9rem;
+}
+
+/* The whole card is one link: lift on hover, clear ring for keyboard focus */
+.course-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.25);
+}
+
+.course-card:hover .card-title a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.course-card:hover .course-card-arrow {
+    opacity: 1;
+    transform: translateX(3px);
+}
+
+.course-card .stretched-link:focus {
+    outline: none;
+}
+
+.course-card .stretched-link:focus-visible::after {
+    outline: 2px solid currentColor;
+    outline-offset: -2px;
+}
+
+/* Keep links inside a course's own card content clickable above the whole-card link */
+.course-card .card-body > :not(.card-title) a {
+    position: relative;
+    z-index: 2;
+}
+
+.course-group-title {
+    margin: 1rem 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .course-card,
+    .course-card-arrow {
+        transition: none;
+    }
+
+    .course-card:hover,
+    .course-card:hover .course-card-arrow {
+        transform: none;
+    }
+}

@@ -9,6 +9,8 @@
 {% else %}
   {% set card_width = 3 %}
 {% endif %}
+{# map the Card Width setting (3, 5 or 12 = 3, 2 or 1 cards per row) to grid columns - hibbittsdesign.org #}
+{% set card_cols = {3: 'col-md-6 col-lg-4', 5: 'col-md-6', 12: 'col-12'}[card_width] ?? ('col-lg-' ~ card_width) %}
 
 {% if page.header.show_sidebar is defined %}
   {% set show_sidebar = page.header.show_sidebar %}
@@ -46,7 +48,8 @@
 
               {{ page.content|raw }}
 
-              <div class="card-deck">
+              {% do assets.addCss('theme://css/course-cards.css') %}
+              <div class="row course-cards">
 
                 {% set siblings = page.collection({items: '@self.siblings','order': {'by': page.header.content.order.by, 'dir': page.header.content.order.dir}}) %}
                 {% for page in siblings %}
@@ -57,32 +60,37 @@
                     {% else %}
                       {% set subsite_home = config.system.home.alias|trim('/') %}
                     {% endif %}
-                    <div class="card col-lg-{{ card_width }}">
+                    <div class="{{ card_cols }} course-card-col">
+                    <div class="card course-card">
+                      {% set subsite_image = page.find('/' ~ page.slug ~ '/headerimage').media.images | first %}
+                      {% if subsite_image is empty %}
+                        {% set subsite_image = page.find('/' ~ page.slug ~ '/' ~ subsite_home).media.images | first %}
+                      {% endif %}
+                      {% if subsite_image is not empty %}
+                        <img class="card-img-top" src="{{subsite_image.url}}" alt="">
+                      {% endif %}
                       <div class="card-body">
-                        {% set subsite_image = page.find('/' ~ page.slug ~ '/headerimage').media.images | first %}
-                        {% if subsite_image is empty %}
-                          {% set subsite_image = page.find('/' ~ page.slug ~ '/' ~ subsite_home).media.images | first %}
-                        {% endif %}
-                        {% if subsite_image is not empty %}
-                          <a href="{{ page.url ~ '/' ~ subsite_home }}"><img class="card-img-top" src="{{subsite_image.url}}" alt="Card image cap"></a>
-                        {% endif %}
                         {% if page.header.subsite_list_title %}
                           {% set subsite_title = page.header.subsite_list_title %}
                         {% else %}
                           {% set subsite_title = page.title %}
                         {% endif %}
                         <h2 class="card-title">
-                          <a href="{{ page.url ~ '/' ~ subsite_home }}">{{ subsite_title }}</a>
+                          <a class="stretched-link" href="{{ page.url ~ '/' ~ subsite_home }}">{{ subsite_title }}</a><span class="course-card-arrow" aria-hidden="true">&rarr;</span>
                         </h2>
                         {% if page.header.subsite_list_description %}
                           <p class="card-text">{{ page.header.subsite_list_description }}</p>
                         {% endif %}
+                        {% if page.header.instructor %}
+                          <p class="card-text course-card-meta">{{ page.header.instructor }}</p>
+                        {% endif %}
                         {{ page.find('/' ~ page.slug).content|raw}}
                       </div>
                     </div>
+                    </div>
                   {% elseif page.header.hide_from_subsite_list != true and(page.template == 'subsitegroup') %}
-                    <div class="col-lg-{{ 12 }}">
-                      <h2> {{ page.header.title}} </h2>
+                    <div class="col-12">
+                      <h2 class="course-group-title"> {{ page.header.title}} </h2>
                     </div>
                     {% set subsite_folder = page.slug %}
                     {% set children = page.collection({'items': {'@page.children': page.route}}) %}
@@ -93,28 +101,33 @@
                         {% else %}
                           {% set subsite_home = 'home' %}
                         {% endif %}
-                        <div class="card col-lg-{{ card_width }}">
+                        <div class="{{ card_cols }} course-card-col">
+                        <div class="card course-card">
+                          {% set subsite_image = page.find('/' ~ subsite_folder ~ '/' ~ p.slug ~ '/headerimage').media.images | first %}
+                          {% if subsite_image is empty %}
+                            {% set subsite_image = page.find('/' ~ subsite_folder ~ '/' ~ p.slug ~ '/' ~ subsite_home).media.images | first %}
+                          {% endif %}
+                          {% if subsite_image is not empty %}
+                            <img class="card-img-top" src="{{subsite_image.url}}" alt="">
+                          {% endif %}
                           <div class="card-body">
-                            {% set subsite_image = page.find('/' ~ subsite_folder ~ '/' ~ p.slug ~ '/headerimage').media.images | first %}
-                            {% if subsite_image is empty %}
-                              {% set subsite_image = page.find('/' ~ subsite_folder ~ '/' ~ p.slug ~ '/' ~ subsite_home).media.images | first %}
-                            {% endif %}
-                            {% if subsite_image is not empty %}
-                              <a href="{{ p.url ~ '/' ~ subsite_home }}"><img class="card-img-top" src="{{subsite_image.url}}" alt="Card image cap"></a>
-                            {% endif %}
                             {% if p.header.subsite_site_title %}
                               {% set subsite_title = p.header.subsite_site_title %}
                             {% else %}
                               {% set subsite_title = p.title %}
                             {% endif %}
                             <h2 class="card-title">
-                              <a href="{{ p.url ~ '/' ~ subsite_home }}">{{ subsite_title }}</a>
+                              <a class="stretched-link" href="{{ p.url ~ '/' ~ subsite_home }}">{{ subsite_title }}</a><span class="course-card-arrow" aria-hidden="true">&rarr;</span>
                             </h2>
                             {% if p.header.subsite_list_description %}
                               <p class="card-text">{{ p.header.subsite_list_description }}</p>
                             {% endif %}
+                            {% if p.header.instructor %}
+                              <p class="card-text course-card-meta">{{ p.header.instructor }}</p>
+                            {% endif %}
                             {{ page.find('/' ~ subsite_folder ~ '/' ~ p.slug).content|raw}}
                           </div>
+                        </div>
                         </div>
                         {% endif %}
                       {% endfor %}
