@@ -7,6 +7,8 @@
 1. [](#bugfix)
     * Dark Mode Auto (System) now loads its stylesheet before custom.css, so site customizations are kept as in Dark Mode On
     * Dark Mode Auto (System) now shows Embedly cards in their dark style
+    * Embedly Card pages show their card again, instead of always reporting the link as no longer available
+    * Embedly cards for pages on sites with bot protection (e.g. Medium) are no longer hidden as unavailable; only missing pages are
 
 # v5.2.0
 ## 10/01/2026
