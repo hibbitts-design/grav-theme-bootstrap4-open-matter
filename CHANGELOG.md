@@ -1,5 +1,5 @@
 # v5.2.3
-## XX/XX/2026
+## 10/02/2026
 
 1. [](#new)
     * Optional Instructor(s) line on course cards, using the same field as Helios Course Hub
