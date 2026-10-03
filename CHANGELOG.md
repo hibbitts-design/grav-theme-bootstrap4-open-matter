@@ -1,5 +1,5 @@
 # v6.0.0
-## XX/XX/2026
+## 10/03/2026
 
 1. [](#new)
     * Course search with the SimpleSearch plugin, limited to the current course
