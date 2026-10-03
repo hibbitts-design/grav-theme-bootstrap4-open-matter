@@ -1,3 +1,30 @@
+# v6.0.0
+## XX/XX/2026
+
+1. [](#new)
+    * Course search with the SimpleSearch plugin, limited to the current course
+    * Course content shortcodes, as in Helios Course Hub (`[objectives]`, `[references]` and more)
+    * `[topics]` shortcode for an A–Z topics index
+    * GitHub-style alerts (`> [!NOTE]` etc.) shown as Bootstrap alerts, with the GitHub Markdown Alerts plugin
+    * Course card description, badge, group and image fields, as in Helios Course Hub
+    * Courses can also be set up with a `course.md` file, as in Helios Course Hub
+    * Print stylesheet
+    * Header Image Height and Display Syndicate Links theme options
+    * Friendlier Page Not Found page
+1. [](#improved)
+    * `?embedded=true` and `?edit_link=false` URL parameters, as in Helios Course Hub
+    * `ratio` and `title` options for the iFrame, Google Slides, PDF and H5P shortcodes
+    * Current page marked in the NavBar
+    * Refreshed sidebar headings, weekly headings, badges and form fields
+    * Existing mytheme installations require manual update of mytheme/blueprints.yaml to surface the new theme options
+1. [](#bugfix)
+    * Embedly Card and Link Preview Card pages no longer show their HTML as text on Grav 2
+    * iFrame shortcode `aspectratio` option no longer ignored
+    * H5P embeds keep resizing when Grav's cache is enabled
+    * Cmd-click on internal links now opens a new tab
+    * Readable Dark Mode button text
+    * Fixed invalid markup in blog post titles and embedded "View all" links
+
 # v5.2.3
 ## 10/02/2026
 
