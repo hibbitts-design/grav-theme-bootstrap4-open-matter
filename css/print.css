@@ -1,0 +1,132 @@
+/*
+Print stylesheet - prints just the page content, in black on white, whatever the Theme Style or Dark Mode - hibbittsdesign.org
+Based on the Grav Helios Course Hub print stylesheet. To leave something out of print, add Bootstrap's d-print-none class
+(or no-print, as in Helios Course Hub).
+*/
+
+@page {
+    margin: 1.5cm 2cm;
+}
+
+@media print {
+    /* Hide site navigation, header image, sidebar, footer, pagination and the Git Sync link */
+    .myheader,
+    .hero,
+    .navbar,
+    .blog-sidebar,
+    .footer,
+    .pagination-container,
+    .pagination,
+    .gitrepo-link-note,
+    .course-card-arrow,
+    .no-print {
+        display: none !important;
+    }
+
+    /* Embedded content (slides, videos, PDFs, H5P) can't be printed and would leave a blank box, so leave it out */
+    .embed-responsive,
+    iframe {
+        display: none !important;
+    }
+
+    /* Course cards two per row */
+    .course-card-col {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+
+    /* Content fills the page (Bootstrap's own print rules set a minimum page width) */
+    body,
+    .container {
+        min-width: 0 !important;
+    }
+
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .blog-main {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .main-content {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* Black on white for every Theme Style and Dark Mode */
+    html,
+    body {
+        background: #fff !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+        color: #000 !important;
+        background-color: transparent !important;
+        text-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+    /* With no background colours, outline alerts, cards, badges and buttons */
+    .alert,
+    .card,
+    .badge,
+    .btn {
+        border: 1px solid #999 !important;
+    }
+
+    /* Show the address after links to other sites, but not on buttons, cards or embeds */
+    .blog-main a[href^="http"]:not(.btn):not(.stretched-link):not(.embedly-card):not(.badge)::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        word-break: break-all;
+    }
+
+    .link-preview-card a::after {
+        content: none !important;
+    }
+
+    /* Keep cards, alerts, images and similar blocks in one piece */
+    .card,
+    .alert,
+    .link-preview-card,
+    .embed-responsive,
+    img,
+    figure,
+    pre,
+    blockquote,
+    table {
+        break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Keep headings with the content that follows, and avoid single stray lines */
+    h1, h2, h3, h4, h5, h6 {
+        break-after: avoid;
+    }
+
+    p, li {
+        orphans: 3;
+        widows: 3;
+    }
+
+    /* Repeat a table's header row on each printed page */
+    thead {
+        display: table-header-group;
+    }
+
+    /* Wrap long code lines rather than cutting them off */
+    pre,
+    code {
+        white-space: pre-wrap !important;
+        word-wrap: break-word;
+    }
+}

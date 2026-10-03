@@ -1,0 +1,5 @@
+title: Course Options
+# A Course page (course.md, as in Grav Helios Course Hub) has the same options as a Subsite page - hibbittsdesign.org
+'@extends':
+    type: subsite
+    context: blueprints://pages

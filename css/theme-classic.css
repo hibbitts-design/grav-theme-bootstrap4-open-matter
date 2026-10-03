@@ -382,7 +382,8 @@ body.chromeless {
   background-color: transparent;
 }
 
-.topics h3 {
+.topics h3,
+.topics-letter {
     width: 2.5em;
     color: white;
     font-weight: 600;
@@ -410,4 +411,32 @@ div.keeptogether {
 
 .chromeless-hide {
     display: block;
+}
+
+/* GitHub-style alerts (see github-alerts.css) - even padding, as the .alert rule above leaves room for list items */
+.alert.md-alert {
+    padding-bottom: .75rem!important;
+}
+
+/* [topics] shortcode - letter headings sized like the earlier ### letters, clear of the top of the window when jumped to */
+.topics-letter {
+    font-size: 1.75rem;
+    scroll-margin-top: 1rem;
+}
+
+/* [topics] shortcode - A-Z index as separate rounded letters */
+.topics-index {
+    gap: 0.25rem;
+}
+
+.topics-index .page-link {
+    min-width: 2rem;
+    text-align: center;
+    margin-left: 0;
+    border-radius: 4px !important;
+}
+
+/* Corner size for the [topics] letter headings */
+h2.topics-letter {
+    border-radius: 4px;
 }

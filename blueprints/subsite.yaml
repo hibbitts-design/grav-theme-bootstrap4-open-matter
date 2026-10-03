@@ -40,6 +40,43 @@ form:
                   placeholder: 'e.g. Instructor: Jane Smith'
                   help: Optional line shown below the description on the course card. Uses the same field as Grav Helios Course Hub, so it carries over unchanged.
 
+                header.image:
+                  ordering@: header.instructor
+                  type: pagemediaselect
+                  label: Course Card Image
+                  help: Optional image from this page's media for the course card. If empty, the course's header image is used. Uses the same field as Grav Helios Course Hub, so it carries over unchanged.
+
+                header.badge_label:
+                  ordering@: header.image
+                  type: text
+                  size: medium
+                  label: Badge Label
+                  placeholder: 'e.g. Coming Soon, New, Archived'
+                  help: Optional status badge shown on the course card. Uses the same field as Grav Helios Course Hub, so it carries over unchanged.
+
+                header.badge_color:
+                  ordering@: header.badge_label
+                  type: select
+                  label: Badge Color
+                  default: default
+                  options:
+                    default: Default
+                    blue: Blue
+                    green: Green
+                    yellow: Yellow
+                    red: Red
+                    purple: Purple
+                    plain: Plain
+                  help: Badge colours match Grav Helios Course Hub, shown with the closest Bootstrap badge style.
+
+                header.group:
+                  ordering@: header.badge_color
+                  type: text
+                  size: medium
+                  label: Course List Group
+                  placeholder: 'e.g. Current Courses'
+                  help: Optional group heading for this course on the Subsite List page. Courses without a group appear first, with no heading. Uses the same field as Grav Helios Course Hub, so it carries over unchanged.
+
                 header.hide_from_subsite_list:
                     ordering@: 4
                     type: toggle

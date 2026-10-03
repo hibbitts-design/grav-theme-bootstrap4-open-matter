@@ -15,18 +15,17 @@ class GoogleSlidesShortcode extends Shortcode
 
             $googleslidesurl= $sc->getParameter('url', $sc->getBbCode());
 
+            // ratio="16:9" or "4:3" (as in Helios Course Hub); default stays 16:9
+            $googleslidesaspectratio = ($sc->getParameter('ratio') === '4:3') ? '4by3' : '16by9';
+
+            $googleslidestitle = htmlspecialchars($sc->getParameter('title', 'Google Slides presentation'), ENT_QUOTES, 'UTF-8');
+
+            if (!$googleslidesurl) {
+                $googleslidesurl = $str;
+            }
+
             if ($googleslidesurl) {
-                $output = '<span class="embed-responsive embed-responsive-16by9"><iframe src="'.$googleslidesurl.'" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></span>';
-
-                return $output;
-
-            } else {
-
-              if ($str) {
-
-                  return '<span class="embed-responsive embed-responsive-16by9"><iframe src="'.$str.'" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></span>';
-
-              }
+                return '<span class="embed-responsive embed-responsive-'.$googleslidesaspectratio.'"><iframe src="'.$googleslidesurl.'" title="'.$googleslidestitle.'" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></span>';
             }
 
         });

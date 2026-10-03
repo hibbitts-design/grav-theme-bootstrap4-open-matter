@@ -22,13 +22,17 @@ Bootstrap4 Open Matter adds what open, collaborative course and blog sites need 
 
 ## What Sets It Apart
 
-- **Chromeless display for LMS embedding** – add `/chromeless:true` to any page URL to show only its content, or hide the site menu, sidebar, and footer site-wide
+- **Content that carries over to Grav Helios Course Hub** – shortcodes, GitHub-style alerts, course card fields, and page URL parameters use the same names, so course content moves to [Grav Helios Course Hub](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub) without rewriting, including the `[topics]` index, the course content shortcodes, and course search
+- **Chromeless display for LMS embedding** – add `/chromeless:true` or `?embedded=true` to any page URL to show only its content, or hide the site menu, sidebar, and footer site-wide
 - **Open authoring with Git Sync** – a "View Git Repository" or "View/Edit Page in Git Repository" link in the menu, footer, or page, with a custom icon and text
-- **Built-in shortcodes** – Badge, Button, Embedly, Google Slides, H5P, iFrame, Link Preview Card, Markdown File, PDF, SpeakerDeck, Twitter, Web Component Stop Note, and Show/Hide If Embedded
-- **Course and content page types** – blog with featured (sticky) posts, course sections, RSS feed aggregation, link lists, subsites, and dedicated H5P, iFrame, PDF, Embedly, and link preview card pages
+- **Built-in shortcodes** – Badge, Button, Embedly, Google Slides, H5P, iFrame, Link Preview Card, Markdown File, PDF, SpeakerDeck, Topics (an A–Z topics index), Twitter, Web Component Stop Note, and Show/Hide If Embedded, with `title` (and `ratio`) options for accessible, well-proportioned embeds
+- **Course content shortcodes** – `[objectives]`, `[key-takeaways]`, `[reflection]`, `[definition]`, `[example]`, `[case-study]`, `[project-brief]`, `[process-note]`, `[feedback-requested]`, `[announcement]`, `[exercise]`, `[references]`, and `[excerpt]`, shown as Bootstrap alerts, with the same names and options as Grav Helios Course Hub
+- **Course and content page types** – blog with featured (sticky) posts, course sections, RSS feed aggregation, link lists, subsites with course cards (description, instructor, badge, group, and image), and dedicated H5P, iFrame, PDF, Embedly, and link preview card pages; a course can be set up with `subsite.md` or, as in Grav Helios Course Hub, `course.md`
+- **Course search** – with the SimpleSearch plugin, a "Search course..." box in the sidebar searches just the current course, or all courses from the course list page (in its NavBar), with results in each course's own layout
 - **Visual styles** – 2026 Refresh or Classic, with Dark Mode off, on, or following the visitor's system setting
 - **Flexible layout** – a Markdown-based sidebar, NavBar style, colour, position, and breakpoint options, dropdowns, and custom menu items
 - **Open licensing and accessibility** – Creative Commons license display and hidden H1 page titles for screen readers
+- **Print-friendly pages** – printed pages show just the content in black on white, with link addresses, whatever the Theme Style or Dark Mode
 
 ## When is Bootstrap4 Open Matter a Good Candidate?
 
@@ -68,27 +72,35 @@ The easiest way to get started is the [Open Course Hub](https://github.com/hibbi
 All options are available in the Admin Panel under **Themes → Bootstrap4 Open Matter**.
 
 - **Open Matter Options** – chromeless site, H5P content embed source URL, Creative Commons license type and display
-- **Bootstrap4 Options** – Theme Style, Dark Mode, NavBar style, background, position, and breakpoint, dropdowns
+- **Bootstrap4 Options** – Theme Style, Dark Mode, Header Image Height (Standard, Slim, or Hidden), Syndicate (RSS) links in the sidebar, NavBar style, background, position, and breakpoint, dropdowns
 - **Custom Menu Items** – text, icon, URL, and target for extra NavBar links
 - **Git Sync Link** – location, link type (view or edit), icon and text, Site Theme Files link, and a custom Git repository URL
 
 ## Page URL Parameters
 
-Add these to any page URL, for example `https://yoursite.com/home/module-01/chromeless:true`.
+Add these to any page URL, for example `https://yoursite.com/home/module-01/chromeless:true` or `https://yoursite.com/home/module-01?embedded=true`.
 
 | Parameter | Effect |
 |---|---|
 | `/chromeless:true` (or `/embedded:true`, `/standalone:true`) | Shows only the page content, with no site menu, sidebar, or footer – for embedding in an LMS |
+| `?embedded=true` (or `?chromeless=true`, `?standalone=true`) | Same as `/chromeless:true`, using the same parameter as Grav Helios Course Hub; carried forward as you follow links |
+| `?edit_link=false` (or `?hidegitlink=true`) | Hides the Git Sync link on that page |
 | `/hidepagetitle:true` | Hides the visible page title, keeping it as a hidden heading for screen readers |
 | `/hideheaderimage:true` | Hides a blog post's header image |
 | `/summaryonly:true` (or `/onlysummary:true`) | Shows only a post's summary, with a link to the full post |
 | `/filter:<tag>` | On Sections pages, limits the section navigation to pages with that tag |
+
+## Printing
+
+To leave something out when a page is printed, add Bootstrap's `d-print-none` class (or `no-print`, as in Grav Helios Course Hub).
 
 ## Requirements
 
 - PHP >= 8.0.2
 - Grav CMS 1.7 or 2.0
 - The [Bootstrap4 theme](https://github.com/trilbymedia/grav-theme-bootstrap4) and required plugins, installed automatically as dependencies
+- GitHub-style alerts (`> [!NOTE]`, `> [!TIP]`, …) need the [GitHub Markdown Alerts](https://github.com/trilbymedia/grav-plugin-github-markdown-alerts) plugin (Grav 2); without it they show as regular blockquotes
+- Course search needs the [SimpleSearch](https://github.com/getgrav/grav-plugin-simplesearch) plugin (Grav 1.7 or 2)
 
 ## Support
 

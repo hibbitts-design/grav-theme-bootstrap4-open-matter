@@ -66,8 +66,10 @@
   {% set pages = pages.children.visible %}
 {% endif %}
 
-{% if background_image and not(navbar_position == 'fixed-bottom') %}
-  <div class="myheader" style="background-image: url({{ background_image.url }});"></div>
+{# Header image height: standard, slim or hidden (Theme option) - hibbittsdesign.org #}
+{% set header_image_size = theme_var('header_image_size') ?: 'standard' %}
+{% if background_image and not(navbar_position == 'fixed-bottom') and header_image_size != 'hidden' %}
+  <div class="myheader{{ header_image_size == 'slim' ? ' myheader-slim' : '' }}" style="background-image: url({{ background_image.url }});"></div>
 {% endif %}
 
 {% if navbar_bg_color %}
@@ -83,6 +85,13 @@
 <nav class="navbar {{ navbar_position }} navbar-expand-{{ navbar_breakpoint }} {{ navbar_style }} {{ navbar_bg }}" {{ navbar_bg_color|raw }};" role="navigation">
     <div class="container">
         <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url }}">{{ site_title }}</a>
+        {# search all courses on a Subsite List page without a sidebar (course pages have search in their sidebar) - hibbittsdesign.org #}
+        {% set navbar_search = config.plugins.simplesearch.enabled and page.template == 'subsitelist' and page.header.show_sidebar is defined and not page.header.show_sidebar %}
+        {% set navbar_bp = theme_var('navbar_breakpoint') ?: 'md' %}
+        {% if navbar_search %}
+          {# small screens: beside the menu button #}
+          {% include 'partials/simplesearch_searchbox.html.twig' with {search_form_classes: 'form-inline navbar-home-search ml-auto mr-2 d-' ~ navbar_bp ~ '-none', search_input_classes: ''} %}
+        {% endif %}
         {% if (pages|first) or (theme_var('display_of_git_sync_repo_link') == 'menu' or theme_var('display_of_git_sync_repo_link') == empty) %}
           <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -90,6 +99,10 @@
         {% endif %}
 
         <div class="navbar-collapse collapse justify-content-end">
+            {% if navbar_search %}
+              {# larger screens: before the menu links #}
+              {% include 'partials/simplesearch_searchbox.html.twig' with {search_form_classes: 'form-inline navbar-home-search mr-3 d-none d-' ~ navbar_bp ~ '-flex', search_input_classes: ''} %}
+            {% endif %}
             <ul class="navbar-nav">
 
               {% for page in pages %}
@@ -113,7 +126,9 @@
                     {% if not (page.find('/' ~ page.slug).template == 'course' or page.find('/' ~ page.slug).template == 'subsite' or page.find('/' ~ page.slug).template == 'coursegroup' or page.find('/' ~ page.slug).template == 'subsitegroup') %}
                       {% set page_url = page.url %}
                       {% set page_menu = page.menu %}
-                      <li class="nav-item {{ current_page }}"><a class="nav-link" href="{{ page_url }}" {% if page.header.menu_target %} target="{{ page.header.menu_target }}" {% endif %}>{% if page.header.menu_icon %}<i class="fa fa-{{ page.header.menu_icon }}"></i>{% endif %}{{ page_menu }}</a></li>
+                      {# mark the current page (or the section it is in) - hibbittsdesign.org #}
+                      {% set is_current = page.active or page.activeChild %}
+                      <li class="nav-item {{ current_page }}{{ is_current ? ' current' : '' }}"><a class="nav-link" href="{{ page_url }}" {% if is_current %}aria-current="page" {% endif %}{% if page.header.menu_target %} target="{{ page.header.menu_target }}" {% endif %}>{% if page.header.menu_icon %}<i class="fa fa-{{ page.header.menu_icon }}"></i>{% endif %}{{ page_menu }}</a></li>
                     {% endif %}
                   {% endif %}
                 {% endif %}

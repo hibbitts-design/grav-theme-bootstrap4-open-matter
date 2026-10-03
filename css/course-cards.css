@@ -87,3 +87,8 @@ Colours, borders and corner radius come from the active style and Dark Mode; thi
 .course-group-title {
     margin: 1rem 0;
 }
+
+/* Search box in the NavBar of the Subsite List page - stays beside the site name on small screens */
+.navbar-home-search .form-control {
+    width: 10rem;
+}

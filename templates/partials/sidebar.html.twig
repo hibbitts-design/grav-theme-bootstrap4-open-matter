@@ -16,9 +16,10 @@
 <h1 class="hidden">{{page.title}}</h1>
 
 {% if config.plugins.simplesearch.enabled %}
-<div class="sidebar-content">
+<div class="sidebar-content sidebar-search mb-4">
     <h2>{{ 'SIDEBAR.SIMPLE_SEARCH.HEADLINE'|t }}</h2>
-    {% include 'partials/simplesearch_searchbox.html.twig' %}
+    {# course search: the current course, or all courses from the Subsite List page - hibbittsdesign.org #}
+    {% include 'partials/simplesearch_searchbox.html.twig' with {search_form_classes: '', search_input_classes: ''} %}
 </div>
 {% endif %}
 
@@ -66,7 +67,8 @@
   {% endif %}
 {% endif %}
 
-{% if config.plugins.feed.enabled %}
+{# Syndicate (RSS) links, unless turned off in the Theme options - hibbittsdesign.org #}
+{% if config.plugins.feed.enabled and theme_var('display_syndicate') is not same as(false) %}
 <div class="sidebar-content">
   {% if page.template == 'blog' %}
     <h2>{{ 'SIDEBAR.SYNDICATE.HEADLINE'|t }}</h2>

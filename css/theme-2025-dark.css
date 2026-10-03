@@ -39,11 +39,14 @@ a:hover:not(.btn, .badge, .navbar-brand, .nav-link), a:focus:not(.btn, .badge, .
 .btn-primary {
     background-color: #93c5fd;
     border-color: #93c5fd;
+    color: #111827; /* dark text for readable contrast on the light blue */
 }
 
-.btn-primary:hover {
-    background-color: #93c5fd;
-    border-color: #93c5fd;
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #bfdbfe;
+    border-color: #bfdbfe;
+    color: #111827;
 }
 
 .btn-success {
@@ -154,10 +157,82 @@ figure.image-caption figcaption {
     color: #d1d5db;
 }
 
-.topics h3 {
+.topics h3,
+.topics-letter {
     background: #4b5563;
 }
 
 ol.breadcrumb {
     background-color: #374151;
+}
+
+/* GitHub-style alerts (see github-alerts.css) - Bootstrap contextual colours, tinted for Dark Mode */
+.alert.md-alert--note {
+    color: #a5e4ee;
+    background-color: rgba(23, 162, 184, 0.18);
+    border-color: rgba(23, 162, 184, 0.35);
+}
+
+.alert.md-alert--tip {
+    color: #a3e3b3;
+    background-color: rgba(40, 167, 69, 0.18);
+    border-color: rgba(40, 167, 69, 0.35);
+}
+
+.alert.md-alert--important {
+    color: #b3d7ff;
+    background-color: rgba(0, 123, 255, 0.2);
+    border-color: rgba(0, 123, 255, 0.4);
+}
+
+.alert.md-alert--warning {
+    color: #ffe08a;
+    background-color: rgba(255, 193, 7, 0.16);
+    border-color: rgba(255, 193, 7, 0.35);
+}
+
+.alert.md-alert--caution {
+    color: #f5b5bc;
+    background-color: rgba(220, 53, 69, 0.2);
+    border-color: rgba(220, 53, 69, 0.4);
+}
+
+/* [topics] shortcode - A-Z index for Dark Mode */
+.topics-index .page-link {
+    background-color: transparent;
+    border-color: #374151;
+}
+
+.topics-index .page-link:hover {
+    background-color: #374151;
+}
+
+.topics-index .page-item.disabled .page-link {
+    background-color: transparent;
+    border-color: #374151;
+    color: #6b7280;
+}
+
+/* Form fields, for example the search boxes */
+.form-control {
+    background-color: #111827;
+    border-color: #4b5563;
+    color: #e5e7eb;
+}
+
+.form-control::placeholder {
+    color: #9ca3af;
+}
+
+.form-control:focus {
+    background-color: #111827;
+    border-color: #93c5fd;
+    color: #f9fafb;
+    box-shadow: 0 0 0 0.2rem rgba(147, 197, 253, 0.25);
+}
+
+/* Soft badges (see open-matter.css) */
+.badge.badge-secondary {
+    background-color: rgba(156, 163, 175, 0.2);
+    color: #e5e7eb;
 }

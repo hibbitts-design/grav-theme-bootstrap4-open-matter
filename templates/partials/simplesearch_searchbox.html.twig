@@ -1,0 +1,7 @@
+{# Search box for the SimpleSearch plugin - searches the current course (<course>/search) or the whole site (/search, or the configured SimpleSearch route),
+   as in Helios Course Hub, as a plain Bootstrap form with no plugin JavaScript - hibbittsdesign.org #}
+{% set search_action = base_url_relative ~ (search_course_route ?? '') ~ (search_route ?? '/search') %}
+{% set search_min = config.plugins.simplesearch.min_query_length ?? 3 %}
+<form class="{{ search_form_classes ?? 'form-inline' }}" role="search" action="{{ search_action }}" method="get">
+    <input class="form-control {{ search_input_classes ?? 'form-control-sm' }}" type="search" name="query" value="{{ query|e }}" placeholder="{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.SEARCH_PLACEHOLDER'|t }}" aria-label="{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.SEARCH_PLACEHOLDER'|t }}" {% if search_min > 0 %}minlength="{{ search_min }}"{% endif %} required>
+</form>

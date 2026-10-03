@@ -29,9 +29,9 @@
           {% if not (grav.uri.param('hidepagetitle')) %}
             <h1>
             {% if titleicon %}
-              <class="p-name"><a href="{{ page.url }}" class="u-url"><i class="fa fa-{{ titleicon }}"></i>{{ page.title }}</a>
+              <a href="{{ page.url }}" class="u-url p-name"><i class="fa fa-{{ titleicon }}"></i>{{ page.title }}</a>
             {% else %}
-              <class="p-name"><a href="{{ page.url }}" class="u-url">{{ page.title }}</a>
+              <a href="{{ page.url }}" class="u-url p-name">{{ page.title }}</a>
             {% endif %}
           </h1>
           {% else %}
@@ -117,7 +117,7 @@
                 {% else %}
                   <a href="{{ page.url }}">{{ 'BLOG.ITEM.VIEW_ALL_OF'|t }}
                 {% endif %}
-                {{ page.title }}<i class="fa fa-chevron-right" aria-hidden="true"></i>
+                {{ page.title }}<span class="continue-link-arrow" aria-hidden="true">&rarr;</span>
               </a>
               </p>
             {% endif %}
@@ -135,7 +135,7 @@
                {% else %}
                  <a href="{{ page.url }}">{{ 'BLOG.ITEM.VIEW_ALL_OF'|t }}
                {% endif %}
-               {{ page.title }}<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+               {{ page.title }}<span class="continue-link-arrow" aria-hidden="true">&rarr;</span></a>
               </p>
             {% endif %}
             <hr>
@@ -156,7 +156,7 @@
               {% endif %}
 
               {# Creative Commons License -  hibbittsdesign.org #}
-              {% if not (grav.uri.param('chromeless') or grav.uri.param('embedded') or grav.uri.param('standalone')) and not(theme_var('chromeless.enabled')) and (theme_var('cc_license.enabled') and not(page.header.hide_cc_license) and not (grav.uri.param('onlysummary') or grav.uri.param('summaryonly'))) %}
+              {% if not embedded_mode and not(theme_var('chromeless.enabled')) and (theme_var('cc_license.enabled') and not(page.header.hide_cc_license) and not (grav.uri.param('onlysummary') or grav.uri.param('summaryonly'))) %}
                 <p>{% include 'partials/creative_commons_license.html.twig' %}</p>
               {% endif %}
 
@@ -180,7 +180,7 @@
                   <a class="topwindow external-link" href="{{ page.url ~ '/chromeless:true' }}">{{ 'BLOG.ITEM.VIEW_ALL_OF'|t }}
                 {% endif %}
                 {{ page.title }}
-                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                <span class="continue-link-arrow" aria-hidden="true">&rarr;</span></a>
               </p>
               {% endif %}
 
@@ -189,8 +189,8 @@
         {% endif %}
 
         {# added check for content display flag - hibbittsdesign.org #}
-        {% if show_prev_next and not (grav.uri.param('chromeless') or grav.uri.param('embedded') or grav.uri.param('standalone') or theme_var('chromeless.enabled')) %}
-            <p class="text-center mt-4">
+        {% if show_prev_next and not (embedded_mode or theme_var('chromeless.enabled')) %}
+            <p class="text-center mt-4 d-print-none">
                 {% if not page.isLast %}
                     <a class="btn btn-primary" href="{{ page.prevSibling.url }}"><i class="fa fa-chevron-left"></i> {{ 'BLOG.ITEM.PREV_POST'|t }}</a>
                 {% endif %}

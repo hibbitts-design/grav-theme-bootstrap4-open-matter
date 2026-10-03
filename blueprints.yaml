@@ -1,7 +1,7 @@
 name: 'Bootstrap4 Open Matter'
 type: theme
 slug: bootstrap4-open-matter
-version: 5.2.3
+version: 6.0.0
 description: "A customized version of the Bootstrap4 theme for open blogs, course hubs and more. Includes Git Sync and 'chromeless' content display for seamless embedding."
 icon: bold
 author:
@@ -139,6 +139,27 @@ form:
                 disabled: 'Off'
                 enabled: 'On'
                 auto: 'Auto (System)'
+            header_image_size:
+              type: select
+              label: 'Header Image Height'
+              help: 'Height of the header image above the NavBar. Slim keeps more of the page in view, especially on phones.'
+              size: medium
+              default: standard
+              options:
+                standard: Standard
+                slim: Slim
+                hidden: Hidden
+            display_syndicate:
+              type: toggle
+              label: 'Display Syndicate (RSS) Links in Sidebar'
+              help: 'Shows Atom and RSS feed buttons in the sidebar of blog pages when the Feed plugin is enabled.'
+              highlight: 1
+              default: 1
+              options:
+                '1': Yes
+                '0': No
+              validate:
+                type: bool
             menubaroptions:
               type: section
               title: 'NavBar (Bootstrap4 Menubar)'

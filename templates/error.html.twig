@@ -1,0 +1,39 @@
+{# Error page (for example "page not found"), with a way back to the course home page and a search box - hibbittsdesign.org #}
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    {% set error_code = page.header.http_response_code ?: 404 %}
+
+    {# the course this address belongs to (if any), so visitors can get back to it #}
+    {% set error_course = search_course_route ? page.find(search_course_route) : null %}
+    {% if error_course %}
+        {% set error_home_url = error_course.url ~ '/' ~ (error_course.header.subsite_home ?: 'home') %}
+        {% set error_home_label = 'THEME_BOOTSTRAP4_OPEN_MATTER.ERROR_COURSE_HOME'|t((error_course.header.subsite_list_title ?: error_course.title)|e) %}
+    {% else %}
+        {% set error_home_url = base_url_relative ?: '/' %}
+        {% set error_home_label = 'THEME_BOOTSTRAP4_OPEN_MATTER.ERROR_SITE_HOME'|t %}
+    {% endif %}
+
+    <div class="main-content" id="error">
+        <div class="container">
+            <div class="error-page">
+                <p class="error-code">{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.ERROR_CODE'|t(error_code) }}</p>
+                {% if error_code == 404 %}
+                    <h1>{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.ERROR_NOT_FOUND_TITLE'|t }}</h1>
+                    <p>{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.ERROR_NOT_FOUND_TEXT'|t }}</p>
+                {% else %}
+                    <h1>{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.ERROR_TITLE'|t }}</h1>
+                    <p>{{ page.content|raw }}</p>
+                {% endif %}
+
+                <p><a class="btn btn-primary" href="{{ error_home_url }}">{{ error_home_label|raw }}</a></p>
+
+                {% if config.plugins.simplesearch.enabled %}
+                    <div class="error-search">
+                        {% include 'partials/simplesearch_searchbox.html.twig' with {search_form_classes: '', search_input_classes: ''} %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

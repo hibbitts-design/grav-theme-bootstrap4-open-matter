@@ -35,10 +35,10 @@ class BadgeShortcode extends Shortcode
             }
 
             if (!empty($badgelabel) && !empty($badgeurl)) {
-                $output = '<a target="'.$badgetarget.'" href="'.$badgeurl.'" class="badge badge-'.$badgetype.'">'.$badgelabel.' </a>';
+                $output = '<a target="'.$badgetarget.'" href="'.$badgeurl.'" class="badge badge-pill badge-'.$badgetype.'">'.$badgelabel.' </a>';
                 return $output;
             } elseif (!empty($badgelabel)) {
-                $output = '<span class="badge badge badge-'.$badgetype.'">'.$badgelabel.'</span>';
+                $output = '<span class="badge badge-pill badge-'.$badgetype.'">'.$badgelabel.'</span>';
                 return $output;
             }
 

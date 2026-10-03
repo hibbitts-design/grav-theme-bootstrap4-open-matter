@@ -1,0 +1,71 @@
+/*
+GitHub-style alerts (> [!NOTE], > [!TIP], > [!IMPORTANT], > [!WARNING], > [!CAUTION]) from the GitHub Markdown Alerts plugin,
+and the course content shortcodes ([objectives], [key-takeaways] and so on), shown as Bootstrap alerts using the colours of
+Bootstrap's contextual alerts - hibbittsdesign.org
+The same Markdown works in Grav Helios Course Hub. Dark Mode colours are in each theme-*-dark.css file.
+*/
+
+/* Note = alert-info */
+.alert.md-alert--note {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+/* Tip = alert-success */
+.alert.md-alert--tip {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+/* Important = alert-primary */
+.alert.md-alert--important {
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+}
+
+/* Warning = alert-warning */
+.alert.md-alert--warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+/* Caution = alert-danger */
+.alert.md-alert--caution {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+/* Title styled like Bootstrap's .alert-heading, with the plugin's icon in the text colour */
+.alert.md-alert .md-alert-title {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.alert.md-alert .md-alert-title svg {
+    fill: currentColor;
+    margin-right: 0.5rem;
+}
+
+/* Font Awesome icons in course content shortcodes when the GitHub Markdown Alerts plugin is not installed */
+.alert.md-alert .md-alert-title .fa {
+    color: inherit;
+    margin-right: 0.5rem;
+}
+
+.alert.md-alert .md-alert-body > :last-child {
+    margin-bottom: 0;
+}
+
+/* Links inside an alert, like Bootstrap's .alert-link */
+.alert.md-alert a:not(.btn) {
+    color: inherit;
+    font-weight: 600;
+    text-decoration: underline;
+}

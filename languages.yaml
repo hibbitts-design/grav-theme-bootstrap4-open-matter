@@ -1,5 +1,18 @@
 en:
   TRANSLATION_TEST: Bootstrap4 Open Matter!
+  THEME_BOOTSTRAP4_OPEN_MATTER:
+    SEARCH_PLACEHOLDER: 'Search course...'
+    SEARCH_NO_RESULTS_TIPS: 'No pages matched your search. You could:'
+    SEARCH_TIP_SPELLING: 'Check the spelling'
+    SEARCH_TIP_FEWER_WORDS: 'Try fewer or different words'
+    SEARCH_ALL_COURSES: 'Search all courses'
+    SEARCH_IN_COURSE: ' in <strong>%s</strong>'
+    ERROR_CODE: 'Error %s'
+    ERROR_NOT_FOUND_TITLE: 'Page not found'
+    ERROR_NOT_FOUND_TEXT: 'Sorry, this page doesn''t exist or may have moved. You can go back to the home page, or search for what you were looking for.'
+    ERROR_TITLE: 'Something went wrong'
+    ERROR_COURSE_HOME: 'Go to %s Home'
+    ERROR_SITE_HOME: 'Go to the Home page'
   BLOG:
     ITEM:
       CONTINUE_READING: Continue reading...

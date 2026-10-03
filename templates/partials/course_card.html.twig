@@ -1,0 +1,37 @@
+{# Course card on the Subsite List page - course is the subsite page - hibbittsdesign.org #}
+{# description, instructor, badge_label, badge_color and group use the same fields as Grav Helios Course Hub, so they carry over unchanged #}
+{% set subsite_home = course.header.subsite_home is defined ? course.header.subsite_home : default_home %}
+<div class="{{ card_cols }} course-card-col">
+<div class="card course-card">
+  {# card image: the course's own image (image: in its frontmatter, as in Helios Course Hub), its header image, or an image on its home page #}
+  {% set subsite_image = course.header.image ? course.media.images[course.header.image] : null %}
+  {% if subsite_image is empty %}
+    {% set subsite_image = page.find(course.route ~ '/headerimage').media.images | first %}
+  {% endif %}
+  {% if subsite_image is empty %}
+    {% set subsite_image = page.find(course.route ~ '/' ~ subsite_home).media.images | first %}
+  {% endif %}
+  {% if subsite_image is not empty %}
+    <img class="card-img-top" src="{{ subsite_image.url }}" alt="">
+  {% endif %}
+  <div class="card-body">
+    {% set subsite_title = course.header.subsite_list_title ?: fallback_title ?: course.title %}
+    <h2 class="card-title">
+      <a class="stretched-link" href="{{ course.url ~ '/' ~ subsite_home }}">{{ subsite_title }}</a><span class="course-card-arrow" aria-hidden="true">&rarr;</span>
+    </h2>
+    {% set subsite_description = course.header.description ?: course.header.subsite_list_description %}
+    {% if subsite_description %}
+      <p class="card-text">{{ subsite_description }}</p>
+    {% endif %}
+    {% if course.header.instructor %}
+      <p class="card-text course-card-meta">{{ course.header.instructor }}</p>
+    {% endif %}
+    {% if course.header.badge_label %}
+      {# map Helios badge colours to Bootstrap badges #}
+      {% set badge_class = {blue: 'primary', green: 'success', yellow: 'warning', red: 'danger', purple: 'info', plain: 'light'}[course.header.badge_color] ?? 'secondary' %}
+      <p class="card-text"><span class="badge badge-pill badge-{{ badge_class }}">{{ course.header.badge_label }}</span></p>
+    {% endif %}
+    {{ course.content|raw }}
+  </div>
+</div>
+</div>
