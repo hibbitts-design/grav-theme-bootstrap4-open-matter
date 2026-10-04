@@ -102,7 +102,7 @@ To leave something out when a page is printed, add Bootstrap's `d-print-none` cl
 - PHP >= 8.0.2
 - Grav CMS 1.7 or 2.0
 - The [Bootstrap4 theme](https://github.com/trilbymedia/grav-theme-bootstrap4) and required plugins, installed automatically as dependencies
-- GitHub-style alerts (`> [!NOTE]`, `> [!TIP]`, …) need the [GitHub Markdown Alerts](https://github.com/trilbymedia/grav-plugin-github-markdown-alerts) plugin (Grav 2); without it they show as regular blockquotes
+- GitHub-style alerts (`> [!NOTE]`, `> [!TIP]`, …) need the [GitHub Markdown Alerts](https://github.com/trilbymedia/grav-plugin-github-markdown-alerts) plugin – version 2 on Grav 2, or [version 1.1.1](https://github.com/trilbymedia/grav-plugin-github-markdown-alerts/releases/tag/1.1.1) on Grav 1.7 (both are included in the Open Course Hub and Open MultiCourse Hub packages); without it they show as regular blockquotes
 - Course search needs the [SimpleSearch](https://github.com/getgrav/grav-plugin-simplesearch) plugin (Grav 1.7 or 2)
 
 ## Support
