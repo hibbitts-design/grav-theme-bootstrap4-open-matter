@@ -15,7 +15,9 @@
 
 <h1 class="hidden">{{page.title}}</h1>
 
-{% if config.plugins.simplesearch.enabled %}
+{# on a Subsite List page, the search box is only shown when its Show Search Box setting is turned on - hibbittsdesign.org #}
+{% set hide_list_search = page.template == 'subsitelist' and not page.header.show_search_box %}
+{% if config.plugins.simplesearch.enabled and not hide_list_search %}
 <div class="sidebar-content sidebar-search mb-4">
     <h2>{{ 'SIDEBAR.SIMPLE_SEARCH.HEADLINE'|t }}</h2>
     {# course search: the current course, or all courses from the Subsite List page - hibbittsdesign.org #}

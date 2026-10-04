@@ -93,7 +93,9 @@
     <div class="container">
         <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url }}">{{ site_title }}</a>
         {# search all courses on a Subsite List page without a sidebar (course pages have search in their sidebar) - hibbittsdesign.org #}
-        {% set navbar_search = config.plugins.simplesearch.enabled and page.template == 'subsitelist' and page.header.show_sidebar is defined and not page.header.show_sidebar %}
+        {# only when the Subsite List page's Show Search Box setting is turned on #}
+        {% set navbar_search = config.plugins.simplesearch.enabled and page.template == 'subsitelist' and page.header.show_sidebar is defined and not page.header.show_sidebar
+          and page.header.show_search_box %}
         {% set navbar_bp = theme_var('navbar_breakpoint') ?: 'md' %}
         {% if navbar_search %}
           {# small screens: beside the menu button #}
