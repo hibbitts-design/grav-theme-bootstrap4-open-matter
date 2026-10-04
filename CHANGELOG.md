@@ -1,3 +1,9 @@
+# v6.0.2
+## 10/04/2026
+
+1. [](#new)
+    * Show Search Box option for the course list page (off by default; the all-courses search box was shown automatically in 6.0.0 and 6.0.1)
+
 # v6.0.1
 ## 10/04/2026
 
