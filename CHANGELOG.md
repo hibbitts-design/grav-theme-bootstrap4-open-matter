@@ -1,3 +1,11 @@
+# v6.0.1
+## 10/04/2026
+
+1. [](#new)
+    * "Standard on home pages, slim elsewhere" option for Header Image Height
+1. [](#improved)
+    * Existing mytheme installations require manual update of mytheme/blueprints.yaml to surface the new theme option
+
 # v6.0.0
 ## 10/03/2026
 
