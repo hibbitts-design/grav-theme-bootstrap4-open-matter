@@ -1,0 +1,80 @@
+/*
+===============================================================================================================================
+2026 Modern Dark Mode CSS - hibbittsdesign.org
+Dark Mode colours for theme-2026-modern.css, loaded after theme-2026-dark.css.
+===============================================================================================================================
+*/
+
+.main-content h1, .main-content .h1,
+.main-content h2, .main-content .h2,
+.main-content h3, .main-content .h3,
+.main-content h4, .main-content .h4,
+.main-content .card-title {
+    color: #f9fafb;
+}
+
+.alert-secondary {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+
+/* quieter shadows in dark too */
+.card,
+.alert-secondary {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.badge.badge-secondary {
+    color: #e5e7eb;
+}
+
+/* the link underline's fallback colour for older browsers, in the lighter Dark Mode link blue */
+.main-content p a:not(.btn, .badge, .nav-link, .page-link),
+.main-content li > a:not(.btn, .badge, .nav-link, .page-link),
+.main-content td a:not(.btn, .badge, .nav-link, .page-link) {
+    text-decoration-color: rgba(147, 197, 253, 0.5);
+    text-decoration-color: color-mix(in srgb, currentColor 50%, transparent);
+}
+
+.listbullet ul li:before {
+    color: #93c5fd;
+}
+
+.blog-sidebar h2 {
+    color: #9ca3af;
+}
+
+/* The keyboard focus ring in light on the dark NavBar of the "Tinted" NavBar Look */
+.navbar-tint .nav-link:focus-visible {
+    outline-color: #f9fafb;
+}
+
+.main-content .fa {
+    color: #9ca3af;
+}
+
+.main-content a .fa,
+.main-content .btn .fa,
+.main-content .alert .fa,
+.main-content .badge .fa {
+    color: inherit;
+}
+
+/* Callouts: a 10% tint of each colour on dark grey, with lighter colours so the titles stay easy to read */
+.alert.md-alert {
+    color: #d1d5db;
+    background-color: #1f2937;
+    background-color: color-mix(in srgb, var(--alert-accent) 10%, #1f2937);
+    /* (theme-2026-dark.css sets a border colour for each type, so the left border's colour is set again here) */
+    border-left-color: var(--alert-accent);
+}
+
+.alert.md-alert--note      { --alert-accent: #6cb6ff; }
+.alert.md-alert--tip       { --alert-accent: #6bc46d; }
+.alert.md-alert--important { --alert-accent: #bc8cff; }
+.alert.md-alert--warning   { --alert-accent: #daaa3f; }
+.alert.md-alert--caution   { --alert-accent: #ff7b72; }

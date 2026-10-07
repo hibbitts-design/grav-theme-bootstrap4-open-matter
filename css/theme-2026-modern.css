@@ -1,0 +1,325 @@
+/*
+===============================================================================================================================
+2026 Modern Theme CSS - hibbittsdesign.org
+The 2026 Refresh style plus a few modern touches: it is loaded after theme-2026.css when the Theme Style is "2026 Modern".
+Dark Mode colours for these are in theme-2026-modern-dark.css.
+===============================================================================================================================
+*/
+
+/* Body text at the same 18px, but in rem so it grows when a visitor sets a larger default font size in their browser */
+body {
+    font-size: 1.125rem;
+}
+
+/* Page headings and card titles (such as the course cards) darker and a little bolder, for a clearer hierarchy */
+.main-content h1, .main-content .h1,
+.main-content h2, .main-content .h2,
+.main-content h3, .main-content .h3,
+.main-content h4, .main-content .h4,
+.main-content .card-title {
+    color: #111827;
+    font-weight: 600;
+}
+
+/* Bold text inside a heading (such as ## **Title** in Markdown) at the heading's own weight, so every heading matches */
+.main-content h1 strong, .main-content h2 strong,
+.main-content h3 strong, .main-content h4 strong {
+    font-weight: inherit;
+}
+
+/* Heading sizes in a steadier scale (about 1.25 times each step), so each level is clearly distinct from the next */
+.main-content h1, .main-content .h1 {
+    font-size: 2.125rem;
+    line-height: 1.2;
+}
+
+.main-content h2, .main-content .h2 {
+    font-size: 1.75rem;
+    line-height: 1.25;
+}
+
+.main-content h3, .main-content .h3 {
+    font-size: 1.375rem;
+    line-height: 1.3;
+}
+
+.main-content h4, .main-content .h4 {
+    font-size: 1.1875rem;
+    line-height: 1.35;
+}
+
+/* More space above headings than below, so each heading groups with the content it introduces */
+.main-content h2 {
+    margin-top: 2.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.main-content h3 {
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.main-content h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ...but no extra space at the top of a page, card or box (:first-child), or for a heading straight after
+   another heading, such as a subtitle (h2 + h3 matches an h3 that directly follows an h2) */
+.main-content h2:first-child,
+.main-content h3:first-child,
+.main-content h4:first-child,
+.main-content .card-title {
+    margin-top: 0;
+}
+
+.main-content h2 + h3,
+.main-content h3 + h4 {
+    margin-top: 0.25rem;
+}
+
+/* The [topics] letter headings keep their own size and spacing */
+.main-content h2.topics-letter {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Headings wrap into lines of similar length, and paragraphs avoid a single word on their last line
+   (text-wrap is ignored by browsers that don't support it yet) */
+.main-content h1, .main-content h2, .main-content h3, .main-content h4 {
+    text-wrap: balance;
+}
+
+.main-content p, .main-content li {
+    text-wrap: pretty;
+}
+
+/* Quieter shadows: the thin borders do most of the work, with only a hint of depth (a little more on hover) */
+.card,
+.alert-secondary {
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(16, 24, 40, 0.08);
+}
+
+/* Site title in the NavBar semibold, so it anchors the NavBar like the page headings */
+.navbar .navbar-brand {
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+/* NavBar items in medium weight and a little smaller than the body text (1rem, 16px by default),
+   with rounded corners for the keyboard focus ring below */
+.navbar .nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+/* Current page in the NavBar: semibold text with a short rounded bar below it, a modern take on the underline.
+   The bar uses the text colour (currentColor), so it is as easy to see as the text on any NavBar colour. */
+.navbar .nav-item.current > .nav-link {
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* (the bar is drawn with ::after, an extra box added by CSS, placed at the bottom of the link) */
+.navbar .nav-item.current > .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0.15rem;
+    width: 1.5rem;
+    height: 3px;
+    border-radius: 3px;
+    background-color: currentColor;
+}
+
+/* When the menu is in a row, the bar spans the text (the link has 0.5rem of space on each side).
+   The menu is in a row from the NavBar Breakpoint setting's width: Small, Medium or Large. */
+@media (min-width: 576px) {
+    .navbar-expand-sm .navbar-nav .nav-item.current > .nav-link::after {
+        left: 0.5rem;
+        right: 0.5rem;
+        width: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-expand-md .navbar-nav .nav-item.current > .nav-link::after {
+        left: 0.5rem;
+        right: 0.5rem;
+        width: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-item.current > .nav-link::after {
+        left: 0.5rem;
+        right: 0.5rem;
+        width: auto;
+    }
+}
+
+/* A clear keyboard focus ring for NavBar items (:focus-visible matches keyboard focus, not mouse clicks),
+   with a small gap so it stands out from the NavBar colour */
+.navbar-dark .nav-link:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+.navbar-light .nav-link:focus-visible {
+    outline: 2px solid #111827;
+    outline-offset: 2px;
+}
+
+/* Grey boxes (such as "What's Happening This Week") as white cards with a thin border, like the course cards (shadow above),
+   with the same space below them as above a heading, so the next section doesn't sit tight against them */
+.alert-secondary {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    margin-bottom: 2.25rem;
+}
+
+/* Images in the page with rounded corners, like the cards and boxes. An image with a credit is rounded through its
+   wrapper, which already clips what's inside it (overflow: hidden), so the image and its credit share the corners. */
+.main-content p > img,
+.main-content figure img,
+.main-content .image-credit-wrapper,
+.main-content .link-preview-card {
+    border-radius: 12px;
+}
+
+/* Image credits as a small, softly rounded label in the page font, set in a little from the image's corner
+   (light text on a dark, slightly see-through background stays easy to read over any photo) */
+.image-credit-wrapper .image-credit {
+    right: 0.5rem;
+    bottom: 0.5rem;
+    padding: 0.2rem 0.5rem;
+    font-family: inherit;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #f3f4f6;
+    background: rgba(17, 24, 39, 0.72);
+    border-radius: 6px;
+}
+
+.image-credit a,
+.image-credit a:hover,
+.image-credit a:focus {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(243, 244, 246, 0.5);
+    text-underline-offset: 2px;
+}
+
+/* A slightly shorter standard header image, so more of each page shows without scrolling
+   (the Slim and phone sizes are unchanged) */
+.myheader {
+    height: 230px;
+}
+
+@media (min-width: 960px) and (max-width: 1140px) {
+    .myheader {
+        height: 210px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 960px) {
+    .myheader {
+        height: 190px;
+    }
+}
+
+/* Checkmark lists: the ✓ in the link colour and bold */
+.listbullet ul li:before {
+    color: #1b6ec2;
+    font-weight: 700;
+}
+
+/* Sidebar headings as small uppercase labels, so the sidebar reads as supporting content */
+.blog-sidebar h2 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #6b7280;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Badges as rounded pills, all in medium weight; the soft grey date badges get slightly darker text to stay crisp at that weight */
+.badge {
+    border-radius: 999px;
+    font-weight: 500;
+}
+
+.badge.badge-secondary {
+    font-weight: 500;
+    color: #1f2937;
+}
+
+/* Links in paragraphs, lists and tables with a thin underline at all times, so they don't rely on colour alone
+   (the link blue is close to the text colour). The underline is a softer version of the link colour (color-mix() blends
+   it half with transparent; older browsers use the colour set just before it), and turns the full link colour on hover or focus.
+   (li > a is a link directly in a list item, so headings inside list items, such as the weekly posts, are left out.)
+   Buttons, badges, menus and page numbers keep their own styles. */
+.main-content p a:not(.btn, .badge, .nav-link, .page-link),
+.main-content li > a:not(.btn, .badge, .nav-link, .page-link),
+.main-content td a:not(.btn, .badge, .nav-link, .page-link) {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(27, 110, 194, 0.5);
+    text-decoration-color: color-mix(in srgb, currentColor 50%, transparent);
+}
+
+.main-content p a:not(.btn, .badge, .nav-link, .page-link):hover,
+.main-content p a:not(.btn, .badge, .nav-link, .page-link):focus,
+.main-content li > a:not(.btn, .badge, .nav-link, .page-link):hover,
+.main-content li > a:not(.btn, .badge, .nav-link, .page-link):focus,
+.main-content td a:not(.btn, .badge, .nav-link, .page-link):hover,
+.main-content td a:not(.btn, .badge, .nav-link, .page-link):focus {
+    text-decoration-color: currentColor;
+}
+
+/* Font Awesome icons in the page in a muted grey, so the text and links stand out;
+   icons in links (such as the Schedule's week headings), buttons, callouts and badges keep their own colour */
+.main-content .fa {
+    color: #6b7280;
+}
+
+.main-content a .fa,
+.main-content .btn .fa,
+.main-content .alert .fa,
+.main-content .badge .fa {
+    color: inherit;
+}
+
+/* Callouts (GitHub-style alerts and the course content shortcodes) with a coloured left border, a light tint and
+   dark text, as in Quark 2 Open Publishing and Grav Helios. Each type sets its colour in --alert-accent (GitHub's
+   colours); color-mix() blends 6% of it into white, and older browsers without it use the light grey set just before it. */
+.alert.md-alert {
+    --alert-accent: #6b7280;
+    color: #374151;
+    background-color: #f9fafb;
+    background-color: color-mix(in srgb, var(--alert-accent) 6%, #ffffff);
+    border: none;
+    border-left: 4px solid var(--alert-accent);
+    border-radius: 8px;
+}
+
+.alert.md-alert .md-alert-title {
+    color: var(--alert-accent);
+}
+
+.alert.md-alert--note      { --alert-accent: #0969da; }
+.alert.md-alert--tip       { --alert-accent: #1a7f37; }
+.alert.md-alert--important { --alert-accent: #8250df; }
+.alert.md-alert--warning   { --alert-accent: #9a6700; }
+.alert.md-alert--caution   { --alert-accent: #cf222e; }

@@ -138,3 +138,115 @@ h2.topics-letter {
     color: inherit;
 }
 
+
+/* NavBar Look "Tinted" (Theme option): the NavBar in a light tint of its colour, with dark text.
+   color-mix() blends some of the NavBar colour into white; older browsers without it use the plain white set just before it.
+   (!important is needed because Bootstrap's bg- classes use it for their background) */
+
+/* How much of the colour is blended in: Tinted (subtle), Tinted, or Tinted (strong) */
+.navbar-tint {
+    --navbar-tint-amount: 10%;
+}
+
+.navbar-tint.navbar-tint-subtle {
+    --navbar-tint-amount: 5%;
+}
+
+.navbar-tint.navbar-tint-strong {
+    --navbar-tint-amount: 18%;
+}
+
+.navbar.navbar-tint {
+    background-color: #ffffff !important;
+    background-color: color-mix(in srgb, var(--navbar-color, #1b6ec2) var(--navbar-tint-amount), #ffffff) !important;
+    /* a hairline along the bottom gives the NavBar a clear edge against the page, as in Grav Helios */
+    border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+/* The NavBar Background classes as the colour for the tint */
+.navbar-tint.bg-primary { --navbar-color: #007bff; }
+.navbar-tint.bg-success { --navbar-color: #28a745; }
+.navbar-tint.bg-info    { --navbar-color: #17a2b8; }
+.navbar-tint.bg-warning { --navbar-color: #ffc107; }
+.navbar-tint.bg-danger  { --navbar-color: #dc3545; }
+.navbar-tint.bg-inverse { --navbar-color: #343a40; }
+.navbar-tint.bg-faded   { --navbar-color: #adb5bd; }
+
+/* Dark text for the site title and menu (Bootstrap's light NavBar text can be too pale on a tint) */
+.navbar-tint .navbar-brand,
+.navbar-tint .navbar-brand:hover,
+.navbar-tint .navbar-brand:focus {
+    color: #111827;
+}
+
+.navbar-tint .navbar-nav .nav-link,
+.navbar-tint .navbar-nav .active > .nav-link {
+    color: #1f2937;
+}
+
+.navbar-tint .navbar-nav .nav-link:hover,
+.navbar-tint .navbar-nav .nav-link:focus {
+    color: #000000;
+}
+
+/* Menu items with room on each side for the current page's pill */
+.navbar-tint .navbar-nav .nav-link {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border-radius: 8px;
+}
+
+/* Current page as a white pill with semibold text, a little shorter than the NavBar so it has space around it.
+   This replaces the underline (and 2026 Modern's rounded bar, hidden with display: none). */
+.navbar-tint .navbar-nav .nav-item.current > .nav-link {
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+    font-weight: 600;
+    color: #111827;
+    text-decoration: none;
+    background-color: #ffffff;
+    /* a thin outline (drawn with box-shadow, so it doesn't change the size) keeps the pill clear on the subtle tint */
+    box-shadow: 0 0 0 1px rgba(17, 24, 39, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-tint .navbar-nav .nav-item.current > .nav-link::after {
+    display: none;
+}
+
+/* When the menu is in a row, its items are centred in the NavBar, so the shorter pill stays in line with them.
+   The menu is in a row from the NavBar Breakpoint setting's width: Small, Medium or Large. */
+@media (min-width: 576px) {
+    .navbar-tint.navbar-expand-sm .navbar-nav {
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-tint.navbar-expand-md .navbar-nav {
+        align-items: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-tint.navbar-expand-lg .navbar-nav {
+        align-items: center;
+    }
+}
+
+/* With NavBar Position "Sticky Top", a frosted NavBar: slightly see-through, blurring the page as it scrolls under.
+   (@supports checks the browser can blur, and visitors who ask their system to reduce transparency keep a solid NavBar) */
+@supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+    .navbar.navbar-tint.sticky-top {
+        background-color: color-mix(in srgb, var(--navbar-color, #1b6ec2) var(--navbar-tint-amount), rgba(255, 255, 255, 0.85)) !important;
+        -webkit-backdrop-filter: saturate(180%) blur(12px);
+        backdrop-filter: saturate(180%) blur(12px);
+    }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+    .navbar.navbar-tint.sticky-top {
+        background-color: color-mix(in srgb, var(--navbar-color, #1b6ec2) var(--navbar-tint-amount), #ffffff) !important;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+    }
+}

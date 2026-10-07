@@ -79,8 +79,25 @@
   <div class="myheader{{ header_image_size == 'slim' ? ' myheader-slim' : '' }}" style="background-image: url({{ background_image.url }});"></div>
 {% endif %}
 
+{# NavBar Look (Theme option): "Tinted" shows the NavBar in a light tint of its colour, with dark text,
+   instead of the solid colour (see "NavBar Look" in css/open-matter.css) - hibbittsdesign.org #}
+{% set navbar_look = theme_var('navbar_look') %}
+{% set navbar_tint = navbar_look in ['tint', 'tint-subtle', 'tint-strong'] %}
+{% if navbar_tint %}
+    {% set navbar_style = 'navbar-light navbar-tint' %}
+    {# "Tinted (subtle)" and "Tinted (strong)" add a class that sets how much of the colour is blended in #}
+    {% if navbar_look == 'tint-subtle' or navbar_look == 'tint-strong' %}
+        {% set navbar_style = navbar_style ~ ' navbar-' ~ navbar_look %}
+    {% endif %}
+{% endif %}
+
 {% if navbar_bg_color %}
-    {% set navbar_bg_color = "style=\"background-color: #{navbar_bg_color}\"" %}
+    {% if navbar_tint %}
+        {# the colour is passed to the CSS as the --navbar-color variable, which mixes it into the tint #}
+        {% set navbar_bg_color = "style=\"--navbar-color: #{navbar_bg_color}\"" %}
+    {% else %}
+        {% set navbar_bg_color = "style=\"background-color: #{navbar_bg_color}\"" %}
+    {% endif %}
     {% set navbar_bg = '' %}
 {% elseif navbar_bg and navbar_bg != 'default' %}
     {% set navbar_bg_color = '' %}

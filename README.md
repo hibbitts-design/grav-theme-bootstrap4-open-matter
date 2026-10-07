@@ -29,8 +29,8 @@ Bootstrap4 Open Matter adds what open, collaborative course and blog sites need 
 - **Course content shortcodes** – `[objectives]`, `[key-takeaways]`, `[reflection]`, `[definition]`, `[example]`, `[case-study]`, `[project-brief]`, `[process-note]`, `[feedback-requested]`, `[announcement]`, `[exercise]`, `[references]`, and `[excerpt]`, shown as Bootstrap alerts, with the same names and options as Grav Helios Course Hub
 - **Course and content page types** – blog with featured (sticky) posts, course sections, RSS feed aggregation, link lists, subsites with course cards (description, instructor, badge, group, and image), and dedicated H5P, iFrame, PDF, Embedly, and link preview card pages; a course can be set up with `subsite.md` or, as in Grav Helios Course Hub, `course.md`
 - **Course search** – with the SimpleSearch plugin, a "Search course..." box in the sidebar searches just the current course, or, when its Show Search Box setting is on, all courses from the course list page, with results in each course's own layout
-- **Visual styles** – 2026 Refresh or Classic, with Dark Mode off, on, or following the visitor's system setting
-- **Flexible layout** – a Markdown-based sidebar, NavBar style, colour, position, and breakpoint options, dropdowns, and custom menu items
+- **Visual styles** – 2026 Modern, 2026 Refresh or Classic, with Dark Mode off, on, or following the visitor's system setting
+- **Flexible layout** – a Markdown-based sidebar, NavBar look (solid or a light tint of its colour), style, colour, position, and breakpoint options, dropdowns, and custom menu items
 - **Open licensing and accessibility** – Creative Commons license display and hidden H1 page titles for screen readers
 - **Print-friendly pages** – printed pages show just the content in black on white, with link addresses, whatever the Theme Style or Dark Mode
 
@@ -72,7 +72,7 @@ The easiest way to get started is the [Open Course Hub](https://github.com/hibbi
 All options are available in the Admin Panel under **Themes → Bootstrap4 Open Matter**.
 
 - **Open Matter Options** – chromeless site, H5P content embed source URL, Creative Commons license type and display
-- **Bootstrap4 Options** – Theme Style, Dark Mode, Header Image Height (Standard, Slim, Standard on home pages and slim elsewhere, or Hidden), Syndicate (RSS) links in the sidebar, NavBar style, background, position, and breakpoint, dropdowns
+- **Bootstrap4 Options** – Theme Style, Dark Mode, Header Image Height (Standard, Slim, Standard on home pages and slim elsewhere, or Hidden), Syndicate (RSS) links in the sidebar, NavBar look, style, background, position, and breakpoint, dropdowns
 - **Custom Menu Items** – text, icon, URL, and target for extra NavBar links
 - **Git Sync Link** – location, link type (view or edit), icon and text, Site Theme Files link, and a custom Git repository URL
 

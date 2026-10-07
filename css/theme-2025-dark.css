@@ -236,3 +236,64 @@ ol.breadcrumb {
     background-color: rgba(156, 163, 175, 0.2);
     color: #e5e7eb;
 }
+
+/* NavBar Look "Tinted": a dark NavBar with a tint of its colour blended into dark grey, and light text */
+.navbar-tint {
+    --navbar-tint-amount: 18%;
+}
+
+.navbar-tint.navbar-tint-subtle {
+    --navbar-tint-amount: 12%;
+}
+
+.navbar-tint.navbar-tint-strong {
+    --navbar-tint-amount: 28%;
+}
+
+.navbar.navbar-tint {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+    background-color: #111827 !important;
+    background-color: color-mix(in srgb, var(--navbar-color, #1b6ec2) var(--navbar-tint-amount), #111827) !important;
+}
+
+.navbar-tint .navbar-brand,
+.navbar-tint .navbar-brand:hover,
+.navbar-tint .navbar-brand:focus,
+.navbar-tint .navbar-nav .nav-link:hover,
+.navbar-tint .navbar-nav .nav-link:focus {
+    color: #ffffff;
+}
+
+.navbar-tint .navbar-nav .nav-link,
+.navbar-tint .navbar-nav .active > .nav-link {
+    color: #e5e7eb;
+}
+
+/* the current page's pill as a light overlay instead of white */
+.navbar-tint .navbar-nav .nav-item.current > .nav-link {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.14);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.16);
+}
+
+/* the phone menu button: a light border, and its dark icon lines turned light with invert() */
+.navbar-tint .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-tint .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* the frosted Sticky Top NavBar, in dark */
+@supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+    .navbar.navbar-tint.sticky-top {
+        background-color: color-mix(in srgb, var(--navbar-color, #1b6ec2) var(--navbar-tint-amount), rgba(17, 24, 39, 0.85)) !important;
+    }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+    .navbar.navbar-tint.sticky-top {
+        background-color: color-mix(in srgb, var(--navbar-color, #1b6ec2) var(--navbar-tint-amount), #111827) !important;
+    }
+}
