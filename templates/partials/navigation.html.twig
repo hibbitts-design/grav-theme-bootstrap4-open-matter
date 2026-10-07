@@ -171,9 +171,13 @@
 
                 {# check to display git sync link in menu - hibbittsdesign.org #}
                 {% if theme_var('display_of_git_sync_repo_link') == 'menu' or theme_var('display_of_git_sync_repo_link') == empty %}
-                  <li class="nav-item active" >
-                      {% include 'partials/git_sync_repo_link.html.twig' with {linkinmenu: true} %}
-                  </li>
+                  {# (only when there's a link to show, so no empty menu item is left) #}
+                  {% set git_sync_link = include('partials/git_sync_repo_link.html.twig', {linkinmenu: true}) %}
+                  {% if git_sync_link|trim %}
+                    <li class="nav-item active" >
+                        {{ git_sync_link|raw }}
+                    </li>
+                  {% endif %}
                 {% endif %}
 
                 {% if config.plugins.login.enabled and grav.user.username %}

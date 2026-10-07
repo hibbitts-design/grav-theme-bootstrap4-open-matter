@@ -145,10 +145,18 @@
                 {# use footer folder page for content - hibbittsdesign.org #}
                 <div class="text-muted">
                   {% if (page.header.git_sync_repo_link_display is defined and page.header.git_sync_repo_link_display == 'footer' ) or (( theme_var('display_of_git_sync_repo_link') == 'footer' and page.header.git_sync_repo_link_display is not defined ) and not (page.header.hide_git_sync_repo_link)) %}
-                    <p>{% include 'partials/git_sync_repo_link.html.twig' %}</p>
+                    {# (only when there's a link to show) #}
+                    {% set git_sync_link = include('partials/git_sync_repo_link.html.twig') %}
+                    {% if git_sync_link|trim %}
+                      <p>{{ git_sync_link|raw }}</p>
+                    {% endif %}
                   {% endif %}
                   {% if theme_var('git_sync_edit_theme_link_location') == 'footer' %}
-                    <p>{% include 'partials/git_sync_theme_link.html.twig' %}</p>
+                    {# (only when there's a link to show) #}
+                    {% set git_sync_theme_link = include('partials/git_sync_theme_link.html.twig') %}
+                    {% if git_sync_theme_link|trim %}
+                      <p>{{ git_sync_theme_link|raw }}</p>
+                    {% endif %}
                   {% endif %}
                   {% if footer_content %}
                     {{ footer_content|raw }}
