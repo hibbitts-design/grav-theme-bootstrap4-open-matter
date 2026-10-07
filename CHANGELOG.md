@@ -1,3 +1,12 @@
+# v6.1.0
+## 10/07/2026
+
+1. [](#new)
+    * 2026 Modern Theme Style: 2026 Refresh with bolder headings, Grav Helios-style callouts, card-style boxes, rounded images, underlined links and a clearer current page in the NavBar
+    * NavBar Look option: Solid colour, or Tinted (subtle, standard or strong) with dark text, frosted when Sticky Top
+1. [](#improved)
+    * Existing mytheme installations require manual update of mytheme/blueprints.yaml to surface the new theme options
+
 # v6.0.3
 ## 10/06/2026
 
