@@ -1,3 +1,9 @@
+# v6.0.3
+## 10/06/2026
+
+1. [](#bugfix)
+    * The Setup Git Sync and Site Theme Files links are no longer shown when the Git Sync plugin is turned off
+
 # v6.0.2
 ## 10/04/2026
 
