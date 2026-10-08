@@ -133,6 +133,9 @@
             {% endif %}
             <ul class="navbar-nav">
 
+              {# the current page's address, kept before the loop below reuses the name "page" for each menu item - hibbittsdesign.org #}
+              {% set current_page_url = page.url %}
+
               {% for page in pages %}
                 {% if page.visible %}
                   {# Set all pages to use active page style - hibbittsdesign.org#}
@@ -156,6 +159,12 @@
                       {% set page_menu = page.menu %}
                       {# mark the current page (or the section it is in) - hibbittsdesign.org #}
                       {% set is_current = page.active or page.activeChild %}
+                      {# also when the current page's address starts with this item's address and a /, such as a section
+                         of a Multi-Section page (activeChild can miss these on Grav 1.7). Not for the home page,
+                         since every address starts with its address. #}
+                      {% if not is_current and not page.home and (current_page_url starts with page.url ~ '/') %}
+                        {% set is_current = true %}
+                      {% endif %}
                       <li class="nav-item {{ current_page }}{{ is_current ? ' current' : '' }}"><a class="nav-link" href="{{ page_url }}" {% if is_current %}aria-current="page" {% endif %}{% if page.header.menu_target %} target="{{ page.header.menu_target }}" {% endif %}>{% if page.header.menu_icon %}<i class="fa fa-{{ page.header.menu_icon }}"></i>{% endif %}{{ page_menu }}</a></li>
                     {% endif %}
                   {% endif %}
