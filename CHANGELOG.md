@@ -1,3 +1,12 @@
+# v6.1.3
+## 10/08/2026
+
+1. [](#improved)
+    * 2026 Modern: Accordion page sections as a clean list matching the site's cards, with a chevron that points down when closed and up when open
+    * Accordion page sections are announced correctly by screen readers when closed or open
+1. [](#bugfix)
+    * 2026 Modern: no gaps between the Accordion page's sections
+
 # v6.1.2
 ## 10/07/2026
 
