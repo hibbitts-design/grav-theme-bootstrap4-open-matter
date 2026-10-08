@@ -1,3 +1,9 @@
+# v6.1.5
+## 10/08/2026
+
+1. [](#bugfix)
+    * The NavBar highlights a Multi-Section page's menu item on its sections (Grav 1.7)
+
 # v6.1.4
 ## 10/08/2026
 
