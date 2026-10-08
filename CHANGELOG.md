@@ -1,3 +1,9 @@
+# v6.1.4
+## 10/08/2026
+
+1. [](#improved)
+    * Tinted NavBar Look keeps the NavBar colour's own hue, with the same lightness for every colour (browsers from 2024 onwards)
+
 # v6.1.3
 ## 10/08/2026
 
