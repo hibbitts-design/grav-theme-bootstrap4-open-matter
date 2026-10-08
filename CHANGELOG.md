@@ -1,3 +1,9 @@
+# v6.1.2
+## 10/07/2026
+
+1. [](#improved)
+    * Updated screenshots
+
 # v6.1.1
 ## 10/07/2026
 
