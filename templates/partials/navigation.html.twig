@@ -35,7 +35,9 @@
     {% endif %}
     {% set pages = page.evaluate([{'@page.children':'/' ~ firstfolderofpath }]) %}
 {% elseif page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).template == 'course' or page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).template == 'subsite' %}
-    {% if page.find('/' ~ firstfolderofpath ).header.navbar_bg_color %}
+    {# the course's own NavBar colour, if it has one (its page is one folder deeper here),
+       so a colour set on its parent folder is kept when the course has none #}
+    {% if page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).header.navbar_bg_color %}
       {% set navbar_bg_color = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).header.navbar_bg_color %}
     {% endif %}
     {% set course_home = page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).header.course_home %}
@@ -106,7 +108,7 @@
     {% set navbar_bg_color = '' %}
 {% endif %}
 
-<nav class="navbar {{ navbar_position }} navbar-expand-{{ navbar_breakpoint }} {{ navbar_style }} {{ navbar_bg }}" {{ navbar_bg_color|raw }};" role="navigation">
+<nav class="navbar {{ navbar_position }} navbar-expand-{{ navbar_breakpoint }} {{ navbar_style }} {{ navbar_bg }}" {{ navbar_bg_color|raw }} role="navigation">
     <div class="container">
         <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url }}">{{ site_title }}</a>
         {# search all courses on a Subsite List page without a sidebar (course pages have search in their sidebar) - hibbittsdesign.org #}
