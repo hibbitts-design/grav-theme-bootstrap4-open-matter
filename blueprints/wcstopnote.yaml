@@ -1,3 +1,4 @@
+# Deprecated: the Web Component Stop Note page type will be removed in a future release, with [wcstopnote] - hibbittsdesign.org
 title: Web Component Stop Note Options
 '@extends':
     type: default

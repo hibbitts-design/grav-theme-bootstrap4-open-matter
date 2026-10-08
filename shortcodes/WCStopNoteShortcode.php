@@ -6,6 +6,10 @@ use Thunder\Shortcode\Shortcode\ShortcodeInterface;
 
 // [wcstopnote title="Important Reminder" message="Midterm exam is on June 20th."]
 
+/**
+ * Deprecated: [wcstopnote] will be removed in a future release, with its page template and blueprint. It was experimental
+ * and needs the separate Web Components plugin. Use a callout such as [announcement] or > [!IMPORTANT] instead - hibbittsdesign.org
+ */
 class WCStopNoteShortcode extends Shortcode
 {
     public function init()
