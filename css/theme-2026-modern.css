@@ -73,6 +73,14 @@ body {
     margin-top: 0;
 }
 
+/* (also the first visible heading after a page title hidden for screen readers only, such as on the course list page;
+   .hidden + h2 matches an h2 that directly follows an element with the hidden class) */
+.main-content .hidden + h2,
+.main-content .hidden + h3,
+.main-content .hidden + h4 {
+    margin-top: 0;
+}
+
 .main-content h2 + h3,
 .main-content h3 + h4 {
     margin-top: 0.25rem;
