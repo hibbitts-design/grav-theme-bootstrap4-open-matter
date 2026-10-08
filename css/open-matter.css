@@ -143,16 +143,24 @@ h2.topics-letter {
    color-mix() blends some of the NavBar colour into white; older browsers without it use the plain white set just before it.
    (!important is needed because Bootstrap's bg- classes use it for their background) */
 
-/* How much of the colour is blended in: Tinted (subtle), Tinted, or Tinted (strong) */
+/* How strong the tint is: Tinted (subtle), Tinted, or Tinted (strong).
+   --navbar-tint-lightness and --navbar-tint-chroma are for newer browsers (see the end of this section),
+   --navbar-tint-amount is the share of colour blended into white for older ones. */
 .navbar-tint {
+    --navbar-tint-lightness: 0.915;
+    --navbar-tint-chroma: 0.15;
     --navbar-tint-amount: 10%;
 }
 
 .navbar-tint.navbar-tint-subtle {
+    --navbar-tint-lightness: 0.94;
+    --navbar-tint-chroma: 0.11;
     --navbar-tint-amount: 5%;
 }
 
 .navbar-tint.navbar-tint-strong {
+    --navbar-tint-lightness: 0.89;
+    --navbar-tint-chroma: 0.19;
     --navbar-tint-amount: 18%;
 }
 
@@ -248,5 +256,30 @@ h2.topics-letter {
         background-color: color-mix(in srgb, var(--navbar-color, #1b6ec2) var(--navbar-tint-amount), #ffffff) !important;
         -webkit-backdrop-filter: none;
         backdrop-filter: none;
+    }
+}
+
+/* Newer browsers (2024 onwards) make the tint from the NavBar colour's own hue instead of blending it into white,
+   so the tint stays warm or cool like the colour, and every colour gets the same light background.
+   oklch(from ...) is a relative colour: it takes the colour's hue (h), sets a fixed lightness, and keeps a share
+   of its colourfulness (c). @supports checks the browser understands it; others keep the blend above. */
+@supports (color: oklch(from red l c h)) {
+    .navbar.navbar-tint {
+        background-color: oklch(from var(--navbar-color, #1b6ec2) var(--navbar-tint-lightness) calc(c * var(--navbar-tint-chroma)) h) !important;
+    }
+}
+
+/* the same tint for the frosted Sticky Top NavBar, slightly see-through (/ 0.85) */
+@supports (color: oklch(from red l c h)) and ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .navbar.navbar-tint.sticky-top {
+        background-color: oklch(from var(--navbar-color, #1b6ec2) var(--navbar-tint-lightness) calc(c * var(--navbar-tint-chroma)) h / 0.85) !important;
+    }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+    @supports (color: oklch(from red l c h)) {
+        .navbar.navbar-tint.sticky-top {
+            background-color: oklch(from var(--navbar-color, #1b6ec2) var(--navbar-tint-lightness) calc(c * var(--navbar-tint-chroma)) h) !important;
+        }
     }
 }
