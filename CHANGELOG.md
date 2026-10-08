@@ -1,3 +1,11 @@
+# v6.1.6
+## 10/08/2026
+
+1. [](#improved)
+    * Deprecated the [twitter] shortcode, as X has heavily restricted embedded timelines; it will be removed in a future release
+    * Deprecated the experimental [wcstopnote] shortcode and Web Component Stop Note page type; they will be removed in a future release
+    * Removed the Twitter feed from the demo sidebar
+
 # v6.1.5
 ## 10/08/2026
 
