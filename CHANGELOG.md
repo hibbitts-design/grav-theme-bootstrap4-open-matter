@@ -1,3 +1,11 @@
+# v6.1.1
+## 10/07/2026
+
+1. [](#bugfix)
+    * 2026 Modern: no extra space above the first heading on pages with a hidden page title, such as the course list page
+    * A course one folder deeper keeps the NavBar colour set on its parent folder
+    * Remove stray characters from the NavBar's HTML
+
 # v6.1.0
 ## 10/07/2026
 
