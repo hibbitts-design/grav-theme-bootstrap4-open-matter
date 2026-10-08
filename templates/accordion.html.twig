@@ -33,9 +33,12 @@
 
                 {% if page.children %}
 
-                  <h2 class="card-header" role="tab" id="heading{{index}}">
-                      <a class="collapsed d-block" data-toggle="collapse" href="#collapse{{index}}" aria-expanded="true" aria-controls="#collapse{{index}}" id="heading{{index}}">
-                          <i class="fa fa-chevron-left pull-right"></i> {{ page.title }}
+                  {# each section starts closed (aria-expanded="false"; Bootstrap updates it when the section opens),
+                     aria-controls names the panel's id (without #), and only the link has the heading id,
+                     so the panel's aria-labelledby points to one element - hibbittsdesign.org #}
+                  <h2 class="card-header" role="tab">
+                      <a class="collapsed d-block" data-toggle="collapse" href="#collapse{{index}}" aria-expanded="false" aria-controls="collapse{{index}}" id="heading{{index}}">
+                          <i class="fa fa-chevron-left pull-right" aria-hidden="true"></i> {{ page.title }}
                       </a>
                   </h2>
 

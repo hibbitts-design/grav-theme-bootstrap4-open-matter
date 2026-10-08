@@ -78,3 +78,28 @@ Dark Mode colours for theme-2026-modern.css, loaded after theme-2026-dark.css.
 .alert.md-alert--important { --alert-accent: #bc8cff; }
 .alert.md-alert--warning   { --alert-accent: #daaa3f; }
 .alert.md-alert--caution   { --alert-accent: #ff7b72; }
+
+/* Accordion page sections in dark */
+#accordion .card-header {
+    background-color: #1f2937;
+    border-top-color: #374151;
+}
+
+#accordion .card-header > a:focus-visible {
+    outline-color: #f9fafb;
+}
+
+#accordion .card-header > a,
+#accordion .card-header > a:hover,
+#accordion .card-header > a:focus-visible {
+    color: #f9fafb;
+}
+
+#accordion .card-header > a:hover,
+#accordion .card-header > a:focus-visible {
+    background-color: #273244;
+}
+
+#accordion .card-header .fa {
+    color: #9ca3af;
+}

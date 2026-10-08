@@ -86,6 +86,13 @@ body {
     margin-top: 0.25rem;
 }
 
+/* Headings used as card headers (such as the Accordion page's sections) keep no outer spacing, as in Bootstrap,
+   so the sections sit together without gaps */
+.main-content .card-header {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 /* The [topics] letter headings keep their own size and spacing */
 .main-content h2.topics-letter {
     font-size: 1.25rem;
@@ -242,6 +249,64 @@ body {
     .myheader {
         height: 190px;
     }
+}
+
+/* Accordion page: the sections as a clean list inside the card, matching the site's other cards and boxes:
+   titles in the heading colour on white, thin dividers, a light tint on hover (and keyboard focus, :focus-visible,
+   so it doesn't stay after a click), and the same muted grey as the page's other icons for the chevron.
+   The whole row is the link (its padding moves from the header to the link), so it's easy to click or tap. */
+
+/* the card clips its rows (overflow: hidden), so the hover tint follows its rounded corners */
+#accordion .card {
+    overflow: hidden;
+}
+
+/* a divider above each row except the first, so the last row doesn't double up with the card's own border */
+#accordion .card-header {
+    padding: 0;
+    background-color: #ffffff;
+    border-bottom: 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+#accordion .card-header:first-child {
+    border-top: 0;
+}
+
+#accordion .card-header > a {
+    padding: 0.9rem 1.25rem;
+    font-weight: 500;
+    color: #111827;
+    text-decoration: none;
+}
+
+/* an open section's title in semibold, like the current page in the NavBar (Bootstrap removes .collapsed when open) */
+#accordion .card-header > a:not(.collapsed) {
+    font-weight: 600;
+}
+
+#accordion .card-header > a:hover,
+#accordion .card-header > a:focus-visible {
+    color: #111827;
+    background-color: #f9fafb;
+}
+
+/* the same 2px keyboard focus ring as the NavBar, drawn just inside the row */
+#accordion .card-header > a:focus-visible {
+    outline: 2px solid #111827;
+    outline-offset: -2px;
+}
+
+/* (the icon is a left-pointing chevron, so it's turned a quarter to point up when open, and down when closed;
+   #6b7280 keeps it easy to see, at more than the 3:1 needed for a sign of whether a section is open) */
+#accordion .card-header .fa {
+    font-size: 0.875rem;
+    color: #6b7280;
+    transform: rotate(90deg);
+}
+
+#accordion .card-header .collapsed .fa {
+    transform: rotate(-90deg);
 }
 
 /* Checkmark lists: the ✓ in the link colour and bold */
