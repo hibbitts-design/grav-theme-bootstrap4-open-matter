@@ -2,7 +2,7 @@
 ## 10/09/2026
 
 1. [](#improved)
-    * No "Setup Git Sync" link is shown before Git Sync is connected to a repository, so visitors don't see an unfinished setup step; set it up in the Admin Panel (Plugins → Git Sync)
+    * No "Setup Git Sync" link is shown before Git Sync is connected to a repository, so visitors don't see an unfinished setup step; set it up in the Admin Panel (its own menu item in Grav 2, or Plugins → Git Sync in Grav 1.7)
 
 # v6.1.6
 ## 10/08/2026
