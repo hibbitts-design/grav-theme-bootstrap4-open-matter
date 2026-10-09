@@ -1,3 +1,9 @@
+# v6.1.7
+## XX/XX/2026
+
+1. [](#improved)
+    * No "Setup Git Sync" link is shown before Git Sync is connected to a repository, so visitors don't see an unfinished setup step; set it up in the Admin Panel (Plugins → Git Sync)
+
 # v6.1.6
 ## 10/08/2026
 
