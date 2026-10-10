@@ -1,3 +1,9 @@
+# v6.1.8
+## 10/10/2026
+
+1. [](#improved)
+    * Updated screenshots, showing the slate blue NavBar used by the Open Course Hub skeleton
+
 # v6.1.7
 ## 10/09/2026
 
