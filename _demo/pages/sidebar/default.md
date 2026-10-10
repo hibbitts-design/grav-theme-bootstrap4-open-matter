@@ -21,5 +21,4 @@ Suggestion, concern or complaint?
 [Assignments](https://canvas.sfu.ca/courses/55288/assignments)  
 [Quizzes](https://canvas.sfu.ca/courses/55288/quizzes)  
 [Class Discussions](https://canvas.sfu.ca/courses/55288/discussion_topics)  
-[Syllabus](https://canvas.sfu.ca/courses/55288/syllabus)   
-
+[Syllabus](https://canvas.sfu.ca/courses/55288/syllabus)
