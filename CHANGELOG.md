@@ -1,3 +1,9 @@
+# v6.2.1
+## XX/XX/2026
+
+1. [](#improved)
+    * Demo content: new Topics page and UX Techniques Guide example (unpublished, using the accordion page type), matching the Open Course Hub skeleton
+
 # v6.2.0
 ## 10/10/2026
 
