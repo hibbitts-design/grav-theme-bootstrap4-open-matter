@@ -1,3 +1,13 @@
+# v6.2.0
+## 10/10/2026
+
+1. [](#new)
+    * Header Image Height option "Standard on home pages, hidden elsewhere": the full image on the home page (and each course home page), and no image on other pages
+1. [](#improved)
+    * Theme options reorganized to match Quark Open Publishing: Open Matter Options now lists Chromeless Site, Menu, Creative Commons License and H5P Setup; Bootstrap4 Options groups Visual Style, Header Defaults and Sidebar Defaults
+    * Shorter Header Image Height help, and clearer labels: "NavBar Position", "Display Dropdowns in Menu", "H5P Embed Source URL" and "Custom Git Repository Tree URL"
+    * The header image code uses plain steps, with comments
+
 # v6.1.8
 ## 10/10/2026
 
