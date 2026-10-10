@@ -68,17 +68,42 @@
   {% set pages = pages.children.visible %}
 {% endif %}
 
-{# Header image height: standard, slim, hidden, or standard on home pages and slim elsewhere (Theme option) - hibbittsdesign.org #}
-{% set header_image_size = theme_var('header_image_size') ?: 'standard' %}
-{% if header_image_size == 'home-standard' %}
+{# Header image height (Theme option): standard, slim, hidden, or standard on home pages
+   with slim or hidden elsewhere - hibbittsdesign.org #}
+{% set header_image_size = theme_var('header_image_size') %}
+{% if not header_image_size %}
+  {% set header_image_size = 'standard' %}
+{% endif %}
+
+{% if header_image_size == 'home-standard' or header_image_size == 'home-hidden' %}
   {# a home page is the site's home page, a course's own page, or the course's home page (its course_home setting) #}
-  {% set is_home_page = page.home()
-    or page.template in ['course', 'subsite']
-    or (page.parent.template in ['course', 'subsite'] and page.slug == (course_home ?? '')|trim('/')) %}
-  {% set header_image_size = is_home_page ? 'standard' : 'slim' %}
+  {% set home_slug = '' %}
+  {% if course_home is defined and course_home %}
+    {% set home_slug = course_home|trim('/') %}
+  {% endif %}
+  {% set is_home_page = false %}
+  {% if page.home() or page.template in ['course', 'subsite'] %}
+    {% set is_home_page = true %}
+  {% elseif page.parent.template in ['course', 'subsite'] and page.slug == home_slug %}
+    {% set is_home_page = true %}
+  {% endif %}
+
+  {# home pages show the full image; other pages show the slim one, or none with "hidden elsewhere" #}
+  {% if is_home_page %}
+    {% set header_image_size = 'standard' %}
+  {% elseif header_image_size == 'home-hidden' %}
+    {% set header_image_size = 'hidden' %}
+  {% else %}
+    {% set header_image_size = 'slim' %}
+  {% endif %}
+{% endif %}
+
+{% set header_image_classes = 'myheader' %}
+{% if header_image_size == 'slim' %}
+  {% set header_image_classes = 'myheader myheader-slim' %}
 {% endif %}
 {% if background_image and not(navbar_position == 'fixed-bottom') and header_image_size != 'hidden' %}
-  <div class="myheader{{ header_image_size == 'slim' ? ' myheader-slim' : '' }}" style="background-image: url({{ background_image.url }});"></div>
+  <div class="{{ header_image_classes }}" style="background-image: url({{ background_image.url }});"></div>
 {% endif %}
 
 {# NavBar Look (Theme option): "Tinted" shows the NavBar in a light tint of its colour, with dark text,

@@ -71,10 +71,10 @@ The easiest way to get started is the [Open Course Hub](https://github.com/hibbi
 
 All options are available in the Admin Panel under **Themes → Bootstrap4 Open Matter**.
 
-- **Open Matter Options** – chromeless site, H5P content embed source URL, Creative Commons license type and display
-- **Bootstrap4 Options** – Theme Style, Dark Mode, Header Image Height (Standard, Slim, Standard on home pages and slim elsewhere, or Hidden), Syndicate (RSS) links in the sidebar, NavBar look, style, background, position, and breakpoint, dropdowns
+- **Open Matter Options** – chromeless site, menu dropdowns, Creative Commons license type and display, and H5P embed source URL
+- **Bootstrap4 Options** – Visual Style (Theme Style, Dark Mode), Header Defaults (Header Image Height: Standard, Slim, Standard on home pages with slim or hidden elsewhere, or Hidden; NavBar look, style, background, position, and breakpoint), and Sidebar Defaults (Syndicate (RSS) links)
 - **Custom Menu Items** – text, icon, URL, and target for extra NavBar links
-- **Git Sync Link** – location, link type (view or edit), icon and text, Site Theme Files link, and a custom Git repository URL
+- **Git Sync Link** – location, link type (view or edit), icon and text, Site Theme Files link, and a custom Git repository tree URL
 
 > [!TIP]
 > The slim header shows only the middle of the image, so landscapes, textures, or photos with a centred subject work best.

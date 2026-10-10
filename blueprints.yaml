@@ -1,7 +1,7 @@
 name: 'Bootstrap4 Open Matter'
 type: theme
 slug: bootstrap4-open-matter
-version: 6.1.8
+version: 6.2.0
 description: "A customized version of the Bootstrap4 theme for open blogs, course hubs and more. Includes Git Sync and 'chromeless' content display for seamless embedding."
 icon: bold
 author:
@@ -56,19 +56,20 @@ form:
                 '1': Yes
               validate:
                 type: bool
-            h5pcontent:
+            menuoptions:
               type: section
-              title: 'H5P Content'
+              title: Menu
               underline: true
-            h5pembedrootpath:
-              type: text
-              size: long
-              label: 'H5P Content Embed Source URL'
-              default: 'https://h5p.org/h5p/embed/'
-              help: 'Enter the embed source URL path up to, but not including, the H5P Content ID.'
-              description: 'H5P embed source URL path up to, but not including, the Content ID. For example, ''https://h5p.org/h5p/embed/'' or ''https://yourorganization.h5p.com/content/'' or ''https://yourWPsite/h5p/wp-admin/admin-ajax.php?action=h5p_embed&id=''.'
+            dropdown.enabled:
+              type: toggle
+              label: 'Display Dropdowns in Menu'
+              highlight: 1
+              default: 1
+              options:
+                '0': Disabled
+                '1': Enabled
               validate:
-                type: URL
+                type: bool
             creativecommonslicenseoptions:
               type: section
               title: 'Creative Commons License'
@@ -113,9 +114,22 @@ form:
               label: 'Additional CC License Text'
               validate:
                 type: text
+            h5psetup:
+              type: section
+              title: 'H5P Setup'
+              underline: true
+            h5pembedrootpath:
+              type: text
+              size: long
+              label: 'H5P Embed Source URL'
+              default: 'https://h5p.org/h5p/embed/'
+              help: 'Enter the embed source URL path up to, but not including, the H5P Content ID.'
+              description: 'H5P embed source URL path up to, but not including, the Content ID. For example, ''https://h5p.org/h5p/embed/'' or ''https://yourorganization.h5p.com/content/'' or ''https://yourWPsite/h5p/wp-admin/admin-ajax.php?action=h5p_embed&id=''.'
+              validate:
+                type: URL
         bootstrap4_options:
           type: tab
-          title: 'Bootstrap4  Options'
+          title: 'Bootstrap4 Options'
           fields:
             generaloptions:
               type: section
@@ -141,32 +155,22 @@ form:
                 disabled: 'Off'
                 enabled: 'On'
                 auto: 'Auto (System)'
+            headeroptions:
+              type: section
+              title: 'Header Defaults'
+              underline: true
             header_image_size:
               type: select
               label: 'Header Image Height'
-              help: 'Height of the header image above the NavBar. Slim keeps more of the page in view, especially on phones. "Standard on home pages" shows the full image on the home page (and each course home page), and the slim one elsewhere.'
+              help: 'Slim or hidden keeps more of the page in view, especially on phones.'
               size: medium
               default: standard
               options:
                 standard: Standard
                 slim: Slim
                 home-standard: 'Standard on home pages, slim elsewhere'
+                home-hidden: 'Standard on home pages, hidden elsewhere'
                 hidden: Hidden
-            display_syndicate:
-              type: toggle
-              label: 'Display Syndicate (RSS) Links in Sidebar'
-              help: 'Shows Atom and RSS feed buttons in the sidebar of blog pages when the Feed plugin is enabled.'
-              highlight: 1
-              default: 1
-              options:
-                '1': Yes
-                '0': No
-              validate:
-                type: bool
-            menubaroptions:
-              type: section
-              title: 'NavBar (Bootstrap4 Menubar)'
-              underline: true
             navbar_look:
               type: select
               label: 'NavBar Look'
@@ -208,7 +212,7 @@ form:
               size: small
             navbar_position:
               type: select
-              label: 'NavBar Postion'
+              label: 'NavBar Position'
               size: small
               default: top
               options:
@@ -223,14 +227,19 @@ form:
                 lg: Large
                 md: Medium
                 sm: Small
-            dropdown.enabled:
+            sidebaroptions:
+              type: section
+              title: 'Sidebar Defaults'
+              underline: true
+            display_syndicate:
               type: toggle
-              label: 'Dropdown in NavBar'
+              label: 'Display Syndicate (RSS) Links in Sidebar'
+              help: 'Shows Atom and RSS feed buttons in the sidebar of blog pages when the Feed plugin is enabled.'
               highlight: 1
               default: 1
               options:
-                '0': Disabled
-                '1': Enabled
+                '1': Yes
+                '0': No
               validate:
                 type: bool
         custommenu_options:
@@ -349,7 +358,7 @@ form:
               underline: true
             git_sync_repo_link:
               type: input.url
-              label: 'Custom Git Repository URL'
+              label: 'Custom Git Repository Tree URL'
               help: 'Enter the URL that leads to the Pages folder in your Git Repository.'
               description: 'URL path to a Git repository up to, but not including, ''/pages'' and everything following it. For example, ''https://github.com/paulhibbitts/demo-grav-course-hub/tree/master''.'
               validate:
