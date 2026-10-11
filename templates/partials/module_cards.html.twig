@@ -1,0 +1,63 @@
+{# Module cards: one card for each child page of cards_page, as on a Modules page in
+   Grav Helios Course Hub. A child page can set group: "Label" to appear under a heading;
+   pages without a group come first, with no heading.
+   card_description_lines (from the Modules page) limits each description to 2 or 3 lines;
+   0 shows it in full. cards_under_heading is true when the cards already have a heading
+   above them (such as "In this module") - hibbittsdesign.org #}
+
+{# the card styles are shared with the course cards on the MultiCourse Hub homepage #}
+{% do assets.addCss('theme://css/course-cards.css') %}
+
+{# Step 1: sort the child pages into groups, keeping the order the groups first appear in #}
+{% set groups = {} %}
+{% set group_order = [] %}
+{% for child in cards_page.children.visible %}
+  {% set group_name = '' %}
+  {% if child.header.group %}
+    {% set group_name = child.header.group %}
+  {% endif %}
+  {% if group_name not in group_order %}
+    {% set group_order = group_order|merge([group_name]) %}
+    {% set groups = groups|merge({(group_name): []}) %}
+  {% endif %}
+  {% set groups = groups|merge({(group_name): groups[group_name]|merge([child])}) %}
+{% endfor %}
+
+{# Step 2: a heading (for named groups) and a row of cards for each group #}
+{% for group_name in group_order %}
+  {% if group_name %}
+    <h2 class="module-group-title">{{ group_name }}</h2>
+  {% endif %}
+  {# a class on the row limits the description lines, or none for full descriptions #}
+  {% set row_class = 'row' %}
+  {% if card_description_lines == 2 or card_description_lines == 3 %}
+    {% set row_class = 'row module-cards-lines-' ~ card_description_lines %}
+  {% endif %}
+  {# card titles are one heading level below the heading above them, so headings don't skip a
+     level for screen reader users: h3 under a group or "In this module" heading, otherwise h2 #}
+  {% set card_heading = 'h2' %}
+  {% if group_name or cards_under_heading %}
+    {% set card_heading = 'h3' %}
+  {% endif %}
+  <div class="{{ row_class }}">
+    {% for child in groups[group_name] %}
+      <div class="col-md-6 course-card-col">
+        <div class="card course-card">
+          <div class="card-body">
+            <{{ card_heading }} class="card-title">
+              <a class="stretched-link" href="{{ child.url }}">{{ child.title }}</a><span class="course-card-arrow" aria-hidden="true">&rarr;</span>
+            </{{ card_heading }}>
+            {# the card text: the page's description, or its summary (the start of its content) #}
+            {% set card_text = child.header.description %}
+            {% if not card_text %}
+              {% set card_text = child.summary|striptags %}
+            {% endif %}
+            {% if card_text %}
+              <p class="card-text">{{ card_text }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endfor %}

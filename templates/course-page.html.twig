@@ -1,0 +1,29 @@
+{# Course page, named as in Grav Helios Course Hub (course-page.md) so courses move between the
+   two without renaming files - hibbittsdesign.org #}
+
+{# Step 1: find the page that holds the module list, if any (module_list_page).
+   Usually that's a Modules page (template "module"): a module's own page is one level below it,
+   and a page in a module is two levels below #}
+{% set module_list_page = null %}
+{% if page.parent.template == 'module' %}
+  {% set module_list_page = page.parent %}
+{% elseif page.parent.parent.template == 'module' %}
+  {% set module_list_page = page.parent.parent %}
+{% elseif page.parent.template == 'course-page' %}
+  {# a course page inside another course page with no Modules page above it, such as the
+     single module of a converted course (30.modules/course-page.md), or pages under Home:
+     the parent's pages are listed instead, in the same layout #}
+  {% set module_list_page = page.parent %}
+{% endif %}
+
+{# Step 2: choose the layout #}
+{% if module_list_page %}
+  {# module list on the left, the content, and Previous/Next #}
+  {% include 'partials/module_page.html.twig' %}
+{% elseif page.children.visible|length > 0 %}
+  {# a course page with its own pages, such as a single module: its content, then a card for each page #}
+  {% include 'module.html.twig' %}
+{% else %}
+  {# any other course page, such as Essentials or Syllabus: a standard page #}
+  {% include 'page.html.twig' %}
+{% endif %}

@@ -1,0 +1,199 @@
+/*
+Modules and course pages (module.md and course-page.md, as in Grav Helios Course Hub) - hibbittsdesign.org
+Lines and backgrounds use a see-through grey, and labels use the text colour made lighter with
+opacity, so these work with every Theme Style and in Dark Mode without their own dark versions.
+*/
+
+/* ── Module list (left column on course pages inside a Modules page) ── */
+
+/* "Modules" label, styled like the other sidebar headings */
+.module-nav .module-nav-title {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: inherit;
+    opacity: 0.75;
+    margin-bottom: 0.5rem;
+}
+
+/* Each module, a little smaller than the page text and in the text colour rather than the
+   link colour, so the list reads as navigation, separate from the links in the content
+   (.blog-sidebar is included so the Theme Styles' own sidebar link padding doesn't override this) */
+.blog-sidebar .module-nav .nav-link {
+    color: inherit;
+    /* "em" sizes it from the page text, so it stays a little smaller than the page text in
+       every Theme Style (page text is 18px in 2025 and 2026, and 16px in Classic) */
+    font-size: 0.97em;
+    padding: 0.35rem 0.6rem;
+    line-height: 1.35;
+    border-radius: 0.375rem;
+}
+
+/* A light grey background on hover (see-through, so it works in Dark Mode too) */
+.module-nav .nav-link:hover {
+    background-color: rgba(128, 128, 128, 0.12);
+    text-decoration: none;
+}
+
+/* The current module or page: bold, on the same light grey background */
+.module-nav .nav-link.active {
+    font-weight: 600;
+    background-color: rgba(128, 128, 128, 0.12);
+}
+
+/* The current module's pages: indented below it, at the same text size */
+.module-nav .module-nav-pages {
+    margin: 0.1rem 0 0.4rem 0.75rem;
+}
+
+.blog-sidebar .module-nav .module-nav-pages .nav-link {
+    padding: 0.3rem 0.6rem;
+}
+
+/* The "Modules" heading lines up with the module names */
+.module-nav .module-nav-title {
+    padding-left: 0.6rem;
+}
+
+/* ── Modules page and module pages: the cards ── */
+
+/* A short description under the Modules page title */
+.module-intro {
+    color: inherit;
+    opacity: 0.75;
+    margin-bottom: 1.5rem;
+}
+
+/* "In this module" and group headings above a set of cards, like the sidebar headings
+   (.blog-main is included so the page's own heading sizes don't override these) */
+.blog-main .module-group-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: inherit;
+    opacity: 0.75;
+    margin: 1.5rem 0 0.75rem;
+}
+
+/* Card descriptions limited to 2 or 3 lines (card_description_lines on the Modules page),
+   ending with "…"; with 0 the description is shown in full */
+.module-cards-lines-2 .card-text,
+.module-cards-lines-3 .card-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.module-cards-lines-2 .card-text {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+
+.module-cards-lines-3 .card-text {
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+}
+
+/* ── Previous / Next ── */
+
+/* Two boxes side by side: Previous on the left, Next on the right */
+.module-prev-next {
+    display: flex;
+    gap: 1rem;
+    margin: 2.5rem 0 1.5rem;
+}
+
+.module-prev-next a {
+    /* each box is half the width, even when it's the only one */
+    flex: 0 1 calc(50% - 0.5rem);
+    display: block;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(108, 117, 125, 0.25);
+    /* the same rounded corners as the cards */
+    border-radius: 12px;
+    text-decoration: none;
+}
+
+.module-prev-next a:hover,
+.module-prev-next a:focus-visible {
+    border-color: currentColor;
+    text-decoration: none;
+}
+
+/* the Next box keeps to the right, even when there's no Previous box */
+.module-prev-next .module-next {
+    margin-left: auto;
+    text-align: right;
+}
+
+/* "Previous" / "Next" in small grey text above the page title */
+.module-prev-next .module-prev-next-label {
+    display: block;
+    font-size: 0.8rem;
+    color: inherit;
+    opacity: 0.75;
+}
+
+/* On phones the boxes stack, one per line */
+@media (max-width: 575.98px) {
+    .module-prev-next {
+        flex-direction: column;
+    }
+
+    .module-prev-next a,
+    .module-prev-next .module-next {
+        flex-basis: auto;
+        margin-left: 0;
+    }
+}
+
+/* ── "On this page" (right column on module pages, with the Page TOC plugin) ── */
+
+/* Stays in view while the page scrolls */
+.module-toc {
+    position: sticky;
+    top: 1.5rem;
+}
+
+/* "On this page" label, styled like the "Modules" heading on the left */
+.module-toc .module-toc-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: inherit;
+    opacity: 0.75;
+    margin-bottom: 0.5rem;
+}
+
+/* Each heading, a little smaller than the module list so the content stays the focus
+   ("em" sizes it from the page text, as for the module list).
+   .main-content is included so 2026 Modern's underline for links in the content doesn't apply */
+.main-content .module-toc .module-toc-link {
+    display: block;
+    text-decoration: none;
+    padding: 0.3rem 0;
+    font-size: 0.85em;
+    line-height: 1.35;
+}
+
+/* An underline on hover and keyboard focus, so it's clear each heading is a link */
+.main-content .module-toc .module-toc-link:hover,
+.main-content .module-toc .module-toc-link:focus-visible {
+    text-decoration: underline;
+}
+
+/* Sub-headings (h3), indented below their heading */
+.module-toc .module-toc-subheadings {
+    margin-left: 1rem;
+}
+
+/* ── Header image on a course page ── */
+
+/* Space between the header image and the content below it, as on weekly pages */
+.course-page-header-image {
+    margin-bottom: 1.5rem;
+}

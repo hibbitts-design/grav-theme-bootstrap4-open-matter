@@ -7,6 +7,7 @@ dark_mode:
   mode: disabled
 header_image_size: standard
 display_syndicate: true
+module_description_lines: 2
 
 dropdown:
   enabled: false

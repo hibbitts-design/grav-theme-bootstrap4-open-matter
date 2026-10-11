@@ -9,6 +9,8 @@
   {% set hide_next_prev_page_buttons = page.parent.header.hide_next_prev_page_buttons %}
 {% endif %}
 
+{% do assets.addCss('theme://css/modules.css') %}
+
 {% embed 'partials/base.html.twig' %}
 
   {% if page.header.show_sidebar is defined %}
@@ -51,7 +53,8 @@
               <div class="col-md-3 blog-sidebar">
               {% endif %}
 
-              <ul class="nav flex-column">
+              {# module-nav gives the section list the same look as the module list on module pages (modules.css) #}
+              <ul class="nav flex-column module-nav">
 
                 {% set collection = page.collection.visible() %}
                 {% if collection is empty %}
@@ -63,10 +66,12 @@
                 {% for p in collection %}
 
                   <li class="nav-item">
-                    {% set current_parent = p.active
-                      ? 'active'
-                      : '' %}
-                    <a class="nav-link {{ current_parent }}" href="{% if activetag %}{{ p.url ~ '/filter:' ~ activetag }}{% else %}{{ p.url }}{% endif %}">{{ p.menu }}</a>
+                    {# the current section is shown in bold, and aria-current tells screen readers it's the page they're on #}
+                    {% set current_parent = '' %}
+                    {% if p.active %}
+                      {% set current_parent = 'active' %}
+                    {% endif %}
+                    <a class="nav-link {{ current_parent }}"{% if p.active %} aria-current="page"{% endif %} href="{% if activetag %}{{ p.url ~ '/filter:' ~ activetag }}{% else %}{{ p.url }}{% endif %}">{{ p.menu }}</a>
                   </li>
 
                   {% if p.children.count != 0 %}
@@ -74,18 +79,19 @@
                     {% if p.active or(p.slug == page.parent.slug) %}
                       <ul class="nav flex-column ml-3">
                         {% for child in p.children.visible %}
-                          {% set current_child = child.active
-                            ? 'active'
-                            : '' %}
+                          {% set current_child = '' %}
+                          {% if child.active %}
+                            {% set current_child = 'active' %}
+                          {% endif %}
                           {% if activetag %}
                             {% if activetag in child.taxonomy['filter'] %}
                               <li class="nav-item">
-                                <a class="nav-link {{ current_child }}" href="{% if activetag %}{{ child.url  ~ '/filter:' ~ activetag }}{% else %}{{ child.url }}{% endif %}">{{ child.menu }}</a>
+                                <a class="nav-link {{ current_child }}"{% if child.active %} aria-current="page"{% endif %} href="{% if activetag %}{{ child.url  ~ '/filter:' ~ activetag }}{% else %}{{ child.url }}{% endif %}">{{ child.menu }}</a>
                               </li>
                             {% endif %}
                           {% else %}
                             <li class="nav-item">
-                              <a class="nav-link {{ current_child }}" href="{% if activetag %}{{ child.url  ~ '/filter:' ~ activetag }}{% else %}{{ child.url }}{% endif %}">{{ child.menu }}</a>
+                              <a class="nav-link {{ current_child }}"{% if child.active %} aria-current="page"{% endif %} href="{% if activetag %}{{ child.url  ~ '/filter:' ~ activetag }}{% else %}{{ child.url }}{% endif %}">{{ child.menu }}</a>
                             </li>
                           {% endif %}
                         {% endfor %}

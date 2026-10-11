@@ -1,3 +1,15 @@
+# v6.3.0
+## XX/XX/2026
+
+1. [](#new)
+    * Modules, as in Grav Helios Course Hub: a Modules page with module cards, and module pages with a module list and Previous/Next buttons
+    * "On this page" list on module pages, with the Page TOC plugin
+    * Module Description Lines theme option for the module cards
+    * Optional header image on module pages
+1. [](#improved)
+    * Sections pages: the section list matches the module list, and screen readers announce the current section
+    * Demo content: weekly pages renamed from `module-NN` to `week-NN`
+
 # v6.2.2
 ## 10/11/2026
 

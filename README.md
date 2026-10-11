@@ -28,6 +28,7 @@ Bootstrap4 Open Matter adds what open, collaborative course and blog sites need 
 - **Built-in shortcodes** – Badge, Button, Embedly, Google Slides, H5P, iFrame, Link Preview Card, Markdown File, PDF, SpeakerDeck, Topics (an A–Z topics index), and Show/Hide If Embedded, with `title` (and `ratio`) options for accessible, well-proportioned embeds
 - **Course content shortcodes** – `[objectives]`, `[key-takeaways]`, `[reflection]`, `[definition]`, `[example]`, `[case-study]`, `[project-brief]`, `[process-note]`, `[feedback-requested]`, `[announcement]`, `[exercise]`, `[references]`, and `[excerpt]`, shown as Bootstrap alerts, with the same names and options as Grav Helios Course Hub
 - **Course and content page types** – blog with featured (sticky) posts, course sections, RSS feed aggregation, link lists, subsites with course cards (description, instructor, badge, group, and image), and dedicated H5P, iFrame, PDF, Embedly, and link preview card pages; a course can be set up with `subsite.md` or, as in Grav Helios Course Hub, `course.md`
+- **Modules** – Modules pages with a card for each module, and module pages with a module list, Previous and Next buttons, and an "On this page" list, using the same page types as Grav Helios Course Hub
 - **Course search** – with the SimpleSearch plugin, a "Search course..." box in the sidebar searches just the current course, or, when its Show Search Box setting is on, all courses from the course list page, with results in each course's own layout
 - **Visual styles** – 2026 Modern, 2026 Refresh or Classic, with Dark Mode off, on, or following the visitor's system setting
 - **Flexible layout** – a Markdown-based sidebar, NavBar look (solid or a light tint of its colour), style, colour, position, and breakpoint options, dropdowns, and custom menu items
@@ -72,16 +73,24 @@ The easiest way to get started is the [Open Course Hub](https://github.com/hibbi
 All options are available in the Admin Panel under **Themes → Bootstrap4 Open Matter**.
 
 - **Open Matter Options** – chromeless site, menu dropdowns, Creative Commons license type and display, and H5P embed source URL
-- **Bootstrap4 Options** – Visual Style (Theme Style, Dark Mode), Header Defaults (Header Image Height: Standard, Slim, Standard on home pages with slim or hidden elsewhere, or Hidden; NavBar look, style, background, position, and breakpoint), and Sidebar Defaults (Syndicate (RSS) links)
+- **Bootstrap4 Options** – Visual Style (Theme Style, Dark Mode), Header Defaults (Header Image Height: Standard, Slim, Standard on home pages with slim or hidden elsewhere, or Hidden; NavBar look, style, background, position, and breakpoint), Sidebar Defaults (Syndicate (RSS) links), and Module Defaults (Module Description Lines)
 - **Custom Menu Items** – text, icon, URL, and target for extra NavBar links
 - **Git Sync Link** – location, link type (view or edit), icon and text, Site Theme Files link, and a custom Git repository tree URL
 
 > [!TIP]
 > The slim header shows only the middle of the image, so landscapes, textures, or photos with a centred subject work best.
 
+## Modules
+
+Modules work as in Grav Helios Course Hub, so courses converted for it from a Common Cartridge (LMS) export can be used here too:
+
+- A **Modules** page (`module.md`) shows its content, then a card for each module; a module can set `group:` to appear under a heading
+- Each **module** (`course-page.md`) can have its own pages; module pages list all modules on the left, with Previous and Next buttons through every module and page in order
+- With the [Page TOC](https://github.com/trilbymedia/grav-plugin-page-toc) plugin, module pages with three or more headings show an "On this page" list on large screens; `navigation: toc_position: hidden` turns it off on a page, and `right` always shows it
+
 ## Page URL Parameters
 
-Add these to any page URL, for example `https://yoursite.com/home/module-01/chromeless:true` or `https://yoursite.com/home/module-01?embedded=true`.
+Add these to any page URL, for example `https://yoursite.com/home/week-01/chromeless:true` or `https://yoursite.com/home/week-01?embedded=true`.
 
 | Parameter | Effect |
 |---|---|
@@ -103,6 +112,7 @@ To leave something out when a page is printed, add Bootstrap's `d-print-none` cl
 - Grav CMS 1.7 or 2.0
 - The [Bootstrap4 theme](https://github.com/trilbymedia/grav-theme-bootstrap4) and required plugins, installed automatically as dependencies
 - GitHub-style alerts (`> [!NOTE]`, `> [!TIP]`, …) need the [GitHub Markdown Alerts](https://github.com/trilbymedia/grav-plugin-github-markdown-alerts) plugin – version 2 on Grav 2, or [version 1.1.1](https://github.com/trilbymedia/grav-plugin-github-markdown-alerts/releases/tag/1.1.1) on Grav 1.7 (both are included in the Open Course Hub and Open MultiCourse Hub packages); without it they show as regular blockquotes
+- The "On this page" list on module pages needs the [Page TOC](https://github.com/trilbymedia/grav-plugin-page-toc) plugin – version 4 on Grav 2, or [version 3.2.5](https://github.com/trilbymedia/grav-plugin-page-toc/releases/tag/3.2.5) on Grav 1.7 (both are included in the Open Course Hub and Open MultiCourse Hub packages); without it, module pages show without the list
 - Course search needs the [SimpleSearch](https://github.com/getgrav/grav-plugin-simplesearch) plugin (Grav 1.7 or 2)
 
 ## Support

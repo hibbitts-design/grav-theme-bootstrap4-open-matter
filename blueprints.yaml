@@ -1,7 +1,7 @@
 name: 'Bootstrap4 Open Matter'
 type: theme
 slug: bootstrap4-open-matter
-version: 6.2.2
+version: 6.3.0
 description: "A customized version of the Bootstrap4 theme for open blogs, course hubs and more. Includes Git Sync and 'chromeless' content display for seamless embedding."
 icon: bold
 author:
@@ -242,6 +242,22 @@ form:
                 '0': No
               validate:
                 type: bool
+            moduleoptions:
+              type: section
+              title: 'Module Defaults'
+              underline: true
+            module_description_lines:
+              type: select
+              label: 'Module Description Lines'
+              help: 'Lines shown in each card description on Modules pages.'
+              size: medium
+              default: 2
+              options:
+                2: '2 lines (default)'
+                3: '3 lines'
+                0: 'No limit'
+              validate:
+                type: int
         custommenu_options:
           type: tab
           title: 'Custom Menu Items'

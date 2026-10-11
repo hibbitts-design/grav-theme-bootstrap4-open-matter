@@ -1,0 +1,55 @@
+{# Header image on a course page, shown the same way as on a weekly page: a wide banner with an
+   optional "Image:" credit. It's only shown when the page sets header_image: true (or names a
+   header_image_file), since imported courses usually have their images in the content already.
+   Uses the same settings as weekly pages: header_image_file, header_image_alt_text,
+   header_image_credit and header_image_creditlink - hibbittsdesign.org #}
+
+{% set show_header_image = false %}
+{% if page.header.header_image or page.header.header_image_file %}
+  {% set show_header_image = true %}
+{% endif %}
+
+{% if show_header_image and not grav.uri.param('hideheaderimage') %}
+
+  {# Step 1: the image: the named file, or the first image in the page's folder #}
+  {% set header_image_media = null %}
+  {% if page.header.header_image_file %}
+    {% set header_image_media = page.media[page.header.header_image_file] %}
+  {% endif %}
+  {% if not header_image_media %}
+    {% set header_image_media = page.media.images|first %}
+  {% endif %}
+
+  {% if header_image_media %}
+    {# Step 2: the banner size, as on weekly pages unless the page sets its own #}
+    {% set header_image_width = 1200 %}
+    {% if page.header.header_image_width %}
+      {% set header_image_width = page.header.header_image_width %}
+    {% endif %}
+    {% set header_image_height = 400 %}
+    {% if page.header.header_image_height %}
+      {% set header_image_height = page.header.header_image_height %}
+    {% endif %}
+    {% set header_image_url = header_image_media.cropZoom(header_image_width, header_image_height).url %}
+
+    {# Step 3: the image, with the credit over it when there is one.
+       The outer div adds space below the image (see modules.css) #}
+    <div class="course-page-header-image">
+    {% if page.header.header_image_credit %}
+      <div class="image-credit-wrapper">
+        <span class="image-credit">Image:
+          {% if page.header.header_image_creditlink %}
+            <a class="newwindow external-link" href="{{ page.header.header_image_creditlink }}">{{ page.header.header_image_credit }}</a>
+          {% else %}
+            {{ page.header.header_image_credit }}
+          {% endif %}
+        </span>
+        <img src="{{ header_image_url }}" alt="{{ page.header.header_image_alt_text }}">
+      </div>
+    {% else %}
+      <img src="{{ header_image_url }}" alt="{{ page.header.header_image_alt_text }}">
+    {% endif %}
+    </div>
+  {% endif %}
+
+{% endif %}

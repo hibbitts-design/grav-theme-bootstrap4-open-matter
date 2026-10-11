@@ -1,0 +1,45 @@
+title: Modules Page Options
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+
+        modules:
+          type: tab
+          title: Modules
+
+          fields:
+
+            modules_info:
+              type: display
+              label: false
+              markdown: true
+              content: 'Each page inside this one is shown as a card, as on a Modules page in Grav Helios Course Hub.'
+
+            header.description:
+              type: textarea
+              label: Introduction
+              toggleable: true
+              rows: 2
+              placeholder: 'Below are the modules available for this course.'
+              help: 'Shown under the page title, above the cards.'
+
+            header.card_description_lines:
+              type: select
+              label: Card Description Lines
+              toggleable: true
+              size: medium
+              help: 'Overrides the Module Description Lines theme option on this page.'
+              options:
+                2: '2 lines'
+                3: '3 lines'
+                0: 'No limit'
+              validate:
+                type: int

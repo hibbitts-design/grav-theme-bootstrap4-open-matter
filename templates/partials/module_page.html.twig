@@ -1,0 +1,183 @@
+{# A course page inside a Modules page: a list of the modules (with the current module's pages),
+   the page content, and Previous/Next through all modules and their pages, in order.
+   module_list_page is the page whose pages are listed (a Modules page, or a course page such as a
+   single module), set by course-page.html.twig - hibbittsdesign.org #}
+
+{# The current module: the page itself, or its parent when it's a page inside a module #}
+{% set current_module = page %}
+{% if page.parent.route != module_list_page.route %}
+  {% set current_module = page.parent %}
+{% endif %}
+
+{% set modules = module_list_page.children.visible %}
+
+{# Every page in reading order (each module, then its pages), for Previous/Next #}
+{% set reading_order = [] %}
+{% for module in modules %}
+  {% set reading_order = reading_order|merge([module]) %}
+  {% for module_page in module.children.visible %}
+    {% set reading_order = reading_order|merge([module_page]) %}
+  {% endfor %}
+{% endfor %}
+
+{# Find this page's place in the reading order, and the pages either side of it #}
+{% set previous_page = null %}
+{% set next_page = null %}
+{% for item in reading_order %}
+  {% if item.route == page.route %}
+    {% if not loop.first %}
+      {% set previous_page = reading_order[loop.index0 - 1] %}
+    {% endif %}
+    {% if not loop.last %}
+      {% set next_page = reading_order[loop.index0 + 1] %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% do assets.addCss('theme://css/modules.css') %}
+
+{% embed 'partials/base.html.twig' %}
+
+{# The course sidebar is off on module pages, which already have the module list on the left,
+   so the content gets more room; a page can turn it on with show_sidebar: true #}
+{% if page.header.show_sidebar is defined %}
+  {% set show_sidebar = page.header.show_sidebar %}
+{% else %}
+  {% set show_sidebar = false %}
+{% endif %}
+
+  {% block content %}
+    {# "On this page" on the right, when the Page TOC plugin is enabled and the course sidebar
+       is off; the list is built first, so the content column can be narrowed to make room #}
+    {% set toc_html = '' %}
+    {% if config.plugins['page-toc'].enabled and not show_sidebar and not (embedded_mode or theme_var('chromeless.enabled')) %}
+      {% set toc_html %}{% include 'partials/module_page_toc.html.twig' %}{% endset %}
+    {% endif %}
+
+    <div class="main-content">
+      <div class="container">
+        <div class="row">
+
+          {% if show_sidebar and not (embedded_mode or theme_var('chromeless.enabled')) %}
+            <div class="col-md-5 blog-main order-first order-md-2">
+          {% elseif toc_html|trim %}
+            {# on large screens the content shares the width with "On this page" #}
+            <div class="col-md-9 col-lg-7 blog-main order-first order-md-2">
+          {% else %}
+            <div class="col-md-9 blog-main order-first order-md-2">
+          {% endif %}
+            {% if not (page.header.hide_page_title) and not (grav.uri.param('hidepagetitle')) %}
+              <h1>{{ page.title }}</h1>
+            {% else %}
+              <h1 class="hidden">{{ page.title }}</h1>
+            {% endif %}
+            {# a header image, as on weekly pages, when the page asks for one #}
+            {% include 'partials/course_page_header_image.html.twig' %}
+            {{ page.content|raw }}
+
+            {# a module's own pages as cards below its content, as in Helios Course Hub #}
+            {% if page.route == current_module.route and page.children.visible|length > 0 %}
+              <h2 class="module-group-title">In this module</h2>
+              {# the same description lines as the cards on the Modules page: the theme option,
+                 or that page's card_description_lines #}
+              {% set card_description_lines = theme_var('module_description_lines') %}
+              {% if card_description_lines is null %}
+                {% set card_description_lines = 2 %}
+              {% endif %}
+              {% if module_list_page.header.card_description_lines is defined %}
+                {% set card_description_lines = module_list_page.header.card_description_lines %}
+              {% endif %}
+              {% include 'partials/module_cards.html.twig' with {'cards_page': page, 'card_description_lines': card_description_lines, 'cards_under_heading': true} %}
+            {% endif %}
+
+            {# Previous and Next as two boxes, each with a small label above the page title #}
+            {% if previous_page or next_page %}
+              <nav class="module-prev-next" aria-label="Previous and next">
+                {% if previous_page %}
+                  <a class="module-prev" href="{{ previous_page.url }}">
+                    <span class="module-prev-next-label"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous</span>
+                    {{ previous_page.menu }}
+                  </a>
+                {% endif %}
+                {% if next_page %}
+                  <a class="module-next" href="{{ next_page.url }}">
+                    <span class="module-prev-next-label">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                    {{ next_page.menu }}
+                  </a>
+                {% endif %}
+              </nav>
+            {% endif %}
+
+            {# Creative Commons License - hibbittsdesign.org #}
+            {% if not embedded_mode and not(theme_var('chromeless.enabled')) and (theme_var('cc_license.enabled') and not(page.header.hide_cc_license)) %}
+              <p>{% include 'partials/creative_commons_license.html.twig' %}</p>
+            {% endif %}
+          </div>
+
+          {# Module navigation: all modules, with the current module's pages below it.
+             It comes after the content in the page code, so keyboard and screen reader users reach the
+             content first; order-md-first still shows it on the left from tablet size up.
+             With "On this page" on the right it's narrower on large screens, as module names are short #}
+          {% if toc_html|trim %}
+            <div class="col-md-3 col-lg-2 blog-sidebar order-md-first">
+          {% else %}
+            <div class="col-md-3 blog-sidebar order-md-first">
+          {% endif %}
+            <nav class="module-nav" aria-label="{{ module_list_page.menu }}">
+              {# a plain label (not a link), like "On this page" #}
+              <p class="module-nav-title">{{ module_list_page.menu }}</p>
+              <ul class="nav flex-column">
+                {% for module in modules %}
+                  {% set module_class = '' %}
+                  {% if module.route == current_module.route %}
+                    {% set module_class = 'active' %}
+                  {% endif %}
+                  <li class="nav-item">
+                    {# aria-current tells screen readers which link is the page they're on #}
+                    {% if module.route == page.route %}
+                      <a class="nav-link {{ module_class }}" href="{{ module.url }}" aria-current="page">{{ module.menu }}</a>
+                    {% else %}
+                      <a class="nav-link {{ module_class }}" href="{{ module.url }}">{{ module.menu }}</a>
+                    {% endif %}
+                    {% if module.route == current_module.route and module.children.visible|length > 0 %}
+                      <ul class="nav flex-column module-nav-pages">
+                        {% for module_page in module.children.visible %}
+                          {% set page_class = '' %}
+                          {% if module_page.route == page.route %}
+                            {% set page_class = 'active' %}
+                          {% endif %}
+                          <li class="nav-item">
+                            {% if module_page.route == page.route %}
+                              <a class="nav-link {{ page_class }}" href="{{ module_page.url }}" aria-current="page">{{ module_page.menu }}</a>
+                            {% else %}
+                              <a class="nav-link {{ page_class }}" href="{{ module_page.url }}">{{ module_page.menu }}</a>
+                            {% endif %}
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            </nav>
+          </div>
+
+          {# "On this page", on large screens only: on smaller screens there's no room beside the content #}
+          {% if toc_html|trim %}
+            <div class="col-lg-3 d-none d-lg-block order-last">
+              {{ toc_html|raw }}
+            </div>
+          {% endif %}
+
+          {% if show_sidebar and not (embedded_mode or theme_var('chromeless.enabled')) %}
+            <div class="col-md-4 blog-sidebar order-last">
+              {% include 'partials/sidebar.html.twig' with {'blog':page} %}
+            </div>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+
+{% endembed %}

@@ -1,0 +1,63 @@
+{# Modules page: its own content, then a card for each module (or page) inside it, as on a
+   Modules page in Grav Helios Course Hub (module.md), so courses move between the two
+   without renaming files. course-page.html.twig also uses it for a course page with its
+   own pages, such as a single module - hibbittsdesign.org #}
+{% do assets.addCss('theme://css/modules.css') %}
+
+{% embed 'partials/base.html.twig' %}
+
+{% if page.header.show_sidebar is defined %}
+  {% set show_sidebar = page.header.show_sidebar %}
+{% else %}
+  {% set show_sidebar = true %}
+{% endif %}
+
+  {% block content %}
+    <div class="main-content">
+      <div class="container">
+        <div class="row">
+          {% if show_sidebar and not (embedded_mode or theme_var('chromeless.enabled')) %}
+            <div class="col-md-8 blog-main">
+          {% else %}
+            <div class="col-md-12 blog-main">
+          {% endif %}
+            {% if not (page.header.hide_page_title) and not (grav.uri.param('hidepagetitle')) %}
+              <h1>{{ page.title }}</h1>
+            {% else %}
+              <h1 class="hidden">{{ page.title }}</h1>
+            {% endif %}
+            {# a header image, as on weekly pages, when the page asks for one #}
+            {% include 'partials/course_page_header_image.html.twig' %}
+            {# a Helios Modules page often has only a description, so show it as the intro #}
+            {% if page.header.description %}
+              <p class="module-intro">{{ page.header.description }}</p>
+            {% endif %}
+            {{ page.content|raw }}
+
+            {# description lines on the cards: the Module Description Lines theme option (2 when
+               not set), or card_description_lines in this page's front matter (2, 3, or 0 for no limit) #}
+            {% set card_description_lines = theme_var('module_description_lines') %}
+            {% if card_description_lines is null %}
+              {% set card_description_lines = 2 %}
+            {% endif %}
+            {% if page.header.card_description_lines is defined %}
+              {% set card_description_lines = page.header.card_description_lines %}
+            {% endif %}
+            {% include 'partials/module_cards.html.twig' with {'cards_page': page, 'card_description_lines': card_description_lines} %}
+
+            {# Creative Commons License - hibbittsdesign.org #}
+            {% if not embedded_mode and not(theme_var('chromeless.enabled')) and (theme_var('cc_license.enabled') and not(page.header.hide_cc_license)) %}
+              <p>{% include 'partials/creative_commons_license.html.twig' %}</p>
+            {% endif %}
+          </div>
+          {% if show_sidebar and not (embedded_mode or theme_var('chromeless.enabled')) %}
+            <div class="col-md-4 blog-sidebar">
+              {% include 'partials/sidebar.html.twig' with {'blog':page} %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+
+{% endembed %}
