@@ -158,6 +158,15 @@ opacity, so these work with every Theme Style and in Dark Mode without their own
     top: 1.5rem;
 }
 
+/* On tablets, "On this page" sits below the module list, with space between them. The
+   sticky setting goes on this wrapper (not .module-toc inside it, which is the same height
+   and so has no room to move), so the list stays in view once you scroll past the modules */
+.module-toc-below-nav {
+    position: sticky;
+    top: 1.5rem;
+    margin-top: 2rem;
+}
+
 /* "On this page" label, styled like the "Modules" heading on the left */
 .module-toc .module-toc-title {
     font-size: 0.875rem;

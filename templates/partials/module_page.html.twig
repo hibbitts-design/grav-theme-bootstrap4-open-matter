@@ -160,9 +160,19 @@
                 {% endfor %}
               </ul>
             </nav>
+
+            {# "On this page" on tablets: below the module list, as there's no room for a third column.
+               Only one of the two copies is shown at a time (d-md-block d-lg-none here, d-lg-block below),
+               and a hidden copy is also hidden from screen readers #}
+            {% if toc_html|trim %}
+              <div class="d-none d-md-block d-lg-none module-toc-below-nav">
+                {{ toc_html|raw }}
+              </div>
+            {% endif %}
           </div>
 
-          {# "On this page", on large screens only: on smaller screens there's no room beside the content #}
+          {# "On this page" on large screens: its own column on the right. On phones it isn't shown,
+             as the module list is already below the content there #}
           {% if toc_html|trim %}
             <div class="col-lg-3 d-none d-lg-block order-last">
               {{ toc_html|raw }}
