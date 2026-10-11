@@ -1,3 +1,9 @@
+# v6.3.1
+## XX/XX/2026
+
+1. [](#improved)
+    * "On this page" also shows on tablets, below the module list
+
 # v6.3.0
 ## 10/11/2026
 
