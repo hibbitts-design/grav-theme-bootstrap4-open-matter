@@ -1,5 +1,5 @@
 # v6.3.0
-## XX/XX/2026
+## 10/11/2026
 
 1. [](#new)
     * Modules, as in Grav Helios Course Hub: a Modules page with module cards, and module pages with a module list and Previous/Next buttons
