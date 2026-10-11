@@ -35,6 +35,14 @@ Dark Mode colours for these are in each theme-*-dark.css file.
     margin-bottom: 0.6rem;
 }
 
+/* On phones the sidebar sits below the page content: extra space keeps it
+   from reading as part of the page (767.98px = below Bootstrap's md) */
+@media (max-width: 767.98px) {
+    .blog-sidebar {
+        margin-top: 2.5rem;
+    }
+}
+
 /* Weekly (blog post) headings in the text colour, with an underline on hover, like the course cards */
 .list-blog-header h1 a,
 .list-blog-header h2 a {
