@@ -1,3 +1,9 @@
+# v6.2.2
+## 10/11/2026
+
+1. [](#improved)
+    * On phones, more space between the page content and the sidebar below it
+
 # v6.2.1
 ## 10/10/2026
 
