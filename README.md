@@ -90,7 +90,7 @@ Modules use the same page types as Grav Helios Course Hub, so courses converted 
 
 ## Page URL Parameters
 
-Add these to any page URL, for example `https://yoursite.com/home/week-01/chromeless:true` or `https://yoursite.com/home/week-01?embedded=true`.
+Add these to any page URL, for example `https://yoursite.com/weekly-units/week-01/chromeless:true` or `https://yoursite.com/weekly-units/week-01?embedded=true`.
 
 | Parameter | Effect |
 |---|---|
