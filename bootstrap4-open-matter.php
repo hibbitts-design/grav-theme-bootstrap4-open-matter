@@ -175,10 +175,10 @@ class Bootstrap4OpenMatter extends Theme
             }
         }
 
-        // Leave out pages of an unpublished course or course group
+        // Leave out pages inside an unpublished page, such as an unpublished course, course group,
+        // Modules page or Weekly Units page (Grav still lets its own pages be published and found)
         foreach ($this->getParentPages($page) as $parent) {
-            $isCourseOrGroup = $this->isCoursePage($parent) || $this->isCourseGroupPage($parent);
-            if ($isCourseOrGroup && !$parent->published()) {
+            if (!$parent->published()) {
                 return true;
             }
         }
