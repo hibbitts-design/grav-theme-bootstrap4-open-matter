@@ -1,8 +1,13 @@
 # v6.3.1
-## XX/XX/2026
+## 10/12/2026
 
+1. [](#new)
+    * Group headings in the module list, as on the cards
 1. [](#improved)
-    * "On this page" also shows on tablets, below the module list
+    * Module pages: the module list is now on the right, where the course sidebar is on other pages, with the course search box above it
+    * The "On this page" list is removed, so module pages match the rest of the course and Open Publishing Space; the Page TOC plugin is no longer used
+1. [](#bugfix)
+    * Module pages show only the content when embedded in an LMS, as other pages do
 
 # v6.3.0
 ## 10/11/2026
