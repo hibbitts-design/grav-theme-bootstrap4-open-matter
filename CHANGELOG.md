@@ -1,3 +1,11 @@
+# v6.3.4
+## XX/XX/2026
+
+1. [](#improved)
+    * More even spacing around course panels (the announcement and reminders box) on Home pages and above blog posts, in every Theme Style and Alert Style colour
+1. [](#bugfix)
+    * Panels above blog posts no longer add empty paragraphs, and have more space before the first post
+
 # v6.3.3
 ## 10/12/2026
 
