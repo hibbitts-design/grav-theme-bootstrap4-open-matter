@@ -82,7 +82,7 @@ All options are available in the Admin Panel under **Themes → Bootstrap4 Open 
 
 ## Modules
 
-Modules use the same page types as Grav Helios Course Hub, so courses converted for it from a Common Cartridge (LMS) export can be used here too:
+Modules use the same page types as Grav Helios Course Hub, and a Canvas, Moodle, Brightspace, or Blackboard course (a Common Cartridge export) can be imported as modules with the free [Common Cartridge Converter](https://common-cartridge-converter.hibbittsdesign.org/) (beta):
 
 - A **Modules** page (`module.md`) shows its content, then a card for each module
 - Each **module** (`course-page.md`) can have its own pages; module pages show the course search box and a list of all modules on the right, where the course sidebar is on other pages, with Previous and Next buttons through every module and page in order
