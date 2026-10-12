@@ -291,3 +291,27 @@ h2.topics-letter {
         }
     }
 }
+
+/* Course panels, such as the announcement, "What's Happening This Week" and "Looking Ahead to Next Week", on a
+   Home page or above a blog's posts. The last line in a reminders box (.listbullet.alert, in any Alert Style colour)
+   adds no extra space of its own, so the space below it matches the space above (each Theme Style sets the padding) */
+.listbullet.alert > :last-child {
+    margin-bottom: 0;
+}
+
+/* More space below an announcement, so it doesn't sit tight against the box that follows it. On a Home page the
+   announcement is followed directly by the box (.list-item); above a blog's posts each panel is in its own .blog-panel.
+   (The space between two boxes is the larger of their margins, not both added together, so this is the full space.
+   !important as some Theme Styles set .list-item's margin with !important.) */
+.blog-main > .md-alert + .list-item {
+    margin-top: 1.5rem!important;
+}
+
+.blog-panel > .md-alert {
+    margin-bottom: 1.5rem;
+}
+
+/* The line between the panels and a blog's posts, with room on both sides so the posts read as their own section */
+.blog-panels-end {
+    margin: 2.5rem 0;
+}

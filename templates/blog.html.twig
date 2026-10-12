@@ -46,12 +46,13 @@
 
                         {# Added reminders and preparations blocks and content check - hibbittsdesign.org #}
                         {% if page.collection('modular_content') is not empty %}
+                          {# each panel in a div, not a p, as a p can't hold the panel's boxes (browsers then add empty paragraphs) #}
                           {% for module in page.collection('modular_content') %}
                             {% if (module.content|striptags)|trim %}
-                              <p>{{ module.content|raw }}</p>
+                              <div class="blog-panel">{{ module.content|raw }}</div>
                             {% endif %}
                           {% endfor %}
-                          <hr>
+                          <hr class="blog-panels-end">
                         {% endif %}
 
                         {# Added display of featured post - hibbittsdesign.org #}
