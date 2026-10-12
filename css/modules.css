@@ -4,7 +4,7 @@ Lines and backgrounds use a see-through grey, and labels use the text colour mad
 opacity, so these work with every Theme Style and in Dark Mode without their own dark versions.
 */
 
-/* ── Module list (left column on course pages inside a Modules page) ── */
+/* ── Module list (right column on course pages inside a Modules page) ── */
 
 /* "Modules" label, styled like the other sidebar headings */
 .module-nav .module-nav-title {
@@ -52,9 +52,23 @@ opacity, so these work with every Theme Style and in Dark Mode without their own
     padding: 0.3rem 0.6rem;
 }
 
-/* The "Modules" heading lines up with the module names */
-.module-nav .module-nav-title {
-    padding-left: 0.6rem;
+/* The list moves left by the links' side padding, so the module names line up with the
+   "Modules" label and the search box above them (the highlight extends into the gap
+   beside the content instead). "> .nav" matches only the module list's own list */
+.module-nav > .nav {
+    margin-left: -0.6rem;
+}
+
+/* Group headings in the list (from group: on a module or page), small and in capitals like
+   the "Modules" label; the side padding lines them up with the names below them */
+.module-nav .module-nav-group {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    opacity: 0.75;
+    padding: 0 0.6rem;
+    margin: 0.75rem 0 0.25rem;
 }
 
 /* ── Modules page and module pages: the cards ── */
@@ -148,56 +162,6 @@ opacity, so these work with every Theme Style and in Dark Mode without their own
         flex-basis: auto;
         margin-left: 0;
     }
-}
-
-/* ── "On this page" (right column on module pages, with the Page TOC plugin) ── */
-
-/* Stays in view while the page scrolls */
-.module-toc {
-    position: sticky;
-    top: 1.5rem;
-}
-
-/* On tablets, "On this page" sits below the module list, with space between them. The
-   sticky setting goes on this wrapper (not .module-toc inside it, which is the same height
-   and so has no room to move), so the list stays in view once you scroll past the modules */
-.module-toc-below-nav {
-    position: sticky;
-    top: 1.5rem;
-    margin-top: 2rem;
-}
-
-/* "On this page" label, styled like the "Modules" heading on the left */
-.module-toc .module-toc-title {
-    font-size: 0.875rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: inherit;
-    opacity: 0.75;
-    margin-bottom: 0.5rem;
-}
-
-/* Each heading, a little smaller than the module list so the content stays the focus
-   ("em" sizes it from the page text, as for the module list).
-   .main-content is included so 2026 Modern's underline for links in the content doesn't apply */
-.main-content .module-toc .module-toc-link {
-    display: block;
-    text-decoration: none;
-    padding: 0.3rem 0;
-    font-size: 0.85em;
-    line-height: 1.35;
-}
-
-/* An underline on hover and keyboard focus, so it's clear each heading is a link */
-.main-content .module-toc .module-toc-link:hover,
-.main-content .module-toc .module-toc-link:focus-visible {
-    text-decoration: underline;
-}
-
-/* Sub-headings (h3), indented below their heading */
-.module-toc .module-toc-subheadings {
-    margin-left: 1rem;
 }
 
 /* ── Header image on a course page ── */

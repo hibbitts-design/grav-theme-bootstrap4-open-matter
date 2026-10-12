@@ -38,33 +38,35 @@
 
 {% embed 'partials/base.html.twig' %}
 
-{# The course sidebar is off on module pages, which already have the module list on the left,
-   so the content gets more room; a page can turn it on with show_sidebar: true #}
+{# The course sidebar is off on module pages, as the module list takes its place on the right;
+   a page can turn it on with show_sidebar: true #}
 {% if page.header.show_sidebar is defined %}
   {% set show_sidebar = page.header.show_sidebar %}
 {% else %}
   {% set show_sidebar = false %}
 {% endif %}
 
-  {% block content %}
-    {# "On this page" on the right, when the Page TOC plugin is enabled and the course sidebar
-       is off; the list is built first, so the content column can be narrowed to make room #}
-    {% set toc_html = '' %}
-    {% if config.plugins['page-toc'].enabled and not show_sidebar and not (embedded_mode or theme_var('chromeless.enabled')) %}
-      {% set toc_html %}{% include 'partials/module_page_toc.html.twig' %}{% endset %}
-    {% endif %}
+{# When embedded in an LMS (chromeless), only the page content is shown, as on other pages:
+   no module list, search box or course sidebar #}
+{% set chromeless_page = false %}
+{% if embedded_mode or theme_var('chromeless.enabled') %}
+  {% set chromeless_page = true %}
+{% endif %}
 
+  {% block content %}
     <div class="main-content">
       <div class="container">
         <div class="row">
 
-          {% if show_sidebar and not (embedded_mode or theme_var('chromeless.enabled')) %}
-            <div class="col-md-5 blog-main order-first order-md-2">
-          {% elseif toc_html|trim %}
-            {# on large screens the content shares the width with "On this page" #}
-            <div class="col-md-9 col-lg-7 blog-main order-first order-md-2">
+          {# The content on the left and the module list on the right, at the same widths as the
+             content and course sidebar on other pages (and like the section list in Open Publishing
+             Space); on phones the list follows the content #}
+          {% if chromeless_page %}
+            <div class="col-md-12 blog-main">
+          {% elseif show_sidebar %}
+            <div class="col-md-5 blog-main">
           {% else %}
-            <div class="col-md-9 blog-main order-first order-md-2">
+            <div class="col-md-8 blog-main">
           {% endif %}
             {% if not (page.header.hide_page_title) and not (grav.uri.param('hidepagetitle')) %}
               <h1>{{ page.title }}</h1>
@@ -114,20 +116,40 @@
             {% endif %}
           </div>
 
-          {# Module navigation: all modules, with the current module's pages below it.
-             It comes after the content in the page code, so keyboard and screen reader users reach the
-             content first; order-md-first still shows it on the left from tablet size up.
-             With "On this page" on the right it's narrower on large screens, as module names are short #}
-          {% if toc_html|trim %}
-            <div class="col-md-3 col-lg-2 blog-sidebar order-md-first">
+          {# Module navigation: all modules, with the current module's pages below it. With the course
+             sidebar also turned on, both share the right side #}
+          {% if not chromeless_page %}
+          {% if show_sidebar %}
+            <div class="col-md-3 blog-sidebar">
           {% else %}
-            <div class="col-md-3 blog-sidebar order-md-first">
+            <div class="col-md-4 blog-sidebar">
           {% endif %}
+
+            {# the course search box, in the same place as in the course sidebar on other pages
+               (when the course sidebar is also turned on, it has its own search box instead) #}
+            {% if config.plugins.simplesearch.enabled and not show_sidebar %}
+              <div class="sidebar-content sidebar-search mb-4">
+                <h2>{{ 'SIDEBAR.SIMPLE_SEARCH.HEADLINE'|t }}</h2>
+                {% include 'partials/simplesearch_searchbox.html.twig' with {search_form_classes: '', search_input_classes: ''} %}
+              </div>
+            {% endif %}
+
             <nav class="module-nav" aria-label="{{ module_list_page.menu }}">
-              {# a plain label (not a link), like "On this page" #}
+              {# a plain label (not a link), like the other sidebar headings #}
               <p class="module-nav-title">{{ module_list_page.menu }}</p>
               <ul class="nav flex-column">
+                {# a group heading (from a module's group: setting) wherever the group changes,
+                   like the part headings in an Open Publishing Space guide's index #}
+                {% set previous_group = '' %}
                 {% for module in modules %}
+                  {% set module_group = '' %}
+                  {% if module.header.group %}
+                    {% set module_group = module.header.group %}
+                  {% endif %}
+                  {% if module_group and module_group != previous_group %}
+                    <li class="nav-item module-nav-group">{{ module_group }}</li>
+                  {% endif %}
+                  {% set previous_group = module_group %}
                   {% set module_class = '' %}
                   {% if module.route == current_module.route %}
                     {% set module_class = 'active' %}
@@ -141,7 +163,17 @@
                     {% endif %}
                     {% if module.route == current_module.route and module.children.visible|length > 0 %}
                       <ul class="nav flex-column module-nav-pages">
+                        {# the same group headings for the module's own pages #}
+                        {% set previous_page_group = '' %}
                         {% for module_page in module.children.visible %}
+                          {% set page_group = '' %}
+                          {% if module_page.header.group %}
+                            {% set page_group = module_page.header.group %}
+                          {% endif %}
+                          {% if page_group and page_group != previous_page_group %}
+                            <li class="nav-item module-nav-group">{{ page_group }}</li>
+                          {% endif %}
+                          {% set previous_page_group = page_group %}
                           {% set page_class = '' %}
                           {% if module_page.route == page.route %}
                             {% set page_class = 'active' %}
@@ -160,27 +192,11 @@
                 {% endfor %}
               </ul>
             </nav>
-
-            {# "On this page" on tablets: below the module list, as there's no room for a third column.
-               Only one of the two copies is shown at a time (d-md-block d-lg-none here, d-lg-block below),
-               and a hidden copy is also hidden from screen readers #}
-            {% if toc_html|trim %}
-              <div class="d-none d-md-block d-lg-none module-toc-below-nav">
-                {{ toc_html|raw }}
-              </div>
-            {% endif %}
           </div>
-
-          {# "On this page" on large screens: its own column on the right. On phones it isn't shown,
-             as the module list is already below the content there #}
-          {% if toc_html|trim %}
-            <div class="col-lg-3 d-none d-lg-block order-last">
-              {{ toc_html|raw }}
-            </div>
           {% endif %}
 
-          {% if show_sidebar and not (embedded_mode or theme_var('chromeless.enabled')) %}
-            <div class="col-md-4 blog-sidebar order-last">
+          {% if show_sidebar and not chromeless_page %}
+            <div class="col-md-4 blog-sidebar">
               {% include 'partials/sidebar.html.twig' with {'blog':page} %}
             </div>
           {% endif %}

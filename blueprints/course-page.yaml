@@ -33,10 +33,10 @@ form:
 
             header.group:
               type: text
-              label: Card Group
+              label: Group
               toggleable: true
               placeholder: 'e.g. Readings'
-              help: 'Shows this page''s card under a heading with this name.'
+              help: 'Shows this page under a heading with this name, on the cards and in the module list.'
 
         options:
           type: tab
