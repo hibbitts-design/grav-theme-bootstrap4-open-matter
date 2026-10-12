@@ -4,6 +4,8 @@
 1. [](#improved)
     * Demo content: a separate Weekly Units page for the weekly units (now at weekly-units/week-01 and so on), a Home page with just the announcement and reminders, pages reordered, and the (unpublished) Modules example, matching the Open Course Hub skeleton
     * README: page address example updated for the Weekly Units page
+1. [](#bugfix)
+    * Course search leaves out pages inside any unpublished page, such as the unpublished Modules example, instead of only those in an unpublished course
 
 # v6.3.1
 ## 10/12/2026
