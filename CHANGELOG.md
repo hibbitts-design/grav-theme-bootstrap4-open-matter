@@ -1,3 +1,10 @@
+# v6.3.2
+## 10/12/2026
+
+1. [](#improved)
+    * Demo content: a separate Weekly Units page for the weekly units (now at weekly-units/week-01 and so on), a Home page with just the announcement and reminders, pages reordered, and the (unpublished) Modules example, matching the Open Course Hub skeleton
+    * README: page address example updated for the Weekly Units page
+
 # v6.3.1
 ## 10/12/2026
 
