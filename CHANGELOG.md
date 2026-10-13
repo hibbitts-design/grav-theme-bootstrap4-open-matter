@@ -1,3 +1,9 @@
+# v6.4.1
+## XX/XX/2026
+
+1. [](#improved)
+    * Demo content: the old separate blog demo is removed, as the course demo now includes a course blog
+
 # v6.4.0
 ## 10/13/2026
 
