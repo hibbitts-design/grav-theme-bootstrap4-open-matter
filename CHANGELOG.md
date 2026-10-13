@@ -1,3 +1,9 @@
+# v6.4.3
+## 10/13/2026
+
+1. [](#bugfix)
+    * On blog posts and weekly units, the site name in the NavBar links to the home page, not the blog
+
 # v6.4.2
 ## 10/13/2026
 
