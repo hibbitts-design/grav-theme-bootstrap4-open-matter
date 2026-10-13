@@ -6,18 +6,14 @@
 
 {% embed 'partials/base.html.twig' %}
 
-    {% set base_url = page.parent.url %}
-    {% set feed_url = base_url %}
-
-    {% if base_url == '/' %}
-        {% set base_url = '' %}
-    {% endif %}
-
-    {% if base_url == base_url_relative %}
-        {% set feed_url = base_url~'/'~page.parent.slug %}
-    {% endif  %}
-
     {% block content %}
+        {# the blog's address, so the post's tag links open its blog's list; kept separate from base_url,
+           which the site name in the NavBar uses to link to the home page - hibbittsdesign.org #}
+        {% set blog_base_url = page.parent.url %}
+        {% if blog_base_url == '/' %}
+          {% set blog_base_url = '' %}
+        {% endif %}
+
         <div class="main-content">
             <div class="container">
                 <div class="row">
@@ -32,7 +28,7 @@
                             {% include 'partials/breadcrumbs.html.twig' %}
                         {% endif %}
 
-                        {% include 'partials/blog_item.html.twig' with {'blog':page.parent, 'truncate':false, 'big_header':false} %}
+                        {% include 'partials/blog_item.html.twig' with {'blog':page.parent, 'truncate':false, 'big_header':false, 'base_url':blog_base_url} %}
                     </div>
 
                     {# check content display flag - hibbittsdesign.org #}
