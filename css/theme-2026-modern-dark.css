@@ -103,3 +103,30 @@ Dark Mode colours for theme-2026-modern.css, loaded after theme-2026-dark.css.
 #accordion .card-header .fa {
     color: #9ca3af;
 }
+
+/* Blog tags, archives and feed links in Dark Mode: soft light-grey pills and outlined buttons */
+.list-blog-tags .badge,
+.blog-sidebar .list-group-item .badge {
+    background-color: rgba(156, 163, 175, 0.2);
+    color: #e5e7eb;
+}
+
+.list-blog-tags .badge:hover,
+.list-blog-tags .badge:focus {
+    background-color: rgba(156, 163, 175, 0.32);
+}
+
+.blog-sidebar .btn-group .btn-warning {
+    border-color: #4b5563;
+    color: #d1d5db;
+}
+
+.blog-sidebar .btn-group .btn-warning:hover,
+.blog-sidebar .btn-group .btn-warning:focus {
+    background-color: #374151;
+    color: #f9fafb;
+}
+
+.blog-sidebar .btn-group .btn-warning .fa {
+    color: #9ca3af;
+}

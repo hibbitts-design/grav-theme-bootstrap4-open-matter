@@ -1,9 +1,14 @@
-{% set taxlist = children_only is defined ? taxonomylist.getChildPagesTags() : taxonomylist.get() %}
+{# Popular Tags: on a blog, only that blog's own posts' tags, so each blog on a site shows its own - hibbittsdesign.org #}
+{% if blog_page is defined %}
+    {% set taxlist = taxonomylist.getChildPagesTags(blog_page) %}
+{% else %}
+    {% set taxlist = taxonomylist.get() %}
+{% endif %}
 
 {% if taxlist %}
     <span class="tags">
         {% for tax, value in taxlist[taxonomy] %}
-            <a class="badge badge-secondary" href="{{ base_url }}/tag:{{ tax }}">{{ tax }}</a>
+            <a class="badge badge-secondary" href="{{ base_url }}/tag:{{ tax }}"><span class="sr-only">Posts tagged </span>{{ tax }}</a>
         {% endfor %}
     </span>
 {% endif %}

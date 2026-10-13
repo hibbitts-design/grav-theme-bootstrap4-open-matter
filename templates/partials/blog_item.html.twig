@@ -8,12 +8,18 @@
 
     <div class="list-blog-header">
 
+        {# h1 on the post's own page, h2 in a list of posts (under the blog's own h1); the h1 class keeps the same size either way #}
+        {% set title_heading = 'h1' %}
+        {% if truncate %}
+          {% set title_heading = 'h2' %}
+        {% endif %}
+
         {% if page.header.link %}
-            <h2>
+            <{{ title_heading }} class="h1">
               {% if page.header.continue_link is not same as(false) %}
-                  <a href="{{ page.header.link }}"><i class="fa fa-angle-double-right"></i>{{ page.title }}</a>
+                  <a href="{{ page.header.link }}"><i class="fa fa-angle-double-right" aria-hidden="true"></i>{{ page.title }}<span class="sr-only"> (on another site)</span></a>
               {% endif %}
-            </h2>
+            </{{ title_heading }}>
         {% else %}
         {# added page title icon - hibbittsdesign.org #}
         {% if page.header.icon %}
@@ -27,22 +33,22 @@
             {% endif %}
           {% endif %}
           {% if not (grav.uri.param('hidepagetitle')) %}
-            <h1>
+            <{{ title_heading }} class="h1">
             {% if titleicon %}
               <a href="{{ page.url }}" class="u-url p-name"><i class="fa fa-{{ titleicon }}"></i>{{ page.title }}</a>
             {% else %}
               <a href="{{ page.url }}" class="u-url p-name">{{ page.title }}</a>
             {% endif %}
-          </h1>
+          </{{ title_heading }}>
           {% else %}
-            <h1 class="hidden">{{page.title}}</h1>
+            <{{ title_heading }} class="hidden">{{page.title}}</{{ title_heading }}>
           {% endif %}
         {% endif %}
 
         <div class="list-blog-meta my-3">
             {% if not (page.parent.header.hide_post_date) %}
                 <span class="list-blog-date">
-                <i class="fa fa-calendar"></i> <span>{{ page.date|date(system.pages.dateformat.short) }}</span>
+                <i class="fa fa-calendar" aria-hidden="true"></i> <span>{{ page.date|date(system.pages.dateformat.short) }}</span>
               </span>
             {% endif %}
 
@@ -50,7 +56,7 @@
               {% if page.taxonomy.tag %}
               <span class="list-blog-tags float-right">
                   {% for tag in page.taxonomy.tag %}
-                      <a class="badge badge-primary" href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+                      <a class="badge badge-primary" href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}"><span class="sr-only">Posts tagged </span>{{ tag }}</a>
                   {% endfor %}
               </span>
               {% endif %}

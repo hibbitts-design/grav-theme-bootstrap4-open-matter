@@ -29,9 +29,9 @@
                 <div class="row">
                       {# check content display flag - hibbittsdesign.org #}
                       {% if not embedded_mode and not(theme_var('chromeless.enabled')) and (show_sidebar) %}
-                        <div class="col-md-8 blog-main">
+                        <div class="col-md-8 blog-main" role="main">
                       {% else %}
-                        <div class="col-md-12 blog-main">
+                        <div class="col-md-12 blog-main" role="main">
                       {% endif %}
 
                         {% if not (page.header.hide_page_title) and not (grav.uri.param('hidepagetitle')) %}
@@ -55,19 +55,53 @@
                           <hr class="blog-panels-end">
                         {% endif %}
 
+                        {# the blog's address, so tag links on posts open this blog's list (not the home page) #}
+                        {% set blog_base_url = page.url %}
+                        {% if page.url == '/' %}
+                          {% set blog_base_url = '' %}
+                        {% endif %}
+
+                        {# Featured posts come first only on the full list; a filtered list (such as blog/tag:news)
+                           or a later page shows matching posts in date order - hibbittsdesign.org #}
+                        {% set show_featured_first = true %}
+                        {% if uri.params is not empty %}
+                          {% set show_featured_first = false %}
+                        {% endif %}
+
+                        {# A filtered list says what it shows (a tag or a month), with a link back to every post - hibbittsdesign.org #}
+                        {% set month_param = 'archives_month' %}
+                        {% if config.plugins.archives.taxonomy_names.month is defined %}
+                          {% set month_param = config.plugins.archives.taxonomy_names.month %}
+                        {% endif %}
+                        {% set filter_tag = uri.param('tag') %}
+                        {% set filter_month = uri.param(month_param) %}
+                        {% if filter_tag or filter_month %}
+                          <p class="blog-filter-note">
+                            {% if filter_tag %}
+                              Posts tagged <strong>{{ filter_tag }}</strong>
+                            {% else %}
+                              {# jun_2026 in the address becomes June 2026 #}
+                              Posts from <strong>{{ ('1 ' ~ filter_month|replace({'_': ' '}))|date('F Y') }}</strong>
+                            {% endif %}
+                            – <a href="{{ page.url }}">show all posts</a>
+                          </p>
+                        {% endif %}
+
                         {# Added display of featured post - hibbittsdesign.org #}
-                        {% for post in taxonomy.findTaxonomy({'tag': "featured"}) %}
-                          {% if (post.header.hide_from_post_list != true) and (post.parent.route == page.route) %}
-                            {% include 'partials/blog_item.html.twig' with {'page':post, 'truncate':true} %}
-                          {% endif %}
-                        {% endfor %}
+                        {% if show_featured_first %}
+                          {% for post in taxonomy.findTaxonomy({'tag': "featured"}) %}
+                            {% if (post.header.hide_from_post_list != true) and (post.parent.route == page.route) %}
+                              {% include 'partials/blog_item.html.twig' with {'page':post, 'truncate':true, 'base_url':blog_base_url} %}
+                            {% endif %}
+                          {% endfor %}
+                        {% endif %}
 
                         {% for child in collection %}
                           {# Added check for hiding post in list - hibbittsdesign.org #}
                           {% if child.header.hide_from_post_list != true %}
-                            {# Added check for not repeating feature post - hibbittsdesign.org #}
-                            {% if "featured" not in child.taxonomy['tag'] %}
-                              {% include 'partials/blog_item.html.twig' with {'page':child, 'truncate':true} %}
+                            {# Added check for not repeating feature post (already shown first) - hibbittsdesign.org #}
+                            {% if not show_featured_first or "featured" not in child.taxonomy['tag'] %}
+                              {% include 'partials/blog_item.html.twig' with {'page':child, 'truncate':true, 'base_url':blog_base_url} %}
                             {% endif %}
                           {% endif %}
                         {% endfor %}

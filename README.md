@@ -8,7 +8,7 @@
 
 [![Grav Discord Chat](https://img.shields.io/discord/501836936584101899.svg?logo=discord&colorB=728ADA&label=Grav%20Discord%20Chat)](https://chat.getgrav.org) [![Latest Release](https://img.shields.io/github/v/release/hibbitts-design/grav-theme-bootstrap4-open-matter?style=flat-square&label=Release)](https://github.com/hibbitts-design/grav-theme-bootstrap4-open-matter/releases/latest) [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/hibbitts-design/grav-theme-bootstrap4-open-matter/blob/master/LICENSE) [![PHP](https://img.shields.io/badge/PHP-%3E%3D8.0.2-8892BF?style=flat-square&logo=php&logoColor=white)](https://learn.getgrav.org/17/basics/requirements)
 
-<p>Try the <a href="https://demo.hibbittsdesign.org/grav-open-course-hub/">demo</a>, or the same course <a href="https://demo.hibbittsdesign.org/grav-open-course-hub-modules/">organised by modules</a></p>
+<p>Try the <a href="https://demo.hibbittsdesign.org/grav-open-course-hub/">demo</a></p>
 
 <p>A free, open-source child theme of the <a href="https://github.com/trilbymedia/grav-theme-bootstrap4">Grav Bootstrap4 theme</a>, built for <a href="https://getgrav.org">Grav CMS</a> with Markdown file-based content, a built-in Admin panel, and no database required. Used by the <a href="https://github.com/hibbitts-design/grav-skeleton-course-hub">Open Course Hub</a> and <a href="https://github.com/hibbitts-design/grav-skeleton-multicourse-hub">Open MultiCourse Hub</a> skeleton packages.</p>
 
@@ -24,11 +24,11 @@ Bootstrap4 Open Matter adds what open, collaborative course and blog sites need 
 
 - **Content that carries over to Grav Helios Course Hub** – shortcodes, GitHub-style alerts, course card fields, and page URL parameters use the same names, so course content moves to [Grav Helios Course Hub](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub) without rewriting, including the `[topics]` index, the course content shortcodes, and course search
 - **Chromeless display for LMS embedding** – add `/chromeless:true` or `?embedded=true` to any page URL to show only its content, or hide the site menu, sidebar, and footer site-wide
-- **Weeks or modules** – weekly units, or Modules pages with a card for each module and module pages with a list of modules and course search beside the content, plus Previous and Next buttons, using the same page types as Grav Helios Course Hub; a Canvas, Moodle, Brightspace, or Blackboard course can be imported as modules with the free [Common Cartridge Converter](https://common-cartridge-converter.hibbittsdesign.org/) (beta) – see [an example conversion](https://demo.hibbittsdesign.org/grav-open-course-hub-it2dda/)
+- **Modules, a blog, or weekly units** – Modules pages with a card for each module and module pages with a list of modules and course search beside the content, plus Previous and Next buttons, using the same page types as Grav Helios Course Hub, alongside a blog or with a blog listing weekly units; a Canvas, Moodle, Brightspace, or Blackboard course can be imported as modules with the free [Common Cartridge Converter](https://common-cartridge-converter.hibbittsdesign.org/) (beta) – see [an example conversion](https://demo.hibbittsdesign.org/grav-open-course-hub-it2dda/)
 - **Open authoring with Git Sync** – a "View Git Repository" or "View/Edit Page in Git Repository" link in the menu, footer, or page, with a custom icon and text
 - **Built-in shortcodes** – Badge, Button, Embedly, Google Slides, H5P, iFrame, Link Preview Card, Markdown File, PDF, SpeakerDeck, Topics (an A–Z topics index), and Show/Hide If Embedded, with `title` (and `ratio`) options for accessible, well-proportioned embeds
 - **Course content shortcodes** – `[objectives]`, `[key-takeaways]`, `[reflection]`, `[definition]`, `[example]`, `[case-study]`, `[project-brief]`, `[process-note]`, `[feedback-requested]`, `[announcement]`, `[exercise]`, `[references]`, and `[excerpt]`, shown as Bootstrap alerts, with the same names and options as Grav Helios Course Hub
-- **Course and content page types** – blog with featured (sticky) posts, course sections, RSS feed aggregation, link lists, subsites with course cards (description, instructor, badge, group, and image), and dedicated H5P, iFrame, PDF, Embedly, and link preview card pages; a course can be set up with `subsite.md` or, as in Grav Helios Course Hub, `course.md`
+- **Course and content page types** – blog with featured (sticky) posts and a sidebar with Popular Tags, Archives and RSS for each blog, course sections, RSS feed aggregation, link lists, subsites with course cards (description, instructor, badge, group, and image), and dedicated H5P, iFrame, PDF, Embedly, and link preview card pages; a course can be set up with `subsite.md` or, as in Grav Helios Course Hub, `course.md`
 - **Course search** – with the SimpleSearch plugin, a "Search course..." box in the sidebar searches just the current course, or, when its Show Search Box setting is on, all courses from the course list page, with results in each course's own layout
 - **Visual styles** – 2026 Modern, 2026 Refresh or Classic, with Dark Mode off, on, or following the visitor's system setting
 - **Flexible layout** – a Markdown-based sidebar, NavBar look (solid or a light tint of its colour), style, colour, position, and breakpoint options, dropdowns, and custom menu items
@@ -88,9 +88,17 @@ Modules use the same page types as Grav Helios Course Hub, and a Canvas, Moodle,
 - Each **module** (`course-page.md`) can have its own pages; module pages show the course search box and a list of all modules on the right, where the course sidebar is on other pages, with Previous and Next buttons through every module and page in order
 - A module or page can set `group:` to appear under a heading, both on the cards and in the module list
 
+## Blogs
+
+A blog page lists its posts newest first, with any posts tagged `featured` shown first. With the [Taxonomy List](https://github.com/getgrav/grav-plugin-taxonomylist), [Archives](https://github.com/getgrav/grav-plugin-archives) and [Feed](https://github.com/getgrav/grav-plugin-feed) plugins, a blog and its posts also show Popular Tags, Archives (posts by month) and RSS/Atom links in the sidebar:
+
+- Each blog shows only its own tags and months, so a site can have several blogs, such as a course blog in each course
+- A blog that hides its post dates and tags (Hide Post Date and Hide Post Taxonomy), such as one listing weekly units, leaves out Popular Tags and Archives
+- Other pages, such as Modules or the Syllabus, show none of these
+
 ## Page URL Parameters
 
-Add these to any page URL, for example `https://yoursite.com/weekly-units/week-01/chromeless:true` or `https://yoursite.com/weekly-units/week-01?embedded=true`.
+Add these to any page URL, for example `https://yoursite.com/modules/module-01/chromeless:true` or `https://yoursite.com/modules/module-01?embedded=true`.
 
 | Parameter | Effect |
 |---|---|
@@ -113,6 +121,7 @@ To leave something out when a page is printed, add Bootstrap's `d-print-none` cl
 - The [Bootstrap4 theme](https://github.com/trilbymedia/grav-theme-bootstrap4) and required plugins, installed automatically as dependencies
 - GitHub-style alerts (`> [!NOTE]`, `> [!TIP]`, …) need the [GitHub Markdown Alerts](https://github.com/trilbymedia/grav-plugin-github-markdown-alerts) plugin – version 2 on Grav 2, or [version 1.1.1](https://github.com/trilbymedia/grav-plugin-github-markdown-alerts/releases/tag/1.1.1) on Grav 1.7 (both are included in the Open Course Hub and Open MultiCourse Hub packages); without it they show as regular blockquotes
 - Course search needs the [SimpleSearch](https://github.com/getgrav/grav-plugin-simplesearch) plugin (Grav 1.7 or 2)
+- The blog sidebar's Popular Tags, Archives and RSS need the Taxonomy List, Archives and Feed plugins (all included in the Open Course Hub and Open MultiCourse Hub packages)
 
 ## Support
 

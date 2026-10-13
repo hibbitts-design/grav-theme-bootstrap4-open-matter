@@ -156,7 +156,7 @@
         {% block pagination %}{% endblock %}
 
         {% if not embedded_mode and not(theme_var('chromeless.enabled')) %}
-          <div class="footer">
+          <div class="footer" role="contentinfo">
               <div class="container">
                 {% if page.find('/footer').header.footer_scroll %}
                   {# added top of page navigation element - hibbittsdesign.org #}

@@ -1,5 +1,14 @@
-{% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (base_url_relative~'/'~blog.slug) : blog.url %}
-{% set new_base_url = blog.url == '/' ? '' : blog.url %}
+{# The blog's address for its RSS/Atom feed and its tag links. When the blog is the site's home page,
+   its own address is just '/', so the feed uses its folder name (slug) instead - hibbittsdesign.org #}
+{% set feed_url = blog.url %}
+{% if blog.url == '/' or blog.url == base_url_relative %}
+  {% set feed_url = base_url_relative ~ '/' ~ blog.slug %}
+{% endif %}
+
+{% set new_base_url = blog.url %}
+{% if blog.url == '/' %}
+  {% set new_base_url = '' %}
+{% endif %}
 {% set arrayofpath = uri.path|split('/') %}
 {% set firstfolderofpath = arrayofpath[1] %}
 {% set secondfolderofpath = arrayofpath[2] %}
@@ -13,7 +22,25 @@
   {% endif %}
 {% endif %}
 
-<h1 class="hidden">{{page.title}}</h1>
+{# the sidebar as its own region, so screen reader users can jump to it (or past it) - hibbittsdesign.org #}
+<aside aria-label="Sidebar">
+
+{# Blog-only blocks (Popular Tags, Archives and Syndicate) are shown only on a blog page (the 'blog'
+   template) and its posts (the 'item' template), not on course pages such as Modules or the Syllabus - hibbittsdesign.org #}
+{% set is_blog_page = false %}
+{% if page.template == 'blog' or page.template == 'item' %}
+  {% set is_blog_page = true %}
+{% endif %}
+
+{# Popular Tags and Archives only for a blog that shows its post tags and dates (Weekly Units hide both) #}
+{% set show_blog_tags = false %}
+{% if is_blog_page and not blog.header.hide_post_taxonomy %}
+  {% set show_blog_tags = true %}
+{% endif %}
+{% set show_blog_archives = false %}
+{% if is_blog_page and not blog.header.hide_post_date %}
+  {% set show_blog_archives = true %}
+{% endif %}
 
 {# on a Subsite List page, the search box is only shown when its Show Search Box setting is turned on - hibbittsdesign.org #}
 {% set hide_list_search = page.template == 'subsitelist' and not page.header.show_search_box %}
@@ -46,17 +73,17 @@
 </div>
 {% endif %}
 
-{% if config.plugins.taxonomylist.enabled %}
+{% if config.plugins.taxonomylist.enabled and show_blog_tags %}
 <div class="sidebar-content">
     <h2>{{ 'SIDEBAR.POPULAR_TAGS.HEADLINE'|t }}</h2>
-    {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
+    {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag', 'blog_page':blog} %}
 </div>
 {% endif %}
 
-{% if config.plugins.archives.enabled %}
+{% if config.plugins.archives.enabled and show_blog_archives %}
 <div class="sidebar-content">
     <h2>{{ 'SIDEBAR.ARCHIVES.HEADLINE'|t }}</h2>
-	{% include 'partials/archives.html.twig' with {'base_url':new_base_url} %}
+	{% include 'partials/archives.html.twig' with {'base_url':new_base_url, 'blog_page':blog} %}
 </div>
 {% endif %}
 
@@ -70,14 +97,13 @@
 {% endif %}
 
 {# Syndicate (RSS) links, unless turned off in the Theme options - hibbittsdesign.org #}
-{% if config.plugins.feed.enabled and theme_var('display_syndicate') is not same as(false) %}
+{% if config.plugins.feed.enabled and theme_var('display_syndicate') is not same as(false) and is_blog_page %}
 <div class="sidebar-content">
-  {% if page.template == 'blog' %}
     <h2>{{ 'SIDEBAR.SYNDICATE.HEADLINE'|t }}</h2>
     <div class="btn-group">
-        <a class="btn btn-warning" href="{{ feed_url }}.atom"><i class="fa fa-rss-square"></i> Atom 1.0</a>
-        <a class="btn btn-warning" href="{{ feed_url }}.rss"><i class="fa fa-rss-square"></i> RSS</a>
+        <a class="btn btn-warning" href="{{ feed_url }}.atom"><i class="fa fa-rss-square" aria-hidden="true"></i> Atom 1.0</a>
+        <a class="btn btn-warning" href="{{ feed_url }}.rss"><i class="fa fa-rss-square" aria-hidden="true"></i> RSS</a>
     </div>
-  {% endif  %}
 </div>
 {% endif %}
+</aside>

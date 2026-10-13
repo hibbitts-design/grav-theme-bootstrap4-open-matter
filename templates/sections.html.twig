@@ -105,9 +105,9 @@
           </div>
 
           {% if show_sidebar and not(embedded_mode or theme_var('chromeless.enabled')) %}
-            <div class="col-md-5 blog-main order-first order-md-2">
+            <div class="col-md-5 blog-main order-first order-md-2" role="main">
             {% else %}
-              <div class="col-md-9 blog-main order-first order-md-2">
+              <div class="col-md-9 blog-main order-first order-md-2" role="main">
               {% endif %}
 
               {% if not(page.header.hide_page_title) and not(grav.uri.param('hidepagetitle')) %}

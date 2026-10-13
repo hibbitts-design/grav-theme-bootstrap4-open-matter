@@ -396,3 +396,46 @@ body {
 .alert.md-alert--important { --alert-accent: #8250df; }
 .alert.md-alert--warning   { --alert-accent: #9a6700; }
 .alert.md-alert--caution   { --alert-accent: #cf222e; }
+
+/* Blog tags, archives and feed links, quieter to match the rest of 2026 Modern.
+   Tags on blog posts (.list-blog-tags) as the same soft grey pills as the sidebar's Popular Tags */
+.list-blog-tags .badge {
+    background-color: rgba(108, 117, 125, 0.16);
+    color: #1f2937;
+}
+
+.list-blog-tags .badge:hover,
+.list-blog-tags .badge:focus {
+    background-color: rgba(108, 117, 125, 0.28);
+}
+
+/* The sidebar's Archives (a .list-group of months) as a plain list, with the post count in soft grey */
+.blog-sidebar .list-group-item {
+    border: none;
+    padding: 0.25rem 0;
+    background-color: transparent;
+}
+
+.blog-sidebar .list-group-item .badge {
+    background-color: rgba(108, 117, 125, 0.16);
+    color: #1f2937;
+}
+
+/* The sidebar's Atom and RSS links as small outlined buttons instead of solid orange ones */
+.blog-sidebar .btn-group .btn-warning {
+    background-color: transparent;
+    border: 1px solid #d1d5db;
+    color: #374151;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.blog-sidebar .btn-group .btn-warning:hover,
+.blog-sidebar .btn-group .btn-warning:focus {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+.blog-sidebar .btn-group .btn-warning .fa {
+    color: #6b7280;
+}

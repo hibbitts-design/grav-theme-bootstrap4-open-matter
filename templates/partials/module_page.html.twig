@@ -62,11 +62,11 @@
              content and course sidebar on other pages (and like the section list in Open Publishing
              Space); on phones the list follows the content #}
           {% if chromeless_page %}
-            <div class="col-md-12 blog-main">
+            <div class="col-md-12 blog-main" role="main">
           {% elseif show_sidebar %}
-            <div class="col-md-5 blog-main">
+            <div class="col-md-5 blog-main" role="main">
           {% else %}
-            <div class="col-md-8 blog-main">
+            <div class="col-md-8 blog-main" role="main">
           {% endif %}
             {% if not (page.header.hide_page_title) and not (grav.uri.param('hidepagetitle')) %}
               <h1>{{ page.title }}</h1>

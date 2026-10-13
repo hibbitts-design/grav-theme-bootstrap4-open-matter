@@ -1,0 +1,29 @@
+{# Archives: this blog's own posts counted by month, newest first, so each blog on a site lists only its own
+   posts. The links use the Archives plugin's month filter, such as blog/archives_month:jun_2026 - hibbittsdesign.org #}
+{% set month_keys = [] %}
+{% set month_names = {} %}
+{% set month_counts = {} %}
+{% for post in blog_page.children.published.order('date', 'desc') %}
+    {% if post.header.hide_from_post_list != true %}
+        {# the month as used in the address (jun_2026), and as shown (June 2026) #}
+        {% set month_key = post.date|date('M_Y')|lower %}
+        {% if month_key not in month_keys %}
+            {% set month_keys = month_keys|merge([month_key]) %}
+            {% set month_names = month_names|merge({(month_key): post.date|date('F Y')}) %}
+            {% set month_counts = month_counts|merge({(month_key): 0}) %}
+        {% endif %}
+        {% set month_counts = month_counts|merge({(month_key): month_counts[month_key] + 1}) %}
+    {% endif %}
+{% endfor %}
+
+<ul class="list-group">
+    {% for month_key in month_keys %}
+        {# the post count is beside the link (not inside it), so it isn't underlined like the link #}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <a href="{{ base_url }}/{{ config.plugins.archives.taxonomy_names.month }}{{ config.system.param_sep }}{{ month_key|e('url') }}">{{ month_names[month_key] }}</a>
+            {% if config.plugins.archives.show_count %}
+                <span class="badge badge-primary badge-pill">{{ month_counts[month_key] }}<span class="sr-only">{% if month_counts[month_key] == 1 %} post{% else %} posts{% endif %}</span></span>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
