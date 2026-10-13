@@ -3,6 +3,8 @@
 
 1. [](#improved)
     * Demo content: the old separate blog demo is removed, as the course demo now includes a course blog
+1. [](#bugfix)
+    * Yes/No switches in the theme settings show their labels again in Admin
 
 # v6.4.0
 ## 10/13/2026
