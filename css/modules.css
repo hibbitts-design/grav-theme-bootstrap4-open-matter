@@ -6,16 +6,10 @@ opacity, so these work with every Theme Style and in Dark Mode without their own
 
 /* ── Module list (right column on course pages inside a Modules page) ── */
 
-/* "Modules" label, styled like the other sidebar headings */
+/* "Modules" heading: styled by each Theme Style's sidebar headings (.blog-sidebar h2), with no extra
+   space above it, as it follows the search box */
 .module-nav .module-nav-title {
-    display: block;
-    font-size: 0.875rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: inherit;
-    opacity: 0.75;
-    margin-bottom: 0.5rem;
+    margin-top: 0;
 }
 
 /* Each module, a little smaller than the page text and in the text colour rather than the
@@ -50,6 +44,77 @@ opacity, so these work with every Theme Style and in Dark Mode without their own
 
 .blog-sidebar .module-nav .module-nav-pages .nav-link {
     padding: 0.3rem 0.6rem;
+}
+
+/* The current page's sections (from the Page TOC plugin), a level below the module names:
+   indented further, and a little smaller and lighter */
+.module-nav .module-nav-sections {
+    margin: 0.2rem 0 0.5rem 1rem;
+}
+
+.blog-sidebar .module-nav .module-nav-sections .nav-link {
+    font-size: 0.875em;
+    line-height: 1.3;
+    padding: 0.2rem 0.75rem;
+    /* a little lighter than the module names, while keeping the text at about 7:1 contrast */
+    opacity: 0.85;
+}
+
+/* Full strength on hover or focus, so the section being pointed at stands out */
+.blog-sidebar .module-nav .module-nav-sections .nav-link:hover,
+.blog-sidebar .module-nav .module-nav-sections .nav-link:focus {
+    opacity: 1;
+}
+
+/* On wider screens, the module column stays in view while reading a long page; if the list is taller
+   than the window, it scrolls on its own. align-self keeps the column only as tall as its contents,
+   which sticky needs (768px is Bootstrap's md, where the column sits beside the content). Only in windows
+   at least 700px tall: in shorter ones (such as when zoomed in), the list scrolls with the page instead.
+   .blog-sidebar.module-nav-column (both classes) outranks Bootstrap's position: relative on all columns */
+@media (min-width: 768px) and (min-height: 700px) {
+    .blog-sidebar.module-nav-column {
+        position: sticky;
+        top: 1rem;
+        align-self: flex-start;
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
+    }
+
+    /* below a Sticky Top NavBar instead of behind it (:has() matches a page that has one) */
+    body:has(.navbar.sticky-top) .blog-sidebar.module-nav-column {
+        top: 5rem;
+        max-height: calc(100vh - 6rem);
+    }
+}
+
+/* On phones, "On this page" above the content: a light box that opens to show the sections */
+.module-sections-above {
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 0.5rem;
+    padding: 0.6rem 0.9rem;
+    margin-bottom: 1.25rem;
+}
+
+.module-sections-above summary {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.module-sections-above-list {
+    margin: 0.5rem 0 0.1rem;
+    padding-left: 1.25rem;
+}
+
+/* A little space above a section heading when jumped to, so it isn't right at the top edge
+   (or hidden behind a Sticky Top NavBar) */
+.module-page-content h2,
+.module-page-content h3 {
+    scroll-margin-top: 1rem;
+}
+
+body:has(.navbar.sticky-top) .module-page-content h2,
+body:has(.navbar.sticky-top) .module-page-content h3 {
+    scroll-margin-top: 5rem;
 }
 
 /* The list moves left by the links' side padding, so the module names line up with the

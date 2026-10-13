@@ -75,7 +75,15 @@
             {% endif %}
             {# a header image, as on weekly pages, when the page asks for one #}
             {% include 'partials/course_page_header_image.html.twig' %}
-            {{ page.content|raw }}
+            {# on phones, this page's sections above the content (not when embedded, which shows content only) #}
+            {% if not chromeless_page %}
+              {% include 'partials/module_sections.html.twig' with {'show_above_content': true} %}
+            {% endif %}
+
+            {# the page's own content (its section headings get a little space above them when jumped to) #}
+            <div class="module-page-content">
+              {{ page.content|raw }}
+            </div>
 
             {# a module's own pages as cards below its content, as in Helios Course Hub #}
             {% if page.route == current_module.route and page.children.visible|length > 0 %}
@@ -119,10 +127,11 @@
           {# Module navigation: all modules, with the current module's pages below it. With the course
              sidebar also turned on, both share the right side #}
           {% if not chromeless_page %}
+          {# module-nav-column: stays in view while reading a long page, on wider screens (see modules.css) #}
           {% if show_sidebar %}
-            <div class="col-md-3 blog-sidebar">
+            <div class="col-md-3 blog-sidebar module-nav-column">
           {% else %}
-            <div class="col-md-4 blog-sidebar">
+            <div class="col-md-4 blog-sidebar module-nav-column">
           {% endif %}
 
             {# the course search box, in the same place as in the course sidebar on other pages
@@ -134,9 +143,9 @@
               </div>
             {% endif %}
 
-            <nav class="module-nav" aria-label="{{ module_list_page.menu }}">
-              {# a plain label (not a link), like the other sidebar headings #}
-              <p class="module-nav-title">{{ module_list_page.menu }}</p>
+            {# the list is named by its heading, which looks like the other sidebar headings in every Theme Style #}
+            <nav class="module-nav" aria-labelledby="module-nav-title">
+              <h2 class="module-nav-title" id="module-nav-title">{{ module_list_page.menu }}</h2>
               <ul class="nav flex-column">
                 {# a group heading (from a module's group: setting) wherever the group changes,
                    like the part headings in an Open Publishing Space guide's index #}
@@ -158,6 +167,7 @@
                     {# aria-current tells screen readers which link is the page they're on #}
                     {% if module.route == page.route %}
                       <a class="nav-link {{ module_class }}" href="{{ module.url }}" aria-current="page">{{ module.menu }}</a>
+                      {% include 'partials/module_sections.html.twig' %}
                     {% else %}
                       <a class="nav-link {{ module_class }}" href="{{ module.url }}">{{ module.menu }}</a>
                     {% endif %}
@@ -181,6 +191,7 @@
                           <li class="nav-item">
                             {% if module_page.route == page.route %}
                               <a class="nav-link {{ page_class }}" href="{{ module_page.url }}" aria-current="page">{{ module_page.menu }}</a>
+                              {% include 'partials/module_sections.html.twig' %}
                             {% else %}
                               <a class="nav-link {{ page_class }}" href="{{ module_page.url }}">{{ module_page.menu }}</a>
                             {% endif %}

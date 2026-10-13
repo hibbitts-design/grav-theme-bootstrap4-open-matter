@@ -26,7 +26,7 @@ Bootstrap4 Open Matter adds what open, collaborative course and blog sites need 
 
 - **Content that carries over to Grav Helios Course Hub** – shortcodes, GitHub-style alerts, course card fields, and page URL parameters use the same names, so course content moves to [Grav Helios Course Hub](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub) without rewriting, including the `[topics]` index, the course content shortcodes, and course search
 - **Chromeless display for LMS embedding** – add `/chromeless:true` or `?embedded=true` to any page URL to show only its content, or hide the site menu, sidebar, and footer site-wide
-- **Modules, a blog, or weekly units** – Modules pages with a card for each module and module pages with a list of modules and course search beside the content, plus Previous and Next buttons, using the same page types as Grav Helios Course Hub, alongside a blog or with a blog listing weekly units; a Canvas, Moodle, Brightspace, or Blackboard course can be imported as modules with the free [Common Cartridge Converter](https://common-cartridge-converter.hibbittsdesign.org/) (beta) – see [an example conversion](https://demo.hibbittsdesign.org/grav-open-course-hub-it2dda/)
+- **Modules, a blog, or weekly units** – Modules pages with a card for each module and module pages with a list of modules (with the current page's sections) and course search beside the content, plus Previous and Next buttons, using the same page types as Grav Helios Course Hub, alongside a blog or with a blog listing weekly units; a Canvas, Moodle, Brightspace, or Blackboard course can be imported as modules with the free [Common Cartridge Converter](https://common-cartridge-converter.hibbittsdesign.org/) (beta) – see [an example conversion](https://demo.hibbittsdesign.org/grav-open-course-hub-it2dda/)
 - **Open authoring with Git Sync** – a "View Git Repository" or "View/Edit Page in Git Repository" link in the menu, footer, or page, with a custom icon and text
 - **Built-in shortcodes** – Badge, Button, Embedly, Google Slides, H5P, iFrame, Link Preview Card, Markdown File, PDF, SpeakerDeck, Topics (an A–Z topics index), and Show/Hide If Embedded, with `title` (and `ratio`) options for accessible, well-proportioned embeds
 - **Course content shortcodes** – `[objectives]`, `[key-takeaways]`, `[reflection]`, `[definition]`, `[example]`, `[case-study]`, `[project-brief]`, `[process-note]`, `[feedback-requested]`, `[announcement]`, `[exercise]`, `[references]`, and `[excerpt]`, shown as Bootstrap alerts, with the same names and options as Grav Helios Course Hub
@@ -88,6 +88,7 @@ Modules use the same page types as Grav Helios Course Hub, and a Canvas, Moodle,
 
 - A **Modules** page (`module.md`) shows its content, then a card for each module
 - Each **module** (`course-page.md`) can have its own pages; module pages show the course search box and a list of all modules on the right, where the course sidebar is on other pages, with Previous and Next buttons through every module and page in order
+- With the [Page TOC](https://github.com/trilbymedia/grav-plugin-page-toc) plugin, the module list also shows the current page's sections (its h2 headings, or its h3s), and on phones they appear in an "On this page" box above the content; on wider screens the module list stays in view while reading
 - A module or page can set `group:` to appear under a heading, both on the cards and in the module list
 
 ## Blogs
@@ -123,6 +124,7 @@ To leave something out when a page is printed, add Bootstrap's `d-print-none` cl
 - The [Bootstrap4 theme](https://github.com/trilbymedia/grav-theme-bootstrap4) and required plugins, installed automatically as dependencies
 - GitHub-style alerts (`> [!NOTE]`, `> [!TIP]`, …) need the [GitHub Markdown Alerts](https://github.com/trilbymedia/grav-plugin-github-markdown-alerts) plugin – version 2 on Grav 2, or [version 1.1.1](https://github.com/trilbymedia/grav-plugin-github-markdown-alerts/releases/tag/1.1.1) on Grav 1.7 (both are included in the Open Course Hub and Open MultiCourse Hub packages); without it they show as regular blockquotes
 - Course search needs the [SimpleSearch](https://github.com/getgrav/grav-plugin-simplesearch) plugin (Grav 1.7 or 2)
+- A module page's sections need the [Page TOC](https://github.com/trilbymedia/grav-plugin-page-toc) plugin – version 4 on Grav 2, or version 3.2.5 on Grav 1.7 (both are included in the Open Course Hub and Open MultiCourse Hub packages)
 - The blog sidebar's Popular Tags, Archives and RSS need the Taxonomy List, Archives and Feed plugins (all included in the Open Course Hub and Open MultiCourse Hub packages)
 
 ## Support

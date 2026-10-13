@@ -1,0 +1,34 @@
+{# The current page's sections: its h2 headings when it has two or more, otherwise its h3s. Shown under
+   the page in the module list, or, with show_above_content, above the content on phones (where the
+   module list comes after the content). Needs the Page TOC plugin, which also gives each heading its anchor - hibbittsdesign.org #}
+{% if config.plugins['page-toc'].enabled %}
+  {# toc_items(content, first heading level, number of levels): here, one level of h2s #}
+  {% set sections = toc_items(page.content, 2, 1) %}
+  {% if sections.children|length < 2 %}
+    {% set sections = toc_items(page.content, 3, 1) %}
+  {% endif %}
+
+  {# a single heading isn't worth a list #}
+  {% if sections.children|length >= 2 %}
+    {% if show_above_content is defined and show_above_content %}
+      {# phones only (d-md-none): a short "On this page" list that opens when tapped #}
+      <details class="module-sections-above d-md-none">
+        <summary>On this page</summary>
+        <ul class="module-sections-above-list">
+          {% for section in sections.children %}
+            <li><a href="{{ section.uri }}">{{ section.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </details>
+    {% else %}
+      {# wider screens only (d-none d-md-flex), as on phones the list is above the content instead #}
+      <ul class="nav flex-column module-nav-sections d-none d-md-flex" aria-label="Sections on this page">
+        {% for section in sections.children %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ section.uri }}">{{ section.label }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endif %}
+{% endif %}
