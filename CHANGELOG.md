@@ -4,8 +4,10 @@
 1. [](#new)
     * Blog sidebar with Popular Tags, Archives and RSS, per blog, on blog pages only
     * Filtered blog lists say what they show, with a link back to all posts
+    * Module pages list their sections under the current page in the module list (with the Page TOC plugin), or in an "On this page" box on phones
 1. [](#improved)
     * More even spacing around course panels (the announcement and reminders box), in every Theme Style
+    * The module list stays in view while reading a long module page, and its heading matches the other sidebar headings
     * Quieter blog tags, Archives and RSS buttons in 2026 Modern
     * Accessibility: page regions, one page title per page, and screen reader labels for blog links
     * README: modules, a blog, or weekly units, and a Blogs section
