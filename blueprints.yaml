@@ -52,8 +52,8 @@ form:
               highlight: 1
               default: 0
               options:
-                '0': No
-                '1': Yes
+                '0': 'No'
+                '1': 'Yes'
               validate:
                 type: bool
             menuoptions:
@@ -80,8 +80,8 @@ form:
               highlight: 1
               default: 0
               options:
-                '0': No
-                '1': Yes
+                '0': 'No'
+                '1': 'Yes'
               validate:
                 type: bool
             cc_license.type:
@@ -103,8 +103,8 @@ form:
               highlight: 1
               default: 0
               options:
-                '0': No
-                '1': Yes
+                '0': 'No'
+                '1': 'Yes'
               validate:
                 type: bool
             cc_license.text:
@@ -238,8 +238,8 @@ form:
               highlight: 1
               default: 1
               options:
-                '1': Yes
-                '0': No
+                '0': 'No'
+                '1': 'Yes'
               validate:
                 type: bool
             moduleoptions:
@@ -269,8 +269,8 @@ form:
               default: 0
               highlight: 1
               options:
-                '0': No
-                '1': Yes
+                '0': 'No'
+                '1': 'Yes'
               validate:
                 type: bool
             custommenu:
