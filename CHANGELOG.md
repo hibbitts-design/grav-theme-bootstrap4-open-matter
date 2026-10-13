@@ -1,10 +1,11 @@
 # v6.4.1
-## XX/XX/2026
+## 10/13/2026
 
 1. [](#improved)
     * Demo content: the old separate blog demo is removed, as the course demo now includes a course blog
 1. [](#bugfix)
-    * Yes/No switches in the theme settings show their labels again in Admin
+    * Yes/No switches in the theme and page settings show their labels in Admin on hosts with PHP's native YAML extension
+    * Git Sync link fields in the theme and page settings show as normal text boxes in Admin 2
 
 # v6.4.0
 ## 10/13/2026
