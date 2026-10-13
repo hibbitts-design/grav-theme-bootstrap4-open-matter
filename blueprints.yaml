@@ -332,21 +332,21 @@ form:
               title: Appearance
               underline: true
             custom_git_sync_repo_link_icon:
-              type: input.text
+              type: text
               size: small
               label: 'Custom Font Awesome Icon'
               description: 'Short name, e.g. ''code-fork''.'
               validate:
                 type: text
             custom_git_sync_repo_link_text:
-              type: input.text
+              type: text
               size: long
               label: 'Custom Link Text'
               description: 'Link text, e.g. ''View Page in GitHub'' or ''View Page as Markdown''.'
               validate:
                 type: text
             git_sync_edit_note_text:
-              type: input.text
+              type: text
               size: medium
               label: 'Text before Page Link'
               description: 'The text before Git Sync Link located on a Page, e.g. ''Have a suggestion or correction?'' or ''Want to reuse this open content?''.'
@@ -363,7 +363,7 @@ form:
                 footer: Footer
                 none: None
             git_sync.edit_theme_link_text:
-              type: input.text
+              type: text
               size: medium
               label: 'Site Theme Files Link Text'
               default: 'Site Theme Files'
@@ -373,7 +373,7 @@ form:
               title: Advanced
               underline: true
             git_sync_repo_link:
-              type: input.url
+              type: url
               label: 'Custom Git Repository Tree URL'
               help: 'Enter the URL that leads to the Pages folder in your Git Repository.'
               description: 'URL path to a Git repository up to, but not including, ''/pages'' and everything following it. For example, ''https://github.com/paulhibbitts/demo-grav-course-hub/tree/master''.'

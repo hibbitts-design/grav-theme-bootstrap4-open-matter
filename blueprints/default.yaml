@@ -36,8 +36,8 @@ form:
                 default: 0
                 highlight: 0
                 options:
-                    0:  Yes
-                    1:  No
+                    0:  'Yes'
+                    1:  'No'
                 validate:
                     type: bool
 
@@ -47,8 +47,8 @@ form:
                 highlight:                 1
                 default:                   1
                 options:
-                    1:                     Yes
-                    0:                     No
+                    1:                     'Yes'
+                    0:                     'No'
                 validate:
                     type:                  bool
 
@@ -64,13 +64,13 @@ form:
                 default: 0
                 highlight: 0
                 options:
-                    0:  Yes
-                    1:  No
+                    0:  'Yes'
+                    1:  'No'
                 validate:
                     type: bool
 
             header.git_sync_repo_link_text:
-                type: input.text
+                type: text
                 size: medium
                 label: 'Custom Git Sync Link Text'
                 description: 'Link text, e.g. ''View Page on GitHub''.'

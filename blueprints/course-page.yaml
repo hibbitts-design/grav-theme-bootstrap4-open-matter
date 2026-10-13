@@ -51,7 +51,7 @@ form:
               help: 'Off by default inside a Modules page.'
               highlight: 1
               options:
-                1: Yes
-                0: No
+                1: 'Yes'
+                0: 'No'
               validate:
                 type: bool

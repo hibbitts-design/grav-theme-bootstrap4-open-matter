@@ -158,8 +158,8 @@ form:
                 default: 0
                 highlight: 0
                 options:
-                    0:  Yes
-                    1:  No
+                    0:  'Yes'
+                    1:  'No'
                 validate:
                     type: bool
 
@@ -170,8 +170,8 @@ form:
                 default: 1
                 highlight: 1
                 options:
-                    1:  Yes
-                    0:  No
+                    1:  'Yes'
+                    0:  'No'
                 validate:
                     type: bool
 
@@ -187,7 +187,7 @@ form:
                 default: 0
                 highlight: 0
                 options:
-                    0:  Yes
-                    1:  No
+                    0:  'Yes'
+                    1:  'No'
                 validate:
                     type: bool
