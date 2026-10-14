@@ -1,3 +1,9 @@
+# v6.4.4
+## 10/14/2026
+
+1. [](#bugfix)
+    * Embedded module pages leave out their Previous and Next buttons, as in Helios Course Hub
+
 # v6.4.3
 ## 10/13/2026
 
