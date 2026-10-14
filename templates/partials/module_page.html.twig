@@ -100,8 +100,9 @@
               {% include 'partials/module_cards.html.twig' with {'cards_page': page, 'card_description_lines': card_description_lines, 'cards_under_heading': true} %}
             {% endif %}
 
-            {# Previous and Next as two boxes, each with a small label above the page title #}
-            {% if previous_page or next_page %}
+            {# Previous and Next as two boxes, each with a small label above the page title; left out when
+               embedded (for example in an LMS), which has its own navigation, as in Helios Course Hub #}
+            {% if (previous_page or next_page) and not embedded_mode and not theme_var('chromeless.enabled') %}
               <nav class="module-prev-next" aria-label="Previous and next">
                 {% if previous_page %}
                   <a class="module-prev" href="{{ previous_page.url }}">
