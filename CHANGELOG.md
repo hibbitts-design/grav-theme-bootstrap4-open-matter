@@ -1,3 +1,10 @@
+# v6.4.5
+## 10/15/2026
+
+1. [](#bugfix)
+    * RSS Feeds pages show each item's preview text and image again with Twig Feeds 5, which no longer provides item.description
+    * RSS Feeds preview images keep their shape when narrowed to fit the page
+
 # v6.4.4
 ## 10/14/2026
 
