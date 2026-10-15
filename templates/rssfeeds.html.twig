@@ -28,6 +28,18 @@
           {% set feed_items = [] %}
           {% for name, feed in twig_feeds %}
             {% for item in feed.items %}
+              {# Twig Feeds 5 has no item.description: the feed's text is in item.content,
+                 and the full HTML (where most feeds put their images) in content:encoded - hibbittsdesign.org #}
+              {% if item.description is empty %}
+                {% if item.content is not empty %}
+                  {% set item = item|merge({ 'description': item.content }) %}
+                {% else %}
+                  {% set item = item|merge({ 'description': item.elements['content:encoded']|default('') }) %}
+                {% endif %}
+                {% if item.elements['content:encoded'] is not empty %}
+                  {% set item = item|merge({ 'image_html': item.elements['content:encoded'] }) %}
+                {% endif %}
+              {% endif %}
               {% if (page.header.rss_feed_text_filter is defined) and (item.description|contains(page.header.rss_feed_text_filter)) or (page.header.rss_feed_text_filter is empty) %}
                 {% set index = index + 1 %}
                 {% set item = item|merge({ 'retrievedTitle': feed.title }) %}
@@ -59,7 +71,9 @@
             </h2>
             <time>{{ item.lastModified|date("m/d/Y") }}</time>, {{ item.retrievedTitle }}
             {% if page.header.rss_feed_header_images and not (page.header.rss_feed_preview_paragraphs == 'all') %}
-              <p>{{ item.description|preg_get('/(<img(?:(\s*(class)\s*=\s*\x22([^\x22]+)\x22*)+|[^>]+?)*>)/')|raw }}</p>
+              {# the image's height attribute is removed, so it keeps its shape when narrowed to fit the page
+                 (Twig needs \\s to pass \s, a space, tab or line break, to the pattern) #}
+              <p>{{ item.image_html|default(item.description)|preg_get('/(<img(?:(\s*(class)\s*=\s*\x22([^\x22]+)\x22*)+|[^>]+?)*>)/')|preg_replace('/\\sheight="[0-9]+"/', '')|raw }}</p>
             {% endif %}
             {% set paragraphs = item.description | split('</p>') %}
             {% set firstParagraph = paragraphs[0] ~ '</p>' %}
