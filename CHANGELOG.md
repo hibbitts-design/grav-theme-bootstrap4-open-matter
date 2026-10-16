@@ -1,6 +1,8 @@
 # v6.4.6
-## XX/XX/2026
+## 10/15/2026
 
+1. [](#new)
+    * A "Skip to content" link, shown when it gets keyboard focus, takes keyboard users past the NavBar to the page content (not on embedded or chromeless pages)
 1. [](#bugfix)
     * Demo content: the UX Techniques Guide's Job Stories page has its own title, not Interviews
 
