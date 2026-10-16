@@ -143,6 +143,9 @@
         {# check content display flag - hibbittsdesign.org #}
         {% if not embedded_mode and not(theme_var('chromeless.enabled')) %}
 
+          {# A "Skip to content" link first on the page, shown when it gets keyboard focus - hibbittsdesign.org #}
+          <a class="skip-link sr-only sr-only-focusable" href="#main-content">{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.SKIP_TO_CONTENT'|t }}</a>
+
           {% if config.plugins.langswitcher.enabled %}
               {% include 'partials/langswitcher.html.twig' %}
           {% endif %}
@@ -152,6 +155,8 @@
           {% endblock %}
         {% endif %}
 
+        {# where "Skip to content" goes: just after the NavBar - hibbittsdesign.org #}
+        <div id="main-content"></div>
         {% block content %}{% endblock %}
         {% block pagination %}{% endblock %}
 
