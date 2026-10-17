@@ -1,3 +1,17 @@
+# v6.4.7
+## 10/17/2026
+
+1. [](#new)
+    * Badge Label and Badge Color settings for modules and their pages: a short badge such as "New", "Draft" or "Due Friday" on the page's card, shown as on the course cards
+    * Captions for images in plain Markdown: an italic line right after an image on its own line (such as `*Photo by …*`) shows as a caption – smaller, softer and just below the image – so photo credits and captions need no HTML, as in Quark Open Publishing
+1. [](#improved)
+    * Images in page text are no taller than a little over half the screen, so an image and the text around it fit on screen together, when reading or presenting a module (card and header images are unchanged)
+    * [topics] index: letters a little larger and bold, letters without topics clearly faded and skipped by screen readers, and a clear outline on the letter with keyboard focus, as in Grav Helios Course Hub
+    * README: image captions and badges on module cards
+1. [](#bugfix)
+    * A module group named with just a number (such as `group: 2026`) no longer stops the Modules page from loading
+    * Green and Purple badges (Badge Color on course and module cards, or `[badge type="success"]` and `type="info"`) have enough contrast for their white text, and Purple is now purple instead of teal
+
 # v6.4.6
 ## 10/15/2026
 
