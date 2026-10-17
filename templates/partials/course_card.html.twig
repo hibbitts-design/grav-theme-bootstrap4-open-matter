@@ -28,7 +28,7 @@
     {% endif %}
     {% if course.header.badge_label %}
       {# map Helios badge colours to Bootstrap badges #}
-      {% set badge_class = {blue: 'primary', green: 'success', yellow: 'warning', red: 'danger', purple: 'info', plain: 'light'}[course.header.badge_color] ?? 'secondary' %}
+      {% set badge_class = {blue: 'primary', green: 'success', yellow: 'warning', red: 'danger', purple: 'purple', plain: 'light'}[course.header.badge_color] ?? 'secondary' %}
       <p class="card-text"><span class="badge badge-pill badge-{{ badge_class }}">{{ course.header.badge_label }}</span></p>
     {% endif %}
     {{ course.content|raw }}

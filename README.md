@@ -35,6 +35,7 @@ Bootstrap4 Open Matter adds what open, collaborative course and blog sites need 
 - **Visual styles** – 2026 Modern, 2026 Refresh or Classic, with Dark Mode off, on, or following the visitor's system setting
 - **Flexible layout** – a Markdown-based sidebar, NavBar look (solid or a light tint of its colour), style, colour, position, and breakpoint options, dropdowns, and custom menu items
 - **Open licensing and accessibility** – Creative Commons license display and hidden H1 page titles for screen readers
+- **Image captions in plain Markdown** – an italic line right after an image (such as `*Photo by …*`) shows as a caption, and images in page text are no taller than a little over half the screen, so an image and its text fit on screen together
 - **Print-friendly pages** – printed pages show just the content in black on white, with link addresses, whatever the Theme Style or Dark Mode
 
 ## When is Bootstrap4 Open Matter a Good Candidate?
@@ -90,6 +91,7 @@ Modules use the same page types as Grav Helios Course Hub, and a Canvas, Moodle,
 - Each **module** (`course-page.md`) can have its own pages; module pages show the course search box and a list of all modules on the right, where the course sidebar is on other pages, with Previous and Next buttons through every module and page in order
 - With the [Page TOC](https://github.com/trilbymedia/grav-plugin-page-toc) plugin, the module list also shows the current page's sections (its h2 headings, or its h3s), and on phones they appear in an "On this page" box above the content; on wider screens the module list stays in view while reading
 - A module or page can set `group:` to appear under a heading, both on the cards and in the module list
+- A module or page can also set a Badge Label (such as "Draft" or "Due Friday") and Badge Color, shown on its card, as on the course cards
 
 ## Blogs
 

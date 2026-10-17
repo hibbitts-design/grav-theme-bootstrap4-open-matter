@@ -78,6 +78,40 @@ a:focus > .continue-link-arrow {
     font-weight: 600;
 }
 
+/* Green, teal and purple badges (Badge Color Green and Purple, or [badge type="success"] and type="info"):
+   Bootstrap's own green and teal are too light for their white text, so these are darker (at least 4.5:1).
+   badge-purple is the theme's own, so Badge Color Purple is purple rather than Bootstrap's teal. White text
+   on these colours also reads well in Dark Mode, so they need no Dark Mode version. */
+.badge.badge-success {
+    background-color: #1e7e34;
+}
+
+.badge.badge-info {
+    background-color: #117a8b;
+}
+
+.badge.badge-purple {
+    color: #fff;
+    background-color: #6f42c1;
+}
+
+/* a little darker when a badge with a link (url) is hovered or focused */
+a.badge.badge-success:hover,
+a.badge.badge-success:focus {
+    background-color: #155d27;
+}
+
+a.badge.badge-info:hover,
+a.badge.badge-info:focus {
+    background-color: #0c5460;
+}
+
+a.badge.badge-purple:hover,
+a.badge.badge-purple:focus {
+    color: #fff;
+    background-color: #59339d;
+}
+
 /* Friendlier "page not found" page */
 .error-page {
     max-width: 36rem;
@@ -330,4 +364,58 @@ h2.topics-letter {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     font-weight: 600;
     text-decoration: none;
+}
+
+/* Images in page text are no taller than a little over half the screen, so an image and the text around it fit
+   on screen together - when reading, and when presenting a module in class or by screen sharing. A shortened
+   image keeps its shape. Only images in the page's own text (inside a paragraph) are limited, not card or
+   header images - the same as Quark Open Publishing - hibbittsdesign.org */
+.main-content p > img {
+    max-height: 55vh;
+    width: auto;
+    max-width: 100%;
+}
+
+/* A caption in plain Markdown: an italic line right after an image on its own, such as
+   ![A photo](photo.jpg) followed by *Photo by …* - shown like a figure caption (smaller and softer, just below
+   the image), so authors need no HTML. It works with the italic line in its own paragraph (after a blank line)
+   or on the line just below the image (the same paragraph), as in Quark Open Publishing.
+   (":only-child" here looks at elements only, so text beside them still counts) */
+.main-content p:has(> img:only-child):has(+ p > em:only-child) {
+    margin-bottom: 0.375rem;
+}
+
+.main-content p:has(> img:only-child) + p:has(> em:only-child),
+.main-content p > img:first-child + em:last-child {
+    display: block;
+    margin-top: 0;
+    font-size: 90%;
+    /* softer than the page text, but still 4.5:1 contrast or more (70%, as figure captions use, is just under) */
+    opacity: 0.8;
+}
+
+/* the image in the same paragraph as its caption sits on its own line */
+.main-content p > img:first-child:has(+ em:last-child) {
+    display: block;
+    margin-bottom: 0.375rem;
+}
+
+/* [topics] shortcode: the A-Z index - letters a little larger and bold, so they're easy to read and tap, with letters
+   without topics clearly faded (they aren't links, and screen readers skip them), and a clear outline around the letter
+   that has keyboard focus, instead of Bootstrap's faint glow - the same as Grav Helios Course Hub - hibbittsdesign.org */
+.topics-index .page-link {
+    min-width: 2.25rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.topics-index .page-item.disabled .page-link {
+    opacity: 0.45;
+}
+
+.topics-index .page-link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+    box-shadow: none;
 }

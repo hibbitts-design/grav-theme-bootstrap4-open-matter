@@ -23,7 +23,8 @@ class TopicsShortcode extends Shortcode
                 if (in_array($letter, $active)) {
                     return '<li class="page-item"><a class="page-link" href="#' . strtolower($letter) . '">' . $letter . '</a></li>';
                 }
-                return '<li class="page-item disabled"><span class="page-link">' . $letter . '</span></li>';
+                // letters without entries are hidden from screen readers (aria-hidden), which then hear only the letters they can follow
+                return '<li class="page-item disabled" aria-hidden="true"><span class="page-link">' . $letter . '</span></li>';
             }, range('A', 'Z'));
             $index = '<nav aria-label="Topics A–Z index"><ul class="pagination pagination-sm flex-wrap justify-content-start topics-index">' . implode('', $indexItems) . '</ul></nav>';
 

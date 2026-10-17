@@ -8,19 +8,15 @@
 {# the card styles are shared with the course cards on the MultiCourse Hub homepage #}
 {% do assets.addCss('theme://css/course-cards.css') %}
 
-{# Step 1: sort the child pages into groups, keeping the order the groups first appear in #}
-{% set groups = {} %}
+{# Step 1: list the group names, in the order the groups first appear (pages without a group are
+   in the group named ''). The names go in a list rather than being used as keys, since Twig would
+   renumber a group name that is a number, such as 2026 #}
 {% set group_order = [] %}
 {% for child in cards_page.children.visible %}
-  {% set group_name = '' %}
-  {% if child.header.group %}
-    {% set group_name = child.header.group %}
-  {% endif %}
+  {% set group_name = child.header.group ?: '' %}
   {% if group_name not in group_order %}
     {% set group_order = group_order|merge([group_name]) %}
-    {% set groups = groups|merge({(group_name): []}) %}
   {% endif %}
-  {% set groups = groups|merge({(group_name): groups[group_name]|merge([child])}) %}
 {% endfor %}
 
 {# Step 2: a heading (for named groups) and a row of cards for each group #}
@@ -40,7 +36,9 @@
     {% set card_heading = 'h3' %}
   {% endif %}
   <div class="{{ row_class }}">
-    {% for child in groups[group_name] %}
+    {% for child in cards_page.children.visible %}
+      {# only this group's pages (a page without a group belongs to the '' group) #}
+      {% if (child.header.group ?: '') == group_name %}
       <div class="col-md-6 course-card-col">
         <div class="card course-card">
           <div class="card-body">
@@ -55,9 +53,16 @@
             {% if card_text %}
               <p class="card-text">{{ card_text }}</p>
             {% endif %}
+            {# a status badge such as "New", "Draft" or "Due Friday" (Badge Label and Badge Color), shown as on the course cards #}
+            {% if child.header.badge_label %}
+              {# map Helios badge colours to Bootstrap badges #}
+              {% set badge_class = {blue: 'primary', green: 'success', yellow: 'warning', red: 'danger', purple: 'purple', plain: 'light'}[child.header.badge_color] ?? 'secondary' %}
+              <p class="card-text"><span class="badge badge-pill badge-{{ badge_class }}">{{ child.header.badge_label|e }}</span></p>
+            {% endif %}
           </div>
         </div>
       </div>
+      {% endif %}
     {% endfor %}
   </div>
 {% endfor %}
