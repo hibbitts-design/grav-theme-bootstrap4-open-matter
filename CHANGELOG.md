@@ -1,5 +1,5 @@
 # v6.4.8
-## XX/XX/2026
+## 10/18/2026
 
 1. [](#improved)
     * Demo content: the Welcome module has a "Start here" badge on its card, a captioned photo, and text shown only on the site or only when embedded ([hideifembedded] and [showifembedded]), as in Grav Open Course Hub
