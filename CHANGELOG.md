@@ -1,3 +1,11 @@
+# v6.4.9
+## 10/18/2026
+
+1. [](#new)
+    * Tap or click an image in a page that's shown smaller than its full size to see it larger, filling the screen (handy for diagrams and screenshots on phones), as in Grav Open Publishing Space; Escape, the Close button or a tap closes it
+1. [](#improved)
+    * README: seeing an image larger
+
 # v6.4.8
 ## 10/18/2026
 
