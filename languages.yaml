@@ -3,6 +3,8 @@ en:
   THEME_BOOTSTRAP4_OPEN_MATTER:
     SEARCH_PLACEHOLDER: 'Search course...'
     SKIP_TO_CONTENT: 'Skip to content'
+    IMAGE_LARGER: 'Show image larger'
+    IMAGE_CLOSE: 'Close'
     SEARCH_NO_RESULTS_TIPS: 'No pages matched your search. You could:'
     SEARCH_TIP_SPELLING: 'Check the spelling'
     SEARCH_TIP_FEWER_WORDS: 'Try fewer or different words'

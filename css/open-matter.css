@@ -419,3 +419,68 @@ h2.topics-letter {
     outline-offset: 2px;
     box-shadow: none;
 }
+
+/* ---------- Seeing an image larger ---------- */
+
+/* An image in a page that's shown smaller than its full size can be tapped or clicked to see it larger
+   (js/image-zoom.js adds image-zoom to it): a zoom-in pointer, and a visible focus ring for keyboard users */
+img.image-zoom {
+    cursor: zoom-in;
+}
+
+img.image-zoom:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+/* the larger view: the image as large as fits the screen, on a dark background, with a Close button at the top right */
+.image-zoom-dialog {
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 3.5rem 1rem 1rem;
+    border: 0;
+    background: rgba(0, 0, 0, 0.92);
+    cursor: zoom-out;
+}
+
+.image-zoom-dialog[open] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-zoom-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.92);
+}
+
+.image-zoom-dialog img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* the Close button: white on the dark background, 44px so it's easy to tap */
+.image-zoom-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.image-zoom-close:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}

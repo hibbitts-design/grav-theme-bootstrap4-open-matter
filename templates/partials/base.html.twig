@@ -112,6 +112,8 @@
             {% do assets.add('theme://js/site.js', {group:'bottom'}) %}
             {# load custom js - hibbittsdesign.org #}
             {% do assets.addJs('theme://js/my.js', 99) %}
+            {# tap or click an image in a page to see it larger - hibbittsdesign.org #}
+            {% do assets.addJs('theme://js/image-zoom.js', {group:'bottom'}) %}
 
             {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
                 {% do assets.add('https://oss.maxcdn.com/respond/1.4.2/respond.min.js') %}
@@ -138,7 +140,8 @@
         {% endblock head %}
     </head>
 
-    <body class="{% block body_classes %}{{ page.header.body_classes }}{% if embedded_mode or (theme_var('chromeless.enabled')) %} chromeless{% endif %}{% endblock %}">
+    {# (the data- labels are for js/image-zoom.js, which lets readers tap an image to see it larger) #}
+    <body class="{% block body_classes %}{{ page.header.body_classes }}{% if embedded_mode or (theme_var('chromeless.enabled')) %} chromeless{% endif %}{% endblock %}" data-image-larger-label="{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.IMAGE_LARGER'|t|e('html_attr') }}" data-image-close-label="{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.IMAGE_CLOSE'|t|e('html_attr') }}">
 
         {# check content display flag - hibbittsdesign.org #}
         {% if not embedded_mode and not(theme_var('chromeless.enabled')) %}

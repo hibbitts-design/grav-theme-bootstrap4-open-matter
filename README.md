@@ -35,7 +35,7 @@ Bootstrap4 Open Matter adds what open, collaborative course and blog sites need 
 - **Visual styles** – 2026 Modern, 2026 Refresh or Classic, with Dark Mode off, on, or following the visitor's system setting
 - **Flexible layout** – a Markdown-based sidebar, NavBar look (solid or a light tint of its colour), style, colour, position, and breakpoint options, dropdowns, and custom menu items
 - **Open licensing and accessibility** – Creative Commons license display and hidden H1 page titles for screen readers
-- **Image captions in plain Markdown** – an italic line right after an image (such as `*Photo by …*`) shows as a caption, and images in page text are no taller than a little over half the screen, so an image and its text fit on screen together
+- **Image captions in plain Markdown** – an italic line right after an image (such as `*Photo by …*`) shows as a caption, and images in page text are no taller than a little over half the screen, so an image and its text fit on screen together; tap or click an image shown smaller than its full size to see it larger
 - **Print-friendly pages** – printed pages show just the content in black on white, with link addresses, whatever the Theme Style or Dark Mode
 
 ## When is Bootstrap4 Open Matter a Good Candidate?
