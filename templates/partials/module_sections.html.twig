@@ -13,7 +13,7 @@
     {% if show_above_content is defined and show_above_content %}
       {# phones only (d-md-none): a short "On this page" list that opens when tapped #}
       <details class="module-sections-above d-md-none">
-        <summary>On this page</summary>
+        <summary>{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.ON_THIS_PAGE'|t }}</summary>
         <ul class="module-sections-above-list">
           {% for section in sections.children %}
             <li><a href="{{ section.uri }}">{{ section.label }}</a></li>
@@ -22,7 +22,7 @@
       </details>
     {% else %}
       {# wider screens only (d-none d-md-flex), as on phones the list is above the content instead #}
-      <ul class="nav flex-column module-nav-sections d-none d-md-flex" aria-label="Sections on this page">
+      <ul class="nav flex-column module-nav-sections d-none d-md-flex" aria-label="{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.SECTIONS_ON_THIS_PAGE'|t|e('html_attr') }}">
         {% for section in sections.children %}
           <li class="nav-item">
             <a class="nav-link" href="{{ section.uri }}">{{ section.label }}</a>

@@ -8,7 +8,7 @@
 {% if taxlist %}
     <span class="tags">
         {% for tax, value in taxlist[taxonomy] %}
-            <a class="badge badge-secondary" href="{{ base_url }}/tag:{{ tax }}"><span class="sr-only">Posts tagged </span>{{ tax }}</a>
+            <a class="badge badge-secondary" href="{{ base_url }}/tag:{{ tax }}"><span class="sr-only">{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.POSTS_TAGGED'|t }} </span>{{ tax }}</a>
         {% endfor %}
     </span>
 {% endif %}

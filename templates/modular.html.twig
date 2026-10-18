@@ -33,7 +33,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top" role="navigation">
             <div class="container">
                 <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url }}">{{ site.title|e('html') }}</a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.TOGGLE_NAVIGATION'|t|e('html_attr') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 

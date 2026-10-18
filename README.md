@@ -129,6 +129,10 @@ To leave something out when a page is printed, add Bootstrap's `d-print-none` cl
 - A module page's sections need the [Page TOC](https://github.com/trilbymedia/grav-plugin-page-toc) plugin – version 4 on Grav 2, or version 3.2.5 on Grav 1.7 (both are included in the Open Course Hub and Open MultiCourse Hub packages)
 - The blog sidebar's Popular Tags, Archives and RSS need the Taxonomy List, Archives and Feed plugins (all included in the Open Course Hub and Open MultiCourse Hub packages)
 
+## Languages
+
+English, French and German are complete. The theme's other languages (Spanish, Italian, Romanian, Russian, Ukrainian, Croatian, Polish and Brazilian Portuguese) are partial, with any missing text shown in English – translations are welcome, in `languages.yaml`. (Creative Commons license names stay in English, as their official titles.)
+
 ## Support
 
 ### Contact and Support

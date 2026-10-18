@@ -17,7 +17,7 @@
         {% if page.header.link %}
             <{{ title_heading }} class="h1">
               {% if page.header.continue_link is not same as(false) %}
-                  <a href="{{ page.header.link }}"><i class="fa fa-angle-double-right" aria-hidden="true"></i>{{ page.title }}<span class="sr-only"> (on another site)</span></a>
+                  <a href="{{ page.header.link }}"><i class="fa fa-angle-double-right" aria-hidden="true"></i>{{ page.title }}<span class="sr-only"> {{ 'THEME_BOOTSTRAP4_OPEN_MATTER.ON_ANOTHER_SITE'|t }}</span></a>
               {% endif %}
             </{{ title_heading }}>
         {% else %}
@@ -56,7 +56,7 @@
               {% if page.taxonomy.tag %}
               <span class="list-blog-tags float-right">
                   {% for tag in page.taxonomy.tag %}
-                      <a class="badge badge-primary" href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}"><span class="sr-only">Posts tagged </span>{{ tag }}</a>
+                      <a class="badge badge-primary" href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}"><span class="sr-only">{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.POSTS_TAGGED'|t }} </span>{{ tag }}</a>
                   {% endfor %}
               </span>
               {% endif %}

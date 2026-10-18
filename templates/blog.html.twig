@@ -83,7 +83,7 @@
                               {# jun_2026 in the address becomes June 2026 #}
                               Posts from <strong>{{ ('1 ' ~ filter_month|replace({'_': ' '}))|date('F Y') }}</strong>
                             {% endif %}
-                            – <a href="{{ page.url }}">show all posts</a>
+                            – <a href="{{ page.url }}">{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.SHOW_ALL_POSTS'|t }}</a>
                           </p>
                         {% endif %}
 

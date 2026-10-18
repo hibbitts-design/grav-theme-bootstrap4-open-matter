@@ -16,6 +16,23 @@ en:
     ERROR_TITLE: 'Something went wrong'
     ERROR_COURSE_HOME: 'Go to %s Home'
     ERROR_SITE_HOME: 'Go to the Home page'
+    PREVIOUS: 'Previous'
+    NEXT: 'Next'
+    PREVIOUS_AND_NEXT: 'Previous and next'
+    ON_THIS_PAGE: 'On this page'
+    SECTIONS_ON_THIS_PAGE: 'Sections on this page'
+    IN_THIS_MODULE: 'In this module'
+    PAGINATION_PREVIOUS: 'Previous page'
+    PAGINATION_NEXT: 'Next page'
+    PAGINATION_CURRENT: '(current)'
+    PAGINATION_GO_TO_PAGE: 'Go to page'
+    POSTS_TAGGED: 'Posts tagged'
+    SHOW_ALL_POSTS: 'show all posts'
+    ON_ANOTHER_SITE: '(on another site)'
+    TOGGLE_NAVIGATION: 'Toggle navigation'
+    SIDEBAR: 'Sidebar'
+    TOP_OF_PAGE: 'Back to top'
+    CC_LICENSE: 'Creative Commons License'
   BLOG:
     ITEM:
       CONTINUE_READING: Continue reading...
@@ -44,6 +61,39 @@ en:
 
 de:
   TRANSLATION_TEST: Bootstrap4 Open Matter!
+  THEME_BOOTSTRAP4_OPEN_MATTER:
+    SEARCH_PLACEHOLDER: 'Kurs durchsuchen...'
+    SKIP_TO_CONTENT: 'Zum Inhalt springen'
+    IMAGE_LARGER: 'Bild vergrößern'
+    IMAGE_CLOSE: 'Schließen'
+    SEARCH_NO_RESULTS_TIPS: 'Keine Seite passt zu Ihrer Suche. Sie können:'
+    SEARCH_TIP_SPELLING: 'Die Schreibweise prüfen'
+    SEARCH_TIP_FEWER_WORDS: 'Weniger oder andere Wörter versuchen'
+    SEARCH_ALL_COURSES: 'Alle Kurse durchsuchen'
+    SEARCH_IN_COURSE: ' in <strong>%s</strong>'
+    ERROR_CODE: 'Fehler %s'
+    ERROR_NOT_FOUND_TITLE: 'Seite nicht gefunden'
+    ERROR_NOT_FOUND_TEXT: 'Diese Seite gibt es leider nicht, oder sie wurde verschoben. Sie können zur Startseite zurückkehren oder nach dem Gesuchten suchen.'
+    ERROR_TITLE: 'Etwas ist schiefgelaufen'
+    ERROR_COURSE_HOME: 'Zur Startseite: %s'
+    ERROR_SITE_HOME: 'Zur Startseite'
+    PREVIOUS: 'Zurück'
+    NEXT: 'Weiter'
+    PREVIOUS_AND_NEXT: 'Zurück und weiter'
+    ON_THIS_PAGE: 'Auf dieser Seite'
+    SECTIONS_ON_THIS_PAGE: 'Abschnitte auf dieser Seite'
+    IN_THIS_MODULE: 'In diesem Modul'
+    PAGINATION_PREVIOUS: 'Vorherige Seite'
+    PAGINATION_NEXT: 'Nächste Seite'
+    PAGINATION_CURRENT: '(aktuelle Seite)'
+    PAGINATION_GO_TO_PAGE: 'Zur Seite'
+    POSTS_TAGGED: 'Beiträge mit dem Schlagwort'
+    SHOW_ALL_POSTS: 'alle Beiträge anzeigen'
+    ON_ANOTHER_SITE: '(auf einer anderen Website)'
+    TOGGLE_NAVIGATION: 'Menü ein- oder ausblenden'
+    SIDEBAR: 'Seitenleiste'
+    TOP_OF_PAGE: 'Nach oben'
+    CC_LICENSE: 'Creative-Commons-Lizenz'
   BLOG:
     ITEM:
       CONTINUE_READING: Weiterlesen...
@@ -100,6 +150,39 @@ es:
 
 fr:
   TRANSLATION_TEST: Bootstrap4 Open Matter!
+  THEME_BOOTSTRAP4_OPEN_MATTER:
+    SEARCH_PLACEHOLDER: 'Rechercher dans le cours...'
+    SKIP_TO_CONTENT: 'Aller au contenu'
+    IMAGE_LARGER: 'Agrandir l''image'
+    IMAGE_CLOSE: 'Fermer'
+    SEARCH_NO_RESULTS_TIPS: 'Aucune page ne correspond à votre recherche. Vous pouvez :'
+    SEARCH_TIP_SPELLING: 'Vérifier l''orthographe'
+    SEARCH_TIP_FEWER_WORDS: 'Essayer moins de mots, ou d''autres mots'
+    SEARCH_ALL_COURSES: 'Rechercher dans tous les cours'
+    SEARCH_IN_COURSE: ' dans <strong>%s</strong>'
+    ERROR_CODE: 'Erreur %s'
+    ERROR_NOT_FOUND_TITLE: 'Page introuvable'
+    ERROR_NOT_FOUND_TEXT: 'Désolé, cette page n''existe pas ou a peut-être été déplacée. Vous pouvez revenir à la page d''accueil, ou rechercher ce que vous cherchiez.'
+    ERROR_TITLE: 'Une erreur s''est produite'
+    ERROR_COURSE_HOME: 'Aller à l''accueil : %s'
+    ERROR_SITE_HOME: 'Aller à la page d''accueil'
+    PREVIOUS: 'Précédent'
+    NEXT: 'Suivant'
+    PREVIOUS_AND_NEXT: 'Précédent et suivant'
+    ON_THIS_PAGE: 'Sur cette page'
+    SECTIONS_ON_THIS_PAGE: 'Sections de cette page'
+    IN_THIS_MODULE: 'Dans ce module'
+    PAGINATION_PREVIOUS: 'Page précédente'
+    PAGINATION_NEXT: 'Page suivante'
+    PAGINATION_CURRENT: '(page actuelle)'
+    PAGINATION_GO_TO_PAGE: 'Aller à la page'
+    POSTS_TAGGED: 'Articles avec l''étiquette'
+    SHOW_ALL_POSTS: 'afficher tous les articles'
+    ON_ANOTHER_SITE: '(sur un autre site)'
+    TOGGLE_NAVIGATION: 'Afficher ou masquer le menu'
+    SIDEBAR: 'Barre latérale'
+    TOP_OF_PAGE: 'Haut de page'
+    CC_LICENSE: 'Licence Creative Commons'
   BLOG:
     ITEM:
       CONTINUE_READING: Continuer la lecture...

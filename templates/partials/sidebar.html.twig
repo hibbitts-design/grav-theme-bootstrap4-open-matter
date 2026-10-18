@@ -23,7 +23,7 @@
 {% endif %}
 
 {# the sidebar as its own region, so screen reader users can jump to it (or past it) - hibbittsdesign.org #}
-<aside aria-label="Sidebar">
+<aside aria-label="{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.SIDEBAR'|t|e('html_attr') }}">
 
 {# Blog-only blocks (Popular Tags, Archives and Syndicate) are shown only on a blog page (the 'blog'
    template) and its posts (the 'item' template), not on course pages such as Modules or the Syllabus - hibbittsdesign.org #}

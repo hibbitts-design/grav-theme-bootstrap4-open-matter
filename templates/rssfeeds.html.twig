@@ -102,7 +102,7 @@
                 {% if currentPage <= 1 %}
                   <li class="page-item disabled">
                       <span class="page-link" aria-hidden="true">&laquo;</span>
-                      <span class="sr-only">Previous</span>
+                      <span class="sr-only">{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.PAGINATION_PREVIOUS'|t }}</span>
                   </li>
                 {% else %}
                   <a class="page-link" href="{{ page.url }}/page:{{ currentPage - 1 }}">&laquo;</a>
@@ -128,7 +128,7 @@
                 {% if currentPage >= totalPages %}
                   <li class="page-item disabled">
                       <span class="page-link" aria-hidden="true">&raquo;</span>
-                      <span class="sr-only">Next</span>
+                      <span class="sr-only">{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.PAGINATION_NEXT'|t }}</span>
                   </li>
                 {% else %}
                   <li class="page-item">
