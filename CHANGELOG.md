@@ -1,3 +1,11 @@
+# v6.4.10
+## XX/XX/2026
+
+1. [](#improved)
+    * French and German translations are complete, for every text the theme shows readers (search, error pages, module pages, pagination, Previous/Next and more)
+    * Text that was only in English in the templates – such as Previous/Next and "In this module" on module pages, "On this page", pagination and several labels screen readers hear – is now translatable
+    * README: which languages are complete
+
 # v6.4.9
 ## 10/18/2026
 
