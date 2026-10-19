@@ -1,3 +1,11 @@
+# v6.4.11
+## 10/19/2026
+
+1. [](#new)
+    * The / key jumps to the course search box, ready to type (as on GitHub and many documentation sites), except while typing in a box, as in Grav Helios Course Hub
+1. [](#improved)
+    * README: the / key for search
+
 # v6.4.10
 ## 10/18/2026
 
