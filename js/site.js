@@ -22,3 +22,27 @@ document.querySelectorAll( 'oembed[url]' ).forEach( element => {
 
     element.appendChild( anchor );
 } );
+
+// The / key jumps to the course search box, ready to type - as on GitHub and many documentation sites, and as in
+// Grav Helios Course Hub. It's left alone while typing (so a / can still be typed) and with Ctrl, Alt or Cmd held; Shift
+// is fine, as some keyboards need it to type a / - hibbittsdesign.org
+document.addEventListener('keydown', function (event) {
+    if (event.key !== '/' || event.ctrlKey || event.altKey || event.metaKey) {
+        return;
+    }
+    var target = event.target;
+    if (target.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].indexOf(target.tagName) !== -1) {
+        return;
+    }
+    // the first search box that can be seen (in the sidebar, on a module page, or in the NavBar on a Subsite List
+    // page); offsetParent is empty for a box that isn't shown, such as one inside the closed phone menu
+    var boxes = document.querySelectorAll('form[role="search"] input[type="search"]');
+    for (var i = 0; i < boxes.length; i++) {
+        if (boxes[i].offsetParent !== null) {
+            // stop the / from being typed into the box
+            event.preventDefault();
+            boxes[i].focus();
+            return;
+        }
+    }
+});
