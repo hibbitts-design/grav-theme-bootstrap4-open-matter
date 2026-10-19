@@ -1,5 +1,5 @@
 # v6.4.10
-## XX/XX/2026
+## 10/18/2026
 
 1. [](#improved)
     * French and German translations are complete, for every text the theme shows readers (search, error pages, module pages, pagination, Previous/Next and more)
