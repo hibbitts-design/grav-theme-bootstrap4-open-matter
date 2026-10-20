@@ -14,9 +14,12 @@ opacity, so these work with every Theme Style and in Dark Mode without their own
 
 /* Each module, a little smaller than the page text and in the text colour rather than the
    link colour, so the list reads as navigation, separate from the links in the content
-   (.blog-sidebar is included so the Theme Styles' own sidebar link padding doesn't override this) */
+   (.blog-sidebar is included so the Theme Styles' own sidebar link padding doesn't override this).
+   Normal weight, as each Theme Style makes the current link bold (.blog-sidebar .active), and here
+   only the page being read is bold (see below) */
 .blog-sidebar .module-nav .nav-link {
     color: inherit;
+    font-weight: normal;
     /* "em" sizes it from the page text, so it stays a little smaller than the page text in
        every Theme Style (page text is 18px in 2025 and 2026, and 16px in Classic) */
     font-size: 0.97em;
@@ -31,14 +34,12 @@ opacity, so these work with every Theme Style and in Dark Mode without their own
     text-decoration: none;
 }
 
-/* The current module (and, on a page inside a module, that module too): bold */
-.module-nav .nav-link.active {
+/* Only the module or page being read is bold, on a light grey background, so just one row is
+   highlighted, as in Open Publishing Space guides; on a page inside a module, that module looks like
+   the others (only the link to the page being read has aria-current, which the template adds for
+   screen readers) */
+.blog-sidebar .module-nav .nav-link[aria-current="page"] {
     font-weight: 600;
-}
-
-/* Only the module or page being read gets the light grey background, so just one row is
-   highlighted (only that link has aria-current, which the template adds for screen readers) */
-.module-nav .nav-link[aria-current="page"] {
     background-color: rgba(128, 128, 128, 0.12);
 }
 
