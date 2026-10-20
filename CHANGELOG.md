@@ -1,3 +1,11 @@
+# v6.4.12
+## 10/20/2026
+
+1. [](#improved)
+    * Module list: only the module or page being read has the grey highlight; on a page inside a module, that module is shown in bold without one
+    * On phones, the course search box and module list share one box, with the current module or page as a rounded row inside it and a thin line beside a module's pages, as in Grav Open Publishing Space
+    * On phones, the "On this page" box is slimmer, with a "›" on the right in place of the triangle, as in Grav Open Publishing Space
+
 # v6.4.11
 ## 10/19/2026
 
