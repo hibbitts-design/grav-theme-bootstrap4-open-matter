@@ -89,6 +89,7 @@ Modules use the same page types as Grav Helios Course Hub, and a Canvas, Moodle,
 
 - A **Modules** page (`module.md`) shows its content, then a card for each module
 - Each **module** (`course-page.md`) can have its own pages; module pages show the course search box and a list of all modules on the right, where the course sidebar is on other pages, with Previous and Next buttons through every module and page in order
+- On phones, the module list follows the content, and a page inside a module starts with a link back to its module
 - With the [Page TOC](https://github.com/trilbymedia/grav-plugin-page-toc) plugin, the module list also shows the current page's sections (its h2 headings, or its h3s), and on phones they appear in an "On this page" box above the content; on wider screens the module list stays in view while reading
 - A module or page can set `group:` to appear under a heading, both on the cards and in the module list
 - A module or page can also set a Badge Label (such as "Draft" or "Due Friday") and Badge Color, shown on its card, as on the course cards

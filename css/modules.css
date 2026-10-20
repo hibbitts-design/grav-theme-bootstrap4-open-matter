@@ -142,6 +142,41 @@ opacity, so these work with every Theme Style and in Dark Mode without their own
     padding-left: 1.25rem;
 }
 
+/* On phones, the link back up to the module above a page inside a module: in the link colour (so it
+   looks tappable, like the page names in Previous/Next), without an underline, at the page text size
+   (easy to read) and a height that's easy to tap
+   (.main-content .module-back is included so the Theme Styles' own link underline doesn't override this) */
+.module-back-link {
+    /* "em" keeps it the same size as the page text in every Theme Style */
+    font-size: 1em;
+    /* only a little space below, so the link reads as part of the page title below it */
+    margin: 0 0 0.25rem;
+}
+
+.main-content .module-back .module-back-link a {
+    /* the "‹" and the module name side by side, so a long name that wraps onto a second line
+       lines up under the name rather than under the "‹" */
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.4em;
+    padding: 0.25rem 0; /* a little taller, for easier tapping */
+    text-decoration: none;
+}
+
+/* on hover or focus, an underline under the module name only, not under the "‹" */
+.main-content .module-back .module-back-link a:hover span,
+.main-content .module-back .module-back-link a:focus-visible span {
+    text-decoration: underline;
+}
+
+/* the "‹" a little smaller than the text, raised slightly so it's centred on the first line of the
+   module name (at its smaller size it would otherwise sit low, on the text's baseline) */
+.module-back-link .fa {
+    font-size: 0.75em;
+    position: relative;
+    top: -0.15em;
+}
+
 /* A little space above a section heading when jumped to, so it isn't right at the top edge
    (or hidden behind a Sticky Top NavBar) */
 .module-page-content h2,
