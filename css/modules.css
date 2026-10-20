@@ -31,9 +31,14 @@ opacity, so these work with every Theme Style and in Dark Mode without their own
     text-decoration: none;
 }
 
-/* The current module or page: bold, on the same light grey background */
+/* The current module (and, on a page inside a module, that module too): bold */
 .module-nav .nav-link.active {
     font-weight: 600;
+}
+
+/* Only the module or page being read gets the light grey background, so just one row is
+   highlighted (only that link has aria-current, which the template adds for screen readers) */
+.module-nav .nav-link[aria-current="page"] {
     background-color: rgba(128, 128, 128, 0.12);
 }
 
@@ -87,21 +92,52 @@ opacity, so these work with every Theme Style and in Dark Mode without their own
     }
 }
 
-/* On phones, "On this page" above the content: a light box that opens to show the sections */
+/* On phones, "On this page" above the content: a slim box that opens to show the sections,
+   like the one in Open Publishing Space guides */
 .module-sections-above {
     border: 1px solid rgba(128, 128, 128, 0.3);
-    border-radius: 0.5rem;
-    padding: 0.6rem 0.9rem;
+    border-radius: 0.375rem;
+    padding: 0.5rem 0.875rem;
     margin-bottom: 1.25rem;
 }
 
+/* "On this page" with a "›" on the right instead of the browser's triangle on the left
+   (list-style removes the triangle in most browsers, ::-webkit-details-marker in older Safari) */
 .module-sections-above summary {
+    /* flex puts the "›" at the right edge (older Safari shows it just after the words instead) */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
     font-weight: 600;
     cursor: pointer;
 }
 
+.module-sections-above summary::-webkit-details-marker {
+    display: none;
+}
+
+.module-sections-above summary::after {
+    content: "\203A";
+    font-size: 1.4em;
+    line-height: 1;
+    opacity: 0.6;
+    transition: transform 0.15s ease;
+}
+
+/* the "›" turns to point down while the box is open */
+.module-sections-above[open] summary::after {
+    transform: rotate(90deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .module-sections-above summary::after {
+        transition: none;
+    }
+}
+
 .module-sections-above-list {
-    margin: 0.5rem 0 0.1rem;
+    margin: 0.5rem 0 0.25rem;
     padding-left: 1.25rem;
 }
 
@@ -122,6 +158,35 @@ body:has(.navbar.sticky-top) .module-page-content h3 {
    beside the content instead). "> .nav" matches only the module list's own list */
 .module-nav > .nav {
     margin-left: -0.6rem;
+}
+
+/* On phones, where the module list comes after the page: the search box and module list share one
+   box (module-nav-card), like the side list in Open Publishing Space guides, with a thin line between
+   the search box and the list. The list stays inside the box's padding, so the grey highlight on the
+   current module or page is a rounded row set in from the box's edge (767.98px = below Bootstrap's md) */
+@media (max-width: 767.98px) {
+    .module-nav-card {
+        border: 1px solid rgba(108, 117, 125, 0.25);
+        /* the same rounded corners as the cards */
+        border-radius: 12px;
+        padding: 1.25rem 1rem;
+    }
+
+    .module-nav-card .sidebar-search {
+        margin-bottom: 1rem !important; /* replaces Bootstrap's mb-4, which also uses !important */
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+    }
+
+    .module-nav > .nav {
+        margin-left: 0;
+    }
+
+    /* the module's pages with a thin line to their left, so they read as part of that module */
+    .module-nav .module-nav-pages {
+        padding-left: 0.5rem;
+        border-left: 1px solid rgba(128, 128, 128, 0.25);
+    }
 }
 
 /* Group headings in the list (from group: on a module or page), small and in capitals like

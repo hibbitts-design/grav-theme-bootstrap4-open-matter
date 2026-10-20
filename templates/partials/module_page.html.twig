@@ -135,6 +135,10 @@
             <div class="col-md-4 blog-sidebar module-nav-column">
           {% endif %}
 
+            {# module-nav-card: on phones, the search box and module list share one box, so they read as one
+               place to find your way around the course (see modules.css; no box on wider screens) #}
+            <div class="module-nav-card">
+
             {# the course search box, in the same place as in the course sidebar on other pages
                (when the course sidebar is also turned on, it has its own search box instead) #}
             {% if config.plugins.simplesearch.enabled and not show_sidebar %}
@@ -204,6 +208,8 @@
                 {% endfor %}
               </ul>
             </nav>
+
+            </div>
           </div>
           {% endif %}
 
