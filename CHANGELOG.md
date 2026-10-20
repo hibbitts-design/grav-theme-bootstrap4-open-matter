@@ -1,3 +1,11 @@
+# v6.4.14
+## 10/20/2026
+
+1. [](#new)
+    * On phones, a page inside a module starts with a link back up to its module, above the page title, as in Grav Open Publishing Space
+1. [](#improved)
+    * README: the link back to the module on phones
+
 # v6.4.13
 ## 10/20/2026
 
