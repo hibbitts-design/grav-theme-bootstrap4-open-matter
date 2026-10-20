@@ -1,3 +1,9 @@
+# v6.4.13
+## 10/20/2026
+
+1. [](#improved)
+    * Module list: on a page inside a module, only that page is bold, and its module looks like the others, as in Grav Open Publishing Space
+
 # v6.4.12
 ## 10/20/2026
 
