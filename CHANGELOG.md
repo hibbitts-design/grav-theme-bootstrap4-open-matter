@@ -1,3 +1,13 @@
+# v6.4.15
+## 10/23/2026
+
+1. [](#improved)
+    * The link-only and title-only templates for iFrame, PDF and SpeakerDeck pages are the same as in Quark 2 Open Publishing and Quark Open Publishing, and each stays on one line for Page Inject
+    * The [clearboth], [twitter], [hideifembedded], [showifembedded] and [h5p] shortcodes and the H5P page template are the same as in the Quark themes (code layout and comments only; an [h5p] activity is now wrapped in a span rather than a paragraph, and the H5P page no longer adds two line breaks after the activity)
+1. [](#bugfix)
+    * An iFrame page shown as a title with Page Inject (template=partials/iframetitleonly) now shows its title, instead of its address
+    * The SpeakerDeck link-only template no longer adds a space before the link address and the title
+
 # v6.4.14
 ## 10/20/2026
 
