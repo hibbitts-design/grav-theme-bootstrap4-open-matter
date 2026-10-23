@@ -9,10 +9,10 @@
 {% block content %}
 <div class="h5p-content-wrapper">
 <p>
-{{page.content|raw}}
+{{ page.content|raw }}
 {% if displaypagetitle is defined %}
 {% if displaypagetitle %}
-<strong>{{page.title}}</strong><br>
+<strong>{{ page.title }}</strong><br>
 {% endif %}
 {% endif %}
 {% if displaycontenttitle is defined %}
@@ -36,7 +36,7 @@
 {% endif %}
 {% endif %}
 {% do assets.addJs('https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js') %}
-<iframe src="{{h5pcontenturl}}" width="400" height="300" frameborder="0" allowfullscreen="allowfullscreen"></iframe><br><br>
+<iframe src="{{ h5pcontenturl }}" width="400" height="300" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 </p>
 </div>
 {% endblock %}
