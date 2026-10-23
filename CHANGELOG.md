@@ -1,3 +1,11 @@
+# v6.4.16
+## 10/XX/2026
+
+1. [](#improved)
+    * Dark mode: code blocks switch to the One Dark colours that match the Prism Highlight plugin's default One Light theme, instead of staying light
+1. [](#bugfix)
+    * Dark mode: tables in page content have a dark header background and dark borders, instead of light header text on a light background (all three Dark Mode stylesheets)
+
 # v6.4.15
 ## 10/23/2026
 
