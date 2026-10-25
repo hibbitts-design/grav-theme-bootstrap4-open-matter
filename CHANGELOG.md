@@ -1,3 +1,9 @@
+# v6.4.17
+## 10/25/2026
+
+1. [](#bugfix)
+    * The NavBar menu button only shows when the menu has items, so a MultiCourse course list page (whose courses aren't in the menu) no longer shows a button that opens an empty menu
+
 # v6.4.16
 ## 10/23/2026
 
