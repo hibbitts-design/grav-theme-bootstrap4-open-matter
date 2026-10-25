@@ -133,31 +133,9 @@
     {% set navbar_bg_color = '' %}
 {% endif %}
 
-<nav class="navbar {{ navbar_position }} navbar-expand-{{ navbar_breakpoint }} {{ navbar_style }} {{ navbar_bg }}" {{ navbar_bg_color|raw }} role="navigation">
-    <div class="container">
-        <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url }}">{{ site_title }}</a>
-        {# search all courses on a Subsite List page without a sidebar (course pages have search in their sidebar) - hibbittsdesign.org #}
-        {# only when the Subsite List page's Show Search Box setting is turned on #}
-        {% set navbar_search = config.plugins.simplesearch.enabled and page.template == 'subsitelist' and page.header.show_sidebar is defined and not page.header.show_sidebar
-          and page.header.show_search_box %}
-        {% set navbar_bp = theme_var('navbar_breakpoint') ?: 'md' %}
-        {% if navbar_search %}
-          {# small screens: beside the menu button #}
-          {% include 'partials/simplesearch_searchbox.html.twig' with {search_form_classes: 'form-inline navbar-home-search ml-auto mr-2 d-' ~ navbar_bp ~ '-none', search_input_classes: ''} %}
-        {% endif %}
-        {% if (pages|first) or (theme_var('display_of_git_sync_repo_link') == 'menu' or theme_var('display_of_git_sync_repo_link') == empty) %}
-          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.TOGGLE_NAVIGATION'|t|e('html_attr') }}">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-        {% endif %}
-
-        <div class="navbar-collapse collapse justify-content-end">
-            {% if navbar_search %}
-              {# larger screens: before the menu links #}
-              {% include 'partials/simplesearch_searchbox.html.twig' with {search_form_classes: 'form-inline navbar-home-search mr-3 d-none d-' ~ navbar_bp ~ '-flex', search_input_classes: ''} %}
-            {% endif %}
-            <ul class="navbar-nav">
-
+{# the menu items are built first, so the menu button below is only shown when there's something in the menu
+   (on a course list page, for example, the courses aren't in the menu and it can be empty) - hibbittsdesign.org #}
+{% set menu_items %}
               {# the current page's address, kept before the loop below reuses the name "page" for each menu item - hibbittsdesign.org #}
               {% set current_page_url = page.url %}
 
@@ -236,6 +214,34 @@
                 {% if config.plugins.login.enabled and grav.user.username %}
                     <li class="nav-item"><span class="nav-link"><i class="fa fa-lock"></i> {% include 'partials/login-status.html.twig' %}</span></li>
                 {% endif %}
+{% endset %}
+
+<nav class="navbar {{ navbar_position }} navbar-expand-{{ navbar_breakpoint }} {{ navbar_style }} {{ navbar_bg }}" {{ navbar_bg_color|raw }} role="navigation">
+    <div class="container">
+        <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url }}">{{ site_title }}</a>
+        {# search all courses on a Subsite List page without a sidebar (course pages have search in their sidebar) - hibbittsdesign.org #}
+        {# only when the Subsite List page's Show Search Box setting is turned on #}
+        {% set navbar_search = config.plugins.simplesearch.enabled and page.template == 'subsitelist' and page.header.show_sidebar is defined and not page.header.show_sidebar
+          and page.header.show_search_box %}
+        {% set navbar_bp = theme_var('navbar_breakpoint') ?: 'md' %}
+        {% if navbar_search %}
+          {# small screens: beside the menu button #}
+          {% include 'partials/simplesearch_searchbox.html.twig' with {search_form_classes: 'form-inline navbar-home-search ml-auto mr-2 d-' ~ navbar_bp ~ '-none', search_input_classes: ''} %}
+        {% endif %}
+        {% if menu_items|trim %}
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.TOGGLE_NAVIGATION'|t|e('html_attr') }}">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+        {% endif %}
+
+        <div class="navbar-collapse collapse justify-content-end">
+            {% if navbar_search %}
+              {# larger screens: before the menu links #}
+              {% include 'partials/simplesearch_searchbox.html.twig' with {search_form_classes: 'form-inline navbar-home-search mr-3 d-none d-' ~ navbar_bp ~ '-flex', search_input_classes: ''} %}
+            {% endif %}
+            <ul class="navbar-nav">
+
+              {{ menu_items }}
             </ul>
         </div>
     </div>
