@@ -1,7 +1,7 @@
 name: 'Bootstrap4 Open Matter'
 type: theme
 slug: bootstrap4-open-matter
-version: 6.4.17
+version: 6.4.18
 description: "A customized version of the Bootstrap4 theme for open blogs, course hubs (organised by weeks or by modules) and more. Includes Git Sync and 'chromeless' content display for seamless embedding."
 icon: bold
 author:
@@ -258,6 +258,17 @@ form:
                 0: 'No limit'
               validate:
                 type: int
+            sidebar_hide_button:
+              type: toggle
+              label: 'Hide Sidebar Button'
+              help: 'Let readers hide the module list on wider screens to focus on the page.'
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
         custommenu_options:
           type: tab
           title: 'Custom Menu Items'

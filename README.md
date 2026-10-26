@@ -76,7 +76,7 @@ The easiest way to get started is the [Open Course Hub](https://github.com/hibbi
 All options are available in the Admin Panel under **Themes → Bootstrap4 Open Matter**.
 
 - **Open Matter Options** – chromeless site, menu dropdowns, Creative Commons license type and display, and H5P embed source URL
-- **Bootstrap4 Options** – Visual Style (Theme Style, Dark Mode), Header Defaults (Header Image Height: Standard, Slim, Standard on home pages with slim or hidden elsewhere, or Hidden; NavBar look, style, background, position, and breakpoint), Sidebar Defaults (Syndicate (RSS) links), and Module Defaults (Module Description Lines)
+- **Bootstrap4 Options** – Visual Style (Theme Style, Dark Mode), Header Defaults (Header Image Height: Standard, Slim, Standard on home pages with slim or hidden elsewhere, or Hidden; NavBar look, style, background, position, and breakpoint), Sidebar Defaults (Syndicate (RSS) links), and Module Defaults (Module Description Lines, and **Hide Sidebar Button**, on by default)
 - **Custom Menu Items** – text, icon, URL, and target for extra NavBar links
 - **Git Sync Link** – location, link type (view or edit), icon and text, Site Theme Files link, and a custom Git repository tree URL
 
@@ -92,6 +92,7 @@ Modules use the same page types as Grav Helios Course Hub, and a Canvas, Moodle,
 - On phones, the module list follows the content, and a page inside a module starts with a link back to its module
 - With the [Page TOC](https://github.com/trilbymedia/grav-plugin-page-toc) plugin, the module list also shows the current page's sections (its h2 headings, or its h3s), and on phones they appear in an "On this page" box above the content; on wider screens the module list stays in view while reading
 - A module or page can set `group:` to appear under a heading, both on the cards and in the module list
+- On wider screens, readers can hide the sidebar (the module list and its search box) to focus on the page, with the button in the same top corner to show it again; their choice is remembered, and a page inside a module then shows its link back to the module. Turn it off with the **Hide Sidebar Button** theme option
 - A module or page can also set a Badge Label (such as "Draft" or "Due Friday") and Badge Color, shown on its card, as on the course cards
 
 ## Blogs

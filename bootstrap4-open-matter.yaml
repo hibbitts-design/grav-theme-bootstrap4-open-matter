@@ -8,6 +8,7 @@ dark_mode:
 header_image_size: standard
 display_syndicate: true
 module_description_lines: 2
+sidebar_hide_button: true
 
 dropdown:
   enabled: false
