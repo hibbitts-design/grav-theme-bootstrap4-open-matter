@@ -1,3 +1,9 @@
+# v6.4.18
+## XX/XX/2026
+
+1. [](#new)
+    * Hide sidebar: on wider screens, a "Hide sidebar" button at the top right of a module page's sidebar hides it (the module list and its search box), leaving a small button in the same place to show it again, so readers can focus on the page; the page is centred at a comfortable width, and a page inside a module shows its link back to the module. The choice is remembered in the reader's browser, and phones are unchanged. It can be turned off with the new Hide Sidebar Button theme option, as in Quark 2 Open Publishing and Quark Open Publishing
+
 # v6.4.17
 ## 10/25/2026
 
