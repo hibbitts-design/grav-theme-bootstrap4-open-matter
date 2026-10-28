@@ -255,6 +255,37 @@
               </ul>
             </nav>
 
+            {# Side Box (side_box), as in Grav Open Publishing Space: the page's own, else the Modules page's, else the
+               course's; none on the pages of a module set to false #}
+            {% set course_page = null %}
+            {% if module_list_page.parent.template in ['course', 'subsite'] %}
+              {% set course_page = module_list_page.parent %}
+            {% endif %}
+
+            {% if page.header.side_box is defined %}
+              {% set side_box = page.header.side_box %}
+            {% elseif module_list_page.header.side_box is defined %}
+              {% set side_box = module_list_page.header.side_box %}
+            {% elseif course_page %}
+              {% set side_box = course_page.header.side_box %}
+            {% else %}
+              {% set side_box = null %}
+            {% endif %}
+
+            {# the page's module has its Side Box turned off ("false" is also how Admin saves it) #}
+            {% set module = page.parent %}
+            {% set in_a_module = module.route != module_list_page.route %}
+            {% set module_turned_off = module.header.side_box is defined and (not module.header.side_box or module.header.side_box == 'false') %}
+            {% if page.header.side_box is not defined and in_a_module and module_turned_off %}
+              {% set side_box = false %}
+            {% endif %}
+
+            {% if side_box and side_box != 'false' %}
+              <div class="module-side-box">
+                {{ side_box|markdown|shortcodes|raw }}
+              </div>
+            {% endif %}
+
             </div>
           </div>
           {% endif %}

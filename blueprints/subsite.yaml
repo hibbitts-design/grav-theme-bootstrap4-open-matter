@@ -119,6 +119,14 @@ form:
                     validate:
                         type: bool
 
+                header.side_box:
+                    ordering@: 8
+                    type: textarea
+                    label: Side Box
+                    toggleable: true
+                    rows: 4
+                    help: 'Markdown shown under the module list on every page of this course.'
+
         options:
           fields:
             publishing:

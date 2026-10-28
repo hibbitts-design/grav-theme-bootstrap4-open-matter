@@ -482,3 +482,18 @@ html:not(.module-nav-hidden) .module-nav-toggle-show,
 .course-resume-dismiss:focus {
     background: rgba(127, 127, 127, 0.15);
 }
+
+/* Side Box: under the module list, after a thin line like the one under the search box */
+.module-side-box {
+    margin-top: 1rem;
+    padding: 1rem 0.6rem 0;
+    border-top: 1px solid rgba(128, 128, 128, 0.25);
+    font-size: 0.97em;
+    line-height: 1.5;
+}
+.module-side-box > :first-child {
+    margin-top: 0;
+}
+.module-side-box > :last-child {
+    margin-bottom: 0;
+}

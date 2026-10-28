@@ -43,3 +43,10 @@ form:
                 0: 'No limit'
               validate:
                 type: int
+
+            header.side_box:
+              type: textarea
+              label: Side Box
+              toggleable: true
+              rows: 4
+              help: 'Markdown shown under the module list on every page in this list.'

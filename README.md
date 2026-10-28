@@ -98,6 +98,7 @@ Modules use the same page types as Grav Helios Course Hub, and a Canvas, Moodle,
 - A module or page can also set a Badge Label (such as "Draft" or "Due Friday") and Badge Color, shown on its card, as on the course cards
 - Link from one module to another with a relative link, such as `[Accessibility](../accessibility)`: it keeps working when the course moves to another folder or site, or when its content moves to or from a Grav Open Publishing Space guide
 - A course page can set **Learning Objectives** (`learning_objectives:`, on the page's Module tab), shown at the top of the page as a Learning Objectives box – the same setting as in Grav Open Publishing Space guides, so a guide page's objectives carry over unchanged
+- A **Side Box** (`side_box:`, Markdown) shows under the module list – set it on a module page, on the Modules page for every page in its list, or on the course page in a site with several courses; `side_box: false` hides it on a page, or on a module and its pages. The same setting as in Grav Open Publishing Space guides and Grav Helios Course Hub
 
 ## Blogs
 

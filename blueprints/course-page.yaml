@@ -69,6 +69,13 @@ form:
               placeholder: "- Understand the key concepts\n- Apply the methods described"
               help: 'Shown at the top of this page as a Learning Objectives box. Supports Markdown.'
 
+            header.side_box:
+              type: textarea
+              label: Side Box
+              toggleable: true
+              rows: 4
+              help: 'Markdown shown under the module list on this page, in place of the course''s Side Box (false hides it).'
+
         options:
           type: tab
 
