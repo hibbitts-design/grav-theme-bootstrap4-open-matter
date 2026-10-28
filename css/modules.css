@@ -588,9 +588,11 @@ html:not(.module-nav-hidden) .module-nav-toggle-show,
     opacity: 0.75;
 }
 
-/* the page title on one line, cut with "…" when it's too long */
+/* the page title on one line, cut with "…" when it's too long; a little smaller than the page text, as in Grav Open
+   Publishing Space guides, so more of it shows */
 .module-bar-title {
     overflow: hidden;
+    font-size: 0.9375rem;
     font-weight: 600;
     text-overflow: ellipsis;
     white-space: nowrap;
