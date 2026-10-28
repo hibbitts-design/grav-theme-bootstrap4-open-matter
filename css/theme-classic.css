@@ -447,3 +447,8 @@ div.keeptogether {
 h2.topics-letter {
     border-radius: 4px;
 }
+
+/* the "All Courses" link above the page (Link to Course List): square corners, like the page */
+.course-list-bar {
+    border-radius: 0;
+}

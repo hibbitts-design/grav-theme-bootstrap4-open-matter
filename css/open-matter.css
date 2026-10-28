@@ -487,9 +487,17 @@ img.image-zoom:focus-visible {
 
 /* Link to Course List option: "‹ All Courses" just below the NavBar of a course on a MultiCourse site, at the top left
    above the page, in the link colour like the link back to a module on phones */
+/* in the page's own colour, with its rounded top corners, so the link reads as the top of the page below rather
+   than a strip of the site's background (the page below then has square top corners) */
 .course-list-bar {
     padding-top: 0.75rem;
     margin-bottom: -0.75rem; /* so the page below keeps its usual distance from the NavBar */
+    background-color: #ffffff;
+    border-radius: 12px 12px 0 0;
+}
+.course-list-bar ~ .main-content {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 .course-list-link {
     display: inline-block;

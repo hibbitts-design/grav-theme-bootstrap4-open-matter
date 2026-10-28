@@ -331,3 +331,8 @@ table, td {
     background: hsl(220, 13%, 26%);
     color: hsl(220, 14%, 71%);
 }
+
+/* the "All Courses" link above the page (Link to Course List), in the page's dark grey */
+.course-list-bar {
+    background-color: #1f2937;
+}
