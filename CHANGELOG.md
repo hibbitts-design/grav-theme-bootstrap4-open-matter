@@ -1,3 +1,9 @@
+# v6.4.25
+## 10/28/2026
+
+1. [](#improved)
+    * Previous/Next Bar on Phones: page titles are a little smaller, so more of each shows, as in Grav Open Publishing Space guides
+
 # v6.4.24
 ## 10/28/2026
 
