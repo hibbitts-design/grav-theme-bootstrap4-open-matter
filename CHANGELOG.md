@@ -1,3 +1,9 @@
+# v6.4.22
+## 10/28/2026
+
+1. [](#new)
+    * Side Box: Markdown under the module list, from a page's, the Modules page's or the course's new Side Box setting (`side_box`), as in Grav Open Publishing Space guides
+
 # v6.4.21
 ## 10/28/2026
 
