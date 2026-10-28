@@ -1,3 +1,13 @@
+# v6.4.20
+## XX/XX/2026
+
+1. [](#new)
+    * Arrow keys: on module pages, the left and right arrow keys go to the previous and next page, as in Grav Open Publishing Space guides – handy when presenting a module by screen sharing
+    * Link to Course List: a new theme option (off by default) adds an "All Courses" link below the NavBar of each course's pages on MultiCourse sites
+    * Keep My Place: a course's Modules page shows returning readers a "Continue where you left off" box, as in Grav Open Publishing Space guides. On by default; can be turned off in the theme options, or per course with `keep_my_place: false`
+2. [](#bugfix)
+    * NavBar: on phones, a long site or course name now wraps instead of running off the screen
+
 # v6.4.19
 ## 10/28/2026
 
