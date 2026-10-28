@@ -1,0 +1,5 @@
+{# Learning objectives from the page settings (learning_objectives, the same setting as in Grav Open Publishing Space
+   guides), shown as an [objectives] box above the page's content - hibbittsdesign.org #}
+{% if page.header.learning_objectives %}
+  {{ ('[objectives]' ~ page.header.learning_objectives|markdown ~ '[/objectives]')|shortcodes|raw }}
+{% endif %}

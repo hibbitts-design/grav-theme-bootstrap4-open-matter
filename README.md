@@ -94,6 +94,7 @@ Modules use the same page types as Grav Helios Course Hub, and a Canvas, Moodle,
 - A module or page can set `group:` to appear under a heading, both on the cards and in the module list
 - On wider screens, readers can hide the sidebar (the module list and its search box) to focus on the page, with the button in the same top corner to show it again; their choice is remembered, and a page inside a module then shows its link back to the module. Turn it off with the **Hide Sidebar Button** theme option
 - A module or page can also set a Badge Label (such as "Draft" or "Due Friday") and Badge Color, shown on its card, as on the course cards
+- A course page can set **Learning Objectives** (`learning_objectives:`, on the page's Module tab), shown at the top of the page as a Learning Objectives box – the same setting as in Grav Open Publishing Space guides, so a guide page's objectives carry over unchanged
 
 ## Blogs
 

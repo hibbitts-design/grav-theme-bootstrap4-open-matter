@@ -106,6 +106,7 @@
 
             {# the page's own content (its section headings get a little space above them when jumped to) #}
             <div class="module-page-content">
+              {% include 'partials/learning_objectives.html.twig' %}
               {{ page.content|raw }}
             </div>
 

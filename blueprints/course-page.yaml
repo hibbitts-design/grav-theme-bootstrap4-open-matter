@@ -61,6 +61,14 @@ form:
                 plain: Plain
               help: 'The badge colour.'
 
+            header.learning_objectives:
+              type: textarea
+              label: Learning Objectives
+              toggleable: true
+              rows: 5
+              placeholder: "- Understand the key concepts\n- Apply the methods described"
+              help: 'Shown at the top of this page as a Learning Objectives box. Supports Markdown.'
+
         options:
           type: tab
 

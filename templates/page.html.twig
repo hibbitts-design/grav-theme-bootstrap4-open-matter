@@ -21,6 +21,7 @@
             {% else %}
               <h1 class="hidden">{{page.title}}</h1>
             {% endif %}
+              {% include 'partials/learning_objectives.html.twig' %}
               {{ page.content|raw }}
               {# Creative Commons License -  hibbittsdesign.org #}
               {% if not embedded_mode and not(theme_var('chromeless.enabled')) and (theme_var('cc_license.enabled') and not(page.header.hide_cc_license)) %}

@@ -32,6 +32,7 @@
             {% if page.header.description %}
               <p class="module-intro">{{ page.header.description }}</p>
             {% endif %}
+            {% include 'partials/learning_objectives.html.twig' %}
             {{ page.content|raw }}
 
             {# description lines on the cards: the Module Description Lines theme option (2 when
