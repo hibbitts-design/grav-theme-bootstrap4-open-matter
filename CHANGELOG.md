@@ -1,5 +1,5 @@
 # v6.4.20
-## XX/XX/2026
+## 10/28/2026
 
 1. [](#new)
     * Arrow keys: on module pages, the left and right arrow keys go to the previous and next page, as in Grav Open Publishing Space guides – handy when presenting a module by screen sharing
