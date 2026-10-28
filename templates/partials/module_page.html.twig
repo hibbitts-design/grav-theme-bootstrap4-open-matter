@@ -148,6 +148,34 @@
                   </a>
                 {% endif %}
               </nav>
+
+              {# Previous/Next bar on phones (Previous/Next Bar on Phones option), fixed to the bottom of the screen in
+                 place of the boxes above, as in Grav Open Publishing Space guides (see css/modules.css) #}
+              {% if theme_var('prev_next_bar') %}
+                <nav class="module-prev-next-bar d-print-none" aria-label="{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.PREVIOUS_AND_NEXT_BAR'|t|e('html_attr') }}">
+                  {% if previous_page %}
+                    <a class="module-bar-link module-bar-prev" href="{{ previous_page.url }}">
+                      <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                      <span class="module-bar-text">
+                        <span class="module-bar-label">{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.PREVIOUS'|t }}</span>
+                        <span class="module-bar-title">{{ previous_page.menu }}</span>
+                      </span>
+                    </a>
+                  {% else %}
+                    {# an empty space, so Next stays on the right #}
+                    <span></span>
+                  {% endif %}
+                  {% if next_page %}
+                    <a class="module-bar-link module-bar-next" href="{{ next_page.url }}">
+                      <span class="module-bar-text">
+                        <span class="module-bar-label">{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.NEXT'|t }}</span>
+                        <span class="module-bar-title">{{ next_page.menu }}</span>
+                      </span>
+                      <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                  {% endif %}
+                </nav>
+              {% endif %}
             {% endif %}
 
             {# Creative Commons License - hibbittsdesign.org #}

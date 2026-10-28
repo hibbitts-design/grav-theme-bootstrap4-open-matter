@@ -334,7 +334,8 @@ table, td {
     color: hsl(220, 14%, 71%);
 }
 
-/* the "All Courses" link above the page (Link to Course List), in the page's dark grey */
-.course-list-bar {
+/* the "All Courses" link above the page and the Previous/Next bar on phones, in the page's dark grey */
+.course-list-bar,
+.module-prev-next-bar {
     background-color: #1f2937;
 }

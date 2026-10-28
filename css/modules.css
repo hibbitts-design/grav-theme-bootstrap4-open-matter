@@ -497,3 +497,106 @@ html:not(.module-nav-hidden) .module-nav-toggle-show,
 .module-side-box > :last-child {
     margin-bottom: 0;
 }
+
+/* Previous/Next bar on phones (Previous/Next Bar on Phones option), as in Grav Open Publishing Space guides: fixed to
+   the bottom of the screen in place of the Previous/Next boxes, below the width where the module list moves under the
+   page. Not on very short screens (phones turned sideways), where it would take too much of the screen */
+.module-prev-next-bar {
+    display: none;
+}
+
+@media (max-width: 767.98px) and (min-height: 500px) {
+    .module-prev-next-bar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1010; /* below the NavBar and its phone menu, whether fixed (1030) or sticky (1020) */
+        background-color: #ffffff; /* the page's colour (Dark Mode: in the theme-*-dark.css files) */
+        border-top: 1px solid rgba(128, 128, 128, 0.25);
+        padding-bottom: env(safe-area-inset-bottom); /* room for the iPhone's home bar */
+    }
+
+    /* the bar replaces the boxes, when it's there */
+    body:has(.module-prev-next-bar) .module-prev-next {
+        display: none;
+    }
+
+    /* room below the page for the bar, so it never covers the end of the page */
+    body:has(.module-prev-next-bar) {
+        padding-bottom: calc(3.75rem + env(safe-area-inset-bottom));
+    }
+
+    /* links reached with the Tab key, and places jumped to, stay above the bar rather than behind it */
+    html:has(.module-prev-next-bar) {
+        scroll-padding-bottom: calc(3.75rem + env(safe-area-inset-bottom));
+    }
+
+    /* while typing in a box (such as the search box), the bar steps aside so it doesn't cover it */
+    body:has(input:not([type="checkbox"], [type="radio"], [type="button"], [type="submit"], [type="reset"]):focus, textarea:focus) .module-prev-next-bar {
+        display: none;
+    }
+}
+
+/* each half of the bar: an arrow, and a small label above the page title */
+.module-bar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 0;
+    min-height: 3.5rem;
+    padding: 0.5rem 1rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.module-bar-link:hover,
+.module-bar-link:focus {
+    color: inherit;
+    text-decoration: none;
+}
+
+.module-bar-link:hover .module-bar-title {
+    text-decoration: underline;
+}
+
+.module-bar-link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: -2px;
+}
+
+.module-bar-prev {
+    border-right: 1px solid rgba(128, 128, 128, 0.25);
+}
+
+.module-bar-next {
+    grid-column: 2;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.module-bar-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.module-bar-label {
+    font-size: 0.75rem;
+    opacity: 0.75;
+}
+
+/* the page title on one line, cut with "…" when it's too long */
+.module-bar-title {
+    overflow: hidden;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.module-bar-link .fa {
+    flex-shrink: 0;
+    opacity: 0.75;
+}

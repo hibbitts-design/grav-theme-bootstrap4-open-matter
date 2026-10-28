@@ -10,6 +10,7 @@ display_syndicate: true
 module_description_lines: 2
 sidebar_hide_button: true
 keep_my_place: true
+prev_next_bar: false
 course_list_link: false
 
 dropdown:
