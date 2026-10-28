@@ -1,3 +1,9 @@
+# v6.4.21
+## 10/28/2026
+
+1. [](#bugfix)
+    * Link to Course List: the "All Courses" link now sits on the page itself, rather than on a strip of the site's background colour
+
 # v6.4.20
 ## 10/28/2026
 
