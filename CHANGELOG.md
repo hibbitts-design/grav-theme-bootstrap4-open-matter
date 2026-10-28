@@ -1,3 +1,9 @@
+# v6.4.24
+## 10/28/2026
+
+1. [](#new)
+    * Previous/Next Bar on Phones: a new theme option (off by default) for a Previous/Next bar fixed to the bottom of the screen on module pages, as in Grav Open Publishing Space guides
+
 # v6.4.23
 ## 10/28/2026
 
