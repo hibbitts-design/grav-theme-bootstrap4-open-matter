@@ -105,6 +105,12 @@
             {% endif %}
 
             {# the page's own content (its section headings get a little space above them when jumped to) #}
+            {# Keep My Place: remember this page for its course's Modules page (see js/course-place.js) #}
+            {% set course_keeps_place = module_list_page.parent.header.keep_my_place is not defined or module_list_page.parent.header.keep_my_place %}
+            {% if theme_var('keep_my_place', true) and course_keeps_place and not chromeless_page %}
+              {% do assets.addJs('theme://js/course-place.js', {group:'bottom'}) %}
+              <div class="course-save-place" data-course="{{ module_list_page.parent.url }}" data-url="{{ page.url }}" data-title="{{ page.title|e('html_attr') }}" hidden></div>
+            {% endif %}
             <div class="module-page-content">
               {% include 'partials/learning_objectives.html.twig' %}
               {{ page.content|raw }}

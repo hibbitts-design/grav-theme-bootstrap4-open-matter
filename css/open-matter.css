@@ -484,3 +484,29 @@ img.image-zoom:focus-visible {
     outline: 2px solid #fff;
     outline-offset: 2px;
 }
+
+/* Link to Course List option: "‹ All Courses" just below the NavBar of a course on a MultiCourse site, at the top left
+   above the page, in the link colour like the link back to a module on phones */
+.course-list-bar {
+    padding-top: 0.75rem;
+    margin-bottom: -0.75rem; /* so the page below keeps its usual distance from the NavBar */
+}
+.course-list-link {
+    display: inline-block;
+    padding: 0.25rem 0; /* a little taller, for easier tapping */
+}
+.course-list-link .fa {
+    font-size: 0.75em;
+}
+
+/* Below the NavBar Breakpoint (where the menu collapses to a button), a long site or course name wraps onto a second
+   line instead of running off the screen, and takes the space beside the menu button so the button stays on its row */
+@media (max-width: 575.98px) {
+    .navbar-expand-sm .navbar-brand { white-space: normal; flex: 1 1 0; min-width: 0; }
+}
+@media (max-width: 767.98px) {
+    .navbar-expand-md .navbar-brand { white-space: normal; flex: 1 1 0; min-width: 0; }
+}
+@media (max-width: 991.98px) {
+    .navbar-expand-lg .navbar-brand { white-space: normal; flex: 1 1 0; min-width: 0; }
+}

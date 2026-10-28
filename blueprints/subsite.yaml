@@ -106,6 +106,19 @@ form:
                     description: "If set, will be used for Subsite's NavBar Background."
                     size: small
 
+                header.keep_my_place:
+                    ordering@: 7
+                    type: toggle
+                    label: Keep My Place
+                    help: 'Shows returning readers a "Continue where you left off" box on this course''s Modules page.'
+                    highlight: 1
+                    default: 1
+                    options:
+                        1: PLUGIN_ADMIN.ENABLED
+                        0: PLUGIN_ADMIN.DISABLED
+                    validate:
+                        type: bool
+
         options:
           fields:
             publishing:

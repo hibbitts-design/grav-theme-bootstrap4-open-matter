@@ -6,6 +6,10 @@
 {% set arrayofpath = uri.path|split('/') %}
 {% set firstfolderofpath = arrayofpath[1] %}
 {% set secondfolderofpath = arrayofpath[2] %}
+{# the site's home page (the course list on a MultiCourse site), kept before base_url is changed to a course's home below,
+   for the Link to Course List option - hibbittsdesign.org #}
+{% set course_list_url = base_url == '' ? '/' : base_url %}
+{% set in_course = false %}
 
 {# MultiCourse hub compatibility - hibbittsdesign.org #}
 {% if page.find('/' ~ firstfolderofpath).template == 'course' or page.find('/' ~ firstfolderofpath).template == 'subsite' %}
@@ -34,6 +38,7 @@
       {% set background_image = page.find('/headerimage').media.images|first %}
     {% endif %}
     {% set pages = page.evaluate([{'@page.children':'/' ~ firstfolderofpath }]) %}
+    {% set in_course = true %}
 {% elseif page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).template == 'course' or page.find('/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath).template == 'subsite' %}
     {# the course's own NavBar colour, if it has one (its page is one folder deeper here),
        so a colour set on its parent folder is kept when the course has none #}
@@ -62,6 +67,7 @@
       {% set background_image = page.find('/headerimage').media.images|first %}
     {% endif %}
     {% set pages = page.evaluate([{'@page.children':'/' ~ firstfolderofpath ~ '/' ~ secondfolderofpath}]) %}
+    {% set in_course = true %}
 {% else %}
   {% set site_title = site.title|e('html') %}
   {% set background_image = page.find('/headerimage').media.images|first %}
@@ -246,3 +252,16 @@
         </div>
     </div>
 </nav>
+
+{# inside a course, with the Link to Course List option on: a link back to the list of courses just below the NavBar, at
+   the top left above the page, like the link back to a guide on Open Publishing Space guide pages - hibbittsdesign.org #}
+{% if in_course and theme_var('course_list_link') %}
+  {# on a page inside a module, phones already show a link back to its module (see module_page.html.twig), so this one
+     is left out there on phones, rather than two back links one above the other #}
+  {% set in_module_page = page.parent.parent.template == 'module' %}
+  <nav class="course-list-bar d-print-none{{ in_module_page ? ' d-none d-md-block' : '' }}" aria-label="{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.ALL_COURSES'|t|e('html_attr') }}">
+    <div class="container">
+      <a class="course-list-link" href="{{ course_list_url }}"><i class="fa fa-chevron-left" aria-hidden="true"></i> {{ 'THEME_BOOTSTRAP4_OPEN_MATTER.ALL_COURSES'|t }}</a>
+    </div>
+  </nav>
+{% endif %}

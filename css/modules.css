@@ -442,3 +442,43 @@ html:not(.module-nav-hidden) .module-nav-toggle-show,
         display: block !important;
     }
 }
+
+/* Keep My Place: "Continue where you left off" on a course's Modules page (see js/course-place.js), a quiet box in a
+   light tint of the text colour, so it works in light and dark modes */
+.course-resume {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    margin: 0 0 1.25rem;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    border-radius: 0.375rem;
+    background: rgba(127, 127, 127, 0.1);
+}
+.course-resume[hidden] {
+    display: none;
+}
+.course-resume-link {
+    flex: 1;
+    min-width: 0;
+    color: inherit;
+}
+.course-resume-title {
+    font-weight: 600;
+}
+.course-resume-dismiss {
+    flex: 0 0 auto;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border: 0;
+    border-radius: 0.25rem;
+    background: transparent;
+    color: inherit;
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+}
+.course-resume-dismiss:hover,
+.course-resume-dismiss:focus {
+    background: rgba(127, 127, 127, 0.15);
+}

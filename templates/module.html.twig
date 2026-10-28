@@ -32,6 +32,18 @@
             {% if page.header.description %}
               <p class="module-intro">{{ page.header.description }}</p>
             {% endif %}
+            {# Keep My Place: "Continue where you left off", shown by js/course-place.js when the reader has been to one of
+               this course's module pages (hidden until then, and when embedded). A course can turn it off with
+               keep_my_place: false in its own front matter #}
+            {% set course_keeps_place = page.parent.header.keep_my_place is not defined or page.parent.header.keep_my_place %}
+            {% if theme_var('keep_my_place', true) and course_keeps_place and not (embedded_mode or theme_var('chromeless.enabled')) %}
+              {% do assets.addJs('theme://js/course-place.js', {group:'bottom'}) %}
+              <div class="course-resume" data-course="{{ page.parent.url }}" hidden>
+                <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                <a class="course-resume-link" href="#">{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.CONTINUE_WHERE_LEFT_OFF'|t }}: <span class="course-resume-title"></span></a>
+                <button type="button" class="course-resume-dismiss" aria-label="{{ 'THEME_BOOTSTRAP4_OPEN_MATTER.FORGET_PLACE'|t|e('html_attr') }}"><span aria-hidden="true">&times;</span></button>
+              </div>
+            {% endif %}
             {% include 'partials/learning_objectives.html.twig' %}
             {{ page.content|raw }}
 

@@ -76,7 +76,7 @@ The easiest way to get started is the [Open Course Hub](https://github.com/hibbi
 All options are available in the Admin Panel under **Themes → Bootstrap4 Open Matter**.
 
 - **Open Matter Options** – chromeless site, menu dropdowns, Creative Commons license type and display, and H5P embed source URL
-- **Bootstrap4 Options** – Visual Style (Theme Style, Dark Mode), Header Defaults (Header Image Height: Standard, Slim, Standard on home pages with slim or hidden elsewhere, or Hidden; NavBar look, style, background, position, and breakpoint), Sidebar Defaults (Syndicate (RSS) links), and Module Defaults (Module Description Lines, and **Hide Sidebar Button**, on by default)
+- **Bootstrap4 Options** – Visual Style (Theme Style, Dark Mode), Header Defaults (Header Image Height: Standard, Slim, Standard on home pages with slim or hidden elsewhere, or Hidden; NavBar look, style, background, position, and breakpoint, and **Link to Course List**, off by default: on a MultiCourse site, an "All Courses" link at the top of each course's pages, back to the list of courses), Sidebar Defaults (Syndicate (RSS) links), and Module Defaults (Module Description Lines, **Keep My Place**, on by default: a "Continue where you left off" box on a course's Modules page, which a course can also turn off on its course page, and **Hide Sidebar Button**, on by default)
 - **Custom Menu Items** – text, icon, URL, and target for extra NavBar links
 - **Git Sync Link** – location, link type (view or edit), icon and text, Site Theme Files link, and a custom Git repository tree URL
 
@@ -93,6 +93,8 @@ Modules use the same page types as Grav Helios Course Hub, and a Canvas, Moodle,
 - With the [Page TOC](https://github.com/trilbymedia/grav-plugin-page-toc) plugin, the module list also shows the current page's sections (its h2 headings, or its h3s), and on phones they appear in an "On this page" box above the content; on wider screens the module list stays in view while reading
 - A module or page can set `group:` to appear under a heading, both on the cards and in the module list
 - On wider screens, readers can hide the sidebar (the module list and its search box) to focus on the page, with the button in the same top corner to show it again; their choice is remembered, and a page inside a module then shows its link back to the module. Turn it off with the **Hide Sidebar Button** theme option
+- On module pages, the ← and → arrow keys go to the previous and next page, as in Grav Open Publishing Space guides – handy when presenting a module by screen sharing
+- A course's Modules page shows returning readers a "Continue where you left off" box, linking to the last page they opened in its module list
 - A module or page can also set a Badge Label (such as "Draft" or "Due Friday") and Badge Color, shown on its card, as on the course cards
 - Link from one module to another with a relative link, such as `[Accessibility](../accessibility)`: it keeps working when the course moves to another folder or site, or when its content moves to or from a Grav Open Publishing Space guide
 - A course page can set **Learning Objectives** (`learning_objectives:`, on the page's Module tab), shown at the top of the page as a Learning Objectives box – the same setting as in Grav Open Publishing Space guides, so a guide page's objectives carry over unchanged

@@ -35,3 +35,36 @@ templates/partials/module_page.html.twig). Phones keep the module list below the
         }
     });
 })();
+
+/*
+Arrow keys: on module pages, ← and → go to the previous and next page (the Previous and Next links below the page),
+as in the Open Publishing guide themes and Grav Helios Open Reader – handy when presenting a module by screen sharing.
+Embedded pages have no Previous and Next links, so the keys do nothing there - hibbittsdesign.org
+*/
+(function () {
+    document.addEventListener('keydown', function (event) {
+        if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') {
+            return;
+        }
+        // leave the keys alone with a modifier key held, so browser shortcuts still work
+        if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) {
+            return;
+        }
+        // and while typing, or in a table or code block, where the arrow keys may scroll it sideways
+        var target = event.target;
+        if (target.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].indexOf(target.tagName) !== -1) {
+            return;
+        }
+        if (target.closest && target.closest('table, pre')) {
+            return;
+        }
+        // and while an image is shown larger (js/image-zoom.js), where the reader is looking at the image
+        if (document.querySelector('dialog[open]')) {
+            return;
+        }
+        var link = document.querySelector(event.key === 'ArrowLeft' ? '.module-prev-next .module-prev' : '.module-prev-next .module-next');
+        if (link) {
+            window.location.href = link.href;
+        }
+    });
+})();

@@ -1,7 +1,7 @@
 name: 'Bootstrap4 Open Matter'
 type: theme
 slug: bootstrap4-open-matter
-version: 6.4.19
+version: 6.4.20
 description: "A customized version of the Bootstrap4 theme for open blogs, course hubs (organised by weeks or by modules) and more. Includes Git Sync and 'chromeless' content display for seamless embedding."
 icon: bold
 author:
@@ -227,6 +227,17 @@ form:
                 lg: Large
                 md: Medium
                 sm: Small
+            course_list_link:
+              type: toggle
+              label: 'Link to Course List'
+              help: 'On a MultiCourse site, adds an "All Courses" link at the top of each course''s pages.'
+              highlight: 1
+              default: 0
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
             sidebaroptions:
               type: section
               title: 'Sidebar Defaults'
@@ -258,6 +269,17 @@ form:
                 0: 'No limit'
               validate:
                 type: int
+            keep_my_place:
+              type: toggle
+              label: 'Keep My Place'
+              help: 'Shows returning readers a "Continue where you left off" box on a course''s Modules page.'
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
             sidebar_hide_button:
               type: toggle
               label: 'Hide Sidebar Button'

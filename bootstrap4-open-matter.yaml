@@ -9,6 +9,8 @@ header_image_size: standard
 display_syndicate: true
 module_description_lines: 2
 sidebar_hide_button: true
+keep_my_place: true
+course_list_link: false
 
 dropdown:
   enabled: false
