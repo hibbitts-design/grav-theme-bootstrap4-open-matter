@@ -1,3 +1,9 @@
+# v6.4.23
+## 10/28/2026
+
+1. [](#bugfix)
+    * Side Box: its text now lines up with the module list instead of being set in
+
 # v6.4.22
 ## 10/28/2026
 
