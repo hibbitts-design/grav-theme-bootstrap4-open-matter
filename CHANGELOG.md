@@ -1,3 +1,9 @@
+# v6.4.19
+## XX/XX/2026
+
+1. [](#new)
+    * Learning Objectives: a course page's new Learning Objectives setting (`learning_objectives`, on its Module tab) is shown at the top of the page as a Learning Objectives box – on module pages, Modules pages and standard course pages – using the same setting as Quark 2 Open Publishing and Quark Open Publishing guides, so a guide page's objectives carry over to a course unchanged
+
 # v6.4.18
 ## 10/26/2026
 
