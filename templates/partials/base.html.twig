@@ -158,9 +158,11 @@
           {% endblock %}
         {% endif %}
 
-        {# where "Skip to content" goes: just after the NavBar - hibbittsdesign.org #}
-        <div id="main-content"></div>
-        {% block content %}{% endblock %}
+        {# where "Skip to content" goes: just after the NavBar. It holds the page's content, so a page's .md address
+           (Grav 2) finds the content here too - hibbittsdesign.org #}
+        <div id="main-content">
+          {% block content %}{% endblock %}
+        </div>
         {% block pagination %}{% endblock %}
 
         {% if not embedded_mode and not(theme_var('chromeless.enabled')) %}
