@@ -1,3 +1,11 @@
+# v6.4.26
+## 10/29/2026
+
+1. [](#improved)
+    * A page's Markdown version (Grav 2's .md address) keeps its callouts as > [!NOTE] and so on, so Docsify-This, GitHub and others show them as callouts
+2. [](#bugfix)
+    * A page's Markdown version (Grav 2) no longer comes out empty on pages without their own main content area, such as standard pages
+
 # v6.4.25
 ## 10/28/2026
 
