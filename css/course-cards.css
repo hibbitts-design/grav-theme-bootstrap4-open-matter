@@ -33,7 +33,7 @@ Colours, borders and corner radius come from the active style and Dark Mode; thi
     gap: 0.75rem;
     font-size: 1.35rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .course-card .card-title a {
@@ -53,6 +53,11 @@ Colours, borders and corner radius come from the active style and Dark Mode; thi
 
 .course-card .card-text {
     margin-bottom: 0.5rem;
+}
+
+/* no extra space after a card's last line, so the space below it matches the card's side padding */
+.course-card .card-body > :last-child {
+    margin-bottom: 0;
 }
 
 .course-card-meta {
