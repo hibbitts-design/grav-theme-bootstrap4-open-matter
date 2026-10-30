@@ -1,5 +1,5 @@
 # v6.4.27
-## XX/XX/2026
+## 10/30/2026
 
 1. [](#improved)
     * Course and module cards: a little less space under titles and at the bottom of each card
