@@ -1,3 +1,9 @@
+# v6.4.28
+## 11/04/2026
+
+1. [](#new)
+    * Accordion sections: [details summary="…" class="accordion"] shows as rows like the Accordion page type, in light and dark
+
 # v6.4.27
 ## 10/30/2026
 
