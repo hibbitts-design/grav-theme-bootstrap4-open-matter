@@ -309,6 +309,25 @@ body {
     transform: rotate(-90deg);
 }
 
+/* Accordion sections ([details class="accordion"]) in the same colours as the Accordion page type's rows */
+details.accordion {
+    border-color: #e5e7eb;
+}
+details.accordion > summary {
+    color: #111827;
+}
+details.accordion > summary:hover,
+details.accordion > summary:focus-visible {
+    background-color: #f9fafb;
+}
+details.accordion > summary:focus-visible {
+    outline: 2px solid #111827;
+    outline-offset: -2px;
+}
+details.accordion > summary::after {
+    color: #6b7280;
+}
+
 /* Checkmark lists: the ✓ in the link colour and bold */
 .listbullet ul li:before {
     color: #1b6ec2;

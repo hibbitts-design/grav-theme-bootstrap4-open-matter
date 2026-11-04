@@ -104,6 +104,25 @@ Dark Mode colours for theme-2026-modern.css, loaded after theme-2026-dark.css.
     color: #9ca3af;
 }
 
+/* Accordion sections ([details class="accordion"]) in dark, like the Accordion page type's rows */
+details.accordion {
+    border-color: #374151;
+}
+details.accordion > summary {
+    color: #f9fafb;
+    background-color: #1f2937;
+}
+details.accordion > summary:hover,
+details.accordion > summary:focus-visible {
+    background-color: #273244;
+}
+details.accordion > summary:focus-visible {
+    outline-color: #f9fafb;
+}
+details.accordion > summary::after {
+    color: #9ca3af;
+}
+
 /* Blog tags, archives and feed links in Dark Mode: soft light-grey pills and outlined buttons */
 .list-blog-tags .badge,
 .blog-sidebar .list-group-item .badge {

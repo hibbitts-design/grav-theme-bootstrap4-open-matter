@@ -518,3 +518,65 @@ img.image-zoom:focus-visible {
 @media (max-width: 991.98px) {
     .navbar-expand-lg .navbar-brand { white-space: normal; flex: 1 1 0; min-width: 0; }
 }
+
+/* Accordion sections – [details summary="…" class="accordion"] – shown like the Accordion page type's rows: sections
+   next to each other share one bordered box, each with a row that opens it and a chevron pointing down (closed) or up
+   (open). The theme styles below set the colours. */
+details.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    overflow: hidden; /* the row's hover tint follows the rounded corners */
+}
+details.accordion + details.accordion {
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+details.accordion:has(+ details.accordion) {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+details.accordion:not(:has(+ details.accordion)) {
+    margin-bottom: 1rem; /* space below the last section */
+}
+details.accordion > summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 1.25rem;
+    font-weight: 500;
+    cursor: pointer;
+    list-style: none; /* no browser triangle (::-webkit-details-marker below for older Safari) */
+}
+details.accordion > summary::-webkit-details-marker {
+    display: none;
+}
+details.accordion > summary::after {
+    content: '';
+    flex: none;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-top: -0.25rem;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+}
+details.accordion[open] > summary {
+    font-weight: 600;
+}
+details.accordion[open] > summary::after {
+    margin-top: 0.25rem;
+    transform: rotate(-135deg);
+}
+/* the section's text, inside the box */
+details.accordion > :not(summary) {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+}
+details.accordion > summary + * {
+    margin-top: 0.5rem;
+}
+details.accordion[open] {
+    padding-bottom: 0.5rem;
+}
