@@ -169,7 +169,7 @@ body {
 }
 
 .header {
-    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    background-image: linear-gradient(135deg, #1f2937 0%, #111827 100%);
 }
 
 .myheader {
