@@ -1,3 +1,9 @@
+# v6.4.29
+## 11/06/2026
+
+1. [](#bugfix)
+    * Hero header images (such as a blog's) fill the header again with the 2025 and 2026 styles, instead of showing a small, enlarged corner
+
 # v6.4.28
 ## 11/04/2026
 
