@@ -28,9 +28,10 @@ opacity, so these work with every Theme Style and in Dark Mode without their own
     border-radius: 0.375rem;
 }
 
-/* A light grey background on hover (see-through, so it works in Dark Mode too) */
+/* A light grey background on hover (see-through, so it works in Dark Mode too), half the shade of the
+   page being read, so that page stays the one clearly highlighted row */
 .module-nav .nav-link:hover {
-    background-color: rgba(128, 128, 128, 0.12);
+    background-color: rgba(128, 128, 128, 0.06);
     text-decoration: none;
 }
 
