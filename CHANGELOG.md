@@ -1,3 +1,9 @@
+# v6.4.30
+## 11/08/2026
+
+1. [](#improved)
+    * The module list's hover shade is lighter than the current page's, so the page being read stays clearly highlighted
+
 # v6.4.29
 ## 11/06/2026
 
