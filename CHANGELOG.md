@@ -1,3 +1,9 @@
+# v6.4.31
+## 11/10/2026
+
+1. [](#new)
+    * Course list pages can show text below the course cards: a line with just `===` in the page's content puts the text after it below the cards, as on Open Publishing Space's Guides List
+
 # v6.4.30
 ## 11/08/2026
 
