@@ -46,7 +46,20 @@
                 <h1 class="hidden">{{page.title}}</h1>
               {% endif %}
 
-              {{ page.content|raw }}
+              {# Text above and below the course cards, as on Open Publishing Space's Guides List: a line with just === in the
+                 page's content splits it, with the text before it above the cards and the text after it below them (=== is
+                 Grav's summary delimiter, so the text above is the page's summary). Without ===, all of it is above - hibbittsdesign.org #}
+              {% set content_above = page.content %}
+              {% set content_below = '' %}
+              {% if '===' in page.rawMarkdown %}
+                {% set summary_text = page.summary %}
+                {% if page.content starts with summary_text %}
+                  {% set content_above = summary_text %}
+                  {% set content_below = page.content|slice(summary_text|length)|trim %}
+                {% endif %}
+              {% endif %}
+
+              {{ content_above|raw }}
 
               {% do assets.addCss('theme://css/course-cards.css') %}
               <div class="row course-cards">
@@ -89,6 +102,8 @@
                 {% endfor %}
 
               </div>
+
+              {{ content_below|raw }}
 
               {# Creative Commons License -  hibbittsdesign.org #}
               {% if not embedded_mode and not(theme_var('chromeless.enabled')) and (theme_var('cc_license.enabled') and not(page.header.hide_cc_license)) %}
