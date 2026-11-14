@@ -1,7 +1,8 @@
 # v6.4.32
-## XX/XX/2026
+## 11/14/2026
 
 1. [](#bugfix)
+    * PDF shortcode: the PDF now shows in the browser's own PDF viewer, instead of Google's viewer, which sometimes started a "gview" download that failed with "File wasn't available on site"
     * Module 3 and Module 5 videos, which are no longer on YouTube, are now Nielsen Norman Group's Customer Journey Mapping 101 and AmberlightUX's Usability Testing
 
 # v6.4.31
