@@ -34,7 +34,9 @@ class PDFShortcode extends Shortcode
             }
 
             if ($pdfurl) {
-                return '<p><div class="embed-responsive embed-responsive-'.$pdfaspectratio.'"><iframe src="https://docs.google.com/gview?url='.$pdfurl.'&embedded=true" title="'.$pdftitle.'" width="640" height="480"></iframe></div></p>';
+                // the PDF itself, shown by the browser's own PDF viewer (Google's viewer, used before, sometimes sent an empty reply that
+                // browsers saved as a "gview" download)
+                return '<p><div class="embed-responsive embed-responsive-'.$pdfaspectratio.'"><iframe src="'.htmlspecialchars(html_entity_decode($pdfurl, ENT_QUOTES, 'UTF-8'), ENT_QUOTES, 'UTF-8').'" title="'.$pdftitle.'" width="640" height="480"></iframe></div></p>';
             }
 
         });
