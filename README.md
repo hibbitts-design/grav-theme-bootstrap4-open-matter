@@ -20,6 +20,9 @@
 
 </div>
 
+> [!NOTE]
+> **Soon in maintenance mode:** Bootstrap4 Open Matter, with the Open Course Hub and Open MultiCourse Hub skeletons it accompanies, will soon be in maintenance mode – still fixed, but with no new features. For new course sites on Grav 2, see [Grav Open Course Space](https://github.com/hibbitts-design/grav-skeleton-open-course-space), their free successor for one course or many; [existing courses move across](https://github.com/hibbitts-design/grav-skeleton-open-course-space#moving-existing-courses). On Grav 1.7, Open Matter remains a free course theme.
+
 Bootstrap4 Open Matter adds what open, collaborative course and blog sites need on top of the Bootstrap4 theme: pages that embed cleanly in an LMS, links that open each page's source in your Git repository, and a set of shortcodes and page types for course content.
 
 ## What Sets It Apart
