@@ -1,3 +1,9 @@
+# v6.4.33
+## XX/XX/2026
+
+1. [](#improved)
+    * README: a notice that it will soon be in maintenance mode, pointing to Grav Open Course Space, the free successor, and how existing courses move across
+
 # v6.4.32
 ## 11/14/2026
 
